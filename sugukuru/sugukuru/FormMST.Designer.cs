@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tsUserLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.miFile = new System.Windows.Forms.ToolStripMenuItem();
             this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tsUserLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsUserName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.inheritableFlowLayoutPanel1 = new InheritableFlowLayoutPanel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,17 @@
             this.statusStrip1.Size = new System.Drawing.Size(1264, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tsUserLabel
+            // 
+            this.tsUserLabel.Name = "tsUserLabel";
+            this.tsUserLabel.Size = new System.Drawing.Size(67, 17);
+            this.tsUserLabel.Text = "ユーザー名：";
+            // 
+            // tsUserName
+            // 
+            this.tsUserName.Name = "tsUserName";
+            this.tsUserName.Size = new System.Drawing.Size(0, 17);
             // 
             // menuStrip1
             // 
@@ -76,14 +87,6 @@
             this.終了ToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.終了ToolStripMenuItem.Text = "終了(&X)";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(100, 630);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(104, 27);
@@ -91,24 +94,21 @@
             this.panel1.Size = new System.Drawing.Size(1160, 630);
             this.panel1.TabIndex = 3;
             // 
-            // tsUserLabel
+            // inheritableFlowLayoutPanel1
             // 
-            this.tsUserLabel.Name = "tsUserLabel";
-            this.tsUserLabel.Size = new System.Drawing.Size(67, 17);
-            this.tsUserLabel.Text = "ユーザー名：";
-            // 
-            // tsUserName
-            // 
-            this.tsUserName.Name = "tsUserName";
-            this.tsUserName.Size = new System.Drawing.Size(0, 17);
+            this.inheritableFlowLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.inheritableFlowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
+            this.inheritableFlowLayoutPanel1.Name = "inheritableFlowLayoutPanel1";
+            this.inheritableFlowLayoutPanel1.Size = new System.Drawing.Size(100, 630);
+            this.inheritableFlowLayoutPanel1.TabIndex = 0;
             // 
             // FormMST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.inheritableFlowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("游ゴシック", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -133,9 +133,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem miFile;
         private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
-        protected System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         protected System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripStatusLabel tsUserLabel;
         private System.Windows.Forms.ToolStripStatusLabel tsUserName;
+        protected InheritableFlowLayoutPanel inheritableFlowLayoutPanel1;
     }
 }
