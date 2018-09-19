@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sugukuru
 {
-    public partial class Form1 : Form
+    public partial class Orders : sugukuru.FormMST
     {
-        public Form1()
+        public Orders()
         {
             InitializeComponent();
         }
