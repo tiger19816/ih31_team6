@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sugukuru
+namespace sugukuru.Purchase
 {
-    public partial class BidCarList : sugukuru.FormMST
+    public partial class BidCarList : sugukuru.FormMaster.FormMST
     {
         public BidCarList()
         {

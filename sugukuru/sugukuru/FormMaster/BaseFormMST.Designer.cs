@@ -1,4 +1,4 @@
-﻿namespace sugukuru
+﻿namespace sugukuru.FormMaster
 {
     partial class BaseFormMST
     {

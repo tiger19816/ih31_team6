@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.FormSample
 {
-    public partial class Sample : sugukuru.FormMST
+    public partial class Sample : sugukuru.FormMaster.FormMST
     {
         //staticで宣言することでインスタンスを固定
         public static SampleUserControl1 ctr1;

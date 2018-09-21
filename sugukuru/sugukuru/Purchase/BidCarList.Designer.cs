@@ -1,4 +1,4 @@
-﻿namespace sugukuru
+﻿namespace sugukuru.Purchase
 {
     partial class BidCarList
     {

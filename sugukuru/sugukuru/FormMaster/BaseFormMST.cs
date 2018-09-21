@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sugukuru
+namespace sugukuru.FormMaster
 {
     public partial class BaseFormMST : Form
     {

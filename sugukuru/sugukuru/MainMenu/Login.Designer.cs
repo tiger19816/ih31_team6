@@ -1,4 +1,4 @@
-﻿namespace sugukuru
+﻿namespace sugukuru.MainMenu
 {
     partial class Login
     {

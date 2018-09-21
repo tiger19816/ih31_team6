@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sugukuru
+namespace sugukuru.Purchase
 {
-    public partial class Purchase : sugukuru.FormMST
+    public partial class Purchase : sugukuru.FormMaster.FormMST
     {
         public Purchase()
         {

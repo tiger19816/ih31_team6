@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Orders
 {
-    public partial class OrdersForm : sugukuru.FormMST
+    public partial class OrdersForm : sugukuru.FormMaster.FormMST
     {
         public OrdersForm()
         {

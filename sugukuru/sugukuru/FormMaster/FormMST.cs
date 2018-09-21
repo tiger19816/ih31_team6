@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sugukuru
+namespace sugukuru.FormMaster
 {
-    public partial class FormMST : sugukuru.BaseFormMST
+    public partial class FormMST : sugukuru.FormMaster.BaseFormMST
     {
         public FormMST()
         {
