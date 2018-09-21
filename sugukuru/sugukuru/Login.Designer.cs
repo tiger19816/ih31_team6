@@ -28,11 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.inheritableFlowLayoutPanel1 = new InheritableFlowLayoutPanel();
+            this.SuspendLayout();
+            // 
+            // inheritableFlowLayoutPanel1
+            // 
+            this.inheritableFlowLayoutPanel1.Location = new System.Drawing.Point(208, 172);
+            this.inheritableFlowLayoutPanel1.Name = "inheritableFlowLayoutPanel1";
+            this.inheritableFlowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.inheritableFlowLayoutPanel1.TabIndex = 0;
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Controls.Add(this.inheritableFlowLayoutPanel1);
+            this.Name = "Login";
             this.Text = "Login";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private InheritableFlowLayoutPanel inheritableFlowLayoutPanel1;
     }
 }

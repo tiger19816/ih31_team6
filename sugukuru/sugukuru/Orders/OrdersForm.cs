@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sugukuru
+namespace sugukuru.Orders
 {
-    public partial class FormMST : sugukuru.BaseFormMST
+    public partial class OrdersForm : sugukuru.FormMST
     {
-        public FormMST()
+        public OrdersForm()
         {
             InitializeComponent();
         }
