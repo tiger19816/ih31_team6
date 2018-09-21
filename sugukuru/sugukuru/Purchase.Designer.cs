@@ -56,12 +56,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tbCustomerNumber = new System.Windows.Forms.TextBox();
             this.btSearch = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.inheritableFlowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btSearch);
             this.panel1.Controls.Add(this.tbCustomerNumber);
             this.panel1.Controls.Add(this.label12);
@@ -342,6 +345,15 @@
             this.btSearch.Text = "検索";
             this.btSearch.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(50, 207);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1025, 268);
+            this.dataGridView1.TabIndex = 25;
+            // 
             // Purchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -353,6 +365,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.inheritableFlowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,5 +401,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbDayStart;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

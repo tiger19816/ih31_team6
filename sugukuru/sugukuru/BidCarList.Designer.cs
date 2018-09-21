@@ -1,6 +1,6 @@
 ﻿namespace sugukuru
 {
-    partial class BidCarInfo
+    partial class BidCarList
     {
         /// <summary>
         /// Required designer variable.
@@ -79,12 +79,12 @@
             this.btRewrite.Text = "訂正";
             this.btRewrite.UseVisualStyleBackColor = true;
             // 
-            // BidCarInfo
+            // BidCarList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Name = "BidCarInfo";
+            this.Name = "BidCarList";
             this.Text = "落札車両情報";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

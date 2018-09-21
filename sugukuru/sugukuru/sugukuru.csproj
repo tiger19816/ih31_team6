@@ -46,19 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="BidCarList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BidCarList.Designer.cs">
       <DependentUpon>BidCarList.cs</DependentUpon>
-=======
-    <Compile Include="BaseFormMST.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseFormMST.Designer.cs">
-      <DependentUpon>BaseFormMST.cs</DependentUpon>
->>>>>>> a8c36409edc7b05998c63e8e0990d941ed41beca
     </Compile>
     <Compile Include="FormMST.cs">
       <SubType>Form</SubType>
@@ -75,21 +67,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpenFormMST.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OpenFormMST.Designer.cs">
-      <DependentUpon>OpenFormMST.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Orders\OrdersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Orders\OrdersForm.Designer.cs">
-      <DependentUpon>OrdersForm.cs</DependentUpon>
+    <Compile Include="Orders.cs" />
+    <Compile Include="Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="Purchase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,48 +81,15 @@
     </Compile>
     <EmbeddedResource Include="BidCarList.resx">
       <DependentUpon>BidCarList.cs</DependentUpon>
-=======
-    <Compile Include="FormSample\Sample.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSample\Sample.Designer.cs">
-      <DependentUpon>Sample.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSample\SampleUserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormSample\SampleUserControl1.Designer.cs">
-      <DependentUpon>SampleUserControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSample\SampleUserControl2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormSample\SampleUserControl2.Designer.cs">
-      <DependentUpon>SampleUserControl2.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="BaseFormMST.resx">
-      <DependentUpon>BaseFormMST.cs</DependentUpon>
->>>>>>> a8c36409edc7b05998c63e8e0990d941ed41beca
     </EmbeddedResource>
     <EmbeddedResource Include="FormMST.resx">
       <DependentUpon>FormMST.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Orders.resx">
       <DependentUpon>Orders.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="FormSample\SampleUserControl2.resx">
-      <DependentUpon>SampleUserControl2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OpenFormMST.resx">
-      <DependentUpon>OpenFormMST.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Orders\OrdersForm.resx">
-      <DependentUpon>OrdersForm.cs</DependentUpon>
->>>>>>> a8c36409edc7b05998c63e8e0990d941ed41beca
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,16 +100,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <EmbeddedResource Include="Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="FormSample\Sample.resx">
-      <DependentUpon>Sample.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSample\SampleUserControl1.resx">
-      <DependentUpon>SampleUserControl1.cs</DependentUpon>
->>>>>>> a8c36409edc7b05998c63e8e0990d941ed41beca
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -174,7 +116,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
