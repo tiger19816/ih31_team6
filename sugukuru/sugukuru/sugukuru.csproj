@@ -46,6 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaimCollection\BulkClaim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\BulkClaim.Designer.cs">
+      <DependentUpon>BulkClaim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimCollection\BulkReconciliation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\BulkReconciliation.Designer.cs">
+      <DependentUpon>BulkReconciliation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimCollection\CheckAccountReceivable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\CheckAccountReceivable.Designer.cs">
+      <DependentUpon>CheckAccountReceivable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimCollection\ClaimCollectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\ClaimCollectionForm.Designer.cs">
+      <DependentUpon>ClaimCollectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimCollection\IndividualClaim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\IndividualClaim.Designer.cs">
+      <DependentUpon>IndividualClaim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimCollection\IndividualReconciliation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\IndividualReconciliation.Designer.cs">
+      <DependentUpon>IndividualReconciliation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimCollection\ReceiptPrinting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\ReceiptPrinting.Designer.cs">
+      <DependentUpon>ReceiptPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimCollection\RepetitionClaim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\RepetitionClaim.Designer.cs">
+      <DependentUpon>RepetitionClaim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\BidCarList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +129,27 @@
     <Compile Include="Purchase\Purchase.Designer.cs">
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClaimCollection\BulkClaim.resx">
+      <DependentUpon>BulkClaim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\BulkReconciliation.resx">
+      <DependentUpon>BulkReconciliation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\CheckAccountReceivable.resx">
+      <DependentUpon>CheckAccountReceivable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\IndividualClaim.resx">
+      <DependentUpon>IndividualClaim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\IndividualReconciliation.resx">
+      <DependentUpon>IndividualReconciliation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\ReceiptPrinting.resx">
+      <DependentUpon>ReceiptPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\RepetitionClaim.resx">
+      <DependentUpon>RepetitionClaim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\BidCarList.resx">
       <DependentUpon>BidCarList.cs</DependentUpon>
     </EmbeddedResource>
