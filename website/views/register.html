@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <title>Register</title>
     <link rel="stylesheet" href="../public/css/froala_blocks.min.css">
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/fonts/login_font.css">
@@ -60,34 +60,60 @@
     </div>
 </header>
 
-<section class="fdb-block fp-active" style="background-image: url()" data-block-type="forms" data-id="1">
+<section class="fdb-block fp-active" data-block-type="forms" data-id="2" draggable="true">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-7 col-xl-5 text-center">
-                <div class="fdb-box fdb-touch">
-                    <div class="row">
-                        <div class="col">
-                            <h1>ログイン</h1>
-                        </div>
+            <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+                <div class="row">
+                    <div class="col text-center">
+                        <h1>アカウントを作成</h1>
+                        <p class="text-h3">1つのアカウントでSUGUKURUサービスすべてを </p>
                     </div>
-                    <form action="" method="post">
-                        <div class="row mt-4">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="ID">
-                            </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col mt-4">
+                        <input type="text" class="form-control" placeholder="会社名">
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="郵便番号">
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="住所">
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                    <div class="col">
+                        <input type="email" class="form-control" placeholder="電話番号">
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                    <div class="col">
+                        <input type="email" class="form-control" placeholder="メールアドレス">
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="パスワード">
+                    </div>
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="パスワードの確認">
+                    </div>
+                </div>
+                <div class="row justify-content-start mt-4">
+                    <div class="col">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                                同意する <a href="">ご利用規約</a>
+                            </label>
                         </div>
-                        <div class="row mt-4">
-                            <div class="col">
-                                <input type="password" class="form-control mb-1" placeholder="パスワード">
-                                <p class="text-right"><a href="">パスワードを忘れた方</a></p>
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col">
-                                <button class="btn" type="button">送信</button>
-                            </div>
-                        </div>
-                    </form>
+
+                        <button class="btn mt-4 btn-lg btn-block">登録</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,6 +123,5 @@
 <script src="../public/js/jquery-3.2.1.slim.min.js"></script>
 <script src="../public/js/popper.min.js"></script>
 <script src="../public/js/bootstrap.min.js"></script>
-
 </body>
 </html>
