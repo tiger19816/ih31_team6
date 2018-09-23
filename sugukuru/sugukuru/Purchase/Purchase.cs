@@ -31,5 +31,10 @@ namespace sugukuru.Purchase
         {
 
         }
+
+        private void btMenu3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
