@@ -55,8 +55,8 @@
             // 
             // btConfirm
             // 
-            this.btConfirm.Location = new System.Drawing.Point(706, 274);
-            this.btConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btConfirm.Location = new System.Drawing.Point(90, 274);
+            this.btConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btConfirm.Name = "btConfirm";
             this.btConfirm.Size = new System.Drawing.Size(58, 22);
             this.btConfirm.TabIndex = 2;
@@ -66,17 +66,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(89, 70);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 70);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(676, 120);
+            this.dataGridView1.Size = new System.Drawing.Size(1130, 183);
             this.dataGridView1.TabIndex = 3;
             // 
             // btRewrite
             // 
-            this.btRewrite.Location = new System.Drawing.Point(89, 274);
-            this.btRewrite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btRewrite.Location = new System.Drawing.Point(19, 274);
+            this.btRewrite.Margin = new System.Windows.Forms.Padding(2);
             this.btRewrite.Name = "btRewrite";
             this.btRewrite.Size = new System.Drawing.Size(58, 22);
             this.btRewrite.TabIndex = 4;

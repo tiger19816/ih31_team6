@@ -75,6 +75,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\BidInfoInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\BidInfoInput.Designer.cs">
+      <DependentUpon>BidInfoInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\Purchase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Purchase\BidInfoInput.resx">
+      <DependentUpon>BidInfoInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>

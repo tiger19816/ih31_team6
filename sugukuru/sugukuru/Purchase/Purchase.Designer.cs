@@ -32,7 +32,6 @@
             this.btBitInfo = new System.Windows.Forms.Button();
             this.btTransportInfo = new System.Windows.Forms.Button();
             this.btDisposalCarPurchase = new System.Windows.Forms.Button();
-            this.btBitCarList = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbOrderNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.tbCustomerNumber = new System.Windows.Forms.TextBox();
             this.btSearch = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btBidCarList = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.inheritableFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -92,7 +92,7 @@
             // 
             // inheritableFlowLayoutPanel1
             // 
-            this.inheritableFlowLayoutPanel1.Controls.Add(this.btBitCarList);
+            this.inheritableFlowLayoutPanel1.Controls.Add(this.btBidCarList);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btBitInfo);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btDisposalCarPurchase);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btBitCar);
@@ -101,10 +101,10 @@
             // btBitCar
             // 
             this.btBitCar.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btBitCar.Location = new System.Drawing.Point(2, 70);
-            this.btBitCar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btBitCar.Location = new System.Drawing.Point(2, 196);
+            this.btBitCar.Margin = new System.Windows.Forms.Padding(2);
             this.btBitCar.Name = "btBitCar";
-            this.btBitCar.Size = new System.Drawing.Size(73, 20);
+            this.btBitCar.Size = new System.Drawing.Size(94, 60);
             this.btBitCar.TabIndex = 0;
             this.btBitCar.Text = "落札車両登録";
             this.btBitCar.UseVisualStyleBackColor = true;
@@ -112,10 +112,10 @@
             // btBitInfo
             // 
             this.btBitInfo.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btBitInfo.Location = new System.Drawing.Point(2, 24);
-            this.btBitInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btBitInfo.Location = new System.Drawing.Point(2, 68);
+            this.btBitInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btBitInfo.Name = "btBitInfo";
-            this.btBitInfo.Size = new System.Drawing.Size(73, 20);
+            this.btBitInfo.Size = new System.Drawing.Size(94, 60);
             this.btBitInfo.TabIndex = 1;
             this.btBitInfo.Text = "入札情報登録";
             this.btBitInfo.UseVisualStyleBackColor = true;
@@ -123,10 +123,10 @@
             // btTransportInfo
             // 
             this.btTransportInfo.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btTransportInfo.Location = new System.Drawing.Point(2, 94);
-            this.btTransportInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btTransportInfo.Location = new System.Drawing.Point(2, 260);
+            this.btTransportInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btTransportInfo.Name = "btTransportInfo";
-            this.btTransportInfo.Size = new System.Drawing.Size(73, 18);
+            this.btTransportInfo.Size = new System.Drawing.Size(94, 60);
             this.btTransportInfo.TabIndex = 2;
             this.btTransportInfo.Text = "陸送情報登録";
             this.btTransportInfo.UseVisualStyleBackColor = true;
@@ -134,24 +134,13 @@
             // btDisposalCarPurchase
             // 
             this.btDisposalCarPurchase.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btDisposalCarPurchase.Location = new System.Drawing.Point(2, 48);
-            this.btDisposalCarPurchase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btDisposalCarPurchase.Location = new System.Drawing.Point(2, 132);
+            this.btDisposalCarPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btDisposalCarPurchase.Name = "btDisposalCarPurchase";
-            this.btDisposalCarPurchase.Size = new System.Drawing.Size(73, 18);
+            this.btDisposalCarPurchase.Size = new System.Drawing.Size(94, 60);
             this.btDisposalCarPurchase.TabIndex = 3;
             this.btDisposalCarPurchase.Text = "売却車両購入";
             this.btDisposalCarPurchase.UseVisualStyleBackColor = true;
-            // 
-            // btBitCarList
-            // 
-            this.btBitCarList.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btBitCarList.Location = new System.Drawing.Point(2, 2);
-            this.btBitCarList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btBitCarList.Name = "btBitCarList";
-            this.btBitCarList.Size = new System.Drawing.Size(70, 18);
-            this.btBitCarList.TabIndex = 0;
-            this.btBitCarList.Text = "落札車両一覧";
-            this.btBitCarList.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -167,7 +156,7 @@
             // tbOrderNumber
             // 
             this.tbOrderNumber.Location = new System.Drawing.Point(95, 26);
-            this.tbOrderNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOrderNumber.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrderNumber.Name = "tbOrderNumber";
             this.tbOrderNumber.Size = new System.Drawing.Size(79, 27);
             this.tbOrderNumber.TabIndex = 1;
@@ -186,7 +175,7 @@
             // 
             this.cbAuctionCompany.FormattingEnabled = true;
             this.cbAuctionCompany.Location = new System.Drawing.Point(320, 26);
-            this.cbAuctionCompany.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbAuctionCompany.Margin = new System.Windows.Forms.Padding(2);
             this.cbAuctionCompany.Name = "cbAuctionCompany";
             this.cbAuctionCompany.Size = new System.Drawing.Size(95, 24);
             this.cbAuctionCompany.TabIndex = 3;
@@ -226,7 +215,7 @@
             // 
             this.cbYaerStart.FormattingEnabled = true;
             this.cbYaerStart.Location = new System.Drawing.Point(97, 67);
-            this.cbYaerStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbYaerStart.Margin = new System.Windows.Forms.Padding(2);
             this.cbYaerStart.Name = "cbYaerStart";
             this.cbYaerStart.Size = new System.Drawing.Size(54, 24);
             this.cbYaerStart.TabIndex = 9;
@@ -235,7 +224,7 @@
             // 
             this.cbMonthStart.FormattingEnabled = true;
             this.cbMonthStart.Location = new System.Drawing.Point(178, 67);
-            this.cbMonthStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbMonthStart.Margin = new System.Windows.Forms.Padding(2);
             this.cbMonthStart.Name = "cbMonthStart";
             this.cbMonthStart.Size = new System.Drawing.Size(43, 24);
             this.cbMonthStart.TabIndex = 10;
@@ -244,7 +233,7 @@
             // 
             this.cbDayStart.FormattingEnabled = true;
             this.cbDayStart.Location = new System.Drawing.Point(248, 67);
-            this.cbDayStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDayStart.Margin = new System.Windows.Forms.Padding(2);
             this.cbDayStart.Name = "cbDayStart";
             this.cbDayStart.Size = new System.Drawing.Size(47, 24);
             this.cbDayStart.TabIndex = 11;
@@ -274,7 +263,7 @@
             // 
             this.cbYearEnd.FormattingEnabled = true;
             this.cbYearEnd.Location = new System.Drawing.Point(368, 67);
-            this.cbYearEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbYearEnd.Margin = new System.Windows.Forms.Padding(2);
             this.cbYearEnd.Name = "cbYearEnd";
             this.cbYearEnd.Size = new System.Drawing.Size(62, 24);
             this.cbYearEnd.TabIndex = 14;
@@ -293,7 +282,7 @@
             // 
             this.cbMonthEnd.FormattingEnabled = true;
             this.cbMonthEnd.Location = new System.Drawing.Point(457, 67);
-            this.cbMonthEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbMonthEnd.Margin = new System.Windows.Forms.Padding(2);
             this.cbMonthEnd.Name = "cbMonthEnd";
             this.cbMonthEnd.Size = new System.Drawing.Size(44, 24);
             this.cbMonthEnd.TabIndex = 16;
@@ -312,7 +301,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(528, 67);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(45, 24);
             this.comboBox1.TabIndex = 18;
@@ -340,7 +329,7 @@
             // tbListingNumber
             // 
             this.tbListingNumber.Location = new System.Drawing.Point(485, 27);
-            this.tbListingNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbListingNumber.Margin = new System.Windows.Forms.Padding(2);
             this.tbListingNumber.Name = "tbListingNumber";
             this.tbListingNumber.Size = new System.Drawing.Size(79, 27);
             this.tbListingNumber.TabIndex = 21;
@@ -358,7 +347,7 @@
             // tbCustomerNumber
             // 
             this.tbCustomerNumber.Location = new System.Drawing.Point(95, 108);
-            this.tbCustomerNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCustomerNumber.Margin = new System.Windows.Forms.Padding(2);
             this.tbCustomerNumber.Name = "tbCustomerNumber";
             this.tbCustomerNumber.Size = new System.Drawing.Size(79, 27);
             this.tbCustomerNumber.TabIndex = 23;
@@ -366,7 +355,7 @@
             // btSearch
             // 
             this.btSearch.Location = new System.Drawing.Point(699, 114);
-            this.btSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(58, 26);
             this.btSearch.TabIndex = 24;
@@ -376,12 +365,21 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 166);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 159);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(797, 214);
+            this.dataGridView1.Size = new System.Drawing.Size(1136, 214);
             this.dataGridView1.TabIndex = 25;
+            // 
+            // btBidCarList
+            // 
+            this.btBidCarList.Location = new System.Drawing.Point(3, 3);
+            this.btBidCarList.Name = "btBidCarList";
+            this.btBidCarList.Size = new System.Drawing.Size(94, 60);
+            this.btBidCarList.TabIndex = 4;
+            this.btBidCarList.Text = "落札車両一覧";
+            this.btBidCarList.UseVisualStyleBackColor = true;
             // 
             // Purchase
             // 
@@ -401,8 +399,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btBitCarList;
         private System.Windows.Forms.Button btBitInfo;
         private System.Windows.Forms.Button btDisposalCarPurchase;
         private System.Windows.Forms.Button btBitCar;
@@ -431,5 +427,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbDayStart;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btBidCarList;
     }
 }
