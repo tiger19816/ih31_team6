@@ -28,44 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btQuotation = new System.Windows.Forms.Button();
+            this.btRegistration = new System.Windows.Forms.Button();
+            this.btList = new System.Windows.Forms.Button();
             this.inheritableFlowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // inheritableFlowLayoutPanel1
             // 
-            this.inheritableFlowLayoutPanel1.Controls.Add(this.button4);
-            this.inheritableFlowLayoutPanel1.Controls.Add(this.button3);
-            this.inheritableFlowLayoutPanel1.Controls.Add(this.button2);
+            this.inheritableFlowLayoutPanel1.Controls.Add(this.btList);
+            this.inheritableFlowLayoutPanel1.Controls.Add(this.btRegistration);
+            this.inheritableFlowLayoutPanel1.Controls.Add(this.btQuotation);
             // 
-            // button2
+            // btQuotation
             // 
-            this.button2.Location = new System.Drawing.Point(3, 135);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 60);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "見積書発行";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btQuotation.Location = new System.Drawing.Point(3, 135);
+            this.btQuotation.Name = "btQuotation";
+            this.btQuotation.Size = new System.Drawing.Size(94, 60);
+            this.btQuotation.TabIndex = 1;
+            this.btQuotation.Text = "見積書発行";
+            this.btQuotation.UseVisualStyleBackColor = true;
+            this.btQuotation.Click += new System.EventHandler(this.btQuotation_Click);
             // 
-            // button3
+            // btRegistration
             // 
-            this.button3.Location = new System.Drawing.Point(3, 69);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "受注登録";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btRegistration.Location = new System.Drawing.Point(3, 69);
+            this.btRegistration.Name = "btRegistration";
+            this.btRegistration.Size = new System.Drawing.Size(94, 60);
+            this.btRegistration.TabIndex = 2;
+            this.btRegistration.Text = "受注登録";
+            this.btRegistration.UseVisualStyleBackColor = true;
+            this.btRegistration.Click += new System.EventHandler(this.btRegistration_Click);
             // 
-            // button4
+            // btList
             // 
-            this.button4.Location = new System.Drawing.Point(3, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 60);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "受注一覧";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btList.Location = new System.Drawing.Point(3, 3);
+            this.btList.Name = "btList";
+            this.btList.Size = new System.Drawing.Size(94, 60);
+            this.btList.TabIndex = 3;
+            this.btList.Text = "受注一覧";
+            this.btList.UseVisualStyleBackColor = true;
+            this.btList.Click += new System.EventHandler(this.btList_Click);
             // 
             // OrdersForm
             // 
@@ -82,8 +85,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btList;
+        private System.Windows.Forms.Button btRegistration;
+        private System.Windows.Forms.Button btQuotation;
     }
 }

@@ -28,10 +28,15 @@ namespace sugukuru.MainMenu
             {
                 ContentFM = new Customer.CustomerForm();
             }
-            this.Hide();
-            ContentFM.ShowDialog();
-            ContentFM.Dispose();
-            this.Show();
+            else if (sender.Equals(btClaimCollection))
+            {
+                ContentFM = new ClaimCollection.ClaimCollectionForm();
+            }
+            else if (sender.Equals(btPurchase))
+            {
+                ContentFM = new Purchase.Purchase();
+            }
+            ContentFM.Show();
         }
     }
 }
