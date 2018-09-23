@@ -16,5 +16,14 @@ namespace sugukuru.MainMenu
         {
             InitializeComponent();
         }
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+            Form MenuFM = new MainMenuForm();
+            this.Hide();
+            MenuFM.ShowDialog();
+            MenuFM.Dispose();
+            this.Show();
+        }
     }
 }
