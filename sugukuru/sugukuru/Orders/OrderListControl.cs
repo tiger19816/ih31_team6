@@ -1,25 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sugukuru.FormMaster
+namespace sugukuru.Orders
 {
-    public partial class OpenFormMST : sugukuru.FormMaster.BaseFormMST
+    public partial class OrderListControl : FormMaster.UserControlMST
     {
-        public OpenFormMST()
+        public OrderListControl()
         {
             InitializeComponent();
-        }
-
-        private void btClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

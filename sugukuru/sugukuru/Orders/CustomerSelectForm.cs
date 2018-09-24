@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sugukuru.FormMaster
+namespace sugukuru.Orders
 {
-    public partial class OpenFormMST : sugukuru.FormMaster.BaseFormMST
+    public partial class CustomerSelectForm : FormMaster.OpenFormMST
     {
-        public OpenFormMST()
+        public CustomerSelectForm()
         {
             InitializeComponent();
-        }
-
-        private void btClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

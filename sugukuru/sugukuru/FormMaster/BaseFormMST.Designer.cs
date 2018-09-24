@@ -31,6 +31,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsUserLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsUserName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsNoticeLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsNoticeCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,7 +40,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsUserLabel,
-            this.tsUserName});
+            this.tsUserName,
+            this.tsNoticeLabel,
+            this.tsNoticeCount});
             this.statusStrip1.Location = new System.Drawing.Point(0, 659);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1264, 22);
@@ -54,7 +58,22 @@
             // tsUserName
             // 
             this.tsUserName.Name = "tsUserName";
-            this.tsUserName.Size = new System.Drawing.Size(0, 17);
+            this.tsUserName.Size = new System.Drawing.Size(55, 17);
+            this.tsUserName.Text = "山田太郎";
+            // 
+            // tsNoticeLabel
+            // 
+            this.tsNoticeLabel.Name = "tsNoticeLabel";
+            this.tsNoticeLabel.Size = new System.Drawing.Size(1157, 17);
+            this.tsNoticeLabel.Spring = true;
+            this.tsNoticeLabel.Text = "新着通知：";
+            this.tsNoticeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tsNoticeCount
+            // 
+            this.tsNoticeCount.Name = "tsNoticeCount";
+            this.tsNoticeCount.Size = new System.Drawing.Size(25, 17);
+            this.tsNoticeCount.Text = "0件";
             // 
             // BaseFormMST
             // 
@@ -79,5 +98,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsUserLabel;
         private System.Windows.Forms.ToolStripStatusLabel tsUserName;
+        private System.Windows.Forms.ToolStripStatusLabel tsNoticeLabel;
+        private System.Windows.Forms.ToolStripStatusLabel tsNoticeCount;
     }
 }
