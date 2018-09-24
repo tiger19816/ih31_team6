@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Purchase\BidCarInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\BidCarInput.Designer.cs">
+      <DependentUpon>BidCarInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\BidCarList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +87,27 @@
     <Compile Include="Purchase\BidInfoInput.Designer.cs">
       <DependentUpon>BidInfoInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\DeliverySlip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\DeliverySlip.Designer.cs">
+      <DependentUpon>DeliverySlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\FixedPostProcessing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\FixedPostProcessing.Designer.cs">
+      <DependentUpon>FixedPostProcessing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\Purchase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Purchase\Purchase.Designer.cs">
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Purchase\BidCarInput.resx">
+      <DependentUpon>BidCarInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\BidCarList.resx">
       <DependentUpon>BidCarList.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +170,12 @@
     </Compile>
     <EmbeddedResource Include="Purchase\BidInfoInput.resx">
       <DependentUpon>BidInfoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\DeliverySlip.resx">
+      <DependentUpon>DeliverySlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\FixedPostProcessing.resx">
+      <DependentUpon>FixedPostProcessing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>

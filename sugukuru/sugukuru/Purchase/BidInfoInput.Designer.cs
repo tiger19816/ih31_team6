@@ -35,6 +35,7 @@
             this.cbAuction = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbListingNumber = new System.Windows.Forms.TextBox();
+            this.btFixed = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,10 +97,20 @@
             this.tbListingNumber.Size = new System.Drawing.Size(100, 19);
             this.tbListingNumber.TabIndex = 6;
             // 
+            // btFixed
+            // 
+            this.btFixed.Location = new System.Drawing.Point(29, 285);
+            this.btFixed.Name = "btFixed";
+            this.btFixed.Size = new System.Drawing.Size(75, 23);
+            this.btFixed.TabIndex = 7;
+            this.btFixed.Text = "確定";
+            this.btFixed.UseVisualStyleBackColor = true;
+            // 
             // BidInfoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btFixed);
             this.Controls.Add(this.tbListingNumber);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbAuction);
@@ -123,5 +134,6 @@
         private System.Windows.Forms.ComboBox cbAuction;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbListingNumber;
+        private System.Windows.Forms.Button btFixed;
     }
 }
