@@ -57,6 +57,7 @@
             this.btSearch = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btBidCarList = new System.Windows.Forms.Button();
+            this.btDeliverySlip = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.inheritableFlowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -92,6 +93,7 @@
             // 
             // inheritableFlowLayoutPanel1
             // 
+            this.inheritableFlowLayoutPanel1.Controls.Add(this.btDeliverySlip);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btBidCarList);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btBitInfo);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btDisposalCarPurchase);
@@ -101,7 +103,7 @@
             // btBitCar
             // 
             this.btBitCar.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btBitCar.Location = new System.Drawing.Point(2, 196);
+            this.btBitCar.Location = new System.Drawing.Point(2, 262);
             this.btBitCar.Margin = new System.Windows.Forms.Padding(2);
             this.btBitCar.Name = "btBitCar";
             this.btBitCar.Size = new System.Drawing.Size(94, 60);
@@ -112,7 +114,7 @@
             // btBitInfo
             // 
             this.btBitInfo.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btBitInfo.Location = new System.Drawing.Point(2, 68);
+            this.btBitInfo.Location = new System.Drawing.Point(2, 134);
             this.btBitInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btBitInfo.Name = "btBitInfo";
             this.btBitInfo.Size = new System.Drawing.Size(94, 60);
@@ -123,7 +125,7 @@
             // btTransportInfo
             // 
             this.btTransportInfo.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btTransportInfo.Location = new System.Drawing.Point(2, 260);
+            this.btTransportInfo.Location = new System.Drawing.Point(2, 326);
             this.btTransportInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btTransportInfo.Name = "btTransportInfo";
             this.btTransportInfo.Size = new System.Drawing.Size(94, 60);
@@ -134,7 +136,7 @@
             // btDisposalCarPurchase
             // 
             this.btDisposalCarPurchase.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btDisposalCarPurchase.Location = new System.Drawing.Point(2, 132);
+            this.btDisposalCarPurchase.Location = new System.Drawing.Point(2, 198);
             this.btDisposalCarPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btDisposalCarPurchase.Name = "btDisposalCarPurchase";
             this.btDisposalCarPurchase.Size = new System.Drawing.Size(94, 60);
@@ -374,12 +376,21 @@
             // 
             // btBidCarList
             // 
-            this.btBidCarList.Location = new System.Drawing.Point(3, 3);
+            this.btBidCarList.Location = new System.Drawing.Point(3, 69);
             this.btBidCarList.Name = "btBidCarList";
             this.btBidCarList.Size = new System.Drawing.Size(94, 60);
             this.btBidCarList.TabIndex = 4;
             this.btBidCarList.Text = "落札車両一覧";
             this.btBidCarList.UseVisualStyleBackColor = true;
+            // 
+            // btDeliverySlip
+            // 
+            this.btDeliverySlip.Location = new System.Drawing.Point(3, 3);
+            this.btDeliverySlip.Name = "btDeliverySlip";
+            this.btDeliverySlip.Size = new System.Drawing.Size(94, 60);
+            this.btDeliverySlip.TabIndex = 5;
+            this.btDeliverySlip.Text = "納品書発行";
+            this.btDeliverySlip.UseVisualStyleBackColor = true;
             // 
             // Purchase
             // 
@@ -428,5 +439,6 @@
         private System.Windows.Forms.ComboBox cbDayStart;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btBidCarList;
+        private System.Windows.Forms.Button btDeliverySlip;
     }
 }
