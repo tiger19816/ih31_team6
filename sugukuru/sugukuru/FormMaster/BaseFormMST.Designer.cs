@@ -31,10 +31,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsUserLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsUserName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsNoticeLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsNoticeCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsMySalesLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsMySales = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsNoticeLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsNoticeCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,19 +67,6 @@
             this.tsUserName.Text = "山田太郎";
             this.tsUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tsNoticeLabel
-            // 
-            this.tsNoticeLabel.Name = "tsNoticeLabel";
-            this.tsNoticeLabel.Size = new System.Drawing.Size(67, 17);
-            this.tsNoticeLabel.Text = "新着通知：";
-            this.tsNoticeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tsNoticeCount
-            // 
-            this.tsNoticeCount.Name = "tsNoticeCount";
-            this.tsNoticeCount.Size = new System.Drawing.Size(25, 17);
-            this.tsNoticeCount.Text = "0件";
-            // 
             // tsMySalesLabel
             // 
             this.tsMySalesLabel.Name = "tsMySalesLabel";
@@ -92,6 +79,19 @@
             this.tsMySales.Name = "tsMySales";
             this.tsMySales.Size = new System.Drawing.Size(52, 17);
             this.tsMySales.Text = "30,000円";
+            // 
+            // tsNoticeLabel
+            // 
+            this.tsNoticeLabel.Name = "tsNoticeLabel";
+            this.tsNoticeLabel.Size = new System.Drawing.Size(67, 17);
+            this.tsNoticeLabel.Text = "新着通知：";
+            this.tsNoticeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tsNoticeCount
+            // 
+            this.tsNoticeCount.Name = "tsNoticeCount";
+            this.tsNoticeCount.Size = new System.Drawing.Size(25, 17);
+            this.tsNoticeCount.Text = "0件";
             // 
             // BaseFormMST
             // 

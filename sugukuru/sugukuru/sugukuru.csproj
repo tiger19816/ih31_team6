@@ -94,6 +94,12 @@
     <Compile Include="Orders\EstimateControl.Designer.cs">
       <DependentUpon>EstimateControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders\OrderChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\OrderChangeForm.Designer.cs">
+      <DependentUpon>OrderChangeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Orders\OrderDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\EstimateControl.resx">
       <DependentUpon>EstimateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\OrderChangeForm.resx">
+      <DependentUpon>OrderChangeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\OrderDetailForm.resx">
       <DependentUpon>OrderDetailForm.cs</DependentUpon>

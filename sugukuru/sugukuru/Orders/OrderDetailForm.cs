@@ -24,5 +24,13 @@ namespace sugukuru.Orders
                 e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
             }
         }
+
+        private void btOrderChange_Click(object sender, EventArgs e)
+        {
+            Form OpenFM = new OrderChangeForm();
+            OpenFM.ShowDialog();
+            OpenFM.Dispose();
+            this.Show();
+        }
     }
 }
