@@ -105,6 +105,12 @@
     <Compile Include="Purchase\Purchase.Designer.cs">
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\Transport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\Transport.Designer.cs">
+      <DependentUpon>Transport.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Purchase\BidCarInput.resx">
       <DependentUpon>BidCarInput.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSample\SampleUserControl1.resx">
       <DependentUpon>SampleUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Transport.resx">
+      <DependentUpon>Transport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
