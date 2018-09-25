@@ -16,5 +16,10 @@ namespace sugukuru.ClaimCollection
         {
             InitializeComponent();
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            List<String> receiveList = IndividualSelectForm.ShowForm();
+        }
     }
 }

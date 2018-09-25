@@ -52,6 +52,12 @@
     <Compile Include="ClaimCollection\BulkClaim.Designer.cs">
       <DependentUpon>BulkClaim.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClaimCollection\BulkSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\BulkSelectForm.Designer.cs">
+      <DependentUpon>BulkSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClaimCollection\BulkReconciliation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="ClaimCollection\IndividualClaim.Designer.cs">
       <DependentUpon>IndividualClaim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimCollection\IndividualSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\IndividualSelectForm.Designer.cs">
+      <DependentUpon>IndividualSelectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClaimCollection\IndividualReconciliation.cs">
       <SubType>UserControl</SubType>
@@ -132,14 +144,23 @@
     <EmbeddedResource Include="ClaimCollection\BulkClaim.resx">
       <DependentUpon>BulkClaim.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\BulkSelectForm.resx">
+      <DependentUpon>BulkSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClaimCollection\BulkReconciliation.resx">
       <DependentUpon>BulkReconciliation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClaimCollection\CheckAccountReceivable.resx">
       <DependentUpon>CheckAccountReceivable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\ClaimCollectionForm.resx">
+      <DependentUpon>ClaimCollectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClaimCollection\IndividualClaim.resx">
       <DependentUpon>IndividualClaim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\IndividualSelectForm.resx">
+      <DependentUpon>IndividualSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClaimCollection\IndividualReconciliation.resx">
       <DependentUpon>IndividualReconciliation.cs</DependentUpon>
