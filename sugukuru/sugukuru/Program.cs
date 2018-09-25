@@ -16,7 +16,7 @@ namespace sugukuru
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClaimCollection.ClaimCollectionForm());
+            Application.Run(new MainMenu.MainMenuForm());
         }
     }
 }

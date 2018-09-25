@@ -46,6 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerListControl.Designer.cs">
+      <DependentUpon>CustomerListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerRegistrationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerRegistrationControl.Designer.cs">
+      <DependentUpon>CustomerRegistrationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster\UserControlMST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormMaster\UserControlMST.Designer.cs">
+      <DependentUpon>UserControlMST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu\MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu\MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\OrderRegistrationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Orders\OrderRegistrationControl.Designer.cs">
+      <DependentUpon>OrderRegistrationControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClaimCollection\BulkClaim.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,12 +171,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\BidInfoInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\BidInfoInput.Designer.cs">
+      <DependentUpon>BidInfoInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\Purchase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Purchase\Purchase.Designer.cs">
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Customer\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerListControl.resx">
+      <DependentUpon>CustomerListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerRegistrationControl.resx">
+      <DependentUpon>CustomerRegistrationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\UserControlMST.resx">
+      <DependentUpon>UserControlMST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\OrderRegistrationControl.resx">
+      <DependentUpon>OrderRegistrationControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClaimCollection\BulkClaim.resx">
       <DependentUpon>BulkClaim.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +291,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Purchase\BidInfoInput.resx">
+      <DependentUpon>BidInfoInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.inheritableFlowLayoutPanel1 = new InheritableFlowLayoutPanel();
+            this.inheritableFlowLayoutPanel1 = new sugukuru.InheritableFlowLayoutPanel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.miFile = new System.Windows.Forms.ToolStripMenuItem();
             this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
