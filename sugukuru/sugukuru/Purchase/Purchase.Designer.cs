@@ -356,7 +356,7 @@
             // 
             // btSearch
             // 
-            this.btSearch.Location = new System.Drawing.Point(699, 114);
+            this.btSearch.Location = new System.Drawing.Point(1091, 389);
             this.btSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(58, 26);

@@ -36,6 +36,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbListingNumber = new System.Windows.Forms.TextBox();
             this.btFixed = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(532, 72);
+            this.label4.Location = new System.Drawing.Point(504, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 5;
@@ -92,7 +95,7 @@
             // 
             // tbListingNumber
             // 
-            this.tbListingNumber.Location = new System.Drawing.Point(591, 70);
+            this.tbListingNumber.Location = new System.Drawing.Point(563, 70);
             this.tbListingNumber.Name = "tbListingNumber";
             this.tbListingNumber.Size = new System.Drawing.Size(100, 19);
             this.tbListingNumber.TabIndex = 6;
@@ -106,10 +109,38 @@
             this.btFixed.Text = "確定";
             this.btFixed.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(87, 115);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "入札日付";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(27, 184);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "入札金額";
+            // 
             // BidInfoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btFixed);
             this.Controls.Add(this.tbListingNumber);
             this.Controls.Add(this.label4);
@@ -135,5 +166,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbListingNumber;
         private System.Windows.Forms.Button btFixed;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
