@@ -16,5 +16,21 @@ namespace sugukuru.Orders
         {
             InitializeComponent();
         }
+
+        private void btEstimateAdd_Click(object sender, EventArgs e)
+        {
+            Form OpenFM = new EstimateAddForm();
+            OpenFM.ShowDialog();
+            OpenFM.Dispose();
+            this.Show();
+        }
+
+        private void btCustomerSearch_Click(object sender, EventArgs e)
+        {
+            Form OpenFM = new CustomerSelectForm();
+            OpenFM.ShowDialog();
+            OpenFM.Dispose();
+            this.Show();
+        }
     }
 }

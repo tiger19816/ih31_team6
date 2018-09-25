@@ -82,6 +82,12 @@
     <Compile Include="Orders\CustomerSelectForm.Designer.cs">
       <DependentUpon>CustomerSelectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders\EstimateAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\EstimateAddForm.Designer.cs">
+      <DependentUpon>EstimateAddForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Orders\EstimateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\CustomerSelectForm.resx">
       <DependentUpon>CustomerSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\EstimateAddForm.resx">
+      <DependentUpon>EstimateAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\EstimateControl.resx">
       <DependentUpon>EstimateControl.cs</DependentUpon>

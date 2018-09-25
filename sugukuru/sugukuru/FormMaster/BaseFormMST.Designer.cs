@@ -33,6 +33,8 @@
             this.tsUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsNoticeLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsNoticeCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsMySalesLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsMySales = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +43,8 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsUserLabel,
             this.tsUserName,
+            this.tsMySalesLabel,
+            this.tsMySales,
             this.tsNoticeLabel,
             this.tsNoticeCount});
             this.statusStrip1.Location = new System.Drawing.Point(0, 659);
@@ -58,14 +62,15 @@
             // tsUserName
             // 
             this.tsUserName.Name = "tsUserName";
-            this.tsUserName.Size = new System.Drawing.Size(55, 17);
+            this.tsUserName.Size = new System.Drawing.Size(929, 17);
+            this.tsUserName.Spring = true;
             this.tsUserName.Text = "山田太郎";
+            this.tsUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tsNoticeLabel
             // 
             this.tsNoticeLabel.Name = "tsNoticeLabel";
-            this.tsNoticeLabel.Size = new System.Drawing.Size(1157, 17);
-            this.tsNoticeLabel.Spring = true;
+            this.tsNoticeLabel.Size = new System.Drawing.Size(67, 17);
             this.tsNoticeLabel.Text = "新着通知：";
             this.tsNoticeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -74,6 +79,19 @@
             this.tsNoticeCount.Name = "tsNoticeCount";
             this.tsNoticeCount.Size = new System.Drawing.Size(25, 17);
             this.tsNoticeCount.Text = "0件";
+            // 
+            // tsMySalesLabel
+            // 
+            this.tsMySalesLabel.Name = "tsMySalesLabel";
+            this.tsMySalesLabel.Size = new System.Drawing.Size(79, 17);
+            this.tsMySalesLabel.Text = "当月売上高：";
+            // 
+            // tsMySales
+            // 
+            this.tsMySales.Margin = new System.Windows.Forms.Padding(0, 3, 30, 2);
+            this.tsMySales.Name = "tsMySales";
+            this.tsMySales.Size = new System.Drawing.Size(52, 17);
+            this.tsMySales.Text = "30,000円";
             // 
             // BaseFormMST
             // 
@@ -100,5 +118,7 @@
         private System.Windows.Forms.ToolStripStatusLabel tsUserName;
         private System.Windows.Forms.ToolStripStatusLabel tsNoticeLabel;
         private System.Windows.Forms.ToolStripStatusLabel tsNoticeCount;
+        private System.Windows.Forms.ToolStripStatusLabel tsMySalesLabel;
+        private System.Windows.Forms.ToolStripStatusLabel tsMySales;
     }
 }

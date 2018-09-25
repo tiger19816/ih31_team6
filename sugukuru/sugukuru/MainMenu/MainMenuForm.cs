@@ -38,5 +38,15 @@ namespace sugukuru.MainMenu
             }
             ContentFM.Show();
         }
+
+        private void btLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult res;
+            res = MessageBox.Show("ログアウトします。よろしいですか？", "確認", MessageBoxButtons.OKCancel);
+            if (res == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }
