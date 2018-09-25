@@ -42,10 +42,10 @@
             this.client_id,
             this.client_name,
             this.total_account_receivable});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(997, 470);
+            this.dataGridView1.Size = new System.Drawing.Size(957, 470);
             this.dataGridView1.TabIndex = 0;
             // 
             // client_id
