@@ -50,11 +50,11 @@
             this.car_name,
             this.claim_amount,
             this.payment_closing_day});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(1000, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(960, 425);
             this.dataGridView1.TabIndex = 0;
             // 
             // receipt_no

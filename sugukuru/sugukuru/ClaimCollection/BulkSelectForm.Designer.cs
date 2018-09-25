@@ -37,6 +37,15 @@
             this.order_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.addButton = new System.Windows.Forms.Button();
+            this.searchTextOrderDate = new System.Windows.Forms.TextBox();
+            this.searchTextClientName = new System.Windows.Forms.TextBox();
+            this.searchTextCarName = new System.Windows.Forms.TextBox();
+            this.searchTextEmployeeName = new System.Windows.Forms.TextBox();
+            this.retrievalButton = new System.Windows.Forms.Button();
+            this.searchOrderDate = new System.Windows.Forms.Label();
+            this.searchCarName = new System.Windows.Forms.Label();
+            this.searchClientName = new System.Windows.Forms.Label();
+            this.searchEmployeeName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,10 +60,10 @@
             this.order_date,
             this.order_type,
             this.select});
-            this.dataList.Location = new System.Drawing.Point(0, 0);
+            this.dataList.Location = new System.Drawing.Point(20, 200);
             this.dataList.Name = "dataList";
             this.dataList.RowTemplate.Height = 21;
-            this.dataList.Size = new System.Drawing.Size(1264, 514);
+            this.dataList.Size = new System.Drawing.Size(1224, 344);
             this.dataList.TabIndex = 5;
             // 
             // order_no
@@ -97,7 +106,7 @@
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.addButton.Location = new System.Drawing.Point(580, 520);
+            this.addButton.Location = new System.Drawing.Point(1152, 616);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(100, 40);
             this.addButton.TabIndex = 6;
@@ -105,17 +114,108 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // BulkClaimSelectForm
+            // searchTextOrderDate
+            // 
+            this.searchTextOrderDate.Location = new System.Drawing.Point(525, 117);
+            this.searchTextOrderDate.Name = "searchTextOrderDate";
+            this.searchTextOrderDate.Size = new System.Drawing.Size(281, 27);
+            this.searchTextOrderDate.TabIndex = 26;
+            // 
+            // searchTextClientName
+            // 
+            this.searchTextClientName.Location = new System.Drawing.Point(525, 57);
+            this.searchTextClientName.Name = "searchTextClientName";
+            this.searchTextClientName.Size = new System.Drawing.Size(281, 27);
+            this.searchTextClientName.TabIndex = 25;
+            // 
+            // searchTextCarName
+            // 
+            this.searchTextCarName.Location = new System.Drawing.Point(125, 117);
+            this.searchTextCarName.Name = "searchTextCarName";
+            this.searchTextCarName.Size = new System.Drawing.Size(281, 27);
+            this.searchTextCarName.TabIndex = 24;
+            // 
+            // searchTextEmployeeName
+            // 
+            this.searchTextEmployeeName.Location = new System.Drawing.Point(125, 57);
+            this.searchTextEmployeeName.Name = "searchTextEmployeeName";
+            this.searchTextEmployeeName.Size = new System.Drawing.Size(281, 27);
+            this.searchTextEmployeeName.TabIndex = 23;
+            // 
+            // retrievalButton
+            // 
+            this.retrievalButton.Location = new System.Drawing.Point(950, 100);
+            this.retrievalButton.Name = "retrievalButton";
+            this.retrievalButton.Size = new System.Drawing.Size(100, 40);
+            this.retrievalButton.TabIndex = 22;
+            this.retrievalButton.Text = "検索";
+            this.retrievalButton.UseVisualStyleBackColor = true;
+            // 
+            // searchOrderDate
+            // 
+            this.searchOrderDate.AutoSize = true;
+            this.searchOrderDate.Location = new System.Drawing.Point(460, 120);
+            this.searchOrderDate.Name = "searchOrderDate";
+            this.searchOrderDate.Size = new System.Drawing.Size(56, 16);
+            this.searchOrderDate.TabIndex = 21;
+            this.searchOrderDate.Text = "受注日付";
+            // 
+            // searchCarName
+            // 
+            this.searchCarName.AutoSize = true;
+            this.searchCarName.Location = new System.Drawing.Point(60, 120);
+            this.searchCarName.Name = "searchCarName";
+            this.searchCarName.Size = new System.Drawing.Size(32, 16);
+            this.searchCarName.TabIndex = 20;
+            this.searchCarName.Text = "車名";
+            // 
+            // searchClientName
+            // 
+            this.searchClientName.AutoSize = true;
+            this.searchClientName.Location = new System.Drawing.Point(460, 60);
+            this.searchClientName.Name = "searchClientName";
+            this.searchClientName.Size = new System.Drawing.Size(44, 16);
+            this.searchClientName.TabIndex = 19;
+            this.searchClientName.Text = "顧客名";
+            // 
+            // searchEmployeeName
+            // 
+            this.searchEmployeeName.AutoSize = true;
+            this.searchEmployeeName.Location = new System.Drawing.Point(60, 60);
+            this.searchEmployeeName.Name = "searchEmployeeName";
+            this.searchEmployeeName.Size = new System.Drawing.Size(56, 16);
+            this.searchEmployeeName.TabIndex = 18;
+            this.searchEmployeeName.Text = "担当者名";
+            // 
+            // BulkSelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 591);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.searchTextOrderDate);
+            this.Controls.Add(this.searchTextClientName);
+            this.Controls.Add(this.searchTextCarName);
+            this.Controls.Add(this.searchTextEmployeeName);
+            this.Controls.Add(this.retrievalButton);
+            this.Controls.Add(this.searchOrderDate);
+            this.Controls.Add(this.searchCarName);
+            this.Controls.Add(this.searchClientName);
+            this.Controls.Add(this.searchEmployeeName);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.dataList);
-            this.Name = "BulkClaimSelectForm";
+            this.Name = "BulkSelectForm";
             this.Text = "BulkClaimSelectForm";
             this.Controls.SetChildIndex(this.dataList, 0);
             this.Controls.SetChildIndex(this.addButton, 0);
+            this.Controls.SetChildIndex(this.searchEmployeeName, 0);
+            this.Controls.SetChildIndex(this.searchClientName, 0);
+            this.Controls.SetChildIndex(this.searchCarName, 0);
+            this.Controls.SetChildIndex(this.searchOrderDate, 0);
+            this.Controls.SetChildIndex(this.retrievalButton, 0);
+            this.Controls.SetChildIndex(this.searchTextEmployeeName, 0);
+            this.Controls.SetChildIndex(this.searchTextCarName, 0);
+            this.Controls.SetChildIndex(this.searchTextClientName, 0);
+            this.Controls.SetChildIndex(this.searchTextOrderDate, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,5 +233,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn order_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn order_type;
         private System.Windows.Forms.DataGridViewCheckBoxColumn select;
+        private System.Windows.Forms.TextBox searchTextOrderDate;
+        private System.Windows.Forms.TextBox searchTextClientName;
+        private System.Windows.Forms.TextBox searchTextCarName;
+        private System.Windows.Forms.TextBox searchTextEmployeeName;
+        private System.Windows.Forms.Button retrievalButton;
+        private System.Windows.Forms.Label searchOrderDate;
+        private System.Windows.Forms.Label searchCarName;
+        private System.Windows.Forms.Label searchClientName;
+        private System.Windows.Forms.Label searchEmployeeName;
     }
 }
