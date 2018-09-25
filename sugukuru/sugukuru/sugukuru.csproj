@@ -178,12 +178,6 @@
     <Compile Include="Purchase\BidCarInput.Designer.cs">
       <DependentUpon>BidCarInput.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase\BidCarList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchase\BidCarList.Designer.cs">
-      <DependentUpon>BidCarList.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMaster\BaseFormMST.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +201,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\BidCarList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\BidCarList.Designer.cs">
+      <DependentUpon>BidCarList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\BidInfoInput.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -294,6 +294,12 @@
     <EmbeddedResource Include="ClaimCollection\RepetitionClaim.resx">
       <DependentUpon>RepetitionClaim.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Purchase\Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\Transport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -302,9 +308,6 @@
     </Compile>
     <EmbeddedResource Include="Purchase\BidCarInput.resx">
       <DependentUpon>BidCarInput.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Purchase\BidCarList.resx">
-      <DependentUpon>BidCarList.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="FormMaster\OpenFormMST.cs">
       <SubType>Form</SubType>
@@ -363,6 +366,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Purchase\BidCarList.resx">
+      <DependentUpon>BidCarList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\BidInfoInput.resx">
       <DependentUpon>BidInfoInput.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSample\SampleUserControl1.resx">
       <DependentUpon>SampleUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Transport.resx">
       <DependentUpon>Transport.cs</DependentUpon>

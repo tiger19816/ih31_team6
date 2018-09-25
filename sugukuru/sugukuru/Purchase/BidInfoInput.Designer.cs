@@ -39,6 +39,9 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.rbSatisfied = new System.Windows.Forms.RadioButton();
+            this.rbUnsatisfied = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -102,7 +105,7 @@
             // 
             // btFixed
             // 
-            this.btFixed.Location = new System.Drawing.Point(29, 285);
+            this.btFixed.Location = new System.Drawing.Point(27, 222);
             this.btFixed.Name = "btFixed";
             this.btFixed.Size = new System.Drawing.Size(75, 23);
             this.btFixed.TabIndex = 7;
@@ -128,16 +131,48 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 184);
+            this.label6.Location = new System.Drawing.Point(27, 160);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 10;
             this.label6.Text = "入札金額";
             // 
+            // tbPrice
+            // 
+            this.tbPrice.Location = new System.Drawing.Point(87, 160);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(100, 19);
+            this.tbPrice.TabIndex = 11;
+            // 
+            // rbSatisfied
+            // 
+            this.rbSatisfied.AutoSize = true;
+            this.rbSatisfied.Location = new System.Drawing.Point(27, 200);
+            this.rbSatisfied.Name = "rbSatisfied";
+            this.rbSatisfied.Size = new System.Drawing.Size(71, 16);
+            this.rbSatisfied.TabIndex = 12;
+            this.rbSatisfied.TabStop = true;
+            this.rbSatisfied.Text = "入札成立";
+            this.rbSatisfied.UseVisualStyleBackColor = true;
+            // 
+            // rbUnsatisfied
+            // 
+            this.rbUnsatisfied.AutoSize = true;
+            this.rbUnsatisfied.Location = new System.Drawing.Point(105, 199);
+            this.rbUnsatisfied.Name = "rbUnsatisfied";
+            this.rbUnsatisfied.Size = new System.Drawing.Size(83, 16);
+            this.rbUnsatisfied.TabIndex = 13;
+            this.rbUnsatisfied.TabStop = true;
+            this.rbUnsatisfied.Text = "入札不成立";
+            this.rbUnsatisfied.UseVisualStyleBackColor = true;
+            // 
             // BidInfoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.rbUnsatisfied);
+            this.Controls.Add(this.rbSatisfied);
+            this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimePicker1);
@@ -169,5 +204,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.RadioButton rbSatisfied;
+        private System.Windows.Forms.RadioButton rbUnsatisfied;
     }
 }
