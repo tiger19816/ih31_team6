@@ -45,7 +45,7 @@
             this.btEstimate.Location = new System.Drawing.Point(3, 135);
             this.btEstimate.Name = "btEstimate";
             this.btEstimate.Size = new System.Drawing.Size(94, 60);
-            this.btEstimate.TabIndex = 1;
+            this.btEstimate.TabIndex = 3;
             this.btEstimate.Text = "見積書発行";
             this.btEstimate.UseVisualStyleBackColor = true;
             this.btEstimate.Click += new System.EventHandler(this.btEstimate_Click);
@@ -65,7 +65,7 @@
             this.btList.Location = new System.Drawing.Point(3, 3);
             this.btList.Name = "btList";
             this.btList.Size = new System.Drawing.Size(94, 60);
-            this.btList.TabIndex = 3;
+            this.btList.TabIndex = 1;
             this.btList.Text = "受注一覧";
             this.btList.UseVisualStyleBackColor = true;
             this.btList.Click += new System.EventHandler(this.btList_Click);

@@ -425,9 +425,9 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(35, 543);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(68, 16);
+            this.label21.Size = new System.Drawing.Size(44, 16);
             this.label21.TabIndex = 33;
-            this.label21.Text = "登録担当者";
+            this.label21.Text = "登録者";
             // 
             // textBox9
             // 
@@ -459,7 +459,7 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(68, 16);
             this.label22.TabIndex = 37;
-            this.label22.Text = "営業担当者";
+            this.label22.Text = "受注担当者";
             // 
             // OrderRegistrationControl
             // 

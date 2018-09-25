@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btDetail = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -92,17 +92,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(1120, 409);
             this.dataGridView1.TabIndex = 32;
             // 
-            // button2
+            // btDetail
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(1040, 573);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 53);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "詳細";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btDetail.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btDetail.Location = new System.Drawing.Point(1040, 573);
+            this.btDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btDetail.Name = "btDetail";
+            this.btDetail.Size = new System.Drawing.Size(117, 53);
+            this.btDetail.TabIndex = 31;
+            this.btDetail.Text = "詳細";
+            this.btDetail.UseVisualStyleBackColor = false;
+            this.btDetail.Click += new System.EventHandler(this.btDetail_Click);
             // 
             // groupBox1
             // 
@@ -487,7 +488,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btDetail);
             this.Controls.Add(this.label1);
             this.Name = "OrderListControl";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -504,7 +505,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btDetail;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;

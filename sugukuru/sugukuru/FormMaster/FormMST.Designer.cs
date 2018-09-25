@@ -33,12 +33,14 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.miFile = new System.Windows.Forms.ToolStripMenuItem();
             this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btClose = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(104, 27);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1160, 630);
             this.panel1.TabIndex = 3;
@@ -76,11 +78,22 @@
             this.終了ToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.終了ToolStripMenuItem.Text = "終了(&X)";
             // 
+            // btClose
+            // 
+            this.btClose.Location = new System.Drawing.Point(3, 593);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(94, 60);
+            this.btClose.TabIndex = 4;
+            this.btClose.Text = "閉じる";
+            this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
             // FormMST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btClose);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.inheritableFlowLayoutPanel1);
             this.Controls.Add(this.panel1);
@@ -89,6 +102,7 @@
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.inheritableFlowLayoutPanel1, 0);
             this.Controls.SetChildIndex(this.menuStrip2, 0);
+            this.Controls.SetChildIndex(this.btClose, 0);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -102,5 +116,6 @@
         private System.Windows.Forms.ToolStripMenuItem miFile;
         private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
         protected InheritableFlowLayoutPanel inheritableFlowLayoutPanel1;
+        private System.Windows.Forms.Button btClose;
     }
 }

@@ -16,5 +16,13 @@ namespace sugukuru.Orders
         {
             InitializeComponent();
         }
+
+        private void btDetail_Click(object sender, EventArgs e)
+        {
+            Form OpenFM = new OrderDetailForm();
+            OpenFM.ShowDialog();
+            OpenFM.Dispose();
+            this.Show();
+        }
     }
 }

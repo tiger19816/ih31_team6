@@ -43,7 +43,7 @@
             this.btRegistration.Location = new System.Drawing.Point(3, 69);
             this.btRegistration.Name = "btRegistration";
             this.btRegistration.Size = new System.Drawing.Size(94, 60);
-            this.btRegistration.TabIndex = 1;
+            this.btRegistration.TabIndex = 2;
             this.btRegistration.Text = "業者登録";
             this.btRegistration.UseVisualStyleBackColor = true;
             this.btRegistration.Click += new System.EventHandler(this.btRegistration_Click);
@@ -53,7 +53,7 @@
             this.btList.Location = new System.Drawing.Point(3, 3);
             this.btList.Name = "btList";
             this.btList.Size = new System.Drawing.Size(94, 60);
-            this.btList.TabIndex = 2;
+            this.btList.TabIndex = 1;
             this.btList.Text = "業者一覧";
             this.btList.UseVisualStyleBackColor = true;
             this.btList.Click += new System.EventHandler(this.btList_Click);

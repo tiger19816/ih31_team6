@@ -32,5 +32,13 @@ namespace sugukuru.Orders
             OpenFM.Dispose();
             this.Show();
         }
+
+        private void tblCustomer_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (e.Column == 0)
+            {
+                e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
+            }
+        }
     }
 }
