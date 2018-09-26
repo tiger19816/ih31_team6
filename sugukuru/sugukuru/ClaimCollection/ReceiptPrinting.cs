@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.ClaimCollection
 {
-    public partial class ReceiptPrinting : UserControl
+    public partial class ReceiptPrinting : FormMaster.UserControlMST
     {
         public ReceiptPrinting()
         {

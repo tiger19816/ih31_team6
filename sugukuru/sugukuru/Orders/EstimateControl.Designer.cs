@@ -41,16 +41,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btCustomerSearch = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -61,6 +57,10 @@
             this.btEstimateChange = new System.Windows.Forms.Button();
             this.btEstimateAdd = new System.Windows.Forms.Button();
             this.btEstimateDelete = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tblCustomer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -216,13 +216,6 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 42;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(139, 297);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 27);
-            this.textBox2.TabIndex = 41;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -231,15 +224,6 @@
             this.label21.Size = new System.Drawing.Size(68, 16);
             this.label21.TabIndex = 40;
             this.label21.Text = "見積担当者";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 300);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "見積日";
             // 
             // tableLayoutPanel1
             // 
@@ -251,13 +235,13 @@
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label10, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label20, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(768, 464);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(874, 464);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 102);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(273, 102);
             this.tableLayoutPanel1.TabIndex = 43;
             // 
             // label5
@@ -286,7 +270,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(117, 9);
+            this.label10.Location = new System.Drawing.Point(86, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 16);
             this.label10.TabIndex = 5;
@@ -301,22 +285,6 @@
             this.label20.Size = new System.Drawing.Size(44, 16);
             this.label20.TabIndex = 6;
             this.label20.Text = "消費税";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(139, 371);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 27);
-            this.textBox3.TabIndex = 45;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 374);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 16);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "見積日";
             // 
             // textBox4
             // 
@@ -369,10 +337,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(489, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(426, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(658, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(721, 328);
             this.dataGridView1.TabIndex = 52;
             // 
             // btEstimateChange
@@ -406,10 +374,45 @@
             this.btEstimateDelete.Text = "削除";
             this.btEstimateDelete.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 300);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "見積日";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(139, 297);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(171, 27);
+            this.textBox2.TabIndex = 41;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(426, 475);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(424, 91);
+            this.textBox3.TabIndex = 55;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(423, 456);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 16);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "備考";
+            // 
             // EstimateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.btEstimateDelete);
             this.Controls.Add(this.btEstimateAdd);
             this.Controls.Add(this.btEstimateChange);
@@ -420,8 +423,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
@@ -459,16 +460,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btCustomerSearch;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
@@ -479,5 +476,9 @@
         private System.Windows.Forms.Button btEstimateChange;
         private System.Windows.Forms.Button btEstimateAdd;
         private System.Windows.Forms.Button btEstimateDelete;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label6;
     }
 }

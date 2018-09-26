@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace sugukuru.ClaimCollection
 {
-    public partial class BulkClaim : UserControl
+    public partial class BulkClaim : FormMaster.UserControlMST
     {
         public BulkClaim()
         {
             InitializeComponent();
-        }
-
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            List<String> receiveList = BulkSelectForm.ShowForm();
-
-
-
-
         }
     }
 }

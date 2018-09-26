@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.ClaimCollection
 {
-    public partial class CheckAccountReceivable : UserControl
+    public partial class CheckAccountReceivable : FormMaster.UserControlMST
     {
         public CheckAccountReceivable()
         {

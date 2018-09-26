@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.ClaimCollection
 {
-    public partial class RepetitionClaim : UserControl
+    public partial class RepetitionClaim : FormMaster.UserControlMST
     {
         public RepetitionClaim()
         {

@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace sugukuru.ClaimCollection
 {
-    public partial class IndividualClaim : UserControl
+    public partial class IndividualClaim : FormMaster.UserControlMST
     {
         public IndividualClaim()
         {
             InitializeComponent();
-        }
-
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            List<String> receiveList = IndividualSelectForm.ShowForm();
-
-
-
-
         }
     }
 }

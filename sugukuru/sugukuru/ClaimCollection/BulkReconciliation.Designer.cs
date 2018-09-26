@@ -51,11 +51,11 @@
             this.car_name,
             this.claim_amount,
             this.payment_amount});
-            this.dataGridView1.Location = new System.Drawing.Point(20, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 115);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(960, 338);
+            this.dataGridView1.Size = new System.Drawing.Size(1120, 451);
             this.dataGridView1.TabIndex = 3;
             // 
             // order_no
@@ -91,9 +91,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(900, 427);
+            this.button1.Location = new System.Drawing.Point(1040, 570);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 40);
+            this.button1.Size = new System.Drawing.Size(117, 53);
             this.button1.TabIndex = 4;
             this.button1.Text = "消込";
             this.button1.UseVisualStyleBackColor = true;
@@ -101,9 +102,10 @@
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.addButton.Location = new System.Drawing.Point(443, 427);
+            this.addButton.Location = new System.Drawing.Point(517, 569);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(100, 40);
+            this.addButton.Size = new System.Drawing.Size(117, 53);
             this.addButton.TabIndex = 5;
             this.addButton.Text = "追加";
             this.addButton.UseVisualStyleBackColor = true;
@@ -113,7 +115,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 99;
@@ -121,14 +123,14 @@
             // 
             // BulkReconciliation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "BulkReconciliation";
-            this.Size = new System.Drawing.Size(1000, 470);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

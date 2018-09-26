@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.ClaimCollection
 {
-    public partial class IndividualReconciliation : UserControl
+    public partial class IndividualReconciliation : FormMaster.UserControlMST
     {
         public IndividualReconciliation()
         {
