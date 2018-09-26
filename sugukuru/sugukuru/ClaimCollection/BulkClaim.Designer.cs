@@ -37,6 +37,7 @@
             this.payment_closing_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,11 +51,11 @@
             this.car_name,
             this.claim_amount,
             this.payment_closing_day});
-            this.dataGridView1.Location = new System.Drawing.Point(20, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 86);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(960, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(960, 339);
             this.dataGridView1.TabIndex = 1;
             // 
             // receipt_no
@@ -108,10 +109,21 @@
             this.button1.Text = "印刷";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(240, 25);
+            this.label1.TabIndex = 99;
+            this.label1.Text = "請求書一括発行　発行一覧";
+            // 
             // BulkClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.dataGridView1);
@@ -119,6 +131,7 @@
             this.Size = new System.Drawing.Size(1000, 470);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,5 +146,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn claim_amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn payment_closing_day;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
