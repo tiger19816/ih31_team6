@@ -38,10 +38,6 @@
             this.inheritableFlowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
             // inheritableFlowLayoutPanel1
             // 
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btDisposalCar);
