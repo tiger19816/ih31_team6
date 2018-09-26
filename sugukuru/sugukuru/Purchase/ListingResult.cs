@@ -8,28 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace sugukuru.Purchase
 {
-    public partial class BidInfoInput : UserControl
+    public partial class ListingResult : UserControl
     {
-        public BidInfoInput()
+        public ListingResult()
         {
             InitializeComponent();
         }
 
-        private void btClose_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            
+
         }
 
-        private void btFixed_Click(object sender, EventArgs e)
+        private void ListingResult_Load(object sender, EventArgs e)
         {
-            //確定ボタン
            
-            
-    
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

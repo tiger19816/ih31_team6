@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class BidCarInput : FormMaster.OpenFormMST
+    public partial class ListingPostProcessing : UserControl
     {
-        public BidCarInput()
+        public ListingPostProcessing()
         {
             InitializeComponent();
         }

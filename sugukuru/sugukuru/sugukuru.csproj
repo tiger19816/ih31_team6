@@ -184,12 +184,6 @@
     <Compile Include="Purchase\BidCarInput.Designer.cs">
       <DependentUpon>BidCarInput.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase\BidCarList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchase\BidCarList.Designer.cs">
-      <DependentUpon>BidCarList.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMaster\BaseFormMST.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,11 +219,35 @@
     <Compile Include="Purchase\DeliverySlip.Designer.cs">
       <DependentUpon>DeliverySlip.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\Discount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\Discount.Designer.cs">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\FixedPostProcessing.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Purchase\FixedPostProcessing.Designer.cs">
       <DependentUpon>FixedPostProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ListingPostProcessing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListingPostProcessing.Designer.cs">
+      <DependentUpon>ListingPostProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ListingRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListingRegistration.Designer.cs">
+      <DependentUpon>ListingRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ListingResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListingResult.Designer.cs">
+      <DependentUpon>ListingResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchase\Purchase.cs">
       <SubType>Form</SubType>
@@ -303,6 +321,12 @@
     <EmbeddedResource Include="ClaimCollection\RepetitionClaim.resx">
       <DependentUpon>RepetitionClaim.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Purchase\Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\Transport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -311,9 +335,6 @@
     </Compile>
     <EmbeddedResource Include="Purchase\BidCarInput.resx">
       <DependentUpon>BidCarInput.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Purchase\BidCarList.resx">
-      <DependentUpon>BidCarList.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="FormMaster\OpenFormMST.cs">
       <SubType>Form</SubType>
@@ -378,8 +399,20 @@
     <EmbeddedResource Include="Purchase\DeliverySlip.resx">
       <DependentUpon>DeliverySlip.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Discount.resx">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\FixedPostProcessing.resx">
       <DependentUpon>FixedPostProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListingPostProcessing.resx">
+      <DependentUpon>ListingPostProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListingRegistration.resx">
+      <DependentUpon>ListingRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListingResult.resx">
+      <DependentUpon>ListingResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
@@ -389,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSample\SampleUserControl1.resx">
       <DependentUpon>SampleUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Transport.resx">
       <DependentUpon>Transport.cs</DependentUpon>
