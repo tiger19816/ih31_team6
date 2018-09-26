@@ -42,6 +42,9 @@
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rbPurchase = new System.Windows.Forms.RadioButton();
+            this.rbDisposal = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +78,7 @@
             // 
             // tbListingNumber
             // 
-            this.tbListingNumber.Location = new System.Drawing.Point(433, 19);
+            this.tbListingNumber.Location = new System.Drawing.Point(877, 17);
             this.tbListingNumber.Margin = new System.Windows.Forms.Padding(2);
             this.tbListingNumber.Name = "tbListingNumber";
             this.tbListingNumber.Size = new System.Drawing.Size(79, 19);
@@ -84,7 +87,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(376, 19);
+            this.label11.Location = new System.Drawing.Point(820, 21);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 12);
@@ -94,7 +97,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(273, 65);
+            this.label7.Location = new System.Drawing.Point(273, 63);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(17, 12);
@@ -114,7 +117,7 @@
             // cbAuctionCompany
             // 
             this.cbAuctionCompany.FormattingEnabled = true;
-            this.cbAuctionCompany.Location = new System.Drawing.Point(263, 16);
+            this.cbAuctionCompany.Location = new System.Drawing.Point(721, 18);
             this.cbAuctionCompany.Margin = new System.Windows.Forms.Padding(2);
             this.cbAuctionCompany.Name = "cbAuctionCompany";
             this.cbAuctionCompany.Size = new System.Drawing.Size(95, 20);
@@ -123,7 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(154, 16);
+            this.label2.Location = new System.Drawing.Point(612, 24);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 12);
@@ -132,7 +135,7 @@
             // 
             // tbOrderNumber
             // 
-            this.tbOrderNumber.Location = new System.Drawing.Point(67, 13);
+            this.tbOrderNumber.Location = new System.Drawing.Point(198, 11);
             this.tbOrderNumber.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrderNumber.Name = "tbOrderNumber";
             this.tbOrderNumber.Size = new System.Drawing.Size(79, 19);
@@ -141,7 +144,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 16);
+            this.label1.Location = new System.Drawing.Point(141, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
@@ -171,10 +174,45 @@
             this.dataGridView1.Size = new System.Drawing.Size(1120, 252);
             this.dataGridView1.TabIndex = 52;
             // 
+            // rbPurchase
+            // 
+            this.rbPurchase.AutoSize = true;
+            this.rbPurchase.Location = new System.Drawing.Point(988, 17);
+            this.rbPurchase.Name = "rbPurchase";
+            this.rbPurchase.Size = new System.Drawing.Size(58, 16);
+            this.rbPurchase.TabIndex = 53;
+            this.rbPurchase.TabStop = true;
+            this.rbPurchase.Text = "仕入れ";
+            this.rbPurchase.UseVisualStyleBackColor = true;
+            // 
+            // rbDisposal
+            // 
+            this.rbDisposal.AutoSize = true;
+            this.rbDisposal.Location = new System.Drawing.Point(988, 39);
+            this.rbDisposal.Name = "rbDisposal";
+            this.rbDisposal.Size = new System.Drawing.Size(47, 16);
+            this.rbDisposal.TabIndex = 54;
+            this.rbDisposal.TabStop = true;
+            this.rbDisposal.Text = "売却";
+            this.rbDisposal.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Location = new System.Drawing.Point(10, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 25);
+            this.label4.TabIndex = 55;
+            this.label4.Text = "登録車両検索";
+            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.rbDisposal);
+            this.Controls.Add(this.rbPurchase);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dtpStart);
@@ -212,5 +250,8 @@
         private System.Windows.Forms.DateTimePicker dtpStart;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.RadioButton rbPurchase;
+        private System.Windows.Forms.RadioButton rbDisposal;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -225,6 +225,24 @@
     <Compile Include="Purchase\FixedPostProcessing.Designer.cs">
       <DependentUpon>FixedPostProcessing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\ListingPostProcessing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListingPostProcessing.Designer.cs">
+      <DependentUpon>ListingPostProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ListingRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListingRegistration.Designer.cs">
+      <DependentUpon>ListingRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ListingResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListingResult.Designer.cs">
+      <DependentUpon>ListingResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\Purchase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +395,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\FixedPostProcessing.resx">
       <DependentUpon>FixedPostProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListingPostProcessing.resx">
+      <DependentUpon>ListingPostProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListingRegistration.resx">
+      <DependentUpon>ListingRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListingResult.resx">
+      <DependentUpon>ListingResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
