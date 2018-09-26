@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class BidCarList : UserControl
+    public partial class Discount : UserControl
     {
-        public BidCarList()
+        public Discount()
         {
             InitializeComponent();
         }

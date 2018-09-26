@@ -128,6 +128,7 @@
             this.btDisposalCar.TabIndex = 6;
             this.btDisposalCar.Text = "売却車両登録";
             this.btDisposalCar.UseVisualStyleBackColor = true;
+            this.btDisposalCar.Click += new System.EventHandler(this.btDisposalCar_Click);
             // 
             // Purchase
             // 

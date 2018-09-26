@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace sugukuru.Purchase
 {
     public partial class BidInfoInput : UserControl
@@ -15,6 +16,20 @@ namespace sugukuru.Purchase
         public BidInfoInput()
         {
             InitializeComponent();
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            
+        }
+
+        private void btFixed_Click(object sender, EventArgs e)
+        {
+            //確定ボタン
+           
+            
+    
         }
     }
 }

@@ -201,12 +201,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Purchase\BidCarList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Purchase\BidCarList.Designer.cs">
-      <DependentUpon>BidCarList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Purchase\BidInfoInput.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -218,6 +212,12 @@
     </Compile>
     <Compile Include="Purchase\DeliverySlip.Designer.cs">
       <DependentUpon>DeliverySlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Discount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\Discount.Designer.cs">
+      <DependentUpon>Discount.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchase\FixedPostProcessing.cs">
       <SubType>UserControl</SubType>
@@ -384,14 +384,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Purchase\BidCarList.resx">
-      <DependentUpon>BidCarList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\BidInfoInput.resx">
       <DependentUpon>BidInfoInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\DeliverySlip.resx">
       <DependentUpon>DeliverySlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Discount.resx">
+      <DependentUpon>Discount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\FixedPostProcessing.resx">
       <DependentUpon>FixedPostProcessing.cs</DependentUpon>

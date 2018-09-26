@@ -18,7 +18,7 @@ namespace sugukuru.Purchase
         public static DeliverySlip DeliverySlip;
         public static BidCarInput BidCarInput;
         public static Transport Transport;
-
+        public static ListingRegistration listingRegistration;
 
 
 
@@ -88,10 +88,10 @@ namespace sugukuru.Purchase
 
         private void btBitCar_Click(object sender, EventArgs e)
         {
-            BidCarInput = new BidCarInput();
-            panel1.Controls.Add(BidCarInput);
-            BidCarInput.Visible = true;
-            ctr1.Visible = false;
+           // BidCarInput = new BidCarInput();
+            //panel1.Controls.Add(BidCarInput);
+            //BidCarInput.Visible = true;
+            //ctr1.Visible = false;
 
         }
 
@@ -104,6 +104,15 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
 
 
+        }
+
+        private void btDisposalCar_Click(object sender, EventArgs e)
+        {
+            //売却・出品車両登録
+            listingRegistration = new ListingRegistration();
+            panel1.Controls.Add(listingRegistration);
+            listingRegistration.Visible = true;
+            ctr1.Visible = false;
         }
     }
 }

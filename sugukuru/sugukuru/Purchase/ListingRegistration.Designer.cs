@@ -47,6 +47,9 @@
             this.cbRep = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btRegistration = new System.Windows.Forms.Button();
+            this.rbUnsatisfied = new System.Windows.Forms.RadioButton();
+            this.rbSatisfied = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -203,17 +206,51 @@
             // 
             // btRegistration
             // 
-            this.btRegistration.Location = new System.Drawing.Point(1053, 140);
+            this.btRegistration.Location = new System.Drawing.Point(15, 424);
             this.btRegistration.Name = "btRegistration";
             this.btRegistration.Size = new System.Drawing.Size(75, 23);
             this.btRegistration.TabIndex = 107;
             this.btRegistration.Text = "確定";
             this.btRegistration.UseVisualStyleBackColor = true;
             // 
+            // rbUnsatisfied
+            // 
+            this.rbUnsatisfied.AutoSize = true;
+            this.rbUnsatisfied.Location = new System.Drawing.Point(93, 180);
+            this.rbUnsatisfied.Name = "rbUnsatisfied";
+            this.rbUnsatisfied.Size = new System.Drawing.Size(83, 16);
+            this.rbUnsatisfied.TabIndex = 109;
+            this.rbUnsatisfied.TabStop = true;
+            this.rbUnsatisfied.Text = "入札不成立";
+            this.rbUnsatisfied.UseVisualStyleBackColor = true;
+            // 
+            // rbSatisfied
+            // 
+            this.rbSatisfied.AutoSize = true;
+            this.rbSatisfied.Location = new System.Drawing.Point(15, 181);
+            this.rbSatisfied.Name = "rbSatisfied";
+            this.rbSatisfied.Size = new System.Drawing.Size(71, 16);
+            this.rbSatisfied.TabIndex = 108;
+            this.rbSatisfied.TabStop = true;
+            this.rbSatisfied.Text = "入札成立";
+            this.rbSatisfied.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 231);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 111;
+            this.label8.Text = "出品価格";
+            // 
             // ListingRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.rbUnsatisfied);
+            this.Controls.Add(this.rbSatisfied);
             this.Controls.Add(this.btRegistration);
             this.Controls.Add(this.cbRep);
             this.Controls.Add(this.label12);
@@ -261,5 +298,8 @@
         private System.Windows.Forms.ComboBox cbRep;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btRegistration;
+        private System.Windows.Forms.RadioButton rbUnsatisfied;
+        private System.Windows.Forms.RadioButton rbSatisfied;
+        private System.Windows.Forms.Label label8;
     }
 }
