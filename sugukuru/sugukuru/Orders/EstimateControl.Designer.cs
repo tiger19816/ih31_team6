@@ -115,6 +115,7 @@
             this.tblCustomer.Size = new System.Drawing.Size(379, 168);
             this.tblCustomer.TabIndex = 36;
             this.tblCustomer.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
+            this.tblCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.tblCustomer_Paint);
             // 
             // label3
             // 
@@ -188,6 +189,7 @@
             this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 35;
             this.label2.Text = "顧客ID";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
             // 
@@ -196,6 +198,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(116, 27);
             this.textBox1.TabIndex = 34;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btCustomerSearch
             // 
@@ -342,6 +345,7 @@
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(721, 328);
             this.dataGridView1.TabIndex = 52;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btEstimateChange
             // 
@@ -352,6 +356,7 @@
             this.btEstimateChange.TabIndex = 53;
             this.btEstimateChange.Text = "変更";
             this.btEstimateChange.UseVisualStyleBackColor = true;
+            this.btEstimateChange.Click += new System.EventHandler(this.btEstimateChange_Click);
             // 
             // btEstimateAdd
             // 
@@ -373,6 +378,7 @@
             this.btEstimateDelete.TabIndex = 54;
             this.btEstimateDelete.Text = "削除";
             this.btEstimateDelete.UseVisualStyleBackColor = true;
+            this.btEstimateDelete.Click += new System.EventHandler(this.btEstimateDelete_Click);
             // 
             // label4
             // 
