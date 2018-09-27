@@ -26,5 +26,10 @@ namespace sugukuru.Purchase
         {
 
         }
+
+        private void ListingRegistration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

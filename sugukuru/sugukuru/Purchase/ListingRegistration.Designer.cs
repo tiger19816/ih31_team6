@@ -50,6 +50,8 @@
             this.rbUnsatisfied = new System.Windows.Forms.RadioButton();
             this.rbSatisfied = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -244,10 +246,28 @@
             this.label8.TabIndex = 111;
             this.label8.Text = "出品価格";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(75, 231);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 19);
+            this.textBox1.TabIndex = 112;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(207, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 113;
+            this.button1.Text = "検索";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ListingRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.rbUnsatisfied);
             this.Controls.Add(this.rbSatisfied);
@@ -272,6 +292,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ListingRegistration";
             this.Size = new System.Drawing.Size(1160, 630);
+            this.Load += new System.EventHandler(this.ListingRegistration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,5 +322,7 @@
         private System.Windows.Forms.RadioButton rbUnsatisfied;
         private System.Windows.Forms.RadioButton rbSatisfied;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

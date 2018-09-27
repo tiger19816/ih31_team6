@@ -46,6 +46,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +83,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 216);
+            this.textBox1.Location = new System.Drawing.Point(77, 189);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 19);
             this.textBox1.TabIndex = 114;
@@ -90,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(117, 220);
+            this.label2.Location = new System.Drawing.Point(13, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 113;
@@ -98,7 +99,7 @@
             // 
             // tbOrderID
             // 
-            this.tbOrderID.Location = new System.Drawing.Point(207, 125);
+            this.tbOrderID.Location = new System.Drawing.Point(59, 108);
             this.tbOrderID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbOrderID.Name = "tbOrderID";
             this.tbOrderID.Size = new System.Drawing.Size(116, 19);
@@ -107,7 +108,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(117, 129);
+            this.label6.Location = new System.Drawing.Point(13, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 12);
             this.label6.TabIndex = 111;
@@ -115,7 +116,7 @@
             // 
             // tbListing
             // 
-            this.tbListing.Location = new System.Drawing.Point(208, 158);
+            this.tbListing.Location = new System.Drawing.Point(77, 147);
             this.tbListing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbListing.Name = "tbListing";
             this.tbListing.Size = new System.Drawing.Size(116, 19);
@@ -124,7 +125,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(115, 167);
+            this.label5.Location = new System.Drawing.Point(13, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 109;
@@ -211,10 +212,20 @@
             this.listBox1.Size = new System.Drawing.Size(120, 124);
             this.listBox1.TabIndex = 115;
             // 
+            // btSearch
+            // 
+            this.btSearch.Location = new System.Drawing.Point(185, 108);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(75, 23);
+            this.btSearch.TabIndex = 123;
+            this.btSearch.Text = "検索";
+            this.btSearch.UseVisualStyleBackColor = true;
+            // 
             // ListingPostProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btSearch);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button4);
@@ -260,5 +271,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btSearch;
     }
 }

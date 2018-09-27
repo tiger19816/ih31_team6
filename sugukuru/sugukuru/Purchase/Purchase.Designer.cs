@@ -94,6 +94,7 @@
             this.btDisposalCarPurchase.TabIndex = 3;
             this.btDisposalCarPurchase.Text = "売却車両購入";
             this.btDisposalCarPurchase.UseVisualStyleBackColor = true;
+            this.btDisposalCarPurchase.Click += new System.EventHandler(this.btDisposalCarPurchase_Click);
             // 
             // btBidCarList
             // 
@@ -103,6 +104,7 @@
             this.btBidCarList.TabIndex = 4;
             this.btBidCarList.Text = "登録車両一覧";
             this.btBidCarList.UseVisualStyleBackColor = true;
+            this.btBidCarList.Click += new System.EventHandler(this.btBidCarList_Click);
             // 
             // btDeliverySlip
             // 

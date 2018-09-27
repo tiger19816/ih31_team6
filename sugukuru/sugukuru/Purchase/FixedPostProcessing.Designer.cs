@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.rbPayment = new System.Windows.Forms.RadioButton();
             this.rbUnpaid = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,16 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btFixed = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "落札確定済み";
             // 
             // rbPayment
             // 
@@ -210,10 +202,31 @@
             this.btFixed.Text = "確定";
             this.btFixed.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.Location = new System.Drawing.Point(10, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(126, 25);
+            this.label7.TabIndex = 112;
+            this.label7.Text = "落札確定済み";
+            // 
+            // btSearch
+            // 
+            this.btSearch.Location = new System.Drawing.Point(227, 143);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(75, 23);
+            this.btSearch.TabIndex = 113;
+            this.btSearch.Text = "検索";
+            this.btSearch.UseVisualStyleBackColor = true;
+            // 
             // FixedPostProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btSearch);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btFixed);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -231,7 +244,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.rbUnpaid);
             this.Controls.Add(this.rbPayment);
-            this.Controls.Add(this.label1);
             this.Name = "FixedPostProcessing";
             this.Size = new System.Drawing.Size(1160, 630);
             this.Load += new System.EventHandler(this.FixedPostProcessing_Load);
@@ -241,8 +253,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rbPayment;
         private System.Windows.Forms.RadioButton rbUnpaid;
         private System.Windows.Forms.TextBox textBox1;
@@ -260,5 +270,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btFixed;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btSearch;
     }
 }
