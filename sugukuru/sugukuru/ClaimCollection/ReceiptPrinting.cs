@@ -16,5 +16,13 @@ namespace sugukuru.ClaimCollection
         {
             InitializeComponent();
         }
+
+        private void btCustomerSearch_Click(object sender, EventArgs e)
+        {
+            Form OpenFM = new sugukuru.Orders.CustomerSelectForm();
+            OpenFM.ShowDialog();
+            OpenFM.Dispose();
+            this.Show();
+        }
     }
 }
