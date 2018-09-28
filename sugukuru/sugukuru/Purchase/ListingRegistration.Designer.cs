@@ -67,26 +67,26 @@
             // 
             // tbModelYear
             // 
-            this.tbModelYear.Location = new System.Drawing.Point(833, 65);
+            this.tbModelYear.Location = new System.Drawing.Point(844, 65);
             this.tbModelYear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbModelYear.Name = "tbModelYear";
-            this.tbModelYear.Size = new System.Drawing.Size(116, 27);
+            this.tbModelYear.Size = new System.Drawing.Size(140, 27);
             this.tbModelYear.TabIndex = 100;
             // 
             // tbCarName
             // 
-            this.tbCarName.Location = new System.Drawing.Point(482, 111);
+            this.tbCarName.Location = new System.Drawing.Point(493, 111);
             this.tbCarName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCarName.Name = "tbCarName";
-            this.tbCarName.Size = new System.Drawing.Size(199, 27);
+            this.tbCarName.Size = new System.Drawing.Size(140, 27);
             this.tbCarName.TabIndex = 99;
             // 
             // tbModel
             // 
-            this.tbModel.Location = new System.Drawing.Point(482, 65);
+            this.tbModel.Location = new System.Drawing.Point(493, 65);
             this.tbModel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbModel.Name = "tbModel";
-            this.tbModel.Size = new System.Drawing.Size(199, 27);
+            this.tbModel.Size = new System.Drawing.Size(140, 27);
             this.tbModel.TabIndex = 98;
             // 
             // label5
@@ -101,7 +101,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(388, 115);
+            this.label13.Location = new System.Drawing.Point(420, 115);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(32, 16);
             this.label13.TabIndex = 96;
@@ -110,7 +110,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(388, 69);
+            this.label14.Location = new System.Drawing.Point(420, 69);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(32, 16);
             this.label14.TabIndex = 95;
@@ -118,7 +118,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(241, 111);
+            this.button4.Location = new System.Drawing.Point(281, 110);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 31);
@@ -128,18 +128,18 @@
             // 
             // tbCustomerID
             // 
-            this.tbCustomerID.Location = new System.Drawing.Point(108, 111);
+            this.tbCustomerID.Location = new System.Drawing.Point(135, 112);
             this.tbCustomerID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCustomerID.Name = "tbCustomerID";
-            this.tbCustomerID.Size = new System.Drawing.Size(116, 27);
+            this.tbCustomerID.Size = new System.Drawing.Size(140, 27);
             this.tbCustomerID.TabIndex = 93;
             // 
             // tbOrderID
             // 
-            this.tbOrderID.Location = new System.Drawing.Point(108, 65);
+            this.tbOrderID.Location = new System.Drawing.Point(135, 66);
             this.tbOrderID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbOrderID.Name = "tbOrderID";
-            this.tbOrderID.Size = new System.Drawing.Size(116, 27);
+            this.tbOrderID.Size = new System.Drawing.Size(140, 27);
             this.tbOrderID.TabIndex = 92;
             this.tbOrderID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -164,7 +164,7 @@
             // cbRep
             // 
             this.cbRep.FormattingEnabled = true;
-            this.cbRep.Location = new System.Drawing.Point(108, 163);
+            this.cbRep.Location = new System.Drawing.Point(135, 164);
             this.cbRep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbRep.Name = "cbRep";
             this.cbRep.Size = new System.Drawing.Size(140, 24);
@@ -190,15 +190,15 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(87, 277);
+            this.textBox1.Location = new System.Drawing.Point(135, 278);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 27);
+            this.textBox1.Size = new System.Drawing.Size(140, 27);
             this.textBox1.TabIndex = 112;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(241, 65);
+            this.button1.Location = new System.Drawing.Point(281, 64);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 31);
@@ -217,10 +217,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(87, 337);
+            this.textBox2.Location = new System.Drawing.Point(135, 338);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(116, 27);
+            this.textBox2.Size = new System.Drawing.Size(140, 27);
             this.textBox2.TabIndex = 115;
             // 
             // label9
@@ -234,16 +234,16 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(82, 432);
+            this.dateTimePicker1.Location = new System.Drawing.Point(135, 433);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(233, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(176, 27);
             this.dateTimePicker1.TabIndex = 118;
             // 
             // cbAuction
             // 
             this.cbAuction.FormattingEnabled = true;
-            this.cbAuction.Location = new System.Drawing.Point(126, 219);
+            this.cbAuction.Location = new System.Drawing.Point(135, 220);
             this.cbAuction.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbAuction.Name = "cbAuction";
             this.cbAuction.Size = new System.Drawing.Size(140, 24);
