@@ -53,6 +53,7 @@
             this.btData.TabIndex = 160;
             this.btData.Text = "データを選択してもらう";
             this.btData.UseVisualStyleBackColor = true;
+            this.btData.Click += new System.EventHandler(this.btData_Click);
             // 
             // textBox1
             // 

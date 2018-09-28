@@ -55,6 +55,7 @@
             this.btData.TabIndex = 146;
             this.btData.Text = "データを選択してもらう";
             this.btData.UseVisualStyleBackColor = true;
+            this.btData.Click += new System.EventHandler(this.btData_Click);
             // 
             // dateTimePicker1
             // 
@@ -212,7 +213,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Name = "FixedProcessingResult";
-            this.Size = new System.Drawing.Size(1160, 630);
+            this.Size = new System.Drawing.Size(1129, 515);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

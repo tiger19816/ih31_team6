@@ -228,7 +228,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Name = "BidCarFixed";
-            this.Size = new System.Drawing.Size(1160, 630);
+            this.Size = new System.Drawing.Size(1129, 515);
             this.Load += new System.EventHandler(this.BidCarFixed_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

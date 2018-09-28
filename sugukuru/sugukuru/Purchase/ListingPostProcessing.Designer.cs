@@ -303,7 +303,7 @@
             this.Controls.Add(this.rbPayment);
             this.Controls.Add(this.label1);
             this.Name = "ListingPostProcessing";
-            this.Size = new System.Drawing.Size(1160, 630);
+            this.Size = new System.Drawing.Size(1129, 515);
             this.ResumeLayout(false);
             this.PerformLayout();
 

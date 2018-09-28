@@ -99,7 +99,8 @@ namespace sugukuru.Purchase
 
         private void btData_Click(object sender, EventArgs e)
         {
-
+            BidResult b = new BidResult();
+            b.Show();
         }
     }
 }
