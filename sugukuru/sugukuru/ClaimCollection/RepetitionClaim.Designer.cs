@@ -48,10 +48,39 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.whiler = new System.Windows.Forms.Label();
+            this.overDay = new System.Windows.Forms.Label();
+            this.overMonth = new System.Windows.Forms.Label();
+            this.overYear = new System.Windows.Forms.Label();
+            this.comboBoxOverDay = new System.Windows.Forms.ComboBox();
+            this.comboBoxOverMonth = new System.Windows.Forms.ComboBox();
+            this.comboBoxOverYear = new System.Windows.Forms.ComboBox();
+            this.underDay = new System.Windows.Forms.Label();
+            this.underMonth = new System.Windows.Forms.Label();
+            this.underYear = new System.Windows.Forms.Label();
+            this.comboBoxUnderDay = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnderMonth = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnderYear = new System.Windows.Forms.ComboBox();
+            this.searchDate = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tblCustomer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -78,10 +107,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 104);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 153);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(1120, 280);
+            this.dataGridView1.Size = new System.Drawing.Size(1120, 289);
             this.dataGridView1.TabIndex = 101;
             // 
             // tblCustomer
@@ -96,7 +125,7 @@
             this.tblCustomer.Controls.Add(this.label15, 1, 0);
             this.tblCustomer.Controls.Add(this.label17, 0, 3);
             this.tblCustomer.Controls.Add(this.label18, 0, 4);
-            this.tblCustomer.Location = new System.Drawing.Point(17, 390);
+            this.tblCustomer.Location = new System.Drawing.Point(15, 448);
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.RowCount = 5;
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
@@ -187,7 +216,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(402, 390);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(400, 448);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
@@ -270,7 +299,7 @@
             // 
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(838, 415);
+            this.groupBox1.Location = new System.Drawing.Point(846, 448);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(224, 116);
             this.groupBox1.TabIndex = 104;
@@ -299,10 +328,281 @@
             this.radioButton1.Text = "直ちに請求する（督促）";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // whiler
+            // 
+            this.whiler.AutoSize = true;
+            this.whiler.Location = new System.Drawing.Point(380, 51);
+            this.whiler.Name = "whiler";
+            this.whiler.Size = new System.Drawing.Size(17, 16);
+            this.whiler.TabIndex = 118;
+            this.whiler.Text = "~";
+            // 
+            // overDay
+            // 
+            this.overDay.AutoSize = true;
+            this.overDay.Location = new System.Drawing.Point(669, 51);
+            this.overDay.Name = "overDay";
+            this.overDay.Size = new System.Drawing.Size(20, 16);
+            this.overDay.TabIndex = 117;
+            this.overDay.Text = "日";
+            // 
+            // overMonth
+            // 
+            this.overMonth.AutoSize = true;
+            this.overMonth.Location = new System.Drawing.Point(593, 51);
+            this.overMonth.Name = "overMonth";
+            this.overMonth.Size = new System.Drawing.Size(20, 16);
+            this.overMonth.TabIndex = 116;
+            this.overMonth.Text = "月";
+            // 
+            // overYear
+            // 
+            this.overYear.AutoSize = true;
+            this.overYear.Location = new System.Drawing.Point(517, 51);
+            this.overYear.Name = "overYear";
+            this.overYear.Size = new System.Drawing.Size(20, 16);
+            this.overYear.TabIndex = 115;
+            this.overYear.Text = "年";
+            // 
+            // comboBoxOverDay
+            // 
+            this.comboBoxOverDay.FormattingEnabled = true;
+            this.comboBoxOverDay.Location = new System.Drawing.Point(619, 48);
+            this.comboBoxOverDay.Name = "comboBoxOverDay";
+            this.comboBoxOverDay.Size = new System.Drawing.Size(44, 24);
+            this.comboBoxOverDay.TabIndex = 114;
+            // 
+            // comboBoxOverMonth
+            // 
+            this.comboBoxOverMonth.FormattingEnabled = true;
+            this.comboBoxOverMonth.Location = new System.Drawing.Point(544, 48);
+            this.comboBoxOverMonth.Name = "comboBoxOverMonth";
+            this.comboBoxOverMonth.Size = new System.Drawing.Size(44, 24);
+            this.comboBoxOverMonth.TabIndex = 113;
+            // 
+            // comboBoxOverYear
+            // 
+            this.comboBoxOverYear.FormattingEnabled = true;
+            this.comboBoxOverYear.Location = new System.Drawing.Point(417, 48);
+            this.comboBoxOverYear.Name = "comboBoxOverYear";
+            this.comboBoxOverYear.Size = new System.Drawing.Size(94, 24);
+            this.comboBoxOverYear.TabIndex = 112;
+            // 
+            // underDay
+            // 
+            this.underDay.AutoSize = true;
+            this.underDay.Location = new System.Drawing.Point(345, 51);
+            this.underDay.Name = "underDay";
+            this.underDay.Size = new System.Drawing.Size(20, 16);
+            this.underDay.TabIndex = 111;
+            this.underDay.Text = "日";
+            // 
+            // underMonth
+            // 
+            this.underMonth.AutoSize = true;
+            this.underMonth.Location = new System.Drawing.Point(269, 51);
+            this.underMonth.Name = "underMonth";
+            this.underMonth.Size = new System.Drawing.Size(20, 16);
+            this.underMonth.TabIndex = 110;
+            this.underMonth.Text = "月";
+            // 
+            // underYear
+            // 
+            this.underYear.AutoSize = true;
+            this.underYear.Location = new System.Drawing.Point(193, 51);
+            this.underYear.Name = "underYear";
+            this.underYear.Size = new System.Drawing.Size(20, 16);
+            this.underYear.TabIndex = 109;
+            this.underYear.Text = "年";
+            // 
+            // comboBoxUnderDay
+            // 
+            this.comboBoxUnderDay.FormattingEnabled = true;
+            this.comboBoxUnderDay.Location = new System.Drawing.Point(295, 48);
+            this.comboBoxUnderDay.Name = "comboBoxUnderDay";
+            this.comboBoxUnderDay.Size = new System.Drawing.Size(44, 24);
+            this.comboBoxUnderDay.TabIndex = 108;
+            // 
+            // comboBoxUnderMonth
+            // 
+            this.comboBoxUnderMonth.FormattingEnabled = true;
+            this.comboBoxUnderMonth.Location = new System.Drawing.Point(220, 48);
+            this.comboBoxUnderMonth.Name = "comboBoxUnderMonth";
+            this.comboBoxUnderMonth.Size = new System.Drawing.Size(44, 24);
+            this.comboBoxUnderMonth.TabIndex = 107;
+            // 
+            // comboBoxUnderYear
+            // 
+            this.comboBoxUnderYear.FormattingEnabled = true;
+            this.comboBoxUnderYear.Location = new System.Drawing.Point(93, 48);
+            this.comboBoxUnderYear.Name = "comboBoxUnderYear";
+            this.comboBoxUnderYear.Size = new System.Drawing.Size(94, 24);
+            this.comboBoxUnderYear.TabIndex = 106;
+            // 
+            // searchDate
+            // 
+            this.searchDate.AutoSize = true;
+            this.searchDate.Location = new System.Drawing.Point(19, 51);
+            this.searchDate.Name = "searchDate";
+            this.searchDate.Size = new System.Drawing.Size(44, 16);
+            this.searchDate.TabIndex = 105;
+            this.searchDate.Text = "入金日";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 85);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 16);
+            this.label10.TabIndex = 119;
+            this.label10.Text = "請求額";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(93, 78);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 27);
+            this.textBox1.TabIndex = 121;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(417, 78);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(171, 27);
+            this.textBox2.TabIndex = 122;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(417, 111);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(171, 27);
+            this.textBox3.TabIndex = 126;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(93, 111);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(171, 27);
+            this.textBox4.TabIndex = 125;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 118);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(32, 16);
+            this.label14.TabIndex = 123;
+            this.label14.Text = "差額";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(269, 85);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(44, 16);
+            this.label16.TabIndex = 127;
+            this.label16.Text = "円以上";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(269, 118);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.TabIndex = 128;
+            this.label9.Text = "円以上";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(594, 85);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 16);
+            this.label13.TabIndex = 129;
+            this.label13.Text = "円以下";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(593, 118);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 16);
+            this.label19.TabIndex = 130;
+            this.label19.Text = "円以下";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Location = new System.Drawing.Point(781, 38);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(119, 100);
+            this.groupBox2.TabIndex = 132;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "検索オプション";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(21, 64);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(76, 20);
+            this.radioButton3.TabIndex = 1;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "AND検索";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Checked = true;
+            this.radioButton4.Location = new System.Drawing.Point(21, 27);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(67, 20);
+            this.radioButton4.TabIndex = 0;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "OR検索";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(940, 118);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 131;
+            this.button2.Text = "検索";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // RepetitionClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.whiler);
+            this.Controls.Add(this.overDay);
+            this.Controls.Add(this.overMonth);
+            this.Controls.Add(this.overYear);
+            this.Controls.Add(this.comboBoxOverDay);
+            this.Controls.Add(this.comboBoxOverMonth);
+            this.Controls.Add(this.comboBoxOverYear);
+            this.Controls.Add(this.underDay);
+            this.Controls.Add(this.underMonth);
+            this.Controls.Add(this.underYear);
+            this.Controls.Add(this.comboBoxUnderDay);
+            this.Controls.Add(this.comboBoxUnderMonth);
+            this.Controls.Add(this.comboBoxUnderYear);
+            this.Controls.Add(this.searchDate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tblCustomer);
@@ -318,6 +618,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,5 +647,33 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label whiler;
+        private System.Windows.Forms.Label overDay;
+        private System.Windows.Forms.Label overMonth;
+        private System.Windows.Forms.Label overYear;
+        private System.Windows.Forms.ComboBox comboBoxOverDay;
+        private System.Windows.Forms.ComboBox comboBoxOverMonth;
+        private System.Windows.Forms.ComboBox comboBoxOverYear;
+        private System.Windows.Forms.Label underDay;
+        private System.Windows.Forms.Label underMonth;
+        private System.Windows.Forms.Label underYear;
+        private System.Windows.Forms.ComboBox comboBoxUnderDay;
+        private System.Windows.Forms.ComboBox comboBoxUnderMonth;
+        private System.Windows.Forms.ComboBox comboBoxUnderYear;
+        private System.Windows.Forms.Label searchDate;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Button button2;
     }
 }
