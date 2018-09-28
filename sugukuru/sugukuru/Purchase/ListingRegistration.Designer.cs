@@ -40,18 +40,18 @@
             this.tbOrderID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
-            this.dtpStart = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.cbRep = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btRegistration = new System.Windows.Forms.Button();
-            this.rbUnsatisfied = new System.Windows.Forms.RadioButton();
-            this.rbSatisfied = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cbAuction = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -155,44 +155,10 @@
             this.label2.TabIndex = 90;
             this.label2.Text = "受注ID";
             // 
-            // dtpEnd
-            // 
-            this.dtpEnd.Location = new System.Drawing.Point(297, 110);
-            this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(200, 19);
-            this.dtpEnd.TabIndex = 104;
-            // 
-            // dtpStart
-            // 
-            this.dtpStart.Location = new System.Drawing.Point(70, 112);
-            this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(200, 19);
-            this.dtpStart.TabIndex = 103;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(275, 117);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 12);
-            this.label3.TabIndex = 102;
-            this.label3.Text = "～";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 112);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 101;
-            this.label4.Text = "受注日付";
-            // 
             // cbRep
             // 
             this.cbRep.FormattingEnabled = true;
-            this.cbRep.Location = new System.Drawing.Point(84, 142);
+            this.cbRep.Location = new System.Drawing.Point(93, 122);
             this.cbRep.Name = "cbRep";
             this.cbRep.Size = new System.Drawing.Size(121, 20);
             this.cbRep.TabIndex = 106;
@@ -200,7 +166,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 145);
+            this.label12.Location = new System.Drawing.Point(12, 122);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 12);
             this.label12.TabIndex = 105;
@@ -215,32 +181,10 @@
             this.btRegistration.Text = "確定";
             this.btRegistration.UseVisualStyleBackColor = true;
             // 
-            // rbUnsatisfied
-            // 
-            this.rbUnsatisfied.AutoSize = true;
-            this.rbUnsatisfied.Location = new System.Drawing.Point(93, 180);
-            this.rbUnsatisfied.Name = "rbUnsatisfied";
-            this.rbUnsatisfied.Size = new System.Drawing.Size(83, 16);
-            this.rbUnsatisfied.TabIndex = 109;
-            this.rbUnsatisfied.TabStop = true;
-            this.rbUnsatisfied.Text = "入札不成立";
-            this.rbUnsatisfied.UseVisualStyleBackColor = true;
-            // 
-            // rbSatisfied
-            // 
-            this.rbSatisfied.AutoSize = true;
-            this.rbSatisfied.Location = new System.Drawing.Point(15, 181);
-            this.rbSatisfied.Name = "rbSatisfied";
-            this.rbSatisfied.Size = new System.Drawing.Size(71, 16);
-            this.rbSatisfied.TabIndex = 108;
-            this.rbSatisfied.TabStop = true;
-            this.rbSatisfied.Text = "入札成立";
-            this.rbSatisfied.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 231);
+            this.label8.Location = new System.Drawing.Point(13, 208);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 12);
             this.label8.TabIndex = 111;
@@ -248,7 +192,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 231);
+            this.textBox1.Location = new System.Drawing.Point(75, 208);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 19);
             this.textBox1.TabIndex = 112;
@@ -262,22 +206,71 @@
             this.button1.Text = "検索";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 253);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 114;
+            this.label6.Text = "出品番号";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(75, 253);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 19);
+            this.textBox2.TabIndex = 115;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(11, 329);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 12);
+            this.label9.TabIndex = 119;
+            this.label9.Text = "入札日付";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(70, 324);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
+            this.dateTimePicker1.TabIndex = 118;
+            // 
+            // cbAuction
+            // 
+            this.cbAuction.FormattingEnabled = true;
+            this.cbAuction.Location = new System.Drawing.Point(108, 164);
+            this.cbAuction.Name = "cbAuction";
+            this.cbAuction.Size = new System.Drawing.Size(121, 20);
+            this.cbAuction.TabIndex = 117;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 167);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(81, 12);
+            this.label10.TabIndex = 116;
+            this.label10.Text = "オークション会場";
+            // 
             // ListingRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cbAuction);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.rbUnsatisfied);
-            this.Controls.Add(this.rbSatisfied);
             this.Controls.Add(this.btRegistration);
             this.Controls.Add(this.cbRep);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.dtpEnd);
-            this.Controls.Add(this.dtpStart);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.tbModelYear);
             this.Controls.Add(this.tbCarName);
             this.Controls.Add(this.tbModel);
@@ -312,17 +305,17 @@
         private System.Windows.Forms.TextBox tbOrderID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpEnd;
-        private System.Windows.Forms.DateTimePicker dtpStart;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbRep;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btRegistration;
-        private System.Windows.Forms.RadioButton rbUnsatisfied;
-        private System.Windows.Forms.RadioButton rbSatisfied;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cbAuction;
+        private System.Windows.Forms.Label label10;
     }
 }

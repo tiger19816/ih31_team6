@@ -178,6 +178,12 @@
     <Compile Include="ClaimCollection\RepetitionClaim.Designer.cs">
       <DependentUpon>RepetitionClaim.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\BidCarFixed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\BidCarFixed.Designer.cs">
+      <DependentUpon>BidCarFixed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\BidCarInput.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,11 +213,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\BidCarProcessing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\BidCarProcessing.Designer.cs">
+      <DependentUpon>BidCarProcessing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\BidInfoInput.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Purchase\BidInfoInput.Designer.cs">
       <DependentUpon>BidInfoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\BidResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\BidResult.Designer.cs">
+      <DependentUpon>BidResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchase\DeliverySlip.cs">
       <SubType>UserControl</SubType>
@@ -231,11 +249,35 @@
     <Compile Include="Purchase\FixedPostProcessing.Designer.cs">
       <DependentUpon>FixedPostProcessing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\FixedProcessingResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\FixedProcessingResult.Designer.cs">
+      <DependentUpon>FixedProcessingResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ListCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListCar.Designer.cs">
+      <DependentUpon>ListCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ListingCar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListingCar.Designer.cs">
+      <DependentUpon>ListingCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\ListingPostProcessing.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Purchase\ListingPostProcessing.Designer.cs">
       <DependentUpon>ListingPostProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ListingProcessingResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListingProcessingResult.Designer.cs">
+      <DependentUpon>ListingProcessingResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchase\ListingRegistration.cs">
       <SubType>UserControl</SubType>
@@ -248,6 +290,12 @@
     </Compile>
     <Compile Include="Purchase\ListingResult.Designer.cs">
       <DependentUpon>ListingResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ListingResultFixed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ListingResultFixed.Designer.cs">
+      <DependentUpon>ListingResultFixed.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchase\Purchase.cs">
       <SubType>Form</SubType>
@@ -333,6 +381,9 @@
     <Compile Include="Purchase\Transport.Designer.cs">
       <DependentUpon>Transport.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Purchase\BidCarFixed.resx">
+      <DependentUpon>BidCarFixed.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\BidCarInput.resx">
       <DependentUpon>BidCarInput.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,8 +444,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Purchase\BidCarProcessing.resx">
+      <DependentUpon>BidCarProcessing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\BidInfoInput.resx">
       <DependentUpon>BidInfoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\BidResult.resx">
+      <DependentUpon>BidResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\DeliverySlip.resx">
       <DependentUpon>DeliverySlip.cs</DependentUpon>
@@ -405,14 +462,29 @@
     <EmbeddedResource Include="Purchase\FixedPostProcessing.resx">
       <DependentUpon>FixedPostProcessing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\FixedProcessingResult.resx">
+      <DependentUpon>FixedProcessingResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListCar.resx">
+      <DependentUpon>ListCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListingCar.resx">
+      <DependentUpon>ListingCar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\ListingPostProcessing.resx">
       <DependentUpon>ListingPostProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListingProcessingResult.resx">
+      <DependentUpon>ListingProcessingResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\ListingRegistration.resx">
       <DependentUpon>ListingRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\ListingResult.resx">
       <DependentUpon>ListingResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ListingResultFixed.resx">
+      <DependentUpon>ListingResultFixed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
