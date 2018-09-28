@@ -176,7 +176,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 125;
-            this.label4.Text = "消込機関";
+            this.label4.Text = "消込期間";
             // 
             // BulkReconciliation
             // 
