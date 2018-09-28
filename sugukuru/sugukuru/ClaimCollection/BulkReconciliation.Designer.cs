@@ -28,65 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.order_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employee_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.car_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claim_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.payment_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.underDay = new System.Windows.Forms.Label();
+            this.underMonth = new System.Windows.Forms.Label();
+            this.underYear = new System.Windows.Forms.Label();
+            this.comboBoxUnderDay = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnderMonth = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnderYear = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.order_no,
-            this.employee_name,
-            this.client_name,
-            this.car_name,
-            this.claim_amount,
-            this.payment_amount});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 115);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(1120, 451);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // order_no
-            // 
-            this.order_no.HeaderText = "受注番号";
-            this.order_no.Name = "order_no";
-            // 
-            // employee_name
-            // 
-            this.employee_name.HeaderText = "担当者名";
-            this.employee_name.Name = "employee_name";
-            // 
-            // client_name
-            // 
-            this.client_name.HeaderText = "顧客名";
-            this.client_name.Name = "client_name";
-            // 
-            // car_name
-            // 
-            this.car_name.HeaderText = "車名";
-            this.car_name.Name = "car_name";
-            // 
-            // claim_amount
-            // 
-            this.claim_amount.HeaderText = "請求額";
-            this.claim_amount.Name = "claim_amount";
-            // 
-            // payment_amount
-            // 
-            this.payment_amount.HeaderText = "支払額";
-            this.payment_amount.Name = "payment_amount";
             // 
             // button1
             // 
@@ -99,18 +57,6 @@
             this.button1.Text = "消込";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // addButton
-            // 
-            this.addButton.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.addButton.Location = new System.Drawing.Point(517, 569);
-            this.addButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(117, 53);
-            this.addButton.TabIndex = 5;
-            this.addButton.Text = "追加";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -121,14 +67,136 @@
             this.label1.TabIndex = 99;
             this.label1.Text = "一括消込";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1001, 47);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 108;
+            this.button2.Text = "開く";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(693, 47);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(302, 27);
+            this.textBox1.TabIndex = 107;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(559, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 16);
+            this.label2.TabIndex = 106;
+            this.label2.Text = "入金情報CSVファイル";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 130);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 21;
+            this.dataGridView1.Size = new System.Drawing.Size(1120, 433);
+            this.dataGridView1.TabIndex = 109;
+            // 
+            // underDay
+            // 
+            this.underDay.AutoSize = true;
+            this.underDay.Location = new System.Drawing.Point(379, 50);
+            this.underDay.Name = "underDay";
+            this.underDay.Size = new System.Drawing.Size(47, 16);
+            this.underDay.TabIndex = 115;
+            this.underDay.Text = "日 以降";
+            // 
+            // underMonth
+            // 
+            this.underMonth.AutoSize = true;
+            this.underMonth.Location = new System.Drawing.Point(303, 50);
+            this.underMonth.Name = "underMonth";
+            this.underMonth.Size = new System.Drawing.Size(20, 16);
+            this.underMonth.TabIndex = 114;
+            this.underMonth.Text = "月";
+            // 
+            // underYear
+            // 
+            this.underYear.AutoSize = true;
+            this.underYear.Location = new System.Drawing.Point(227, 50);
+            this.underYear.Name = "underYear";
+            this.underYear.Size = new System.Drawing.Size(20, 16);
+            this.underYear.TabIndex = 113;
+            this.underYear.Text = "年";
+            // 
+            // comboBoxUnderDay
+            // 
+            this.comboBoxUnderDay.FormattingEnabled = true;
+            this.comboBoxUnderDay.Location = new System.Drawing.Point(329, 47);
+            this.comboBoxUnderDay.Name = "comboBoxUnderDay";
+            this.comboBoxUnderDay.Size = new System.Drawing.Size(44, 24);
+            this.comboBoxUnderDay.TabIndex = 112;
+            // 
+            // comboBoxUnderMonth
+            // 
+            this.comboBoxUnderMonth.FormattingEnabled = true;
+            this.comboBoxUnderMonth.Location = new System.Drawing.Point(254, 47);
+            this.comboBoxUnderMonth.Name = "comboBoxUnderMonth";
+            this.comboBoxUnderMonth.Size = new System.Drawing.Size(44, 24);
+            this.comboBoxUnderMonth.TabIndex = 111;
+            // 
+            // comboBoxUnderYear
+            // 
+            this.comboBoxUnderYear.FormattingEnabled = true;
+            this.comboBoxUnderYear.Location = new System.Drawing.Point(127, 47);
+            this.comboBoxUnderYear.Name = "comboBoxUnderYear";
+            this.comboBoxUnderYear.Size = new System.Drawing.Size(94, 24);
+            this.comboBoxUnderYear.TabIndex = 110;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 16);
+            this.label3.TabIndex = 123;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(503, 84);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 40);
+            this.button3.TabIndex = 124;
+            this.button3.Text = "消込データ作成";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.TabIndex = 125;
+            this.label4.Text = "消込機関";
+            // 
             // BulkReconciliation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.addButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.underDay);
+            this.Controls.Add(this.underMonth);
+            this.Controls.Add(this.underYear);
+            this.Controls.Add(this.comboBoxUnderDay);
+            this.Controls.Add(this.comboBoxUnderMonth);
+            this.Controls.Add(this.comboBoxUnderYear);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "BulkReconciliation";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -138,16 +206,20 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn order_no;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employee_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn car_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claim_amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn payment_amount;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label underDay;
+        private System.Windows.Forms.Label underMonth;
+        private System.Windows.Forms.Label underYear;
+        private System.Windows.Forms.ComboBox comboBoxUnderDay;
+        private System.Windows.Forms.ComboBox comboBoxUnderMonth;
+        private System.Windows.Forms.ComboBox comboBoxUnderYear;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label4;
     }
 }

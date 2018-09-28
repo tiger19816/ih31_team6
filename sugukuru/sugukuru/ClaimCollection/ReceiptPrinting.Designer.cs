@@ -48,6 +48,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tblCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -67,25 +71,25 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(12, 13);
+            this.label2.Location = new System.Drawing.Point(10, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 25);
             this.label2.TabIndex = 99;
-            this.label2.Text = "領収書詳細画面";
+            this.label2.Text = "領収書発行画面";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(423, 119);
+            this.dataGridView1.Location = new System.Drawing.Point(423, 92);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(721, 389);
+            this.dataGridView1.Size = new System.Drawing.Size(721, 440);
             this.dataGridView1.TabIndex = 104;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 65);
+            this.label1.Location = new System.Drawing.Point(20, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 102;
@@ -93,7 +97,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 58);
+            this.textBox1.Location = new System.Drawing.Point(130, 49);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(116, 27);
@@ -101,7 +105,7 @@
             // 
             // btCustomerSearch
             // 
-            this.btCustomerSearch.Location = new System.Drawing.Point(309, 58);
+            this.btCustomerSearch.Location = new System.Drawing.Point(264, 45);
             this.btCustomerSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCustomerSearch.Name = "btCustomerSearch";
             this.btCustomerSearch.Size = new System.Drawing.Size(87, 31);
@@ -126,7 +130,7 @@
             this.tblCustomer.Controls.Add(this.label16, 0, 2);
             this.tblCustomer.Controls.Add(this.label17, 0, 7);
             this.tblCustomer.Controls.Add(this.label18, 0, 8);
-            this.tblCustomer.Location = new System.Drawing.Point(17, 119);
+            this.tblCustomer.Location = new System.Drawing.Point(23, 92);
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.RowCount = 9;
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
@@ -252,7 +256,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(423, 58);
+            this.button2.Location = new System.Drawing.Point(423, 45);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 31);
@@ -263,24 +267,62 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 460);
+            this.label5.Location = new System.Drawing.Point(20, 485);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 16);
             this.label5.TabIndex = 108;
             this.label5.Text = "但し";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(137, 457);
+            this.textBox2.Location = new System.Drawing.Point(23, 505);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 27);
+            this.textBox2.Size = new System.Drawing.Size(379, 27);
             this.textBox2.TabIndex = 107;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(130, 442);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 112;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(130, 405);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(171, 27);
+            this.textBox3.TabIndex = 111;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(20, 445);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(68, 16);
+            this.label21.TabIndex = 110;
+            this.label21.Text = "発行担当者";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 408);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.TabIndex = 109;
+            this.label6.Text = "発行日";
             // 
             // ReceiptPrinting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
@@ -323,5 +365,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label6;
     }
 }

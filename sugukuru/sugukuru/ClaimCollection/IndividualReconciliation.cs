@@ -19,7 +19,7 @@ namespace sugukuru.ClaimCollection
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            List<String> receiveList = IndividualSelectForm.ShowForm();
+            //List<String> receiveList = IndividualSelectForm.ShowForm();
         }
     }
 }
