@@ -49,6 +49,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.btRegistration = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +60,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 25);
             this.label1.TabIndex = 10;
-            this.label1.Text = "出品車両結果";
+            this.label1.Text = "売却車両結果";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btFixed
@@ -125,7 +126,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(100, 563);
+            this.textBox6.Location = new System.Drawing.Point(131, 499);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(116, 27);
@@ -134,7 +135,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 567);
+            this.label2.Location = new System.Drawing.Point(24, 499);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 126;
@@ -237,10 +238,20 @@
             this.radioButton1.Text = "引き渡し済み";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // btRegistration
+            // 
+            this.btRegistration.Location = new System.Drawing.Point(27, 550);
+            this.btRegistration.Name = "btRegistration";
+            this.btRegistration.Size = new System.Drawing.Size(75, 23);
+            this.btRegistration.TabIndex = 135;
+            this.btRegistration.Text = "登録";
+            this.btRegistration.UseVisualStyleBackColor = true;
+            // 
             // ListingResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btRegistration);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label10);
@@ -293,5 +304,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button btRegistration;
     }
 }

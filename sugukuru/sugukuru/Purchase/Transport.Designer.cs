@@ -74,7 +74,7 @@
             this.btConfirmation.Name = "btConfirmation";
             this.btConfirmation.Size = new System.Drawing.Size(87, 31);
             this.btConfirmation.TabIndex = 3;
-            this.btConfirmation.Text = "確認";
+            this.btConfirmation.Text = "登録";
             this.btConfirmation.UseVisualStyleBackColor = true;
             // 
             // label3
