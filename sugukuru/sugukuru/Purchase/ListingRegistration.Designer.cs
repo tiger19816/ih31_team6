@@ -58,7 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 25);
             this.label1.TabIndex = 9;
@@ -67,116 +67,124 @@
             // 
             // tbModelYear
             // 
-            this.tbModelYear.Location = new System.Drawing.Point(714, 49);
+            this.tbModelYear.Location = new System.Drawing.Point(833, 65);
+            this.tbModelYear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbModelYear.Name = "tbModelYear";
-            this.tbModelYear.Size = new System.Drawing.Size(100, 19);
+            this.tbModelYear.Size = new System.Drawing.Size(116, 27);
             this.tbModelYear.TabIndex = 100;
             // 
             // tbCarName
             // 
-            this.tbCarName.Location = new System.Drawing.Point(413, 83);
+            this.tbCarName.Location = new System.Drawing.Point(482, 111);
+            this.tbCarName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCarName.Name = "tbCarName";
-            this.tbCarName.Size = new System.Drawing.Size(171, 19);
+            this.tbCarName.Size = new System.Drawing.Size(199, 27);
             this.tbCarName.TabIndex = 99;
             // 
             // tbModel
             // 
-            this.tbModel.Location = new System.Drawing.Point(413, 49);
+            this.tbModel.Location = new System.Drawing.Point(482, 65);
+            this.tbModel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbModel.Name = "tbModel";
-            this.tbModel.Size = new System.Drawing.Size(171, 19);
+            this.tbModel.Size = new System.Drawing.Size(199, 27);
             this.tbModel.TabIndex = 98;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(634, 52);
+            this.label5.Location = new System.Drawing.Point(740, 69);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.Size = new System.Drawing.Size(32, 16);
             this.label5.TabIndex = 97;
             this.label5.Text = "年式";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(333, 86);
+            this.label13.Location = new System.Drawing.Point(388, 115);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(29, 12);
+            this.label13.Size = new System.Drawing.Size(32, 16);
             this.label13.TabIndex = 96;
             this.label13.Text = "車名";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(333, 52);
+            this.label14.Location = new System.Drawing.Point(388, 69);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(29, 12);
+            this.label14.Size = new System.Drawing.Size(32, 16);
             this.label14.TabIndex = 95;
             this.label14.Text = "型式";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(207, 83);
+            this.button4.Location = new System.Drawing.Point(241, 111);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(87, 31);
             this.button4.TabIndex = 94;
             this.button4.Text = "業者検索";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // tbCustomerID
             // 
-            this.tbCustomerID.Location = new System.Drawing.Point(93, 83);
+            this.tbCustomerID.Location = new System.Drawing.Point(108, 111);
+            this.tbCustomerID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCustomerID.Name = "tbCustomerID";
-            this.tbCustomerID.Size = new System.Drawing.Size(100, 19);
+            this.tbCustomerID.Size = new System.Drawing.Size(116, 27);
             this.tbCustomerID.TabIndex = 93;
             // 
             // tbOrderID
             // 
-            this.tbOrderID.Location = new System.Drawing.Point(93, 49);
+            this.tbOrderID.Location = new System.Drawing.Point(108, 65);
+            this.tbOrderID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbOrderID.Name = "tbOrderID";
-            this.tbOrderID.Size = new System.Drawing.Size(100, 19);
+            this.tbOrderID.Size = new System.Drawing.Size(116, 27);
             this.tbOrderID.TabIndex = 92;
             this.tbOrderID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 86);
+            this.label7.Location = new System.Drawing.Point(15, 115);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 12);
+            this.label7.Size = new System.Drawing.Size(45, 16);
             this.label7.TabIndex = 91;
             this.label7.Text = "顧客ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 52);
+            this.label2.Location = new System.Drawing.Point(15, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 12);
+            this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 90;
             this.label2.Text = "受注ID";
             // 
             // cbRep
             // 
             this.cbRep.FormattingEnabled = true;
-            this.cbRep.Location = new System.Drawing.Point(93, 122);
+            this.cbRep.Location = new System.Drawing.Point(108, 163);
+            this.cbRep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbRep.Name = "cbRep";
-            this.cbRep.Size = new System.Drawing.Size(121, 20);
+            this.cbRep.Size = new System.Drawing.Size(140, 24);
             this.cbRep.TabIndex = 106;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 122);
+            this.label12.Location = new System.Drawing.Point(14, 163);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 12);
+            this.label12.Size = new System.Drawing.Size(68, 16);
             this.label12.TabIndex = 105;
             this.label12.Text = "営業担当者";
             // 
             // btRegistration
             // 
-            this.btRegistration.Location = new System.Drawing.Point(15, 424);
+            this.btRegistration.Location = new System.Drawing.Point(17, 565);
+            this.btRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btRegistration.Name = "btRegistration";
-            this.btRegistration.Size = new System.Drawing.Size(75, 23);
+            this.btRegistration.Size = new System.Drawing.Size(87, 31);
             this.btRegistration.TabIndex = 107;
             this.btRegistration.Text = "確定";
             this.btRegistration.UseVisualStyleBackColor = true;
@@ -184,24 +192,26 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 208);
+            this.label8.Location = new System.Drawing.Point(15, 277);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.Size = new System.Drawing.Size(56, 16);
             this.label8.TabIndex = 111;
             this.label8.Text = "出品価格";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 208);
+            this.textBox1.Location = new System.Drawing.Point(87, 277);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 19);
+            this.textBox1.Size = new System.Drawing.Size(116, 27);
             this.textBox1.TabIndex = 112;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(207, 49);
+            this.button1.Location = new System.Drawing.Point(241, 65);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(87, 31);
             this.button1.TabIndex = 113;
             this.button1.Text = "検索";
             this.button1.UseVisualStyleBackColor = true;
@@ -209,55 +219,58 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 253);
+            this.label6.Location = new System.Drawing.Point(14, 337);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(56, 16);
             this.label6.TabIndex = 114;
             this.label6.Text = "出品番号";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(75, 253);
+            this.textBox2.Location = new System.Drawing.Point(87, 337);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 19);
+            this.textBox2.Size = new System.Drawing.Size(116, 27);
             this.textBox2.TabIndex = 115;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(11, 329);
+            this.label9.Location = new System.Drawing.Point(13, 439);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 12);
+            this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 119;
             this.label9.Text = "入札日付";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(70, 324);
+            this.dateTimePicker1.Location = new System.Drawing.Point(82, 432);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
+            this.dateTimePicker1.Size = new System.Drawing.Size(233, 27);
             this.dateTimePicker1.TabIndex = 118;
             // 
             // cbAuction
             // 
             this.cbAuction.FormattingEnabled = true;
-            this.cbAuction.Location = new System.Drawing.Point(108, 164);
+            this.cbAuction.Location = new System.Drawing.Point(126, 219);
+            this.cbAuction.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbAuction.Name = "cbAuction";
-            this.cbAuction.Size = new System.Drawing.Size(121, 20);
+            this.cbAuction.Size = new System.Drawing.Size(140, 24);
             this.cbAuction.TabIndex = 117;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 167);
+            this.label10.Location = new System.Drawing.Point(14, 223);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 12);
+            this.label10.Size = new System.Drawing.Size(104, 16);
             this.label10.TabIndex = 116;
             this.label10.Text = "オークション会場";
             // 
             // ListingRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker1);
@@ -283,8 +296,8 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "ListingRegistration";
-            this.Size = new System.Drawing.Size(1160, 630);
             this.Load += new System.EventHandler(this.ListingRegistration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

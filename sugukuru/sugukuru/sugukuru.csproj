@@ -70,6 +70,12 @@
     <Compile Include="Customer\CustomerRegistrationControl.Designer.cs">
       <DependentUpon>CustomerRegistrationControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMaster\UserControlMinMST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormMaster\UserControlMinMST.Designer.cs">
+      <DependentUpon>UserControlMinMST.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMaster\UserControlMST.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,7 +191,7 @@
       <DependentUpon>BidCarFixed.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchase\BidCarInput.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Purchase\BidCarInput.Designer.cs">
       <DependentUpon>BidCarInput.cs</DependentUpon>
@@ -315,6 +321,9 @@
     <EmbeddedResource Include="Customer\CustomerRegistrationControl.resx">
       <DependentUpon>CustomerRegistrationControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster\UserControlMinMST.resx">
+      <DependentUpon>UserControlMinMST.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMaster\UserControlMST.resx">
       <DependentUpon>UserControlMST.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +378,12 @@
     <EmbeddedResource Include="ClaimCollection\RepetitionClaim.resx">
       <DependentUpon>RepetitionClaim.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Purchase\SaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\SaleForm.Designer.cs">
+      <DependentUpon>SaleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\Search.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -494,6 +509,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSample\SampleUserControl1.resx">
       <DependentUpon>SampleUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\SaleForm.resx">
+      <DependentUpon>SaleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Search.resx">
       <DependentUpon>Search.cs</DependentUpon>

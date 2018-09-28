@@ -71,7 +71,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(1001, 47);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(89, 27);
             this.button2.TabIndex = 108;
             this.button2.Text = "開く";
             this.button2.UseVisualStyleBackColor = true;

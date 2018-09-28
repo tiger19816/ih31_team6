@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class Transport : UserControl
+    public partial class Transport : FormMaster.UserControlMST
     {
         public Transport()
         {

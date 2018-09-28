@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class BidCarFixed : UserControl
+    public partial class BidCarFixed : FormMaster.UserControlMinMST
     {
         public BidCarFixed()
         {

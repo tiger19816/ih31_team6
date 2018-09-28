@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sugukuru.Purchase
+namespace sugukuru.FormMaster
 {
-    public partial class ListingPostProcessing : FormMaster.UserControlMST
+    public partial class UserControlMinMST : UserControl
     {
-        public ListingPostProcessing()
+        public UserControlMinMST()
         {
             InitializeComponent();
         }

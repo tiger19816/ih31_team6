@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class BidCarProcessing : UserControl
+    public partial class BidCarProcessing : FormMaster.UserControlMST
     {
         public static BidCarFixed BidCarFixed;
         public static FixedPostProcessing FixedPostProcessing;

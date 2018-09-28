@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btLogout = new System.Windows.Forms.Button();
+            this.btSales = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btPurchase
@@ -44,14 +45,14 @@
             this.btPurchase.Name = "btPurchase";
             this.btPurchase.Size = new System.Drawing.Size(250, 100);
             this.btPurchase.TabIndex = 4;
-            this.btPurchase.Text = "仕入・売却";
+            this.btPurchase.Text = "仕入";
             this.btPurchase.UseVisualStyleBackColor = true;
             this.btPurchase.Click += new System.EventHandler(this.Button_Click);
             // 
             // btCustomer
             // 
             this.btCustomer.Font = new System.Drawing.Font("游ゴシック", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btCustomer.Location = new System.Drawing.Point(389, 116);
+            this.btCustomer.Location = new System.Drawing.Point(389, 233);
             this.btCustomer.Name = "btCustomer";
             this.btCustomer.Size = new System.Drawing.Size(250, 100);
             this.btCustomer.TabIndex = 6;
@@ -73,7 +74,7 @@
             // btClaimCollection
             // 
             this.btClaimCollection.Font = new System.Drawing.Font("游ゴシック", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btClaimCollection.Location = new System.Drawing.Point(45, 352);
+            this.btClaimCollection.Location = new System.Drawing.Point(389, 116);
             this.btClaimCollection.Name = "btClaimCollection";
             this.btClaimCollection.Size = new System.Drawing.Size(250, 100);
             this.btClaimCollection.TabIndex = 5;
@@ -113,11 +114,23 @@
             this.btLogout.UseVisualStyleBackColor = false;
             this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
             // 
+            // btSales
+            // 
+            this.btSales.Font = new System.Drawing.Font("游ゴシック", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btSales.Location = new System.Drawing.Point(45, 350);
+            this.btSales.Name = "btSales";
+            this.btSales.Size = new System.Drawing.Size(250, 100);
+            this.btSales.TabIndex = 12;
+            this.btSales.Text = "売却";
+            this.btSales.UseVisualStyleBackColor = true;
+            this.btSales.Click += new System.EventHandler(this.Button_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btSales);
             this.Controls.Add(this.btLogout);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -134,6 +147,7 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.btLogout, 0);
+            this.Controls.SetChildIndex(this.btSales, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +162,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btLogout;
+        private System.Windows.Forms.Button btSales;
     }
 }

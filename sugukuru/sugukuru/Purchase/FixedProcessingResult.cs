@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class FixedProcessingResult : UserControl
+    public partial class FixedProcessingResult : FormMaster.UserControlMinMST
     {
         public FixedProcessingResult()
         {

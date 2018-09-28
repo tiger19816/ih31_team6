@@ -31,7 +31,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btCarResult = new System.Windows.Forms.Button();
             this.btFixedProcessing = new System.Windows.Forms.Button();
-            this.btProcessingResult = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -47,9 +46,10 @@
             // 
             // btCarResult
             // 
-            this.btCarResult.Location = new System.Drawing.Point(15, 52);
+            this.btCarResult.Location = new System.Drawing.Point(17, 52);
+            this.btCarResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCarResult.Name = "btCarResult";
-            this.btCarResult.Size = new System.Drawing.Size(154, 23);
+            this.btCarResult.Size = new System.Drawing.Size(180, 31);
             this.btCarResult.TabIndex = 114;
             this.btCarResult.Text = "落札車両確定";
             this.btCarResult.UseVisualStyleBackColor = true;
@@ -57,42 +57,33 @@
             // 
             // btFixedProcessing
             // 
-            this.btFixedProcessing.Location = new System.Drawing.Point(175, 52);
+            this.btFixedProcessing.Location = new System.Drawing.Point(204, 52);
+            this.btFixedProcessing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btFixedProcessing.Name = "btFixedProcessing";
-            this.btFixedProcessing.Size = new System.Drawing.Size(154, 23);
+            this.btFixedProcessing.Size = new System.Drawing.Size(180, 31);
             this.btFixedProcessing.TabIndex = 115;
-            this.btFixedProcessing.Text = "落札後処理登録";
+            this.btFixedProcessing.Text = "落札後処理状況";
             this.btFixedProcessing.UseVisualStyleBackColor = true;
             this.btFixedProcessing.Click += new System.EventHandler(this.btFixedProcessing_Click);
             // 
-            // btProcessingResult
-            // 
-            this.btProcessingResult.Location = new System.Drawing.Point(335, 52);
-            this.btProcessingResult.Name = "btProcessingResult";
-            this.btProcessingResult.Size = new System.Drawing.Size(154, 23);
-            this.btProcessingResult.TabIndex = 116;
-            this.btProcessingResult.Text = "落札後処理確認・確定";
-            this.btProcessingResult.UseVisualStyleBackColor = true;
-            this.btProcessingResult.Click += new System.EventHandler(this.btProcessingResult_Click);
-            // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(15, 92);
+            this.panel2.Location = new System.Drawing.Point(17, 100);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1129, 515);
+            this.panel2.Size = new System.Drawing.Size(1130, 510);
             this.panel2.TabIndex = 119;
             // 
             // BidCarProcessing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btProcessingResult);
             this.Controls.Add(this.btFixedProcessing);
             this.Controls.Add(this.btCarResult);
             this.Controls.Add(this.label7);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "BidCarProcessing";
-            this.Size = new System.Drawing.Size(1160, 630);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,7 +94,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btCarResult;
         private System.Windows.Forms.Button btFixedProcessing;
-        private System.Windows.Forms.Button btProcessingResult;
         private System.Windows.Forms.Panel panel2;
     }
 }

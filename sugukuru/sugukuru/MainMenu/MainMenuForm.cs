@@ -36,6 +36,10 @@ namespace sugukuru.MainMenu
             {
                 ContentFM = new Purchase.Purchase();
             }
+            else if (sender.Equals(btSales))
+            {
+                ContentFM = new Purchase.SaleForm();
+            }
             ContentFM.Show();
         }
 

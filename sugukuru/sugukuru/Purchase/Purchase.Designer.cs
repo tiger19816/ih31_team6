@@ -33,9 +33,6 @@
             this.btTransportInfo = new System.Windows.Forms.Button();
             this.btDisposalCarPurchase = new System.Windows.Forms.Button();
             this.btDeliverySlip = new System.Windows.Forms.Button();
-            this.btDisposalCar = new System.Windows.Forms.Button();
-            this.btListingCar = new System.Windows.Forms.Button();
-            this.btListingResult = new System.Windows.Forms.Button();
             this.btBidCarInput = new System.Windows.Forms.Button();
             this.inheritableFlowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -43,9 +40,6 @@
             // inheritableFlowLayoutPanel1
             // 
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btBidCarInput);
-            this.inheritableFlowLayoutPanel1.Controls.Add(this.btListingResult);
-            this.inheritableFlowLayoutPanel1.Controls.Add(this.btListingCar);
-            this.inheritableFlowLayoutPanel1.Controls.Add(this.btDisposalCar);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btDeliverySlip);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btBitInfo);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btDisposalCarPurchase);
@@ -55,7 +49,7 @@
             // btBitCar
             // 
             this.btBitCar.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btBitCar.Location = new System.Drawing.Point(2, 452);
+            this.btBitCar.Location = new System.Drawing.Point(2, 260);
             this.btBitCar.Margin = new System.Windows.Forms.Padding(2);
             this.btBitCar.Name = "btBitCar";
             this.btBitCar.Size = new System.Drawing.Size(94, 60);
@@ -67,7 +61,7 @@
             // btBitInfo
             // 
             this.btBitInfo.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btBitInfo.Location = new System.Drawing.Point(2, 324);
+            this.btBitInfo.Location = new System.Drawing.Point(2, 132);
             this.btBitInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btBitInfo.Name = "btBitInfo";
             this.btBitInfo.Size = new System.Drawing.Size(94, 60);
@@ -79,7 +73,7 @@
             // btTransportInfo
             // 
             this.btTransportInfo.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btTransportInfo.Location = new System.Drawing.Point(2, 516);
+            this.btTransportInfo.Location = new System.Drawing.Point(2, 324);
             this.btTransportInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btTransportInfo.Name = "btTransportInfo";
             this.btTransportInfo.Size = new System.Drawing.Size(94, 60);
@@ -91,7 +85,7 @@
             // btDisposalCarPurchase
             // 
             this.btDisposalCarPurchase.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btDisposalCarPurchase.Location = new System.Drawing.Point(2, 388);
+            this.btDisposalCarPurchase.Location = new System.Drawing.Point(2, 196);
             this.btDisposalCarPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btDisposalCarPurchase.Name = "btDisposalCarPurchase";
             this.btDisposalCarPurchase.Size = new System.Drawing.Size(94, 60);
@@ -102,49 +96,13 @@
             // 
             // btDeliverySlip
             // 
-            this.btDeliverySlip.Location = new System.Drawing.Point(3, 259);
+            this.btDeliverySlip.Location = new System.Drawing.Point(3, 67);
             this.btDeliverySlip.Name = "btDeliverySlip";
             this.btDeliverySlip.Size = new System.Drawing.Size(94, 60);
             this.btDeliverySlip.TabIndex = 5;
             this.btDeliverySlip.Text = "納品書発行";
             this.btDeliverySlip.UseVisualStyleBackColor = true;
             this.btDeliverySlip.Click += new System.EventHandler(this.btDeliverySlip_Click);
-            // 
-            // btDisposalCar
-            // 
-            this.btDisposalCar.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btDisposalCar.Location = new System.Drawing.Point(2, 194);
-            this.btDisposalCar.Margin = new System.Windows.Forms.Padding(2);
-            this.btDisposalCar.Name = "btDisposalCar";
-            this.btDisposalCar.Size = new System.Drawing.Size(94, 60);
-            this.btDisposalCar.TabIndex = 6;
-            this.btDisposalCar.Text = "出品車両登録";
-            this.btDisposalCar.UseVisualStyleBackColor = true;
-            this.btDisposalCar.Click += new System.EventHandler(this.btDisposalCar_Click);
-            // 
-            // btListingCar
-            // 
-            this.btListingCar.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btListingCar.Location = new System.Drawing.Point(2, 130);
-            this.btListingCar.Margin = new System.Windows.Forms.Padding(2);
-            this.btListingCar.Name = "btListingCar";
-            this.btListingCar.Size = new System.Drawing.Size(94, 60);
-            this.btListingCar.TabIndex = 7;
-            this.btListingCar.Text = "出品車両処理";
-            this.btListingCar.UseVisualStyleBackColor = true;
-            this.btListingCar.Click += new System.EventHandler(this.btListingCar_Click);
-            // 
-            // btListingResult
-            // 
-            this.btListingResult.Font = new System.Drawing.Font("游ゴシック", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btListingResult.Location = new System.Drawing.Point(2, 66);
-            this.btListingResult.Margin = new System.Windows.Forms.Padding(2);
-            this.btListingResult.Name = "btListingResult";
-            this.btListingResult.Size = new System.Drawing.Size(94, 60);
-            this.btListingResult.TabIndex = 8;
-            this.btListingResult.Text = "出品結果登録";
-            this.btListingResult.UseVisualStyleBackColor = true;
-            this.btListingResult.Click += new System.EventHandler(this.btListingResult_Click);
             // 
             // btBidCarInput
             // 
@@ -178,9 +136,6 @@
         private System.Windows.Forms.Button btBitCar;
         private System.Windows.Forms.Button btTransportInfo;
         private System.Windows.Forms.Button btDeliverySlip;
-        private System.Windows.Forms.Button btDisposalCar;
-        private System.Windows.Forms.Button btListingCar;
-        private System.Windows.Forms.Button btListingResult;
         private System.Windows.Forms.Button btBidCarInput;
     }
 }
