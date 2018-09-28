@@ -37,6 +37,7 @@ namespace sugukuru.ClaimCollection
 
             btIndividualClaim.Text = "個別請求書" + Environment.NewLine + "発行";
             btBulkClaim.Text = "一括請求書" + Environment.NewLine + "発行";
+            btRepetitionClaim.Text = "未決済請求" + Environment.NewLine + "処理";
 
             inheritableFlowLayoutPanel1.ResumeLayout();
 
