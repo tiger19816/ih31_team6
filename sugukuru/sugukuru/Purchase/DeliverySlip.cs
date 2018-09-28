@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class DeliverySlip : UserControl
+    public partial class DeliverySlip : FormMaster.UserControlMST
     {
         public DeliverySlip()
         {

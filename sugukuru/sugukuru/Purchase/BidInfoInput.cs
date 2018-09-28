@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class BidInfoInput : UserControl
+    public partial class BidInfoInput : FormMaster.UserControlMST
     {
         public BidInfoInput()
         {
