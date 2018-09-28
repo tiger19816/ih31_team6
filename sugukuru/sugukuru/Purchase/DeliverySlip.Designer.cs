@@ -63,7 +63,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.transport1 = new sugukuru.Purchase.Transport();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tblCustomer.SuspendLayout();
@@ -440,20 +439,10 @@
             this.label8.TabIndex = 95;
             this.label8.Text = "支払条件";
             // 
-            // transport1
-            // 
-            this.transport1.Font = new System.Drawing.Font("游ゴシック", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.transport1.Location = new System.Drawing.Point(0, 0);
-            this.transport1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.transport1.Name = "transport1";
-            this.transport1.Size = new System.Drawing.Size(1160, 630);
-            this.transport1.TabIndex = 107;
-            // 
             // DeliverySlip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.transport1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox4);
@@ -528,6 +517,5 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
-        private Transport transport1;
     }
 }

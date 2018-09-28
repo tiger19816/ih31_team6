@@ -68,7 +68,7 @@
             // 
             // btFixed
             // 
-            this.btFixed.Location = new System.Drawing.Point(695, 269);
+            this.btFixed.Location = new System.Drawing.Point(695, 267);
             this.btFixed.Name = "btFixed";
             this.btFixed.Size = new System.Drawing.Size(105, 44);
             this.btFixed.TabIndex = 119;
@@ -77,7 +77,7 @@
             // 
             // btCorrection
             // 
-            this.btCorrection.Location = new System.Drawing.Point(556, 269);
+            this.btCorrection.Location = new System.Drawing.Point(556, 267);
             this.btCorrection.Name = "btCorrection";
             this.btCorrection.Size = new System.Drawing.Size(105, 44);
             this.btCorrection.TabIndex = 120;
@@ -86,7 +86,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(15, 269);
+            this.button1.Location = new System.Drawing.Point(15, 267);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 44);
             this.button1.TabIndex = 121;
