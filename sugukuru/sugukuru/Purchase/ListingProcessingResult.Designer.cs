@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.btData = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -47,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbAuctionCompany = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,16 +62,6 @@
             this.label7.Text = "出品後処理確認";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btData
-            // 
-            this.btData.Location = new System.Drawing.Point(1025, 474);
-            this.btData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btData.Name = "btData";
-            this.btData.Size = new System.Drawing.Size(102, 31);
-            this.btData.TabIndex = 161;
-            this.btData.Text = "選択";
-            this.btData.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -79,7 +69,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(1124, 273);
+            this.dataGridView1.Size = new System.Drawing.Size(1124, 267);
             this.dataGridView1.TabIndex = 160;
             // 
             // groupBox1
@@ -234,10 +224,21 @@
             this.label2.TabIndex = 162;
             this.label2.Text = "オークション主催会社";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Location = new System.Drawing.Point(1027, 467);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 40);
+            this.button1.TabIndex = 176;
+            this.button1.Text = "確定";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ListingProcessingResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
@@ -252,7 +253,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbAuctionCompany);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btData);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -268,7 +268,6 @@
 
         #endregion
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btData;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -286,5 +285,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbAuctionCompany;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

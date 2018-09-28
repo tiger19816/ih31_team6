@@ -28,71 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
-            this.btResult = new System.Windows.Forms.Button();
-            this.btListingProcessing = new System.Windows.Forms.Button();
-            this.btProccesingResult = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btListingProcessing = new System.Windows.Forms.Button();
+            this.btResult = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label7
+            // panel2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(10, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 25);
-            this.label7.TabIndex = 114;
-            this.label7.Text = "出品車両処理";
-            // 
-            // btResult
-            // 
-            this.btResult.Location = new System.Drawing.Point(15, 60);
-            this.btResult.Name = "btResult";
-            this.btResult.Size = new System.Drawing.Size(134, 23);
-            this.btResult.TabIndex = 115;
-            this.btResult.Text = "出品結果確定";
-            this.btResult.UseVisualStyleBackColor = true;
-            this.btResult.Click += new System.EventHandler(this.btResult_Click);
+            this.panel2.Location = new System.Drawing.Point(15, 111);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1130, 510);
+            this.panel2.TabIndex = 118;
             // 
             // btListingProcessing
             // 
-            this.btListingProcessing.Location = new System.Drawing.Point(155, 60);
+            this.btListingProcessing.Location = new System.Drawing.Point(179, 59);
+            this.btListingProcessing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btListingProcessing.Name = "btListingProcessing";
-            this.btListingProcessing.Size = new System.Drawing.Size(134, 23);
+            this.btListingProcessing.Size = new System.Drawing.Size(156, 31);
             this.btListingProcessing.TabIndex = 116;
             this.btListingProcessing.Text = "出品後手続き内容登録";
             this.btListingProcessing.UseVisualStyleBackColor = true;
             this.btListingProcessing.Click += new System.EventHandler(this.btListingProcessing_Click);
             // 
-            // btProccesingResult
+            // btResult
             // 
-            this.btProccesingResult.Location = new System.Drawing.Point(295, 60);
-            this.btProccesingResult.Name = "btProccesingResult";
-            this.btProccesingResult.Size = new System.Drawing.Size(134, 23);
-            this.btProccesingResult.TabIndex = 117;
-            this.btProccesingResult.Text = "出品後手続確認・確定";
-            this.btProccesingResult.UseVisualStyleBackColor = true;
-            this.btProccesingResult.Click += new System.EventHandler(this.btProccesingResult_Click);
+            this.btResult.Location = new System.Drawing.Point(15, 59);
+            this.btResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btResult.Name = "btResult";
+            this.btResult.Size = new System.Drawing.Size(156, 31);
+            this.btResult.TabIndex = 115;
+            this.btResult.Text = "出品結果確定";
+            this.btResult.UseVisualStyleBackColor = true;
+            this.btResult.Click += new System.EventHandler(this.btResult_Click);
             // 
-            // panel2
+            // label7
             // 
-            this.panel2.Location = new System.Drawing.Point(15, 99);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1129, 515);
-            this.panel2.TabIndex = 118;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.Location = new System.Drawing.Point(12, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(126, 25);
+            this.label7.TabIndex = 114;
+            this.label7.Text = "出品車両処理";
             // 
             // ListingCar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btProccesingResult);
             this.Controls.Add(this.btListingProcessing);
             this.Controls.Add(this.btResult);
             this.Controls.Add(this.label7);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "ListingCar";
-            this.Size = new System.Drawing.Size(1160, 630);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,7 +94,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btResult;
         private System.Windows.Forms.Button btListingProcessing;
-        private System.Windows.Forms.Button btProccesingResult;
         private System.Windows.Forms.Panel panel2;
     }
 }

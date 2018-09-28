@@ -28,31 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btCorrection = new System.Windows.Forms.Button();
-            this.btFixed = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btCorrection
-            // 
-            this.btCorrection.Location = new System.Drawing.Point(128, 280);
-            this.btCorrection.Name = "btCorrection";
-            this.btCorrection.Size = new System.Drawing.Size(75, 23);
-            this.btCorrection.TabIndex = 125;
-            this.btCorrection.Text = "訂正";
-            this.btCorrection.UseVisualStyleBackColor = true;
-            // 
-            // btFixed
-            // 
-            this.btFixed.Location = new System.Drawing.Point(17, 281);
-            this.btFixed.Name = "btFixed";
-            this.btFixed.Size = new System.Drawing.Size(75, 23);
-            this.btFixed.TabIndex = 124;
-            this.btFixed.Text = "確定";
-            this.btFixed.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -83,13 +66,41 @@
             this.label7.Text = "出品車両情報";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 253);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 44);
+            this.button1.TabIndex = 128;
+            this.button1.Text = "訂正";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(553, 253);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 44);
+            this.button2.TabIndex = 127;
+            this.button2.Text = "訂正";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(692, 253);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(105, 44);
+            this.button3.TabIndex = 126;
+            this.button3.Text = "確定";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // ListCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 386);
-            this.Controls.Add(this.btCorrection);
-            this.Controls.Add(this.btFixed);
+            this.ClientSize = new System.Drawing.Size(820, 310);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
@@ -102,11 +113,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btCorrection;
-        private System.Windows.Forms.Button btFixed;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class Discount : UserControl
+    public partial class Discount : FormMaster.UserControlMST
     {
         public Discount()
         {

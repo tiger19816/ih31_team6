@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btFixed = new System.Windows.Forms.Button();
             this.btCorrection = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,27 +68,37 @@
             // 
             // btFixed
             // 
-            this.btFixed.Location = new System.Drawing.Point(17, 276);
+            this.btFixed.Location = new System.Drawing.Point(695, 269);
             this.btFixed.Name = "btFixed";
-            this.btFixed.Size = new System.Drawing.Size(75, 23);
+            this.btFixed.Size = new System.Drawing.Size(105, 44);
             this.btFixed.TabIndex = 119;
             this.btFixed.Text = "確定";
             this.btFixed.UseVisualStyleBackColor = true;
             // 
             // btCorrection
             // 
-            this.btCorrection.Location = new System.Drawing.Point(128, 275);
+            this.btCorrection.Location = new System.Drawing.Point(556, 269);
             this.btCorrection.Name = "btCorrection";
-            this.btCorrection.Size = new System.Drawing.Size(75, 23);
+            this.btCorrection.Size = new System.Drawing.Size(105, 44);
             this.btCorrection.TabIndex = 120;
             this.btCorrection.Text = "訂正";
             this.btCorrection.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 269);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 44);
+            this.button1.TabIndex = 121;
+            this.button1.Text = "訂正";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // BidResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 397);
+            this.ClientSize = new System.Drawing.Size(823, 327);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btCorrection);
             this.Controls.Add(this.btFixed);
             this.Controls.Add(this.label1);
@@ -108,5 +119,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btFixed;
         private System.Windows.Forms.Button btCorrection;
+        private System.Windows.Forms.Button button1;
     }
 }

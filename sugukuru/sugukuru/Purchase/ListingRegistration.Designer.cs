@@ -42,7 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbRep = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btRegistration = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbAuction = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -179,16 +179,6 @@
             this.label12.TabIndex = 105;
             this.label12.Text = "営業担当者";
             // 
-            // btRegistration
-            // 
-            this.btRegistration.Location = new System.Drawing.Point(17, 565);
-            this.btRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btRegistration.Name = "btRegistration";
-            this.btRegistration.Size = new System.Drawing.Size(87, 31);
-            this.btRegistration.TabIndex = 107;
-            this.btRegistration.Text = "確定";
-            this.btRegistration.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -268,10 +258,21 @@
             this.label10.TabIndex = 116;
             this.label10.Text = "オークション会場";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button2.Location = new System.Drawing.Point(1057, 587);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 40);
+            this.button2.TabIndex = 120;
+            this.button2.Text = "登録";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // ListingRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cbAuction);
@@ -281,7 +282,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btRegistration);
             this.Controls.Add(this.cbRep);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.tbModelYear);
@@ -320,7 +320,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbRep;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btRegistration;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
@@ -330,5 +329,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cbAuction;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button2;
     }
 }

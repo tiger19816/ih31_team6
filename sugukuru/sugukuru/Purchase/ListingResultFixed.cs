@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class ListingResultFixed : UserControl
+    public partial class ListingResultFixed : FormMaster.UserControlMST
     {
         public ListingResultFixed()
         {

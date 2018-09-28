@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class ListingCar : UserControl
+    public partial class ListingCar : FormMaster.UserControlMST
     {
 
         public static ListingProcessingResult listingProcessingResult;
