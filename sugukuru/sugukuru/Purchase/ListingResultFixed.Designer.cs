@@ -53,6 +53,7 @@
             this.btData.TabIndex = 144;
             this.btData.Text = "データを選択してもらう";
             this.btData.UseVisualStyleBackColor = true;
+            this.btData.Click += new System.EventHandler(this.btData_Click);
             // 
             // textBox1
             // 
@@ -169,7 +170,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 25);
             this.label7.TabIndex = 131;
-            this.label7.Text = "落札結果確定";
+            this.label7.Text = "出品結果確定";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ListingResultFixed
@@ -191,7 +192,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Name = "ListingResultFixed";
-            this.Size = new System.Drawing.Size(1160, 630);
+            this.Size = new System.Drawing.Size(1129, 515);
             this.Load += new System.EventHandler(this.ListingResultFixed_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -53,6 +53,7 @@
             this.btResult.TabIndex = 115;
             this.btResult.Text = "出品結果確定";
             this.btResult.UseVisualStyleBackColor = true;
+            this.btResult.Click += new System.EventHandler(this.btResult_Click);
             // 
             // btListingProcessing
             // 
@@ -62,6 +63,7 @@
             this.btListingProcessing.TabIndex = 116;
             this.btListingProcessing.Text = "出品後手続き内容登録";
             this.btListingProcessing.UseVisualStyleBackColor = true;
+            this.btListingProcessing.Click += new System.EventHandler(this.btListingProcessing_Click);
             // 
             // btProccesingResult
             // 
@@ -71,6 +73,7 @@
             this.btProccesingResult.TabIndex = 117;
             this.btProccesingResult.Text = "出品後手続確認・確定";
             this.btProccesingResult.UseVisualStyleBackColor = true;
+            this.btProccesingResult.Click += new System.EventHandler(this.btProccesingResult_Click);
             // 
             // panel2
             // 

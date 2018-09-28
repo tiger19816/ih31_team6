@@ -196,5 +196,13 @@ namespace sugukuru.Purchase
             ListingCar.Visible = false;
 
         }
+
+        private void btBidCarInput_Click(object sender, EventArgs e)
+        {
+            BidCarInput f = new BidCarInput();
+            //Form2を表示する
+            f.Show();
+            
+        }
     }
 }

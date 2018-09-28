@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btFixed = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -54,15 +53,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
-            // 
-            // btFixed
-            // 
-            this.btFixed.Location = new System.Drawing.Point(15, 469);
-            this.btFixed.Name = "btFixed";
-            this.btFixed.Size = new System.Drawing.Size(75, 23);
-            this.btFixed.TabIndex = 111;
-            this.btFixed.Text = "確定";
-            this.btFixed.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -312,9 +302,8 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btFixed);
             this.Name = "FixedPostProcessing";
-            this.Size = new System.Drawing.Size(1160, 630);
+            this.Size = new System.Drawing.Size(1129, 515);
             this.Load += new System.EventHandler(this.FixedPostProcessing_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -322,7 +311,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btFixed;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;

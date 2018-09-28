@@ -21,5 +21,11 @@ namespace sugukuru.Purchase
         {
 
         }
+
+        private void btData_Click(object sender, EventArgs e)
+        {
+            ListCar l = new ListCar();
+            l.Show();
+        }
     }
 }
