@@ -123,7 +123,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "Purchase";
-            this.Text = "仕入れ -スグクル社車両販売システム";
+            this.Text = "仕入 -スグクル社車両販売システム";
             this.inheritableFlowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

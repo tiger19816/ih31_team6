@@ -24,10 +24,6 @@ namespace sugukuru.Purchase
         public static BidCarProcessing BidCarProcessing;
         public static ListingCar ListingCar;
         
-
-
-
-
        public Purchase()
         {
             InitializeComponent();
@@ -43,6 +39,13 @@ namespace sugukuru.Purchase
             BidCarProcessing = new BidCarProcessing();
             ListingCar = new ListingCar();
 
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btBitInfo, 0);
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btBidCarInput, 1);
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btBitCar, 2);
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btDeliverySlip, 3);
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btTransportInfo, 4);
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btDisposalCarPurchase, 5);
+
             panel1.Controls.Add(ctr1);
             panel1.Controls.Add(BidInfoInput);
             panel1.Controls.Add(DeliverySlip);
@@ -54,7 +57,7 @@ namespace sugukuru.Purchase
             panel1.Controls.Add(BidCarProcessing);
             panel1.Controls.Add(ListingCar);
 
-            ctr1.Visible = true;
+            ctr1.Visible = false;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
             //BidCarInput.Visible = false;

@@ -110,7 +110,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Name = "SaleForm";
-            this.Text = "SaleForm";
+            this.Text = "売却 -スグクル社車両販売システム";
             this.inheritableFlowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

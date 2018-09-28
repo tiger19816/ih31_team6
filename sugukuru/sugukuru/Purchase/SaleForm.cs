@@ -27,7 +27,13 @@ namespace sugukuru.Purchase
             listingRegistration = new ListingRegistration();
             ListingResult = new ListingResult();
             ListingCar = new ListingCar();
-            
+
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btBitInfo, 0);
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btListingResult, 1);
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btListingCar, 2);
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btDisposalCar, 3);
+            inheritableFlowLayoutPanel1.Controls.SetChildIndex(btTransportInfo, 4);
+
             panel1.Controls.Add(BidInfoInput);
             panel1.Controls.Add(Transport);
             panel1.Controls.Add(listingRegistration);
