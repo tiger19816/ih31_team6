@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace sugukuru.Purchase
 {
-    public partial class BidResult : Form
+    public partial class BidResult : UserControl
     {
         public BidResult()
         {
