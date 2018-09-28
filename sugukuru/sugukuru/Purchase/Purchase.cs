@@ -20,7 +20,10 @@ namespace sugukuru.Purchase
         public static Transport Transport;
         public static ListingRegistration listingRegistration;
         public static Discount Discount;
-
+        public static ListingResult ListingResult;
+        public static BidCarProcessing BidCarProcessing;
+        public static ListingCar ListingCar;
+        
 
 
 
@@ -36,6 +39,9 @@ namespace sugukuru.Purchase
             Transport = new Transport();
             listingRegistration = new ListingRegistration();
             Discount = new Discount();
+            ListingResult = new ListingResult();
+            BidCarProcessing = new BidCarProcessing();
+            ListingCar = new ListingCar();
 
             panel1.Controls.Add(ctr1);
             panel1.Controls.Add(BidInfoInput);
@@ -44,6 +50,9 @@ namespace sugukuru.Purchase
             panel1.Controls.Add(Transport);
             panel1.Controls.Add(listingRegistration);
             panel1.Controls.Add(Discount);
+            panel1.Controls.Add(ListingResult);
+            panel1.Controls.Add(BidCarProcessing);
+            panel1.Controls.Add(ListingCar);
 
             ctr1.Visible = true;
             BidInfoInput.Visible = false;
@@ -52,6 +61,10 @@ namespace sugukuru.Purchase
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = false;
+           
 
         }
         
@@ -64,6 +77,9 @@ namespace sugukuru.Purchase
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = false;
         }
 
         private void btDeliverySlip_Click(object sender, EventArgs e)
@@ -74,11 +90,25 @@ namespace sugukuru.Purchase
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = false;
         }
 
         private void btBitCar_Click(object sender, EventArgs e)
         {
-            
+            //落札車両処理
+            ctr1.Visible = false;
+            BidInfoInput.Visible = false;
+            DeliverySlip.Visible = false;
+            Transport.Visible = false;
+            listingRegistration.Visible = false;
+            Discount.Visible = false;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = true;
+            ListingCar.Visible = false;
+
+
         }
 
         private void btTransportInfo_Click(object sender, EventArgs e)
@@ -89,6 +119,9 @@ namespace sugukuru.Purchase
             Transport.Visible = true;
             listingRegistration.Visible = false;
             Discount.Visible = false;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = false;
         }
 
         private void btDisposalCar_Click(object sender, EventArgs e)
@@ -99,6 +132,9 @@ namespace sugukuru.Purchase
             Transport.Visible = false;
             listingRegistration.Visible = true;
             Discount.Visible = false;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = false;
         }
 
         private void btDisposalCarPurchase_Click(object sender, EventArgs e)
@@ -109,6 +145,9 @@ namespace sugukuru.Purchase
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = true;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = false;
         }
 
         private void btBidCarList_Click(object sender, EventArgs e)
@@ -119,6 +158,43 @@ namespace sugukuru.Purchase
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = false;
+        }
+
+        private void btListingCar_Click(object sender, EventArgs e)
+        {
+            //出品車両処理
+            ctr1.Visible = false;
+            BidInfoInput.Visible = false;
+            DeliverySlip.Visible = false;
+            //BidCarInput.Visible = false;
+            Transport.Visible = false;
+            listingRegistration.Visible = false;
+            Discount.Visible = false;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = true;
+
+
+
+        }
+
+        private void btListingResult_Click(object sender, EventArgs e)
+        {
+            //出品結果登録
+            ctr1.Visible = false;
+            BidInfoInput.Visible = false;
+            DeliverySlip.Visible = false;
+            //BidCarInput.Visible = false;
+            Transport.Visible = false;
+            listingRegistration.Visible = false;
+            Discount.Visible = false;
+            ListingResult.Visible = true;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = false;
+
         }
     }
 }
