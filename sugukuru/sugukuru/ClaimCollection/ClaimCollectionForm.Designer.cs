@@ -53,7 +53,7 @@
             this.btReceiptPrinting.Location = new System.Drawing.Point(3, 399);
             this.btReceiptPrinting.Name = "btReceiptPrinting";
             this.btReceiptPrinting.Size = new System.Drawing.Size(94, 60);
-            this.btReceiptPrinting.TabIndex = 6;
+            this.btReceiptPrinting.TabIndex = 7;
             this.btReceiptPrinting.Text = "領収書発行";
             this.btReceiptPrinting.UseVisualStyleBackColor = true;
             this.btReceiptPrinting.Click += new System.EventHandler(this.btReceiptPrinting_Click);
@@ -63,8 +63,8 @@
             this.btRepetitionClaim.Location = new System.Drawing.Point(3, 333);
             this.btRepetitionClaim.Name = "btRepetitionClaim";
             this.btRepetitionClaim.Size = new System.Drawing.Size(94, 60);
-            this.btRepetitionClaim.TabIndex = 7;
-            this.btRepetitionClaim.Text = "繰越請求書発行";
+            this.btRepetitionClaim.TabIndex = 6;
+            this.btRepetitionClaim.Text = "未決済請求処理";
             this.btRepetitionClaim.UseVisualStyleBackColor = true;
             this.btRepetitionClaim.Click += new System.EventHandler(this.btRepetitionClaim_Click);
             // 
@@ -73,7 +73,7 @@
             this.btBulkReconciliation.Location = new System.Drawing.Point(3, 267);
             this.btBulkReconciliation.Name = "btBulkReconciliation";
             this.btBulkReconciliation.Size = new System.Drawing.Size(94, 60);
-            this.btBulkReconciliation.TabIndex = 8;
+            this.btBulkReconciliation.TabIndex = 5;
             this.btBulkReconciliation.Text = "一括消込";
             this.btBulkReconciliation.UseVisualStyleBackColor = true;
             this.btBulkReconciliation.Click += new System.EventHandler(this.btBulkReconciliation_Click);
@@ -83,7 +83,7 @@
             this.btIndividualReconciliation.Location = new System.Drawing.Point(3, 201);
             this.btIndividualReconciliation.Name = "btIndividualReconciliation";
             this.btIndividualReconciliation.Size = new System.Drawing.Size(94, 60);
-            this.btIndividualReconciliation.TabIndex = 9;
+            this.btIndividualReconciliation.TabIndex = 4;
             this.btIndividualReconciliation.Text = "個別消込";
             this.btIndividualReconciliation.UseVisualStyleBackColor = true;
             this.btIndividualReconciliation.Click += new System.EventHandler(this.btIndividualReconciliation_Click);
@@ -93,7 +93,7 @@
             this.btBulkClaim.Location = new System.Drawing.Point(3, 135);
             this.btBulkClaim.Name = "btBulkClaim";
             this.btBulkClaim.Size = new System.Drawing.Size(94, 60);
-            this.btBulkClaim.TabIndex = 10;
+            this.btBulkClaim.TabIndex = 3;
             this.btBulkClaim.Text = "一括請求書発行";
             this.btBulkClaim.UseVisualStyleBackColor = true;
             this.btBulkClaim.Click += new System.EventHandler(this.btBulkClaim_Click);
@@ -103,7 +103,7 @@
             this.btIndividualClaim.Location = new System.Drawing.Point(3, 69);
             this.btIndividualClaim.Name = "btIndividualClaim";
             this.btIndividualClaim.Size = new System.Drawing.Size(94, 60);
-            this.btIndividualClaim.TabIndex = 11;
+            this.btIndividualClaim.TabIndex = 2;
             this.btIndividualClaim.Text = "個別請求書発行";
             this.btIndividualClaim.UseVisualStyleBackColor = true;
             this.btIndividualClaim.Click += new System.EventHandler(this.btIndividualClaim_Click);
@@ -113,7 +113,7 @@
             this.btCheckAccountReceivable.Location = new System.Drawing.Point(3, 3);
             this.btCheckAccountReceivable.Name = "btCheckAccountReceivable";
             this.btCheckAccountReceivable.Size = new System.Drawing.Size(94, 60);
-            this.btCheckAccountReceivable.TabIndex = 12;
+            this.btCheckAccountReceivable.TabIndex = 1;
             this.btCheckAccountReceivable.Text = "売掛金参照";
             this.btCheckAccountReceivable.UseVisualStyleBackColor = true;
             this.btCheckAccountReceivable.Click += new System.EventHandler(this.btCheckAccountReceivable_Click);

@@ -56,10 +56,10 @@ namespace sugukuru.ClaimCollection
             panel1.Controls.Add(ctr6);
             panel1.Controls.Add(ctr7);
 
-            ctr1.Visible = false;
+            ctr1.Visible = true;
             ctr2.Visible = false;
             ctr3.Visible = false;
-            ctr4.Visible = true;
+            ctr4.Visible = false;
             ctr5.Visible = false;
             ctr6.Visible = false;
             ctr7.Visible = false;
