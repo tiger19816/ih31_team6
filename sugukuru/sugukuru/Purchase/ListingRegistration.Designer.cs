@@ -72,6 +72,7 @@
             this.tbModelYear.Name = "tbModelYear";
             this.tbModelYear.Size = new System.Drawing.Size(140, 27);
             this.tbModelYear.TabIndex = 100;
+            this.tbModelYear.Text = "2018";
             // 
             // tbCarName
             // 
@@ -80,6 +81,7 @@
             this.tbCarName.Name = "tbCarName";
             this.tbCarName.Size = new System.Drawing.Size(140, 27);
             this.tbCarName.TabIndex = 99;
+            this.tbCarName.Text = "エルグランド";
             // 
             // tbModel
             // 
@@ -88,6 +90,7 @@
             this.tbModel.Name = "tbModel";
             this.tbModel.Size = new System.Drawing.Size(140, 27);
             this.tbModel.TabIndex = 98;
+            this.tbModel.Text = "DBA-PE52";
             // 
             // label5
             // 
@@ -133,6 +136,7 @@
             this.tbCustomerID.Name = "tbCustomerID";
             this.tbCustomerID.Size = new System.Drawing.Size(140, 27);
             this.tbCustomerID.TabIndex = 93;
+            this.tbCustomerID.Text = "18001";
             // 
             // tbOrderID
             // 
@@ -141,6 +145,7 @@
             this.tbOrderID.Name = "tbOrderID";
             this.tbOrderID.Size = new System.Drawing.Size(140, 27);
             this.tbOrderID.TabIndex = 92;
+            this.tbOrderID.Text = "2018110001";
             this.tbOrderID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label7
@@ -169,6 +174,7 @@
             this.cbRep.Name = "cbRep";
             this.cbRep.Size = new System.Drawing.Size(140, 24);
             this.cbRep.TabIndex = 106;
+            this.cbRep.Text = "大阪 春貴";
             // 
             // label12
             // 
@@ -195,6 +201,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 27);
             this.textBox1.TabIndex = 112;
+            this.textBox1.Text = "108,000";
             // 
             // button1
             // 
@@ -222,6 +229,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(140, 27);
             this.textBox2.TabIndex = 115;
+            this.textBox2.Text = "0001";
             // 
             // label9
             // 
@@ -248,6 +256,7 @@
             this.cbAuction.Name = "cbAuction";
             this.cbAuction.Size = new System.Drawing.Size(140, 24);
             this.cbAuction.TabIndex = 117;
+            this.cbAuction.Text = "USS大阪会場";
             // 
             // label10
             // 

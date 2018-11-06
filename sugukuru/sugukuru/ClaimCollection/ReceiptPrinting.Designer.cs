@@ -35,16 +35,25 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btCustomerSearch = new System.Windows.Forms.Button();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -120,19 +129,28 @@
             this.tblCustomer.ColumnCount = 2;
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tblCustomer.Controls.Add(this.label23, 1, 7);
+            this.tblCustomer.Controls.Add(this.label22, 1, 6);
+            this.tblCustomer.Controls.Add(this.label20, 1, 5);
+            this.tblCustomer.Controls.Add(this.label19, 1, 4);
+            this.tblCustomer.Controls.Add(this.label10, 1, 3);
+            this.tblCustomer.Controls.Add(this.label9, 1, 2);
             this.tblCustomer.Controls.Add(this.label3, 0, 0);
             this.tblCustomer.Controls.Add(this.label4, 0, 1);
             this.tblCustomer.Controls.Add(this.label14, 0, 6);
             this.tblCustomer.Controls.Add(this.label13, 0, 5);
             this.tblCustomer.Controls.Add(this.label12, 0, 4);
             this.tblCustomer.Controls.Add(this.label11, 0, 3);
-            this.tblCustomer.Controls.Add(this.label15, 1, 1);
             this.tblCustomer.Controls.Add(this.label16, 0, 2);
             this.tblCustomer.Controls.Add(this.label17, 0, 7);
             this.tblCustomer.Controls.Add(this.label18, 0, 8);
+            this.tblCustomer.Controls.Add(this.label7, 1, 0);
+            this.tblCustomer.Controls.Add(this.label8, 1, 1);
+            this.tblCustomer.Controls.Add(this.label15, 0, 9);
+            this.tblCustomer.Controls.Add(this.label24, 1, 8);
             this.tblCustomer.Location = new System.Drawing.Point(23, 92);
             this.tblCustomer.Name = "tblCustomer";
-            this.tblCustomer.RowCount = 9;
+            this.tblCustomer.RowCount = 10;
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
@@ -145,6 +163,72 @@
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblCustomer.Size = new System.Drawing.Size(379, 298);
             this.tblCustomer.TabIndex = 105;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Location = new System.Drawing.Point(117, 240);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 16);
+            this.label23.TabIndex = 117;
+            this.label23.Text = "営業部";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Location = new System.Drawing.Point(117, 207);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(88, 16);
+            this.label22.TabIndex = 116;
+            this.label22.Text = "06-6345-2222";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Location = new System.Drawing.Point(117, 174);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(88, 16);
+            this.label20.TabIndex = 115;
+            this.label20.Text = "06-6345-2222";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Location = new System.Drawing.Point(117, 141);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(178, 16);
+            this.label19.TabIndex = 114;
+            this.label19.Text = "大阪府大阪市北区梅田3丁目3-2";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Location = new System.Drawing.Point(117, 108);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 16);
+            this.label10.TabIndex = 114;
+            this.label10.Text = "533-0001";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(117, 75);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 16);
+            this.label9.TabIndex = 113;
+            this.label9.Text = "ハルオオサカ";
             // 
             // label3
             // 
@@ -212,15 +296,6 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "所在地〒";
             // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(117, 42);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 16);
-            this.label15.TabIndex = 5;
-            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -254,6 +329,48 @@
             this.label18.TabIndex = 8;
             this.label18.Text = "取引先担当者";
             // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(117, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 16);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "18001";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(117, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 16);
+            this.label8.TabIndex = 67;
+            this.label8.Text = "HAL大阪";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(4, 300);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 16);
+            this.label15.TabIndex = 5;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Location = new System.Drawing.Point(117, 273);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(71, 16);
+            this.label24.TabIndex = 118;
+            this.label24.Text = "大阪 春太郎";
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(423, 45);
@@ -281,6 +398,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(379, 27);
             this.textBox2.TabIndex = 107;
+            this.textBox2.Text = "取引料金の請求";
             // 
             // comboBox1
             // 
@@ -289,6 +407,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 112;
+            this.comboBox1.Text = "大阪 春貴";
             // 
             // textBox3
             // 
@@ -296,6 +415,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(171, 27);
             this.textBox3.TabIndex = 111;
+            this.textBox3.Text = "2018年11月5日";
             // 
             // label21
             // 
@@ -369,5 +489,14 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label24;
     }
 }

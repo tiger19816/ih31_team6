@@ -73,6 +73,7 @@
             this.cbAuction.Name = "cbAuction";
             this.cbAuction.Size = new System.Drawing.Size(140, 24);
             this.cbAuction.TabIndex = 4;
+            this.cbAuction.Text = "USS大阪会場";
             // 
             // label4
             // 
@@ -90,6 +91,7 @@
             this.tbListingNumber.Name = "tbListingNumber";
             this.tbListingNumber.Size = new System.Drawing.Size(116, 27);
             this.tbListingNumber.TabIndex = 6;
+            this.tbListingNumber.Text = "0001";
             // 
             // dateTimePicker1
             // 
@@ -124,6 +126,7 @@
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(116, 27);
             this.tbPrice.TabIndex = 11;
+            this.tbPrice.Text = "108,000";
             // 
             // rbSatisfied
             // 
@@ -167,6 +170,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(116, 27);
             this.textBox1.TabIndex = 15;
+            this.textBox1.Text = "18001";
             // 
             // btSearch
             // 

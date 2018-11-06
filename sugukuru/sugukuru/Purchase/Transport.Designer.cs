@@ -66,6 +66,7 @@
             this.cbTransport.Name = "cbTransport";
             this.cbTransport.Size = new System.Drawing.Size(140, 24);
             this.cbTransport.TabIndex = 2;
+            this.cbTransport.Text = "株式会社ゼロ";
             // 
             // btConfirmation
             // 
@@ -157,6 +158,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(116, 27);
             this.textBox1.TabIndex = 19;
+            this.textBox1.Text = "0001";
             // 
             // btSearch
             // 
@@ -175,6 +177,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(116, 27);
             this.textBox2.TabIndex = 21;
+            this.textBox2.Text = "18001";
             // 
             // textBox3
             // 
@@ -183,6 +186,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(116, 27);
             this.textBox3.TabIndex = 22;
+            this.textBox3.Text = "USS大阪会場";
             // 
             // textBox4
             // 
@@ -191,6 +195,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(116, 27);
             this.textBox4.TabIndex = 23;
+            this.textBox4.Text = "HAL大阪";
             // 
             // textBox5
             // 
@@ -199,6 +204,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(116, 27);
             this.textBox5.TabIndex = 24;
+            this.textBox5.Text = "5,400";
             // 
             // textBox6
             // 
@@ -207,6 +213,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(116, 27);
             this.textBox6.TabIndex = 25;
+            this.textBox6.Text = "1811001";
             // 
             // dateTimePicker1
             // 

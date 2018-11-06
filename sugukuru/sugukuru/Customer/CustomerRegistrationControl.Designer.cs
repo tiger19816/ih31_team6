@@ -281,6 +281,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 26;
+            this.comboBox1.Text = "大阪府";
             // 
             // label16
             // 
@@ -309,6 +310,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(250, 27);
             this.textBox1.TabIndex = 29;
+            this.textBox1.Text = "HAL大阪";
             // 
             // textBox2
             // 
@@ -316,6 +318,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(250, 27);
             this.textBox2.TabIndex = 30;
+            this.textBox2.Text = "ハルオオサカ";
             // 
             // textBox3
             // 
@@ -323,6 +326,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(250, 27);
             this.textBox3.TabIndex = 31;
+            this.textBox3.Text = "HAL";
             // 
             // textBox4
             // 
@@ -330,6 +334,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(250, 27);
             this.textBox4.TabIndex = 32;
+            this.textBox4.Text = "ハル";
             // 
             // textBox5
             // 
@@ -337,6 +342,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 27);
             this.textBox5.TabIndex = 33;
+            this.textBox5.Text = "533-0001";
             // 
             // textBox6
             // 
@@ -344,6 +350,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(250, 27);
             this.textBox6.TabIndex = 34;
+            this.textBox6.Text = "大阪市北区梅田3丁目3-2";
             // 
             // textBox7
             // 
@@ -351,6 +358,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(250, 27);
             this.textBox7.TabIndex = 35;
+            this.textBox7.Text = "営業部";
             // 
             // textBox8
             // 
@@ -358,6 +366,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(250, 27);
             this.textBox8.TabIndex = 36;
+            this.textBox8.Text = "大阪 春太郎";
             // 
             // textBox9
             // 
@@ -365,6 +374,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(250, 27);
             this.textBox9.TabIndex = 38;
+            this.textBox9.Text = "halOsaka@mail.com";
             // 
             // textBox10
             // 
@@ -372,6 +382,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 27);
             this.textBox10.TabIndex = 37;
+            this.textBox10.Text = "06-6345-2222";
             // 
             // textBox11
             // 
@@ -379,6 +390,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(100, 27);
             this.textBox11.TabIndex = 39;
+            this.textBox11.Text = "1,000,000";
             // 
             // textBox12
             // 
@@ -386,6 +398,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(100, 27);
             this.textBox12.TabIndex = 40;
+            this.textBox12.Text = "12345678";
             // 
             // textBox13
             // 
@@ -393,6 +406,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(100, 27);
             this.textBox13.TabIndex = 41;
+            this.textBox13.Text = "2018年10月20日";
             // 
             // textBox14
             // 
@@ -487,6 +501,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(190, 27);
             this.textBox15.TabIndex = 49;
+            this.textBox15.Text = "三菱UFJ銀行";
             // 
             // textBox16
             // 
@@ -494,6 +509,7 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(190, 27);
             this.textBox16.TabIndex = 50;
+            this.textBox16.Text = "梅田支店";
             // 
             // textBox17
             // 
@@ -501,6 +517,7 @@
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(100, 27);
             this.textBox17.TabIndex = 51;
+            this.textBox17.Text = "0005";
             // 
             // textBox18
             // 
@@ -508,6 +525,7 @@
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(100, 27);
             this.textBox18.TabIndex = 52;
+            this.textBox18.Text = "044";
             // 
             // textBox19
             // 
@@ -515,6 +533,7 @@
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(190, 27);
             this.textBox19.TabIndex = 53;
+            this.textBox19.Text = "HAL大阪";
             // 
             // label22
             // 
@@ -549,6 +568,7 @@
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(100, 27);
             this.textBox20.TabIndex = 57;
+            this.textBox20.Text = "25";
             // 
             // textBox21
             // 
@@ -556,6 +576,7 @@
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(100, 27);
             this.textBox21.TabIndex = 58;
+            this.textBox21.Text = "1";
             // 
             // textBox22
             // 
@@ -563,6 +584,7 @@
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(100, 27);
             this.textBox22.TabIndex = 59;
+            this.textBox22.Text = "10";
             // 
             // label26
             // 
@@ -589,6 +611,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 64;
+            this.comboBox2.Text = "大阪 春貴";
             // 
             // comboBox3
             // 
@@ -597,6 +620,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 65;
+            this.comboBox3.Text = "大阪 春男";
             // 
             // textBox23
             // 
