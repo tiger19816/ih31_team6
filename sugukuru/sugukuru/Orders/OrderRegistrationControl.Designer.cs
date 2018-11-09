@@ -64,8 +64,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbRegisteredPerson = new System.Windows.Forms.ComboBox();
+            this.cbOrderInCharge = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tblCustomer.SuspendLayout();
@@ -436,21 +436,21 @@
             this.textBox9.Size = new System.Drawing.Size(171, 27);
             this.textBox9.TabIndex = 34;
             // 
-            // comboBox1
+            // cbRegisteredPerson
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(153, 540);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 35;
+            this.cbRegisteredPerson.FormattingEnabled = true;
+            this.cbRegisteredPerson.Location = new System.Drawing.Point(153, 540);
+            this.cbRegisteredPerson.Name = "cbRegisteredPerson";
+            this.cbRegisteredPerson.Size = new System.Drawing.Size(121, 24);
+            this.cbRegisteredPerson.TabIndex = 35;
             // 
-            // comboBox2
+            // cbOrderInCharge
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(660, 540);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 36;
+            this.cbOrderInCharge.FormattingEnabled = true;
+            this.cbOrderInCharge.Location = new System.Drawing.Point(660, 540);
+            this.cbOrderInCharge.Name = "cbOrderInCharge";
+            this.cbOrderInCharge.Size = new System.Drawing.Size(121, 24);
+            this.cbOrderInCharge.TabIndex = 36;
             // 
             // label22
             // 
@@ -466,8 +466,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbOrderInCharge);
+            this.Controls.Add(this.cbRegisteredPerson);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -543,8 +543,8 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbRegisteredPerson;
+        private System.Windows.Forms.ComboBox cbOrderInCharge;
         private System.Windows.Forms.Label label22;
     }
 }

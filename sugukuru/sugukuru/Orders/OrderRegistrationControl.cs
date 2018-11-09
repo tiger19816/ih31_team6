@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace sugukuru.Orders
 {
     public partial class OrderRegistrationControl : UserControl
     {
+        //DB接続文字列の取得
+        string conStr;
+
         public OrderRegistrationControl()
         {
             InitializeComponent();
+            this.conStr = ConfigurationManager.AppSettings["DbConKey"];
         }
 
         private void tblCustomer_CellPaint(object sender, TableLayoutCellPaintEventArgs e)

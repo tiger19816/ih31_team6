@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbId = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.btLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -54,19 +54,22 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "社員ID";
             // 
-            // textBox1
+            // tbId
             // 
-            this.textBox1.Location = new System.Drawing.Point(211, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 19);
-            this.textBox1.TabIndex = 2;
+            this.tbId.Location = new System.Drawing.Point(211, 75);
+            this.tbId.MaxLength = 3;
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(100, 19);
+            this.tbId.TabIndex = 2;
             // 
-            // textBox2
+            // tbPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(211, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 19);
-            this.textBox2.TabIndex = 3;
+            this.tbPassword.Location = new System.Drawing.Point(211, 116);
+            this.tbPassword.MaxLength = 20;
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(100, 19);
+            this.tbPassword.TabIndex = 3;
             // 
             // btLogin
             // 
@@ -95,8 +98,8 @@
             this.ClientSize = new System.Drawing.Size(464, 231);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -111,8 +114,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbId;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.Label label3;
     }

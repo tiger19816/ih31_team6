@@ -17,6 +17,11 @@ namespace sugukuru.MainMenu
             InitializeComponent();
         }
 
+        public MainMenuForm(int id, string name, int division) : base(id, name, division)
+        {
+            InitializeComponent();
+        }
+
         private void Button_Click(object sender, EventArgs e)
         {
             Form ContentFM = null;
