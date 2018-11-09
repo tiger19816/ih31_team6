@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btOrderRegistrarion = new System.Windows.Forms.Button();
             this.btCustomerSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbClientId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbOrderType = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,13 +43,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tbInfo = new System.Windows.Forms.TextBox();
+            this.tbCarModel = new System.Windows.Forms.TextBox();
+            this.tbCarClass = new System.Windows.Forms.TextBox();
+            this.tbCarYear = new System.Windows.Forms.TextBox();
+            this.tbCarColor = new System.Windows.Forms.TextBox();
+            this.tbCarMile = new System.Windows.Forms.TextBox();
+            this.tbBudget = new System.Windows.Forms.TextBox();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -63,25 +63,26 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.tbCreateAt = new System.Windows.Forms.TextBox();
+            this.cbCreateRep = new System.Windows.Forms.ComboBox();
+            this.cbOrderRep = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.gbOrderType.SuspendLayout();
             this.tblCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btOrderRegistrarion
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1040, 573);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 53);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "登録";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btOrderRegistrarion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btOrderRegistrarion.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btOrderRegistrarion.Location = new System.Drawing.Point(1040, 573);
+            this.btOrderRegistrarion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btOrderRegistrarion.Name = "btOrderRegistrarion";
+            this.btOrderRegistrarion.Size = new System.Drawing.Size(117, 53);
+            this.btOrderRegistrarion.TabIndex = 5;
+            this.btOrderRegistrarion.Text = "登録";
+            this.btOrderRegistrarion.UseVisualStyleBackColor = false;
+            this.btOrderRegistrarion.Click += new System.EventHandler(this.btOrderRegistrarion_Click);
             // 
             // btCustomerSearch
             // 
@@ -104,13 +105,13 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "受注登録";
             // 
-            // textBox1
+            // tbClientId
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 141);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 27);
-            this.textBox1.TabIndex = 8;
+            this.tbClientId.Location = new System.Drawing.Point(153, 141);
+            this.tbClientId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbClientId.Name = "tbClientId";
+            this.tbClientId.Size = new System.Drawing.Size(116, 27);
+            this.tbClientId.TabIndex = 8;
             // 
             // label2
             // 
@@ -121,18 +122,18 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "顧客ID";
             // 
-            // groupBox1
+            // gbOrderType
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(30, 57);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(311, 63);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "受注種別";
+            this.gbOrderType.Controls.Add(this.radioButton2);
+            this.gbOrderType.Controls.Add(this.radioButton1);
+            this.gbOrderType.Location = new System.Drawing.Point(30, 57);
+            this.gbOrderType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbOrderType.Name = "gbOrderType";
+            this.gbOrderType.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbOrderType.Size = new System.Drawing.Size(311, 63);
+            this.gbOrderType.TabIndex = 10;
+            this.gbOrderType.TabStop = false;
+            this.gbOrderType.Text = "受注種別";
             // 
             // radioButton2
             // 
@@ -221,55 +222,55 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "細微情報";
             // 
-            // textBox2
+            // tbInfo
             // 
-            this.textBox2.Location = new System.Drawing.Point(583, 332);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(550, 151);
-            this.textBox2.TabIndex = 19;
+            this.tbInfo.Location = new System.Drawing.Point(583, 332);
+            this.tbInfo.Multiline = true;
+            this.tbInfo.Name = "tbInfo";
+            this.tbInfo.Size = new System.Drawing.Size(550, 151);
+            this.tbInfo.TabIndex = 19;
             // 
-            // textBox3
+            // tbCarModel
             // 
-            this.textBox3.Location = new System.Drawing.Point(660, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 27);
-            this.textBox3.TabIndex = 20;
+            this.tbCarModel.Location = new System.Drawing.Point(660, 77);
+            this.tbCarModel.Name = "tbCarModel";
+            this.tbCarModel.Size = new System.Drawing.Size(171, 27);
+            this.tbCarModel.TabIndex = 20;
             // 
-            // textBox4
+            // tbCarClass
             // 
-            this.textBox4.Location = new System.Drawing.Point(660, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 27);
-            this.textBox4.TabIndex = 22;
+            this.tbCarClass.Location = new System.Drawing.Point(660, 117);
+            this.tbCarClass.Name = "tbCarClass";
+            this.tbCarClass.Size = new System.Drawing.Size(171, 27);
+            this.tbCarClass.TabIndex = 22;
             // 
-            // textBox5
+            // tbCarYear
             // 
-            this.textBox5.Location = new System.Drawing.Point(660, 157);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
-            this.textBox5.TabIndex = 24;
+            this.tbCarYear.Location = new System.Drawing.Point(660, 157);
+            this.tbCarYear.Name = "tbCarYear";
+            this.tbCarYear.Size = new System.Drawing.Size(100, 27);
+            this.tbCarYear.TabIndex = 24;
             // 
-            // textBox6
+            // tbCarColor
             // 
-            this.textBox6.Location = new System.Drawing.Point(660, 197);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 27);
-            this.textBox6.TabIndex = 26;
+            this.tbCarColor.Location = new System.Drawing.Point(660, 197);
+            this.tbCarColor.Name = "tbCarColor";
+            this.tbCarColor.Size = new System.Drawing.Size(100, 27);
+            this.tbCarColor.TabIndex = 26;
             // 
-            // textBox7
+            // tbCarMile
             // 
-            this.textBox7.Location = new System.Drawing.Point(660, 237);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 27);
-            this.textBox7.TabIndex = 28;
+            this.tbCarMile.Location = new System.Drawing.Point(660, 237);
+            this.tbCarMile.Name = "tbCarMile";
+            this.tbCarMile.Size = new System.Drawing.Size(100, 27);
+            this.tbCarMile.TabIndex = 28;
             // 
-            // textBox8
+            // tbBudget
             // 
-            this.textBox8.Location = new System.Drawing.Point(660, 277);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 27);
-            this.textBox8.TabIndex = 30;
+            this.tbBudget.Location = new System.Drawing.Point(660, 277);
+            this.tbBudget.Name = "tbBudget";
+            this.tbBudget.Size = new System.Drawing.Size(100, 27);
+            this.tbBudget.TabIndex = 30;
             // 
             // tblCustomer
             // 
@@ -429,28 +430,28 @@
             this.label21.TabIndex = 33;
             this.label21.Text = "登録者";
             // 
-            // textBox9
+            // tbCreateAt
             // 
-            this.textBox9.Location = new System.Drawing.Point(153, 495);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(171, 27);
-            this.textBox9.TabIndex = 34;
+            this.tbCreateAt.Location = new System.Drawing.Point(153, 495);
+            this.tbCreateAt.Name = "tbCreateAt";
+            this.tbCreateAt.Size = new System.Drawing.Size(171, 27);
+            this.tbCreateAt.TabIndex = 34;
             // 
-            // comboBox1
+            // cbCreateRep
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(153, 540);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 35;
+            this.cbCreateRep.FormattingEnabled = true;
+            this.cbCreateRep.Location = new System.Drawing.Point(153, 540);
+            this.cbCreateRep.Name = "cbCreateRep";
+            this.cbCreateRep.Size = new System.Drawing.Size(121, 24);
+            this.cbCreateRep.TabIndex = 35;
             // 
-            // comboBox2
+            // cbOrderRep
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(660, 540);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 36;
+            this.cbOrderRep.FormattingEnabled = true;
+            this.cbOrderRep.Location = new System.Drawing.Point(660, 540);
+            this.cbOrderRep.Name = "cbOrderRep";
+            this.cbOrderRep.Size = new System.Drawing.Size(121, 24);
+            this.cbOrderRep.TabIndex = 36;
             // 
             // label22
             // 
@@ -466,19 +467,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.cbOrderRep);
+            this.Controls.Add(this.cbCreateRep);
+            this.Controls.Add(this.tbCreateAt);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.tblCustomer);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbBudget);
+            this.Controls.Add(this.tbCarMile);
+            this.Controls.Add(this.tbCarColor);
+            this.Controls.Add(this.tbCarYear);
+            this.Controls.Add(this.tbCarClass);
+            this.Controls.Add(this.tbCarModel);
+            this.Controls.Add(this.tbInfo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -486,18 +487,18 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbOrderType);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbClientId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btCustomerSearch);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btOrderRegistrarion);
             this.Font = new System.Drawing.Font("游ゴシック", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrderRegistrationControl";
             this.Size = new System.Drawing.Size(1160, 630);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbOrderType.ResumeLayout(false);
+            this.gbOrderType.PerformLayout();
             this.tblCustomer.ResumeLayout(false);
             this.tblCustomer.PerformLayout();
             this.ResumeLayout(false);
@@ -507,12 +508,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btOrderRegistrarion;
         private System.Windows.Forms.Button btCustomerSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbClientId;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbOrderType;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label4;
@@ -522,13 +523,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbInfo;
+        private System.Windows.Forms.TextBox tbCarModel;
+        private System.Windows.Forms.TextBox tbCarClass;
+        private System.Windows.Forms.TextBox tbCarYear;
+        private System.Windows.Forms.TextBox tbCarColor;
+        private System.Windows.Forms.TextBox tbCarMile;
+        private System.Windows.Forms.TextBox tbBudget;
         private System.Windows.Forms.TableLayoutPanel tblCustomer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
@@ -542,9 +543,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox tbCreateAt;
+        private System.Windows.Forms.ComboBox cbCreateRep;
+        private System.Windows.Forms.ComboBox cbOrderRep;
         private System.Windows.Forms.Label label22;
     }
 }

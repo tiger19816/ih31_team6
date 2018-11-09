@@ -34,12 +34,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbOrderId = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -139,14 +139,15 @@
             this.radioButton1.Text = "OR検索";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btSearch
             // 
-            this.button1.Location = new System.Drawing.Point(1065, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "検索";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btSearch.Location = new System.Drawing.Point(1065, 128);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(75, 23);
+            this.btSearch.TabIndex = 33;
+            this.btSearch.Text = "検索";
+            this.btSearch.UseVisualStyleBackColor = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // label2
             // 
@@ -183,12 +184,12 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 56;
             // 
-            // textBox1
+            // tbOrderId
             // 
-            this.textBox1.Location = new System.Drawing.Point(252, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 51;
+            this.tbOrderId.Location = new System.Drawing.Point(252, 51);
+            this.tbOrderId.Name = "tbOrderId";
+            this.tbOrderId.Size = new System.Drawing.Size(100, 27);
+            this.tbOrderId.TabIndex = 51;
             // 
             // label10
             // 
@@ -482,11 +483,11 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbOrderId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btSearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btDetail);
             this.Controls.Add(this.label1);
@@ -509,12 +510,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbOrderId;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label9;
