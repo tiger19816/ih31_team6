@@ -40,7 +40,7 @@
             this.rbSatisfied = new System.Windows.Forms.RadioButton();
             this.rbUnsatisfied = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbOrderId = new System.Windows.Forms.TextBox();
             this.btSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -160,13 +160,13 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "入札情報登録";
             // 
-            // textBox1
+            // tbOrderId
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 89);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 27);
-            this.textBox1.TabIndex = 15;
+            this.tbOrderId.Location = new System.Drawing.Point(148, 89);
+            this.tbOrderId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbOrderId.Name = "tbOrderId";
+            this.tbOrderId.Size = new System.Drawing.Size(116, 27);
+            this.tbOrderId.TabIndex = 15;
             // 
             // btSearch
             // 
@@ -206,7 +206,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbOrderId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.label6);
@@ -239,7 +239,7 @@
         private System.Windows.Forms.RadioButton rbSatisfied;
         private System.Windows.Forms.RadioButton rbUnsatisfied;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbOrderId;
         private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
