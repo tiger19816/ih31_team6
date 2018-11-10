@@ -12,7 +12,7 @@ namespace sugukuru.FormMaster
 {
     public partial class BaseFormMST : Form
     {
-        public static int ID;
+        public static string ID = "";
         public static string NAME = "";
         public static int DIVISION = 1;
 
@@ -25,7 +25,7 @@ namespace sugukuru.FormMaster
         public BaseFormMST(int id, string name, int division)
         {
             InitializeComponent();
-            ID = id;
+            ID = id.ToString();
             NAME = name;
             DIVISION = division;
             displayControl();
