@@ -23,18 +23,12 @@ namespace sugukuru.Orders
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
 
             //登録担当者をコンボボックスにセットする(全社員)
-            DataTable dtResponsible = Utility.ResponsibleList.getResponsibleList();
-            cbCreateRep.DisplayMember = "employee_name";
-            cbCreateRep.ValueMember = "id";
-            cbCreateRep.DataSource = dtResponsible;
+            Utility.ResponsibleList.setResponsible(cbCreateRep);
             //現在ログイン中の社員を選択する
             Utility.ResponsibleList.SelectFromValue(cbCreateRep, FormMaster.BaseFormMST.ID);
 
             //受注担当者をセットする(営業担当者のみ)
-            DataTable dtSales = Utility.ResponsibleList.getSalesList();
-            cbOrderRep.DisplayMember = "employee_name";
-            cbOrderRep.ValueMember = "id";
-            cbOrderRep.DataSource = dtSales;
+            Utility.ResponsibleList.setSales(cbOrderRep);
             //初期選択を未選択にする
             cbOrderRep.SelectedIndex = -1;
         }

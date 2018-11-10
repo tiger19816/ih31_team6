@@ -13,9 +13,9 @@ namespace sugukuru.Utility
     class ResponsibleList
     {
         //******************************************************************************************
-        #region 全社員のDataTableを取得する
+        #region コンボボックスに全社員の情報をセットする
         //******************************************************************************************
-        public static DataTable getResponsibleList()
+        public static void setResponsible(ComboBox combobox)
         {
             //SQL文を作成する
             string sql = "SELECT id, CONCAT (family_name, ' ', first_name) AS employee_name FROM employee";
@@ -37,15 +37,18 @@ namespace sugukuru.Utility
 
             //DB切断
             con.Close();
-
-            return dt;
+            
+            //コンボボックスに値をセットする
+            combobox.DisplayMember = "employee_name";
+            combobox.ValueMember = "id";
+            combobox.DataSource = dt;
         }
         #endregion
 
         //******************************************************************************************
-        #region 営業担当者のDataTableを取得する
+        #region コンボボックスに営業担当者の情報をセットする
         //******************************************************************************************
-        public static DataTable getSalesList()
+        public static void setSales(ComboBox combobox)
         {
             //SQL文を作成する
             string sql = "SELECT id, CONCAT (family_name, ' ', first_name) AS employee_name FROM employee WHERE division = 2";
@@ -68,7 +71,10 @@ namespace sugukuru.Utility
             //DB切断
             con.Close();
 
-            return dt;
+            //コンボボックスに値をセットする
+            combobox.DisplayMember = "employee_name";
+            combobox.ValueMember = "id";
+            combobox.DataSource = dt;
         }
         #endregion
 
