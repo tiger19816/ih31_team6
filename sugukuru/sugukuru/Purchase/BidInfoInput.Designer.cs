@@ -42,9 +42,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbOrderId = new System.Windows.Forms.TextBox();
             this.btSearch = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.gbBidResult = new System.Windows.Forms.GroupBox();
+            this.btFixed = new System.Windows.Forms.Button();
+            this.gbBidResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -178,33 +178,34 @@
             this.btSearch.Text = "検索";
             this.btSearch.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbBidResult
             // 
-            this.groupBox1.Controls.Add(this.rbUnsatisfied);
-            this.groupBox1.Controls.Add(this.rbSatisfied);
-            this.groupBox1.Location = new System.Drawing.Point(36, 424);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "入札結果";
+            this.gbBidResult.Controls.Add(this.rbUnsatisfied);
+            this.gbBidResult.Controls.Add(this.rbSatisfied);
+            this.gbBidResult.Location = new System.Drawing.Point(36, 424);
+            this.gbBidResult.Name = "gbBidResult";
+            this.gbBidResult.Size = new System.Drawing.Size(200, 100);
+            this.gbBidResult.TabIndex = 17;
+            this.gbBidResult.TabStop = false;
+            this.gbBidResult.Text = "入札結果";
             // 
-            // button1
+            // btFixed
             // 
-            this.button1.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1057, 587);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 40);
-            this.button1.TabIndex = 72;
-            this.button1.Text = "確定";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btFixed.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btFixed.Location = new System.Drawing.Point(1057, 587);
+            this.btFixed.Name = "btFixed";
+            this.btFixed.Size = new System.Drawing.Size(100, 40);
+            this.btFixed.TabIndex = 72;
+            this.btFixed.Text = "確定";
+            this.btFixed.UseVisualStyleBackColor = true;
+            this.btFixed.Click += new System.EventHandler(this.btFixed_Click);
             // 
             // BidInfoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btFixed);
+            this.Controls.Add(this.gbBidResult);
             this.Controls.Add(this.btSearch);
             this.Controls.Add(this.tbOrderId);
             this.Controls.Add(this.label7);
@@ -219,8 +220,8 @@
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "BidInfoInput";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbBidResult.ResumeLayout(false);
+            this.gbBidResult.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +242,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbOrderId;
         private System.Windows.Forms.Button btSearch;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox gbBidResult;
+        private System.Windows.Forms.Button btFixed;
     }
 }

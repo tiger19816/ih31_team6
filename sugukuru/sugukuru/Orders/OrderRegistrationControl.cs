@@ -44,7 +44,7 @@ namespace sugukuru.Orders
         //顧客IDはプロトタイプでは固定にする
         String client_id = "18001";
         //受注IDは詳細は後で
-        String id = "8873098198";
+        String id = "8973098141";
         //登録者、担当者のセレクトボックスの処理は後で行う
         String order_at = "123";
         String create_at = "456";
