@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.clientList = new System.Windows.Forms.DataGridView();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.searchOption = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,14 +41,43 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.searchCustomerId = new System.Windows.Forms.TextBox();
+            this.searchCustomerName = new System.Windows.Forms.TextBox();
+            this.searchCustomerTEL = new System.Windows.Forms.TextBox();
+            this.searchCustomerPostalCode = new System.Windows.Forms.TextBox();
+            this.searchCustomerAddress = new System.Windows.Forms.TextBox();
+            this.searchCharge = new System.Windows.Forms.ComboBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formal_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formal_name_read = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abbreviation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abbreviation_read = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postal_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prefectures = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.municipality = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client_division = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client_rep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mail_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.monthly_trading_estimated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recovery_condition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.closing_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.collection_month = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.collection_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.financial_institution = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.financial_institution_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.branch_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.branch_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bank_account_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bank_account_holder = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.file_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.create_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.create_rep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.update_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.update_rep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.clientList)).BeginInit();
+            this.searchOption.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -73,34 +102,65 @@
             this.button2.Text = "詳細";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // clientList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 166);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(1120, 400);
-            this.dataGridView1.TabIndex = 30;
+            this.clientList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.formal_name,
+            this.formal_name_read,
+            this.abbreviation,
+            this.abbreviation_read,
+            this.postal_code,
+            this.prefectures,
+            this.municipality,
+            this.client_division,
+            this.client_rep,
+            this.phone_number,
+            this.fax,
+            this.mail_address,
+            this.monthly_trading_estimated,
+            this.recovery_condition,
+            this.closing_date,
+            this.collection_month,
+            this.collection_date,
+            this.financial_institution,
+            this.financial_institution_code,
+            this.branch_name,
+            this.branch_code,
+            this.bank_account_number,
+            this.bank_account_holder,
+            this.file_info,
+            this.create_at,
+            this.create_rep,
+            this.update_at,
+            this.update_rep});
+            this.clientList.Location = new System.Drawing.Point(48, 166);
+            this.clientList.Name = "clientList";
+            this.clientList.RowTemplate.Height = 21;
+            this.clientList.Size = new System.Drawing.Size(1120, 400);
+            this.clientList.TabIndex = 30;
             // 
-            // button1
+            // searchButton
             // 
-            this.button1.Location = new System.Drawing.Point(942, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "検索";
-            this.button1.UseVisualStyleBackColor = true;
+            this.searchButton.Location = new System.Drawing.Point(942, 129);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.TabIndex = 31;
+            this.searchButton.Text = "検索";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // groupBox1
+            // searchOption
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(783, 49);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(119, 100);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "検索オプション";
+            this.searchOption.Controls.Add(this.radioButton2);
+            this.searchOption.Controls.Add(this.radioButton1);
+            this.searchOption.Location = new System.Drawing.Point(783, 49);
+            this.searchOption.Name = "searchOption";
+            this.searchOption.Size = new System.Drawing.Size(119, 100);
+            this.searchOption.TabIndex = 32;
+            this.searchOption.TabStop = false;
+            this.searchOption.Text = "検索オプション";
             // 
             // radioButton2
             // 
@@ -179,74 +239,230 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "名称";
             // 
-            // textBox1
+            // searchCustomerId
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 39;
+            this.searchCustomerId.Location = new System.Drawing.Point(100, 57);
+            this.searchCustomerId.Name = "searchCustomerId";
+            this.searchCustomerId.Size = new System.Drawing.Size(100, 27);
+            this.searchCustomerId.TabIndex = 39;
             // 
-            // textBox2
+            // searchCustomerName
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 27);
-            this.textBox2.TabIndex = 40;
+            this.searchCustomerName.Location = new System.Drawing.Point(100, 91);
+            this.searchCustomerName.Name = "searchCustomerName";
+            this.searchCustomerName.Size = new System.Drawing.Size(180, 27);
+            this.searchCustomerName.TabIndex = 40;
             // 
-            // textBox3
+            // searchCustomerTEL
             // 
-            this.textBox3.Location = new System.Drawing.Point(100, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 27);
-            this.textBox3.TabIndex = 41;
+            this.searchCustomerTEL.Location = new System.Drawing.Point(100, 125);
+            this.searchCustomerTEL.Name = "searchCustomerTEL";
+            this.searchCustomerTEL.Size = new System.Drawing.Size(100, 27);
+            this.searchCustomerTEL.TabIndex = 41;
             // 
-            // textBox4
+            // searchCustomerPostalCode
             // 
-            this.textBox4.Location = new System.Drawing.Point(420, 57);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 27);
-            this.textBox4.TabIndex = 42;
+            this.searchCustomerPostalCode.Location = new System.Drawing.Point(420, 57);
+            this.searchCustomerPostalCode.Name = "searchCustomerPostalCode";
+            this.searchCustomerPostalCode.Size = new System.Drawing.Size(100, 27);
+            this.searchCustomerPostalCode.TabIndex = 42;
             // 
-            // textBox5
+            // searchCustomerAddress
             // 
-            this.textBox5.Location = new System.Drawing.Point(420, 91);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(260, 27);
-            this.textBox5.TabIndex = 43;
+            this.searchCustomerAddress.Location = new System.Drawing.Point(420, 91);
+            this.searchCustomerAddress.Name = "searchCustomerAddress";
+            this.searchCustomerAddress.Size = new System.Drawing.Size(260, 27);
+            this.searchCustomerAddress.TabIndex = 43;
             // 
-            // comboBox1
+            // searchCharge
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(420, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 44;
+            this.searchCharge.FormattingEnabled = true;
+            this.searchCharge.Location = new System.Drawing.Point(420, 125);
+            this.searchCharge.Name = "searchCharge";
+            this.searchCharge.Size = new System.Drawing.Size(121, 24);
+            this.searchCharge.TabIndex = 44;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "顧客ID";
+            this.id.MinimumWidth = 75;
+            this.id.Name = "id";
+            this.id.Width = 75;
+            // 
+            // formal_name
+            // 
+            this.formal_name.HeaderText = "正式名称";
+            this.formal_name.MinimumWidth = 150;
+            this.formal_name.Name = "formal_name";
+            this.formal_name.Width = 150;
+            // 
+            // formal_name_read
+            // 
+            this.formal_name_read.HeaderText = "正式名称カナ";
+            this.formal_name_read.MinimumWidth = 150;
+            this.formal_name_read.Name = "formal_name_read";
+            this.formal_name_read.Width = 150;
+            // 
+            // abbreviation
+            // 
+            this.abbreviation.HeaderText = "略称";
+            this.abbreviation.MinimumWidth = 200;
+            this.abbreviation.Name = "abbreviation";
+            this.abbreviation.Width = 200;
+            // 
+            // abbreviation_read
+            // 
+            this.abbreviation_read.HeaderText = "略称読み";
+            this.abbreviation_read.MinimumWidth = 200;
+            this.abbreviation_read.Name = "abbreviation_read";
+            this.abbreviation_read.Width = 200;
+            // 
+            // postal_code
+            // 
+            this.postal_code.HeaderText = "郵便番号";
+            this.postal_code.MinimumWidth = 100;
+            this.postal_code.Name = "postal_code";
+            // 
+            // prefectures
+            // 
+            this.prefectures.HeaderText = "都道府県";
+            this.prefectures.Name = "prefectures";
+            // 
+            // municipality
+            // 
+            this.municipality.HeaderText = "市町村以下";
+            this.municipality.Name = "municipality";
+            // 
+            // client_division
+            // 
+            this.client_division.HeaderText = "取引先部署";
+            this.client_division.Name = "client_division";
+            // 
+            // client_rep
+            // 
+            this.client_rep.HeaderText = "取引先担当者";
+            this.client_rep.Name = "client_rep";
+            // 
+            // phone_number
+            // 
+            this.phone_number.HeaderText = "電話番号";
+            this.phone_number.Name = "phone_number";
+            // 
+            // fax
+            // 
+            this.fax.HeaderText = "ファックス";
+            this.fax.Name = "fax";
+            // 
+            // mail_address
+            // 
+            this.mail_address.HeaderText = "メールアドレス";
+            this.mail_address.Name = "mail_address";
+            // 
+            // monthly_trading_estimated
+            // 
+            this.monthly_trading_estimated.HeaderText = "月間取引見込み";
+            this.monthly_trading_estimated.Name = "monthly_trading_estimated";
+            // 
+            // recovery_condition
+            // 
+            this.recovery_condition.HeaderText = "回収条件";
+            this.recovery_condition.Name = "recovery_condition";
+            // 
+            // closing_date
+            // 
+            this.closing_date.HeaderText = "締日";
+            this.closing_date.Name = "closing_date";
+            // 
+            // collection_month
+            // 
+            this.collection_month.HeaderText = "回収月";
+            this.collection_month.Name = "collection_month";
+            // 
+            // collection_date
+            // 
+            this.collection_date.HeaderText = "回収日";
+            this.collection_date.Name = "collection_date";
+            // 
+            // financial_institution
+            // 
+            this.financial_institution.HeaderText = "金融機関名";
+            this.financial_institution.Name = "financial_institution";
+            // 
+            // financial_institution_code
+            // 
+            this.financial_institution_code.HeaderText = "金融機関コード";
+            this.financial_institution_code.Name = "financial_institution_code";
+            // 
+            // branch_name
+            // 
+            this.branch_name.HeaderText = "支店名";
+            this.branch_name.Name = "branch_name";
+            // 
+            // branch_code
+            // 
+            this.branch_code.HeaderText = "支店コード";
+            this.branch_code.Name = "branch_code";
+            // 
+            // bank_account_number
+            // 
+            this.bank_account_number.HeaderText = "口座番号";
+            this.bank_account_number.Name = "bank_account_number";
+            // 
+            // bank_account_holder
+            // 
+            this.bank_account_holder.HeaderText = "口座名義";
+            this.bank_account_holder.Name = "bank_account_holder";
+            // 
+            // file_info
+            // 
+            this.file_info.HeaderText = "微細情報";
+            this.file_info.Name = "file_info";
+            // 
+            // create_at
+            // 
+            this.create_at.HeaderText = "登録日";
+            this.create_at.Name = "create_at";
+            // 
+            // create_rep
+            // 
+            this.create_rep.HeaderText = "登録担当者";
+            this.create_rep.Name = "create_rep";
+            // 
+            // update_at
+            // 
+            this.update_at.HeaderText = "変更日";
+            this.update_at.Name = "update_at";
+            // 
+            // update_rep
+            // 
+            this.update_rep.HeaderText = "変更担当者";
+            this.update_rep.Name = "update_rep";
             // 
             // CustomerListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.searchCharge);
+            this.Controls.Add(this.searchCustomerAddress);
+            this.Controls.Add(this.searchCustomerPostalCode);
+            this.Controls.Add(this.searchCustomerTEL);
+            this.Controls.Add(this.searchCustomerName);
+            this.Controls.Add(this.searchCustomerId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.searchOption);
+            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.clientList);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Name = "CustomerListControl";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientList)).EndInit();
+            this.searchOption.ResumeLayout(false);
+            this.searchOption.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,9 +472,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView clientList;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.GroupBox searchOption;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
@@ -267,11 +483,40 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox searchCustomerId;
+        private System.Windows.Forms.TextBox searchCustomerName;
+        private System.Windows.Forms.TextBox searchCustomerTEL;
+        private System.Windows.Forms.TextBox searchCustomerPostalCode;
+        private System.Windows.Forms.TextBox searchCustomerAddress;
+        private System.Windows.Forms.ComboBox searchCharge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn formal_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn formal_name_read;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abbreviation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abbreviation_read;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postal_code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prefectures;
+        private System.Windows.Forms.DataGridViewTextBoxColumn municipality;
+        private System.Windows.Forms.DataGridViewTextBoxColumn client_division;
+        private System.Windows.Forms.DataGridViewTextBoxColumn client_rep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone_number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mail_address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn monthly_trading_estimated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn recovery_condition;
+        private System.Windows.Forms.DataGridViewTextBoxColumn closing_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn collection_month;
+        private System.Windows.Forms.DataGridViewTextBoxColumn collection_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn financial_institution;
+        private System.Windows.Forms.DataGridViewTextBoxColumn financial_institution_code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn branch_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn branch_code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bank_account_number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bank_account_holder;
+        private System.Windows.Forms.DataGridViewTextBoxColumn file_info;
+        private System.Windows.Forms.DataGridViewTextBoxColumn create_at;
+        private System.Windows.Forms.DataGridViewTextBoxColumn create_rep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn update_at;
+        private System.Windows.Forms.DataGridViewTextBoxColumn update_rep;
     }
 }
