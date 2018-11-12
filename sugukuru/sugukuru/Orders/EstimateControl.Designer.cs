@@ -47,6 +47,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,10 +58,9 @@
             this.btEstimateAdd = new System.Windows.Forms.Button();
             this.btEstimateDelete = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.tblCustomer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -286,6 +286,13 @@
             this.label20.TabIndex = 6;
             this.label20.Text = "消費税";
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(139, 408);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(171, 27);
+            this.textBox4.TabIndex = 47;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -376,6 +383,13 @@
             this.label4.TabIndex = 39;
             this.label4.Text = "見積日";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(139, 297);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(171, 27);
+            this.textBox2.TabIndex = 41;
+            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(426, 475);
@@ -393,26 +407,10 @@
             this.label6.TabIndex = 56;
             this.label6.Text = "備考";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(139, 293);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(171, 27);
-            this.dateTimePicker1.TabIndex = 57;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(139, 404);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(171, 27);
-            this.dateTimePicker2.TabIndex = 58;
-            // 
             // EstimateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.btEstimateDelete);
@@ -423,9 +421,11 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tblCustomer);
@@ -466,6 +466,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
@@ -476,9 +477,8 @@
         private System.Windows.Forms.Button btEstimateAdd;
         private System.Windows.Forms.Button btEstimateDelete;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
