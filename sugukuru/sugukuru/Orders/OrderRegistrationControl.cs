@@ -104,13 +104,7 @@ namespace sugukuru.Orders
 
             //日付取得
             String date = dateTimePicker1.Value.ToShortDateString();
-
-            MessageBox.Show(date);
-
             date = date.Replace("/", "-");
-
-            MessageBox.Show(date);
-
             //ここまで
 
 

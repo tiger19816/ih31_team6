@@ -23,7 +23,9 @@ namespace sugukuru.Purchase
             InitializeComponent();
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
 
-           
+            //登録担当者をコンボボックスにセットする(全社員)
+            Utility.ResponsibleList.setAuctionHall(cbAuction);
+
         }
 
         //閉じるボタン
@@ -42,15 +44,31 @@ namespace sugukuru.Purchase
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();
 
-            //オークション会場の値書き込み
-            int a_id = 12345;
-
-            //入札日付
+            //入札日付************************************************
             String date = dateTimePicker1.Value.ToShortDateString();
             date.Replace("/", "-");
+            //*****************************************************
+
+            //入札結果********************************************
+            int result = 0;
+            if (rbSatisfied.Checked == true)
+            {
+                result = 1;
+            }else if(rbUnsatisfied.Checked == true)
+            {
+                result = 0;
+            }
+            //************************************************
+
+                String sql = "INSERT INTO `sugukuru`.`bid` (`order_id`, `auction_hall_id`, `listing_number`, `bid_date`, `bid_price`, `bid_result`) VALUES ('"+tbOrderId.Text+"', '"+cbAuction.SelectedValue+"', '"+tbListingNumber.Text+"', '"+date+"', '"+tbPrice+"', '"+result+"');";
 
 
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
 
+            con.Close();
+
+            MessageBox.Show("登録しました。");
         }
 
 
