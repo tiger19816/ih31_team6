@@ -239,6 +239,12 @@
     <Compile Include="Purchase\BidResult.Designer.cs">
       <DependentUpon>BidResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\BitCarList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\BitCarList.Designer.cs">
+      <DependentUpon>BitCarList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\DeliverySlip.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -472,6 +478,9 @@
     <EmbeddedResource Include="Purchase\BidResult.resx">
       <DependentUpon>BidResult.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\BitCarList.resx">
+      <DependentUpon>BitCarList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\DeliverySlip.resx">
       <DependentUpon>DeliverySlip.cs</DependentUpon>
     </EmbeddedResource>
@@ -538,9 +547,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utility\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

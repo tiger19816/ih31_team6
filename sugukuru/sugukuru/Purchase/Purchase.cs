@@ -16,7 +16,7 @@ namespace sugukuru.Purchase
         public static Search ctr1;
         public static BidInfoInput BidInfoInput;
         public static DeliverySlip DeliverySlip;
-        //public static BidCarInput BidCarInput;
+        public static BitCarList BidCarList;
         public static Transport Transport;
         public static ListingRegistration listingRegistration;
         public static Discount Discount;
@@ -31,7 +31,7 @@ namespace sugukuru.Purchase
             ctr1 = new Search();
             BidInfoInput = new BidInfoInput();
             DeliverySlip = new DeliverySlip();
-            //BidCarInput = new BidCarInput();
+            BidCarList = new BitCarList();
             Transport = new Transport();
             listingRegistration = new ListingRegistration();
             Discount = new Discount();
@@ -49,7 +49,7 @@ namespace sugukuru.Purchase
             panel1.Controls.Add(ctr1);
             panel1.Controls.Add(BidInfoInput);
             panel1.Controls.Add(DeliverySlip);
-            //panel1.Controls.Add(BidCarInput);
+            panel1.Controls.Add(BidCarList);
             panel1.Controls.Add(Transport);
             panel1.Controls.Add(listingRegistration);
             panel1.Controls.Add(Discount);
@@ -60,7 +60,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
-            //BidCarInput.Visible = false;
+            BidCarList.Visible = false;
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
@@ -77,6 +77,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
             BidInfoInput.Visible = true;
             DeliverySlip.Visible = false;
+            BidCarList.Visible = false;
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
@@ -90,6 +91,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = true;
+            BidCarList.Visible = false;
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
@@ -104,6 +106,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
+            BidCarList.Visible = false;
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
@@ -119,6 +122,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
+            BidCarList.Visible = false;
             Transport.Visible = true;
             listingRegistration.Visible = false;
             Discount.Visible = false;
@@ -132,6 +136,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
+            BidCarList.Visible = false;
             Transport.Visible = false;
             listingRegistration.Visible = true;
             Discount.Visible = false;
@@ -145,6 +150,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
+            BidCarList.Visible = false;
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = true;
@@ -158,6 +164,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = true;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
+            BidCarList.Visible = false;
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
@@ -172,7 +179,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
-            //BidCarInput.Visible = false;
+            BidCarList.Visible = false;
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
@@ -190,7 +197,7 @@ namespace sugukuru.Purchase
             ctr1.Visible = false;
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
-            //BidCarInput.Visible = false;
+            BidCarList.Visible = false;
             Transport.Visible = false;
             listingRegistration.Visible = false;
             Discount.Visible = false;
@@ -202,10 +209,18 @@ namespace sugukuru.Purchase
 
         private void btBidCarInput_Click(object sender, EventArgs e)
         {
-            BidCarInput f = new BidCarInput();
-            //Form2を表示する
-            f.Show();
-            
+            //落札車両登録
+            ctr1.Visible = false;
+            BidInfoInput.Visible = false;
+            DeliverySlip.Visible = false;
+            BidCarList.Visible = true;
+            Transport.Visible = false;
+            listingRegistration.Visible = false;
+            Discount.Visible = false;
+            ListingResult.Visible = false;
+            BidCarProcessing.Visible = false;
+            ListingCar.Visible = false;
+
         }
     }
 }

@@ -28,46 +28,46 @@ namespace sugukuru.ClaimCollection
         //****************************************************************************
         private void btDisplay_Click(object sender, EventArgs e)
         {
-            string strYear = cbYear.SelectedValue.ToString();
-            string strMonth = cbMonth.SelectedValue.ToString();
+            //string strYear = cbYear.SelectedValue.ToString();
+            //string strMonth = cbMonth.SelectedValue.ToString();
 
-            //SQL文を作成する
-            string sql = "SELECT id, CONCAT (family_name, ' ', first_name) AS employee_name, division FROM employee WHERE id = '" + strId + "' AND password = '" + strPasword + "'";
+            ////SQL文を作成する
+            //string sql = "SELECT id, CONCAT (family_name, ' ', first_name) AS employee_name, division FROM employee WHERE id = '" + strId + "' AND password = '" + strPasword + "'";
 
-            //抽象データ格納データセットを作成
-            DataSet dset = new DataSet("login");
+            ////抽象データ格納データセットを作成
+            //DataSet dset = new DataSet("login");
 
-            //DB接続オブジェクトを作成
-            MySqlConnection con = new MySqlConnection(this.conStr);
+            ////DB接続オブジェクトを作成
+            //MySqlConnection con = new MySqlConnection(this.conStr);
 
-            //DB接続
-            con.Open();
+            ////DB接続
+            //con.Open();
 
-            //データアダプターの生成
-            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+            ////データアダプターの生成
+            //MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
 
-            ///データ抽出＆取得
-            mAdp.Fill(dset, "login");
+            /////データ抽出＆取得
+            //mAdp.Fill(dset, "login");
 
-            //DB切断
-            con.Close();
+            ////DB切断
+            //con.Close();
 
-            //抽出件数を取得
-            int rcnt = dset.Tables["login"].Rows.Count;
+            ////抽出件数を取得
+            //int rcnt = dset.Tables["login"].Rows.Count;
 
-            //0件の場合はエラー
-            if (rcnt != 0)
-            {
-                Form MenuFM = new MainMenuForm(Convert.ToInt32(dset.Tables["login"].Rows[0]["id"]), dset.Tables["login"].Rows[0]["employee_name"].ToString(), Convert.ToInt32(dset.Tables["login"].Rows[0]["division"]));
-                this.Hide();
-                MenuFM.ShowDialog();
-                MenuFM.Dispose();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("社員IDかパスワードが誤っています。");
-            }
+            ////0件の場合はエラー
+            //if (rcnt != 0)
+            //{
+            //    Form MenuFM = new MainMenuForm(Convert.ToInt32(dset.Tables["login"].Rows[0]["id"]), dset.Tables["login"].Rows[0]["employee_name"].ToString(), Convert.ToInt32(dset.Tables["login"].Rows[0]["division"]));
+            //    this.Hide();
+            //    MenuFM.ShowDialog();
+            //    MenuFM.Dispose();
+            //    this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("社員IDかパスワードが誤っています。");
+            //}
         }
         #endregion
     }
