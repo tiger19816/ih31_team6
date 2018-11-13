@@ -63,10 +63,10 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.tbCreateAt = new System.Windows.Forms.TextBox();
             this.cbCreateRep = new System.Windows.Forms.ComboBox();
             this.cbOrderRep = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.gbOrderType.SuspendLayout();
             this.tblCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -430,13 +430,6 @@
             this.label21.TabIndex = 33;
             this.label21.Text = "登録者";
             // 
-            // tbCreateAt
-            // 
-            this.tbCreateAt.Location = new System.Drawing.Point(153, 495);
-            this.tbCreateAt.Name = "tbCreateAt";
-            this.tbCreateAt.Size = new System.Drawing.Size(171, 27);
-            this.tbCreateAt.TabIndex = 34;
-            // 
             // cbCreateRep
             // 
             this.cbCreateRep.FormattingEnabled = true;
@@ -462,14 +455,21 @@
             this.label22.TabIndex = 37;
             this.label22.Text = "受注担当者";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(153, 498);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePicker1.TabIndex = 38;
+            // 
             // OrderRegistrationControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.cbOrderRep);
             this.Controls.Add(this.cbCreateRep);
-            this.Controls.Add(this.tbCreateAt);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.tblCustomer);
@@ -543,9 +543,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox tbCreateAt;
         private System.Windows.Forms.ComboBox cbCreateRep;
         private System.Windows.Forms.ComboBox cbOrderRep;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

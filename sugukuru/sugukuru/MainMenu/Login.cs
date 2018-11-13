@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 
+
 namespace sugukuru.MainMenu
 {
     public partial class Login : Form

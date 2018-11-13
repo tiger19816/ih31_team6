@@ -119,5 +119,38 @@ namespace sugukuru.Utility
             }
         }
         #endregion
+
+        //******************************************************************************************
+        #region コンボボックスにオークション会場の情報をセットする
+        //******************************************************************************************
+        public static void setAuctionHall(ComboBox combobox)
+        {
+            //SQL文を作成する
+            string sql = "SELECT id, auction_hall_name FROM auction_hall";
+
+            //抽象データ格納データセットを作成
+            DataTable dt = new DataTable();
+
+            //DB接続オブジェクトを作成
+            MySqlConnection con = new MySqlConnection(ConfigurationManager.AppSettings["DbConKey"]);
+
+            //DB接続
+            con.Open();
+
+            //データアダプターの生成
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+
+            ///データ抽出＆取得
+            mAdp.Fill(dt);
+
+            //DB切断
+            con.Close();
+
+            //コンボボックスに値をセットする
+            combobox.DisplayMember = "auction_hall_name";
+            combobox.ValueMember = "id";
+            combobox.DataSource = dt;
+        }
+        #endregion
     }
 }
