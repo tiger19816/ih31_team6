@@ -31,13 +31,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.underMonth = new System.Windows.Forms.Label();
             this.underYear = new System.Windows.Forms.Label();
-            this.comboBoxUnderMonth = new System.Windows.Forms.ComboBox();
-            this.comboBoxUnderYear = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbMonth = new System.Windows.Forms.ComboBox();
+            this.cbYear = new System.Windows.Forms.ComboBox();
+            this.dgvBulk = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btPrint = new System.Windows.Forms.Button();
+            this.btDisplay = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBulk)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -67,30 +67,30 @@
             this.underYear.TabIndex = 104;
             this.underYear.Text = "年";
             // 
-            // comboBoxUnderMonth
+            // cbMonth
             // 
-            this.comboBoxUnderMonth.FormattingEnabled = true;
-            this.comboBoxUnderMonth.Location = new System.Drawing.Point(232, 51);
-            this.comboBoxUnderMonth.Name = "comboBoxUnderMonth";
-            this.comboBoxUnderMonth.Size = new System.Drawing.Size(44, 24);
-            this.comboBoxUnderMonth.TabIndex = 103;
+            this.cbMonth.FormattingEnabled = true;
+            this.cbMonth.Location = new System.Drawing.Point(232, 51);
+            this.cbMonth.Name = "cbMonth";
+            this.cbMonth.Size = new System.Drawing.Size(44, 24);
+            this.cbMonth.TabIndex = 103;
             // 
-            // comboBoxUnderYear
+            // cbYear
             // 
-            this.comboBoxUnderYear.FormattingEnabled = true;
-            this.comboBoxUnderYear.Location = new System.Drawing.Point(105, 51);
-            this.comboBoxUnderYear.Name = "comboBoxUnderYear";
-            this.comboBoxUnderYear.Size = new System.Drawing.Size(94, 24);
-            this.comboBoxUnderYear.TabIndex = 102;
+            this.cbYear.FormattingEnabled = true;
+            this.cbYear.Location = new System.Drawing.Point(105, 51);
+            this.cbYear.Name = "cbYear";
+            this.cbYear.Size = new System.Drawing.Size(94, 24);
+            this.cbYear.TabIndex = 102;
             // 
-            // dataGridView1
+            // dgvBulk
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 96);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(1120, 470);
-            this.dataGridView1.TabIndex = 101;
+            this.dgvBulk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBulk.Location = new System.Drawing.Point(20, 96);
+            this.dgvBulk.Name = "dgvBulk";
+            this.dgvBulk.RowTemplate.Height = 21;
+            this.dgvBulk.Size = new System.Drawing.Size(1120, 470);
+            this.dgvBulk.TabIndex = 101;
             // 
             // label1
             // 
@@ -102,56 +102,57 @@
             this.label1.TabIndex = 99;
             this.label1.Text = "一括 請求書発行";
             // 
-            // button1
+            // btPrint
             // 
-            this.button1.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1040, 573);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 53);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "印刷";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btPrint.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btPrint.Location = new System.Drawing.Point(1040, 573);
+            this.btPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btPrint.Name = "btPrint";
+            this.btPrint.Size = new System.Drawing.Size(117, 53);
+            this.btPrint.TabIndex = 3;
+            this.btPrint.Text = "印刷";
+            this.btPrint.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btDisplay
             // 
-            this.button2.Location = new System.Drawing.Point(332, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 27);
-            this.button2.TabIndex = 109;
-            this.button2.Text = "表示";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btDisplay.Location = new System.Drawing.Point(332, 51);
+            this.btDisplay.Name = "btDisplay";
+            this.btDisplay.Size = new System.Drawing.Size(89, 27);
+            this.btDisplay.TabIndex = 109;
+            this.btDisplay.Text = "表示";
+            this.btDisplay.UseVisualStyleBackColor = true;
+            this.btDisplay.Click += new System.EventHandler(this.btDisplay_Click);
             // 
             // BulkClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btDisplay);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.underMonth);
             this.Controls.Add(this.underYear);
-            this.Controls.Add(this.comboBoxUnderMonth);
-            this.Controls.Add(this.comboBoxUnderYear);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cbMonth);
+            this.Controls.Add(this.cbYear);
+            this.Controls.Add(this.dgvBulk);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btPrint);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "BulkClaim";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBulk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btPrint;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvBulk;
         private System.Windows.Forms.Label underMonth;
         private System.Windows.Forms.Label underYear;
-        private System.Windows.Forms.ComboBox comboBoxUnderMonth;
-        private System.Windows.Forms.ComboBox comboBoxUnderYear;
+        private System.Windows.Forms.ComboBox cbMonth;
+        private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btDisplay;
     }
 }

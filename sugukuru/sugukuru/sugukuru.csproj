@@ -312,6 +312,7 @@
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility\ResponsibleList.cs" />
+    <Compile Include="Utility\Tool.cs" />
     <EmbeddedResource Include="ClaimCollection\IndividualSelectForm.resx">
       <DependentUpon>IndividualSelectForm.cs</DependentUpon>
     </EmbeddedResource>
