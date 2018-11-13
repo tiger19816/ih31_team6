@@ -21,6 +21,16 @@ namespace sugukuru.Orders
         {
             InitializeComponent();
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
+
+            //登録担当者をコンボボックスにセットする(全社員)
+            Utility.ResponsibleList.setResponsible(cbCreateRep);
+            //現在ログイン中の社員を選択する
+            Utility.ResponsibleList.SelectFromValue(cbCreateRep, FormMaster.BaseFormMST.ID);
+
+            //受注担当者をセットする(営業担当者のみ)
+            Utility.ResponsibleList.setSales(cbOrderRep);
+            //初期選択を未選択にする
+            cbOrderRep.SelectedIndex = -1;
         }
 
         //顧客情報のデータテーブル
@@ -41,14 +51,7 @@ namespace sugukuru.Orders
             this.Show();
         }
 
-        //顧客IDはプロトタイプでは固定にする
-        String client_id = "18001";
-        //受注IDは詳細は後で
-        String id = "8973098141";
-        //登録者、担当者のセレクトボックスの処理は後で行う
-        String order_at = "123";
-        String create_at = "456";
-        
+        String id = "";
 
         //登録ボタン押下
         private void btOrderRegistrarion_Click(object sender, EventArgs e)
@@ -59,17 +62,60 @@ namespace sugukuru.Orders
             con.Open();
 
             //ラジオボタンのチェック
-            int order_type = 0;
+            String order_type = "0";
             if (radioButton1.Checked == true)
             {
-                order_type = 111;
+                order_type = "1";
             }else if (radioButton2.Checked == true)
             {
-                order_type = 222;
+                order_type = "2";
             }
 
-                String sql = "INSERT INTO `sugukuru`.`order` (`id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info`, `order_rep`, `create_rep`,`cancel_flag`)" +
-                " VALUES ('" +id+"', '"+tbClientId.Text+"', '"+order_type+"', '"+tbCarModel.Text+"', '"+tbCarClass.Text+"', '"+tbCarYear.Text+"', '"+tbCarColor+"', '"+tbCarMile.Text+"', '"+tbBudget.Text+"', '"+tbInfo.Text+"', '"+order_at+"', '"+create_at+"','0');";
+            //受注ID生成
+            String year = DateTime.Now.Year.ToString();    //2018
+            String mo = DateTime.Now.Month.ToString();     //11
+
+            String sql_id = "SELECT COUNT(*) FROM `order` WHERE create_at LIKE '" + year + "-"+mo+"%';";
+
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql_id, con);
+            mAdp.Fill(dset, "order");
+
+            String cntStr = dset.Tables["order"].Rows[0]["COUNT(*)"].ToString();     //件数
+           
+            int cnt = int.Parse(cntStr)+1;
+
+            cntStr = cnt.ToString();     //最新件数
+            
+
+            while (cntStr.Length != 4)
+            {
+                cntStr = "0" + cntStr;
+            }
+
+            int y = int.Parse(year);
+            y = y % 100;
+
+            year = y.ToString();    //18
+
+            id = year + mo + order_type + cntStr;
+
+            //ここまで
+
+
+            //日付取得
+            String date = dateTimePicker1.Value.ToShortDateString();
+
+            MessageBox.Show(date);
+
+            date = date.Replace("/", "-");
+
+            MessageBox.Show(date);
+
+            //ここまで
+
+
+            String sql = "INSERT INTO `sugukuru`.`order` (`id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info`, `order_rep`,`create_at`, `create_rep`,`cancel_flag`)" +
+                " VALUES ('" +id+"', '"+tbClientId.Text+"', '"+order_type+"', '"+tbCarModel.Text+"', '"+tbCarClass.Text+"', '"+tbCarYear.Text+"', '"+tbCarColor.Text+"', '"+tbCarMile.Text+"', '"+tbBudget.Text+"', '"+tbInfo.Text+"', '"+cbOrderRep.Text+ "', '" + date + "','" + cbCreateRep.Text+"','0');";
 
 
            MessageBox.Show(sql);
@@ -79,7 +125,16 @@ namespace sugukuru.Orders
 
             con.Close();
 
-            
+            MessageBox.Show("受注登録しました。");
+
+            tbClientId.Text = "";
+            tbCarModel.Text = "";
+            tbCarClass.Text = "";
+            tbCarYear.Text = "";
+            tbCarColor.Text = "";
+            tbCarMile.Text = "";
+            tbBudget.Text = "";
+            tbInfo.Text = "";
 
 
         }

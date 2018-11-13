@@ -22,6 +22,8 @@ namespace sugukuru.Purchase
         {
             InitializeComponent();
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
+
+           
         }
 
         //閉じるボタン
@@ -40,6 +42,18 @@ namespace sugukuru.Purchase
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();
 
+            //オークション会場の値書き込み
+            int a_id = 12345;
+
+            //入札日付
+            String date = dateTimePicker1.Value.ToShortDateString();
+            date.Replace("/", "-");
+
+
+
         }
+
+
+
     }
 }

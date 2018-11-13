@@ -33,7 +33,7 @@ namespace sugukuru.MainMenu
             string strPasword = tbPassword.Text;
 
             //SQL文を作成する
-            string sql = "SELECT id, family_name, first_name, division FROM employee WHERE id = '" + strId + "' AND password = '" + strPasword + "'";
+            string sql = "SELECT id, CONCAT (family_name, ' ', first_name) AS employee_name, division FROM employee WHERE id = '" + strId + "' AND password = '" + strPasword + "'";
 
             //抽象データ格納データセットを作成
             DataSet dset = new DataSet("login");
@@ -59,7 +59,7 @@ namespace sugukuru.MainMenu
             //0件の場合はエラー
             if (rcnt != 0)
             {
-                Form MenuFM = new MainMenuForm(Convert.ToInt32(dset.Tables["login"].Rows[0]["id"]), dset.Tables["login"].Rows[0]["family_name"].ToString() + dset.Tables["login"].Rows[0]["first_name"].ToString(), Convert.ToInt32(dset.Tables["login"].Rows[0]["division"]));
+                Form MenuFM = new MainMenuForm(Convert.ToInt32(dset.Tables["login"].Rows[0]["id"]), dset.Tables["login"].Rows[0]["employee_name"].ToString(), Convert.ToInt32(dset.Tables["login"].Rows[0]["division"]));
                 this.Hide();
                 MenuFM.ShowDialog();
                 MenuFM.Dispose();
