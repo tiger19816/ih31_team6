@@ -46,36 +46,7 @@
             this.searchCustomerTEL = new System.Windows.Forms.TextBox();
             this.searchCustomerPostalCode = new System.Windows.Forms.TextBox();
             this.searchCustomerAddress = new System.Windows.Forms.TextBox();
-            this.searchCharge = new System.Windows.Forms.ComboBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formal_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formal_name_read = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abbreviation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abbreviation_read = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postal_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prefectures = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.municipality = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_division = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_rep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mail_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monthly_trading_estimated = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recovery_condition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.closing_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collection_month = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collection_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.financial_institution = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.financial_institution_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.branch_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.branch_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bank_account_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bank_account_holder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.file_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.create_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.create_rep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.update_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.update_rep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchSalesReq = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientList)).BeginInit();
             this.searchOption.SuspendLayout();
             this.SuspendLayout();
@@ -104,37 +75,8 @@
             // 
             // clientList
             // 
+            this.clientList.AllowUserToAddRows = false;
             this.clientList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.formal_name,
-            this.formal_name_read,
-            this.abbreviation,
-            this.abbreviation_read,
-            this.postal_code,
-            this.prefectures,
-            this.municipality,
-            this.client_division,
-            this.client_rep,
-            this.phone_number,
-            this.fax,
-            this.mail_address,
-            this.monthly_trading_estimated,
-            this.recovery_condition,
-            this.closing_date,
-            this.collection_month,
-            this.collection_date,
-            this.financial_institution,
-            this.financial_institution_code,
-            this.branch_name,
-            this.branch_code,
-            this.bank_account_number,
-            this.bank_account_holder,
-            this.file_info,
-            this.create_at,
-            this.create_rep,
-            this.update_at,
-            this.update_rep});
             this.clientList.Location = new System.Drawing.Point(48, 166);
             this.clientList.Name = "clientList";
             this.clientList.RowTemplate.Height = 21;
@@ -274,175 +216,19 @@
             this.searchCustomerAddress.Size = new System.Drawing.Size(260, 27);
             this.searchCustomerAddress.TabIndex = 43;
             // 
-            // searchCharge
+            // searchSalesReq
             // 
-            this.searchCharge.FormattingEnabled = true;
-            this.searchCharge.Location = new System.Drawing.Point(420, 125);
-            this.searchCharge.Name = "searchCharge";
-            this.searchCharge.Size = new System.Drawing.Size(121, 24);
-            this.searchCharge.TabIndex = 44;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "顧客ID";
-            this.id.MinimumWidth = 75;
-            this.id.Name = "id";
-            this.id.Width = 75;
-            // 
-            // formal_name
-            // 
-            this.formal_name.HeaderText = "正式名称";
-            this.formal_name.MinimumWidth = 150;
-            this.formal_name.Name = "formal_name";
-            this.formal_name.Width = 150;
-            // 
-            // formal_name_read
-            // 
-            this.formal_name_read.HeaderText = "正式名称カナ";
-            this.formal_name_read.MinimumWidth = 150;
-            this.formal_name_read.Name = "formal_name_read";
-            this.formal_name_read.Width = 150;
-            // 
-            // abbreviation
-            // 
-            this.abbreviation.HeaderText = "略称";
-            this.abbreviation.MinimumWidth = 200;
-            this.abbreviation.Name = "abbreviation";
-            this.abbreviation.Width = 200;
-            // 
-            // abbreviation_read
-            // 
-            this.abbreviation_read.HeaderText = "略称読み";
-            this.abbreviation_read.MinimumWidth = 200;
-            this.abbreviation_read.Name = "abbreviation_read";
-            this.abbreviation_read.Width = 200;
-            // 
-            // postal_code
-            // 
-            this.postal_code.HeaderText = "郵便番号";
-            this.postal_code.MinimumWidth = 100;
-            this.postal_code.Name = "postal_code";
-            // 
-            // prefectures
-            // 
-            this.prefectures.HeaderText = "都道府県";
-            this.prefectures.Name = "prefectures";
-            // 
-            // municipality
-            // 
-            this.municipality.HeaderText = "市町村以下";
-            this.municipality.Name = "municipality";
-            // 
-            // client_division
-            // 
-            this.client_division.HeaderText = "取引先部署";
-            this.client_division.Name = "client_division";
-            // 
-            // client_rep
-            // 
-            this.client_rep.HeaderText = "取引先担当者";
-            this.client_rep.Name = "client_rep";
-            // 
-            // phone_number
-            // 
-            this.phone_number.HeaderText = "電話番号";
-            this.phone_number.Name = "phone_number";
-            // 
-            // fax
-            // 
-            this.fax.HeaderText = "ファックス";
-            this.fax.Name = "fax";
-            // 
-            // mail_address
-            // 
-            this.mail_address.HeaderText = "メールアドレス";
-            this.mail_address.Name = "mail_address";
-            // 
-            // monthly_trading_estimated
-            // 
-            this.monthly_trading_estimated.HeaderText = "月間取引見込み";
-            this.monthly_trading_estimated.Name = "monthly_trading_estimated";
-            // 
-            // recovery_condition
-            // 
-            this.recovery_condition.HeaderText = "回収条件";
-            this.recovery_condition.Name = "recovery_condition";
-            // 
-            // closing_date
-            // 
-            this.closing_date.HeaderText = "締日";
-            this.closing_date.Name = "closing_date";
-            // 
-            // collection_month
-            // 
-            this.collection_month.HeaderText = "回収月";
-            this.collection_month.Name = "collection_month";
-            // 
-            // collection_date
-            // 
-            this.collection_date.HeaderText = "回収日";
-            this.collection_date.Name = "collection_date";
-            // 
-            // financial_institution
-            // 
-            this.financial_institution.HeaderText = "金融機関名";
-            this.financial_institution.Name = "financial_institution";
-            // 
-            // financial_institution_code
-            // 
-            this.financial_institution_code.HeaderText = "金融機関コード";
-            this.financial_institution_code.Name = "financial_institution_code";
-            // 
-            // branch_name
-            // 
-            this.branch_name.HeaderText = "支店名";
-            this.branch_name.Name = "branch_name";
-            // 
-            // branch_code
-            // 
-            this.branch_code.HeaderText = "支店コード";
-            this.branch_code.Name = "branch_code";
-            // 
-            // bank_account_number
-            // 
-            this.bank_account_number.HeaderText = "口座番号";
-            this.bank_account_number.Name = "bank_account_number";
-            // 
-            // bank_account_holder
-            // 
-            this.bank_account_holder.HeaderText = "口座名義";
-            this.bank_account_holder.Name = "bank_account_holder";
-            // 
-            // file_info
-            // 
-            this.file_info.HeaderText = "微細情報";
-            this.file_info.Name = "file_info";
-            // 
-            // create_at
-            // 
-            this.create_at.HeaderText = "登録日";
-            this.create_at.Name = "create_at";
-            // 
-            // create_rep
-            // 
-            this.create_rep.HeaderText = "登録担当者";
-            this.create_rep.Name = "create_rep";
-            // 
-            // update_at
-            // 
-            this.update_at.HeaderText = "変更日";
-            this.update_at.Name = "update_at";
-            // 
-            // update_rep
-            // 
-            this.update_rep.HeaderText = "変更担当者";
-            this.update_rep.Name = "update_rep";
+            this.searchSalesReq.FormattingEnabled = true;
+            this.searchSalesReq.Location = new System.Drawing.Point(420, 125);
+            this.searchSalesReq.Name = "searchSalesReq";
+            this.searchSalesReq.Size = new System.Drawing.Size(121, 24);
+            this.searchSalesReq.TabIndex = 44;
             // 
             // CustomerListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.searchCharge);
+            this.Controls.Add(this.searchSalesReq);
             this.Controls.Add(this.searchCustomerAddress);
             this.Controls.Add(this.searchCustomerPostalCode);
             this.Controls.Add(this.searchCustomerTEL);
@@ -488,35 +274,6 @@
         private System.Windows.Forms.TextBox searchCustomerTEL;
         private System.Windows.Forms.TextBox searchCustomerPostalCode;
         private System.Windows.Forms.TextBox searchCustomerAddress;
-        private System.Windows.Forms.ComboBox searchCharge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn formal_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn formal_name_read;
-        private System.Windows.Forms.DataGridViewTextBoxColumn abbreviation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn abbreviation_read;
-        private System.Windows.Forms.DataGridViewTextBoxColumn postal_code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prefectures;
-        private System.Windows.Forms.DataGridViewTextBoxColumn municipality;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_division;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client_rep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone_number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mail_address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn monthly_trading_estimated;
-        private System.Windows.Forms.DataGridViewTextBoxColumn recovery_condition;
-        private System.Windows.Forms.DataGridViewTextBoxColumn closing_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn collection_month;
-        private System.Windows.Forms.DataGridViewTextBoxColumn collection_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn financial_institution;
-        private System.Windows.Forms.DataGridViewTextBoxColumn financial_institution_code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn branch_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn branch_code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bank_account_number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bank_account_holder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn file_info;
-        private System.Windows.Forms.DataGridViewTextBoxColumn create_at;
-        private System.Windows.Forms.DataGridViewTextBoxColumn create_rep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn update_at;
-        private System.Windows.Forms.DataGridViewTextBoxColumn update_rep;
+        private System.Windows.Forms.ComboBox searchSalesReq;
     }
 }
