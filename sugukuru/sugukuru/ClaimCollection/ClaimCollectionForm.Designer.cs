@@ -124,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Name = "ClaimCollectionForm";
-            this.Text = "ClaimCollectionForm";
+            this.Text = "請求・回収・消込 - スグクル社車両販売システム";
             this.inheritableFlowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

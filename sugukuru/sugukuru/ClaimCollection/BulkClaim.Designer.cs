@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.underMonth = new System.Windows.Forms.Label();
             this.underYear = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btPrint = new System.Windows.Forms.Button();
             this.btDisplay = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBulk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,10 +87,15 @@
             // 
             // dgvBulk
             // 
+            this.dgvBulk.AllowUserToAddRows = false;
+            this.dgvBulk.AllowUserToDeleteRows = false;
+            this.dgvBulk.AllowUserToResizeColumns = false;
+            this.dgvBulk.AllowUserToResizeRows = false;
             this.dgvBulk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBulk.Location = new System.Drawing.Point(20, 96);
             this.dgvBulk.Name = "dgvBulk";
             this.dgvBulk.RowTemplate.Height = 21;
+            this.dgvBulk.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBulk.Size = new System.Drawing.Size(1120, 470);
             this.dgvBulk.TabIndex = 101;
             // 
@@ -112,6 +119,7 @@
             this.btPrint.TabIndex = 3;
             this.btPrint.Text = "印刷";
             this.btPrint.UseVisualStyleBackColor = true;
+            this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
             // 
             // btDisplay
             // 
@@ -122,6 +130,11 @@
             this.btDisplay.Text = "表示";
             this.btDisplay.UseVisualStyleBackColor = true;
             this.btDisplay.Click += new System.EventHandler(this.btDisplay_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
             // 
             // BulkClaim
             // 
@@ -154,5 +167,6 @@
         private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btDisplay;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
