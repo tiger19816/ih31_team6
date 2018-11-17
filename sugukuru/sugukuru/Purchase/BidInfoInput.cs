@@ -60,7 +60,7 @@ namespace sugukuru.Purchase
             }
             //************************************************
 
-                String sql = "INSERT INTO `sugukuru`.`bid` (`order_id`, `auction_hall_id`, `listing_number`, `bid_date`, `bid_price`, `bid_result`) VALUES ('"+tbOrderId.Text+"', '"+cbAuction.SelectedValue+"', '"+tbListingNumber.Text+"', '"+date+"', '"+tbPrice+"', '"+result+"');";
+                String sql = "INSERT INTO `sugukuru`.`bid` (`order_id`, `auction_hall_id`, `listing_number`, `bid_date`, `bid_price`, `bid_result`) VALUES ('"+tbOrderId.Text+"', '"+cbAuction.SelectedValue+"', '"+tbListingNumber.Text+"', '"+date+"', '"+tbPrice.Text+"', '"+result+"');";
 
 
             MySqlCommand cmd = new MySqlCommand(sql, con);

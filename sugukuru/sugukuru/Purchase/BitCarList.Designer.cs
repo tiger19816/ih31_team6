@@ -63,6 +63,7 @@
             this.btSelect.TabIndex = 110;
             this.btSelect.Text = "選択";
             this.btSelect.UseVisualStyleBackColor = true;
+            this.btSelect.Click += new System.EventHandler(this.btSelect_Click);
             // 
             // BitCarList
             // 
