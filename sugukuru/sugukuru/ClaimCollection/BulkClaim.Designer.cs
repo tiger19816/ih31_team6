@@ -39,6 +39,8 @@
             this.btPrint = new System.Windows.Forms.Button();
             this.btDisplay = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.dtpBill = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBulk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +98,7 @@
             this.dgvBulk.Name = "dgvBulk";
             this.dgvBulk.RowTemplate.Height = 21;
             this.dgvBulk.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBulk.Size = new System.Drawing.Size(1120, 470);
+            this.dgvBulk.Size = new System.Drawing.Size(1120, 437);
             this.dgvBulk.TabIndex = 101;
             // 
             // label1
@@ -136,10 +138,28 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // dtpBill
+            // 
+            this.dtpBill.Location = new System.Drawing.Point(969, 539);
+            this.dtpBill.Name = "dtpBill";
+            this.dtpBill.Size = new System.Drawing.Size(171, 27);
+            this.dtpBill.TabIndex = 110;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(859, 546);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 16);
+            this.label3.TabIndex = 111;
+            this.label3.Text = "請求書発行日";
+            // 
             // BulkClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dtpBill);
             this.Controls.Add(this.btDisplay);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.underMonth);
@@ -168,5 +188,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btDisplay;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.DateTimePicker dtpBill;
+        private System.Windows.Forms.Label label3;
     }
 }

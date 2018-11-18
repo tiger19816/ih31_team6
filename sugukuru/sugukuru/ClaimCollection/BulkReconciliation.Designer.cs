@@ -30,7 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btFileOpen = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -67,14 +67,15 @@
             this.label1.TabIndex = 99;
             this.label1.Text = "一括消込";
             // 
-            // button2
+            // btFileOpen
             // 
-            this.button2.Location = new System.Drawing.Point(1001, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 27);
-            this.button2.TabIndex = 108;
-            this.button2.Text = "開く";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btFileOpen.Location = new System.Drawing.Point(1001, 47);
+            this.btFileOpen.Name = "btFileOpen";
+            this.btFileOpen.Size = new System.Drawing.Size(89, 27);
+            this.btFileOpen.TabIndex = 108;
+            this.btFileOpen.Text = "開く";
+            this.btFileOpen.UseVisualStyleBackColor = true;
+            this.btFileOpen.Click += new System.EventHandler(this.btFileOpen_Click);
             // 
             // textBox1
             // 
@@ -88,9 +89,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(559, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 16);
+            this.label2.Size = new System.Drawing.Size(104, 16);
             this.label2.TabIndex = 106;
-            this.label2.Text = "入金情報CSVファイル";
+            this.label2.Text = "入金情報ファイル";
             // 
             // dataGridView1
             // 
@@ -192,7 +193,7 @@
             this.Controls.Add(this.comboBoxUnderMonth);
             this.Controls.Add(this.comboBoxUnderYear);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btFileOpen);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -208,7 +209,7 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btFileOpen;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;

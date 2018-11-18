@@ -40,6 +40,7 @@
             // 
             // inheritableFlowLayoutPanel1
             // 
+            this.inheritableFlowLayoutPanel1.BackColor = System.Drawing.Color.MistyRose;
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btCheckAccountReceivable);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btIndividualClaim);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btBulkClaim);
