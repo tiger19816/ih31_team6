@@ -72,6 +72,7 @@
     <Compile Include="Customer\CustomerRegistrationControl.Designer.cs">
       <DependentUpon>CustomerRegistrationControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entites\Estimate.cs" />
     <Compile Include="FormMaster\UserControlMinMST.cs">
       <SubType>UserControl</SubType>
     </Compile>
