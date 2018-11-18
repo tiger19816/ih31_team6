@@ -105,11 +105,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(20, 150);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(1222, 292);
             this.dataGridView1.TabIndex = 49;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBox1
             // 
@@ -152,8 +150,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(116, 27);
             this.textBox3.TabIndex = 63;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // label4
             // 
@@ -202,7 +198,6 @@
             // textBox6
             // 
             this.textBox6.Enabled = false;
-            this.textBox6.HideSelection = false;
             this.textBox6.Location = new System.Drawing.Point(605, 501);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox6.Name = "textBox6";
@@ -238,7 +233,6 @@
             this.button1.TabIndex = 71;
             this.button1.Text = "確定";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -249,7 +243,6 @@
             this.button3.TabIndex = 72;
             this.button3.Text = "選択";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // EstimateAddForm
             // 
@@ -275,7 +268,6 @@
             this.Controls.Add(this.label1);
             this.Name = "EstimateAddForm";
             this.Text = "見積内容入力 - スグクル社 車両販売管理システム";
-            this.Load += new System.EventHandler(this.EstimateAddForm_Load);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);

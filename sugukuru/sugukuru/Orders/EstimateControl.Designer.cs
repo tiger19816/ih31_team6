@@ -435,7 +435,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Name = "EstimateControl";
-            this.Load += new System.EventHandler(this.EstimateControl_Load);
             this.tblCustomer.ResumeLayout(false);
             this.tblCustomer.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
