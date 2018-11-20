@@ -51,22 +51,30 @@
             this.tbCarMile = new System.Windows.Forms.TextBox();
             this.tbBudget = new System.Windows.Forms.TextBox();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbClientRep = new System.Windows.Forms.Label();
+            this.lbClientDivision = new System.Windows.Forms.Label();
+            this.lbFax = new System.Windows.Forms.Label();
+            this.lbPhoneNumber = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.lbPostalCode = new System.Windows.Forms.Label();
+            this.lbNameRead = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.cbCreateRep = new System.Windows.Forms.ComboBox();
             this.cbOrderRep = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbSalesRep = new System.Windows.Forms.Label();
             this.gbOrderType.SuspendLayout();
             this.tblCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -278,16 +286,24 @@
             this.tblCustomer.ColumnCount = 2;
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tblCustomer.Controls.Add(this.label3, 0, 0);
+            this.tblCustomer.Controls.Add(this.lbSalesRep, 1, 8);
+            this.tblCustomer.Controls.Add(this.lbName, 1, 0);
             this.tblCustomer.Controls.Add(this.label14, 0, 5);
             this.tblCustomer.Controls.Add(this.label13, 0, 4);
             this.tblCustomer.Controls.Add(this.label12, 0, 3);
             this.tblCustomer.Controls.Add(this.label11, 0, 2);
-            this.tblCustomer.Controls.Add(this.label15, 1, 0);
             this.tblCustomer.Controls.Add(this.label16, 0, 1);
             this.tblCustomer.Controls.Add(this.label17, 0, 6);
             this.tblCustomer.Controls.Add(this.label19, 0, 8);
             this.tblCustomer.Controls.Add(this.label18, 0, 7);
+            this.tblCustomer.Controls.Add(this.label3, 0, 0);
+            this.tblCustomer.Controls.Add(this.lbNameRead, 1, 1);
+            this.tblCustomer.Controls.Add(this.lbPostalCode, 1, 2);
+            this.tblCustomer.Controls.Add(this.lbPhoneNumber, 1, 4);
+            this.tblCustomer.Controls.Add(this.lbFax, 1, 5);
+            this.tblCustomer.Controls.Add(this.lbClientDivision, 1, 6);
+            this.tblCustomer.Controls.Add(this.lbClientRep, 1, 7);
+            this.tblCustomer.Controls.Add(this.lbAddress, 1, 3);
             this.tblCustomer.Location = new System.Drawing.Point(33, 185);
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.RowCount = 9;
@@ -300,20 +316,90 @@
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblCustomer.Size = new System.Drawing.Size(379, 298);
             this.tblCustomer.TabIndex = 31;
             this.tblCustomer.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
             // 
-            // label3
+            // lbClientRep
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(4, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "顧客名";
+            this.lbClientRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientRep.AutoSize = true;
+            this.lbClientRep.BackColor = System.Drawing.Color.Transparent;
+            this.lbClientRep.Location = new System.Drawing.Point(117, 240);
+            this.lbClientRep.Name = "lbClientRep";
+            this.lbClientRep.Size = new System.Drawing.Size(0, 16);
+            this.lbClientRep.TabIndex = 46;
+            // 
+            // lbClientDivision
+            // 
+            this.lbClientDivision.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientDivision.AutoSize = true;
+            this.lbClientDivision.BackColor = System.Drawing.Color.Transparent;
+            this.lbClientDivision.Location = new System.Drawing.Point(117, 207);
+            this.lbClientDivision.Name = "lbClientDivision";
+            this.lbClientDivision.Size = new System.Drawing.Size(0, 16);
+            this.lbClientDivision.TabIndex = 45;
+            // 
+            // lbFax
+            // 
+            this.lbFax.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbFax.AutoSize = true;
+            this.lbFax.BackColor = System.Drawing.Color.Transparent;
+            this.lbFax.Location = new System.Drawing.Point(117, 174);
+            this.lbFax.Name = "lbFax";
+            this.lbFax.Size = new System.Drawing.Size(0, 16);
+            this.lbFax.TabIndex = 44;
+            // 
+            // lbPhoneNumber
+            // 
+            this.lbPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPhoneNumber.AutoSize = true;
+            this.lbPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lbPhoneNumber.Location = new System.Drawing.Point(117, 141);
+            this.lbPhoneNumber.Name = "lbPhoneNumber";
+            this.lbPhoneNumber.Size = new System.Drawing.Size(0, 16);
+            this.lbPhoneNumber.TabIndex = 43;
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lbAddress.Location = new System.Drawing.Point(117, 108);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(0, 16);
+            this.lbAddress.TabIndex = 42;
+            // 
+            // lbPostalCode
+            // 
+            this.lbPostalCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPostalCode.AutoSize = true;
+            this.lbPostalCode.BackColor = System.Drawing.Color.Transparent;
+            this.lbPostalCode.Location = new System.Drawing.Point(117, 75);
+            this.lbPostalCode.Name = "lbPostalCode";
+            this.lbPostalCode.Size = new System.Drawing.Size(0, 16);
+            this.lbPostalCode.TabIndex = 41;
+            // 
+            // lbNameRead
+            // 
+            this.lbNameRead.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbNameRead.AutoSize = true;
+            this.lbNameRead.BackColor = System.Drawing.Color.Transparent;
+            this.lbNameRead.Location = new System.Drawing.Point(117, 42);
+            this.lbNameRead.Name = "lbNameRead";
+            this.lbNameRead.Size = new System.Drawing.Size(0, 16);
+            this.lbNameRead.TabIndex = 40;
+            // 
+            // lbName
+            // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbName.AutoSize = true;
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
+            this.lbName.Location = new System.Drawing.Point(117, 9);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(0, 16);
+            this.lbName.TabIndex = 39;
             // 
             // label14
             // 
@@ -359,15 +445,6 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "所在地〒";
             // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(117, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 16);
-            this.label15.TabIndex = 5;
-            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -411,6 +488,17 @@
             this.label18.Size = new System.Drawing.Size(80, 16);
             this.label18.TabIndex = 8;
             this.label18.Text = "取引先担当者";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(4, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "顧客名";
             // 
             // label20
             // 
@@ -461,6 +549,16 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
             this.dateTimePicker1.TabIndex = 38;
+            // 
+            // lbSalesRep
+            // 
+            this.lbSalesRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbSalesRep.AutoSize = true;
+            this.lbSalesRep.BackColor = System.Drawing.Color.Transparent;
+            this.lbSalesRep.Location = new System.Drawing.Point(117, 273);
+            this.lbSalesRep.Name = "lbSalesRep";
+            this.lbSalesRep.Size = new System.Drawing.Size(0, 16);
+            this.lbSalesRep.TabIndex = 48;
             // 
             // OrderRegistrationControl
             // 
@@ -536,7 +634,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
@@ -547,5 +644,14 @@
         private System.Windows.Forms.ComboBox cbOrderRep;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbClientRep;
+        private System.Windows.Forms.Label lbClientDivision;
+        private System.Windows.Forms.Label lbFax;
+        private System.Windows.Forms.Label lbPhoneNumber;
+        private System.Windows.Forms.Label lbAddress;
+        private System.Windows.Forms.Label lbPostalCode;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbNameRead;
+        private System.Windows.Forms.Label lbSalesRep;
     }
 }

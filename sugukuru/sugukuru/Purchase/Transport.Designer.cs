@@ -39,9 +39,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbOrderId = new System.Windows.Forms.TextBox();
             this.btSearch = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbCustomerId = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -150,13 +150,13 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "伝票番号";
             // 
-            // textBox1
+            // tbOrderId
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 129);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 27);
-            this.textBox1.TabIndex = 19;
+            this.tbOrderId.Location = new System.Drawing.Point(84, 129);
+            this.tbOrderId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbOrderId.Name = "tbOrderId";
+            this.tbOrderId.Size = new System.Drawing.Size(116, 27);
+            this.tbOrderId.TabIndex = 19;
             // 
             // btSearch
             // 
@@ -167,14 +167,15 @@
             this.btSearch.TabIndex = 20;
             this.btSearch.Text = "検索";
             this.btSearch.UseVisualStyleBackColor = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
-            // textBox2
+            // tbCustomerId
             // 
-            this.textBox2.Location = new System.Drawing.Point(84, 171);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(116, 27);
-            this.textBox2.TabIndex = 21;
+            this.tbCustomerId.Location = new System.Drawing.Point(84, 171);
+            this.tbCustomerId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbCustomerId.Name = "tbCustomerId";
+            this.tbCustomerId.Size = new System.Drawing.Size(116, 27);
+            this.tbCustomerId.TabIndex = 21;
             // 
             // textBox3
             // 
@@ -225,9 +226,9 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbCustomerId);
             this.Controls.Add(this.btSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbOrderId);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -258,9 +259,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbOrderId;
         private System.Windows.Forms.Button btSearch;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbCustomerId;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
