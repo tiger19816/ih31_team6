@@ -8,14 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace sugukuru.ClaimCollection
 {
     public partial class BulkReconciliation : FormMaster.UserControlMST
     {
+        //DB接続文字列の取得
+        string conStr;
+
         public BulkReconciliation()
         {
             InitializeComponent();
+            this.conStr = ConfigurationManager.AppSettings["DbConKey"];
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -115,15 +121,46 @@ namespace sugukuru.ClaimCollection
             }
             sr.Close();
 
-            //消込処理
-            for (int i = tbl.Count - 1; i >= 0; i--)
-            {
-                
-                if (true)
-                {
-                    tbl.RemoveAt(i);
-                }
-            }
+            //string sql = "";
+
+            ////DB接続オブジェクトを作成
+            //MySqlConnection con = new MySqlConnection(this.conStr);
+
+            ////DB接続
+            //con.Open();
+
+            ////消込処理
+            //for (int i = tbl.Count - 1; i >= 0; i--)
+            //{
+            //    Dictionary<string, string> d = tbl[i];
+            //    sql = "SELECT * FROM client "
+            //        + "INNER JOIN "
+            //        + "WHERE bank_account_holder = '" + d["name"]+"'";
+
+            //    //抽象データ格納データセットを作成
+            //    DataSet dset = new DataSet("unbilled");
+
+            //    //データアダプターの生成
+            //    MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+
+            //    ///データ抽出＆取得
+            //    mAdp.Fill(dset, "unbilled");
+
+            //    sql = "INSERT INTO billing_clearing(no) VALUES('" + no + " ');";
+
+            //    //SQL発行準備
+            //    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+            //    ///SQLの実行
+            //    cmd.ExecuteNonQuery();
+            //    if (true)
+            //    {
+            //        tbl.RemoveAt(i);
+            //    }
+            //}
+            
+            ////DB接続
+            //con.Close();
         }
     }
 }
