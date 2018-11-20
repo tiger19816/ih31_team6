@@ -45,17 +45,36 @@ namespace sugukuru.Orders
         //顧客の検索ボタン
         private void btCustomerSearch_Click(object sender, EventArgs e)
         {
-            Form MenuFM = new CustomerSelectForm();
+            //子フォームを開く
+            CustomerSelectForm MenuFM = new CustomerSelectForm();
             MenuFM.ShowDialog();
             MenuFM.Dispose();
             this.Show();
+
+            //子フォームで追加が押下された場合の処理
+            if (MenuFM.SelectFlg)
+            {
+                //返り値の取得(DataRow)
+                DataRow selectRow = MenuFM.Customer.getDataRow();
+                //DataRowの中身をフォームの中身に追加していく
+                //DataRowからの引数はデータベースのカラム名そのまま
+                tbClientId.Text = selectRow["id"].ToString();
+                lbName.Text = selectRow["formal_name"].ToString();
+                lbNameRead.Text = selectRow["formal_name_read"].ToString();
+                lbPostalCode.Text = selectRow["postal_code"].ToString();
+                lbAddress.Text = selectRow["address"].ToString();
+                lbPhoneNumber.Text = selectRow["phone_number"].ToString();
+                lbFax.Text = selectRow["fax"].ToString();
+                lbClientDivision.Text = selectRow["client_division"].ToString();
+                lbClientRep.Text = selectRow["client_rep"].ToString();
+                lbSalesRep.Text = selectRow["family_name"].ToString() + " " + selectRow["first_name"].ToString();
+            }
         }
-
-        String id = "";
-
         //登録ボタン押下
         private void btOrderRegistrarion_Click(object sender, EventArgs e)
         {
+            string id = "";
+
             //SQL文を発行する
             DataSet dset = new DataSet("orders");
             MySqlConnection con = new MySqlConnection(this.conStr);
