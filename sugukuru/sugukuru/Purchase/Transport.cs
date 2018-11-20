@@ -15,6 +15,8 @@ namespace sugukuru.Purchase
         public Transport()
         {
             InitializeComponent();
+
+
         }
     }
 }

@@ -69,10 +69,11 @@
             // 
             // btConfirmation
             // 
-            this.btConfirmation.Location = new System.Drawing.Point(20, 504);
+            this.btConfirmation.Font = new System.Drawing.Font("游ゴシック", 12F);
+            this.btConfirmation.Location = new System.Drawing.Point(1040, 573);
             this.btConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btConfirmation.Name = "btConfirmation";
-            this.btConfirmation.Size = new System.Drawing.Size(87, 31);
+            this.btConfirmation.Size = new System.Drawing.Size(117, 53);
             this.btConfirmation.TabIndex = 3;
             this.btConfirmation.Text = "登録";
             this.btConfirmation.UseVisualStyleBackColor = true;
@@ -94,7 +95,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 12;
-            this.label1.Text = "出品ID";
+            this.label1.Text = "受注ID";
             // 
             // label4
             // 
