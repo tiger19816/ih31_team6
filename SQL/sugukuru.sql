@@ -53,13 +53,21 @@ INSERT INTO `auction_hall` (`id`, `auction_hall_name`) VALUES
 --
 
 CREATE TABLE `bid` (
-  `order_id` char(10) NOT NULL COMMENT '受注ID',
+  `order_id` char(9) NOT NULL COMMENT '受注ID',
   `auction_hall_id` int(11) NOT NULL COMMENT 'オークション会場ID',
   `listing_number` int(11) NOT NULL COMMENT '出品番号',
   `bid_date` date NOT NULL COMMENT '入札日付',
   `bid_price` int(11) NOT NULL COMMENT '入札金額',
   `bid_result` int(11) NOT NULL COMMENT '入札結果'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='入札テーブル';
+
+--
+-- テーブルのデータのダンプ `bid`
+--
+
+INSERT INTO `bid` (`order_id`, `auction_hall_id`, `listing_number`, `bid_date`, `bid_price`, `bid_result`) VALUES
+('181110001', 1, 12345, '2018-11-14', 850000, 1),
+('181110002', 1, 12346, '2018-11-14', 700000, 1);
 
 -- --------------------------------------------------------
 
@@ -128,17 +136,18 @@ CREATE TABLE `client` (
   `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '登録日',
   `create_rep` char(3) NOT NULL COMMENT '登録担当者',
   `update_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '変更日',
-  `update_rep` char(3) DEFAULT NULL COMMENT '変更担当者'
+  `update_rep` char(3) DEFAULT '' COMMENT '変更担当者',
+  `sales_rep` char(3) NOT NULL DEFAULT '' COMMENT '営業担当者'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='顧客テーブル';
 
 --
 -- テーブルのデータのダンプ `client`
 --
 
-INSERT INTO `client` (`id`, `formal_name`, `formal_name_read`, `abbreviation`, `abbreviation_read`, `postal_code`, `prefectures`, `municipality`, `client_division`, `client_rep`, `phone_number`, `fax`, `mail_address`, `monthly_trading_estimated`, `recovery_condition`, `closing_date`, `collection_month`, `collection_date`, `financial_institution_name`, `financial_institution_code`, `branch_name`, `branch_code`, `bank_account_type`, `bank_account_number`, `bank_account_holder`, `fine_info`, `create_at`, `create_rep`, `update_at`, `update_rep`) VALUES
-('18001', '株式会社カーステーションバンバン', 'カブシキガイシャカーステーションバンバン', 'カーステバン', 'カーステバン', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '岡本隆', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'カブシキガイシャカーステーションバンバン', NULL, '2018-11-06 16:41:30', '101', '2018-11-06 16:41:30', NULL),
-('18002', '株式会社パシフィックオート', 'カブシキガイシャパシフィックオート', 'パシフオート', 'パシフオート', '5300001', '大阪府', '北区梅田3-3-1', '総務部', '今井哲文', '0612345555', '0623456785', 'imai@pasificauto.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'カブシキガイシャパシフィックオート', NULL, '2018-11-06 16:41:30', '101', '2018-11-06 16:41:30', NULL),
-('18003', '株式会社オフィスMIYA', 'カブシキガイシャオフィスミヤ', 'オフィスミヤ', 'オフィスミヤ', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '田中太郎', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'オフィスミヤ', NULL, '2018-11-13 18:10:15', '101', '0000-00-00 00:00:00', NULL);
+INSERT INTO `client` (`id`, `formal_name`, `formal_name_read`, `abbreviation`, `abbreviation_read`, `postal_code`, `prefectures`, `municipality`, `client_division`, `client_rep`, `phone_number`, `fax`, `mail_address`, `monthly_trading_estimated`, `recovery_condition`, `closing_date`, `collection_month`, `collection_date`, `financial_institution_name`, `financial_institution_code`, `branch_name`, `branch_code`, `bank_account_type`, `bank_account_number`, `bank_account_holder`, `fine_info`, `create_at`, `create_rep`, `update_at`, `update_rep`, `sales_rep`) VALUES
+('18001', '株式会社カーステーションバンバン', 'カブシキガイシャカーステーションバンバン', 'カーステバン', 'カーステバン', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '岡本隆', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'カブシキガイシャカーステーションバンバン', NULL, '2018-11-06 16:41:30', '101', '2018-11-20 10:51:26', NULL, '102'),
+('18002', '株式会社パシフィックオート', 'カブシキガイシャパシフィックオート', 'パシフオート', 'パシフオート', '5300001', '大阪府', '北区梅田3-3-1', '総務部', '今井哲文', '0612345555', '0623456785', 'imai@pasificauto.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'カブシキガイシャパシフィックオート', NULL, '2018-11-06 16:41:30', '101', '2018-11-20 10:51:29', NULL, '102'),
+('18003', '株式会社オフィスMIYA', 'カブシキガイシャオフィスミヤ', 'オフィスミヤ', 'オフィスミヤ', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '田中太郎', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'オフィスミヤ', NULL, '2018-11-13 18:10:15', '101', '2018-11-20 10:51:33', NULL, '102');
 
 -- --------------------------------------------------------
 
@@ -236,7 +245,7 @@ CREATE TABLE `quote` (
   `quote_rep` char(3) NOT NULL COMMENT '見積担当者',
   `expiry_date` date NOT NULL COMMENT '有効期限',
   `payment_term` varchar(20) NOT NULL COMMENT '支払条件',
-  `delivery_date` date NOT NULL COMMENT '納期',
+  `delivery_date` varchar(20) NOT NULL COMMENT '納期',
   `remarks` text NOT NULL COMMENT '備考'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='見積テーブル';
 
@@ -303,8 +312,17 @@ CREATE TABLE `unbilled_data` (
   `billing_amount` varchar(50) NOT NULL COMMENT '品名',
   `quantity` int(11) NOT NULL COMMENT '数量',
   `unit` varchar(3) NOT NULL COMMENT '単位',
-  `unit_price` int(11) NOT NULL COMMENT '単価'
+  `unit_price` int(11) NOT NULL COMMENT '単価',
+  `comp_flag` int(11) NOT NULL COMMENT '完了フラグ'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- テーブルのデータのダンプ `unbilled_data`
+--
+
+INSERT INTO `unbilled_data` (`id`, `customer_id`, `order_id`, `recorded_date`, `billing_amount`, `quantity`, `unit`, `unit_price`, `comp_flag`) VALUES
+(1, '18001', '181110001', '2018-11-15', 'JZS144 クラウン', 1, '台', 1000000, 0),
+(2, '18001', '181110002', '2018-11-15', 'L600S ムーブ', 1, '台', 1000000, 0);
 
 --
 -- Indexes for dumped tables
@@ -332,7 +350,7 @@ ALTER TABLE `bill`
 -- Indexes for table `billing_detail`
 --
 ALTER TABLE `billing_detail`
-  ADD PRIMARY KEY (`invoice_number`);
+  ADD PRIMARY KEY (`invoice_number`,`no`);
 
 --
 -- Indexes for table `client`
@@ -402,7 +420,7 @@ ALTER TABLE `auction_hall`
 -- AUTO_INCREMENT for table `unbilled_data`
 --
 ALTER TABLE `unbilled_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
