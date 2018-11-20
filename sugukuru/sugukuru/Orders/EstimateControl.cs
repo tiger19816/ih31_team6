@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using IronPdf;
 
 namespace sugukuru.Orders
 {
@@ -28,6 +29,7 @@ namespace sugukuru.Orders
             textBox10.Text = 0.ToString();
             textBox11.Text = 0.ToString();
             textBox12.Text = 0.ToString();
+            textBox13.Text = "見積後２週間";
         }
 
         private void EstimateControl_Load(object sender, EventArgs e)
@@ -49,14 +51,24 @@ namespace sugukuru.Orders
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // データをつくる
+
             table.Columns.Add("受注番号");
             table.Columns.Add("品名");
             table.Columns.Add("数量");
             table.Columns.Add("単位");
-            table.Columns.Add("単価");
-            table.Columns.Add("金額");
+            table.Columns.Add("単価", Type.GetType("System.Int32"));
+            table.Columns.Add("金額", Type.GetType("System.Int32"));
+
             dataGridView1.DataSource = table;
             dataGridView1.Columns["品名"].Width = 250;
+
+            //データグリッドビュー料金の3桁カンマ区切り
+            dataGridView1.Columns["単価"].DefaultCellStyle.Format = "c";
+            dataGridView1.Columns["金額"].DefaultCellStyle.Format = "c";
+
+            //データグリッドビュー料金の右揃え
+            dataGridView1.Columns["単価"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns["金額"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             // データを追加
             //抽象データ格納データセットを作成
@@ -107,7 +119,7 @@ namespace sugukuru.Orders
             }
             else
             {
-                MessageBox.Show("社員IDかパスワードが誤っています。");
+                MessageBox.Show("顧客IDが誤っています。");
             }
         }
 
@@ -170,7 +182,14 @@ namespace sugukuru.Orders
         // 印刷を押したときの処理
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(textBox1.Text
+            // 見積テーブルと見積詳細テーブルに追加
+
+            // 見積内容をhtmlにセット
+
+            // htmlをpdf変換
+
+            MessageBox.Show(
+                          textBox1.Text
                 + " :  "+ textBox2.Text
                 + " : " + textBox4.Text
                 + " : " + textBox7.Text
@@ -178,7 +197,7 @@ namespace sugukuru.Orders
                 + " : " + textBox9.Text
                 + " : " + dateTimePicker1.Text
                 + " : " + comboBox1.Text
-                + " : " + dateTimePicker2.Text
+                + " : " + textBox13.Text
                 + " : " + textBox5.Text
                 + " : " + textBox6.Text
                 + " : " + textBox3.Text
