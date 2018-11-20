@@ -28,6 +28,12 @@ namespace sugukuru.Purchase
         String order_id = "";
         int sum = 0;
 
+        String tbTaxName = "";
+        String tbPriceName = "";
+        String tbCarTaxName = "";
+        String tbFeeName = "";
+
+
 
         public BidCarInput(String id)
         {
@@ -88,34 +94,113 @@ namespace sugukuru.Purchase
        
 
         //合計金額を出す
-
-        private void tbTax_TextChanged(object sender, EventArgs e)
+        //共通のイベントハンドラ
+        private void textBox_Leave(object sender, System.EventArgs e)
         {
-            int val = int.Parse(tbTax.Text);
-            sum += val;
+
+            int i = 0;
+
+            //いったん全部読み込む
+            String tax = tbTax.Text;
+            if (tax != "")
+            {
+                Boolean result = int.TryParse(tax, out i);
+                if(!result)
+                {
+                    tax = "0";
+                }
+            }
+            else
+            {
+                tax = "0";
+            }
+
+            MessageBox.Show(tax);
+           
+            String price = tbPrice.Text;
+            if (price != "")
+            {
+                Boolean result = int.TryParse(price, out i);
+                if (!result || price == "")
+                {
+                    price = "0";
+                }
+            }
+            else
+            {
+                price = "0";
+            }
+
+            MessageBox.Show(price);
+
+            String carTax = tbCarTax.Text;
+            if (carTax != "")
+            {
+                Boolean result = int.TryParse(carTax, out i);
+                if (!result || carTax == "")
+                {
+                    carTax = "0";
+                }
+            }
+            else
+            {
+                carTax = "0";
+            }
+
+            MessageBox.Show(carTax);
+
+            String fee = tbFee.Text;
+            if (fee != "")
+            {
+                Boolean result = int.TryParse(fee, out i);
+                if (!result || fee == "")
+                {
+                    fee = "0";
+                }
+            }
+            else
+            {
+                fee = "0";
+            }
+
+            MessageBox.Show(fee);
+
+
+            sum = int.Parse(tax) + int.Parse(price) + int.Parse(carTax) + int.Parse(fee);
+            
             lbSum.Text = sum.ToString();
+
         }
 
-        private void tbPrice_TextChanged(object sender, EventArgs e)
-        {
-            int val = int.Parse(tbPrice.Text);
-            sum += val;
-          
-            lbSum.Text = sum.ToString();
-        }
 
-        private void tbCarTax_TextChanged(object sender, EventArgs e)
-        {
-            int val = int.Parse(tbCarTax.Text);
-            sum += val;
-            lbSum.Text = sum.ToString();
-        }
 
-        private void tbFee_TextChanged(object sender, EventArgs e)
-        {
-            int val = int.Parse(tbFee.Text);
-            sum += val;
-            lbSum.Text = sum.ToString();
-        }
+        //private void tbTax_TextChanged(object sender, EventArgs e)
+        //{
+        //    int val = int.Parse(tbTax.Text);
+        //    sum += val;
+        //    lbSum.Text = sum.ToString();
+        //}
+
+        //private void tbPrice_TextChanged(object sender, EventArgs e)
+        //{
+        //    int val = int.Parse(tbPrice.Text);
+        //    sum += val;
+
+        //    lbSum.Text = sum.ToString();
+        //}
+
+        //private void tbCarTax_TextChanged(object sender, EventArgs e)
+        //{
+        //    int val = int.Parse(tbCarTax.Text);
+        //    sum += val;
+        //    lbSum.Text = sum.ToString();
+        //}
+
+        //private void tbFee_TextChanged(object sender, EventArgs e)
+        //{
+        //    int val = int.Parse(tbFee.Text);
+        //    sum += val;
+        //    lbSum.Text = sum.ToString();
+        //}
     }
 }
