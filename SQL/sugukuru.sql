@@ -87,6 +87,18 @@ CREATE TABLE `bill` (
 -- --------------------------------------------------------
 
 --
+-- テーブルの構造 `billing_clearing`
+--
+
+CREATE TABLE `billing_clearing` (
+  `no` char(10) NOT NULL COMMENT '請求書番号',
+  `amount` int(11) DEFAULT NULL COMMENT '入金額',
+  `clearing_flag` int(11) NOT NULL DEFAULT '0' COMMENT '消込フラグ'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求消込';
+
+-- --------------------------------------------------------
+
+--
 -- テーブルの構造 `billing_detail`
 --
 
@@ -145,9 +157,9 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`id`, `formal_name`, `formal_name_read`, `abbreviation`, `abbreviation_read`, `postal_code`, `prefectures`, `municipality`, `client_division`, `client_rep`, `phone_number`, `fax`, `mail_address`, `monthly_trading_estimated`, `recovery_condition`, `closing_date`, `collection_month`, `collection_date`, `financial_institution_name`, `financial_institution_code`, `branch_name`, `branch_code`, `bank_account_type`, `bank_account_number`, `bank_account_holder`, `fine_info`, `create_at`, `create_rep`, `update_at`, `update_rep`, `sales_rep`) VALUES
-('18001', '株式会社カーステーションバンバン', 'カブシキガイシャカーステーションバンバン', 'カーステバン', 'カーステバン', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '岡本隆', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'カブシキガイシャカーステーションバンバン', NULL, '2018-11-06 16:41:30', '101', '2018-11-20 10:51:26', NULL, '102'),
-('18002', '株式会社パシフィックオート', 'カブシキガイシャパシフィックオート', 'パシフオート', 'パシフオート', '5300001', '大阪府', '北区梅田3-3-1', '総務部', '今井哲文', '0612345555', '0623456785', 'imai@pasificauto.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'カブシキガイシャパシフィックオート', NULL, '2018-11-06 16:41:30', '101', '2018-11-20 10:51:29', NULL, '102'),
-('18003', '株式会社オフィスMIYA', 'カブシキガイシャオフィスミヤ', 'オフィスミヤ', 'オフィスミヤ', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '田中太郎', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'オフィスミヤ', NULL, '2018-11-13 18:10:15', '101', '2018-11-20 10:51:33', NULL, '102');
+('18001', '株式会社カーステーションバンバン', 'カブシキガイシャカーステーションバンバン', 'カーステバン', 'カーステバン', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '岡本隆', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'ｶ)ｶｰｽﾃｰｼﾖﾝﾊﾞﾝﾊﾞﾝ', NULL, '2018-11-06 16:41:30', '101', '2018-11-20 15:58:12', NULL, '102'),
+('18002', '株式会社パシフィックオート', 'カブシキガイシャパシフィックオート', 'パシフオート', 'パシフオート', '5300001', '大阪府', '北区梅田3-3-1', '総務部', '今井哲文', '0612345555', '0623456785', 'imai@pasificauto.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'ｶ)ﾊﾟｼﾌｲﾂｸｵｰﾄ', NULL, '2018-11-06 16:41:30', '101', '2018-11-20 15:58:50', NULL, '102'),
+('18003', '株式会社オフィスMIYA', 'カブシキガイシャオフィスミヤ', 'オフィスミヤ', 'オフィスミヤ', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '田中太郎', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'ｶ)ｵﾌｲｽﾐﾔ', NULL, '2018-11-13 18:10:15', '101', '2018-11-20 16:00:03', NULL, '102');
 
 -- --------------------------------------------------------
 
@@ -229,6 +241,7 @@ CREATE TABLE `procedure_after_successful_bid` (
   `vehicle_registration_status` int(11) NOT NULL COMMENT '車両登録状況',
   `procedure_content` varchar(50) NOT NULL COMMENT '手続内容',
   `report_deadline` date NOT NULL COMMENT '報告期限',
+  `procedure_flag` int(11) NOT NULL COMMENT 'オークション手続伝達フラグ',
   `report_complete_date` date NOT NULL COMMENT '報告完了日付'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='落札後手続きテーブル';
 
@@ -249,6 +262,14 @@ CREATE TABLE `quote` (
   `remarks` text NOT NULL COMMENT '備考'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='見積テーブル';
 
+--
+-- テーブルのデータのダンプ `quote`
+--
+
+INSERT INTO `quote` (`id`, `client_id`, `quote_date`, `quote_rep`, `expiry_date`, `payment_term`, `delivery_date`, `remarks`) VALUES
+('1800118001', '18001', '2018-11-20', '山田', '見積後２週間', '20日締めの当月15払い', '別途相談', ''),
+('1800118002', '18001', '2018-11-20', '山田', '見積後２週間', '20日締めの当月15払い', '別途相談', '');
+
 -- --------------------------------------------------------
 
 --
@@ -264,6 +285,16 @@ CREATE TABLE `quote_detail` (
   `unit` int(11) NOT NULL COMMENT '単位',
   `price` int(11) NOT NULL COMMENT '単価'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='見積明細テーブル';
+
+--
+-- テーブルのデータのダンプ `quote_detail`
+--
+
+INSERT INTO `quote_detail` (`quote_id`, `no`, `order_id`, `product_name`, `quantity`, `unit`, `price`) VALUES
+('1800118001', 1, '181110001', 'JZS144 クラウン(H10)', 1, 1, 10000),
+('1800118001', 2, '181110002', 'L600S ムーブ(H10)', 1, 1, 100000),
+('1800118002', 1, '181110001', 'JZS144 クラウン(H10)', 1, 1, 100000),
+('1800118002', 2, '181110002', 'L600S ムーブ(H10)', 1, 1, 100000);
 
 -- --------------------------------------------------------
 
@@ -297,6 +328,25 @@ CREATE TABLE `successful_bid_vehicle` (
   `fee` int(11) NOT NULL COMMENT '手数料',
   `successful_bid_fixing` int(11) NOT NULL COMMENT '落札確定'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='落札車両テーブル';
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `transportation`
+--
+
+CREATE TABLE `transportation` (
+  `order_id` char(9) NOT NULL COMMENT '受注ID',
+  `vendor_id` char(3) NOT NULL COMMENT '業者ID',
+  `starting_postal_code` char(7) NOT NULL COMMENT '出発地郵便番号',
+  `starting_address` varchar(100) NOT NULL COMMENT '出発地住所',
+  `destination_postal_code` char(7) NOT NULL COMMENT '到着地郵便番号',
+  `destination_address` varchar(100) NOT NULL COMMENT '到着地住所',
+  `fee` int(11) NOT NULL COMMENT '料金',
+  `order_date` date NOT NULL COMMENT '依頼日',
+  `slip_number` varchar(20) NOT NULL COMMENT '伝票番号',
+  `responsible_id` char(3) NOT NULL COMMENT '担当者ID'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='陸送情報';
 
 -- --------------------------------------------------------
 
@@ -345,6 +395,12 @@ ALTER TABLE `bid`
 --
 ALTER TABLE `bill`
   ADD PRIMARY KEY (`invoice_number`);
+
+--
+-- Indexes for table `billing_clearing`
+--
+ALTER TABLE `billing_clearing`
+  ADD PRIMARY KEY (`no`);
 
 --
 -- Indexes for table `billing_detail`
@@ -398,6 +454,12 @@ ALTER TABLE `recieved_document`
 -- Indexes for table `successful_bid_vehicle`
 --
 ALTER TABLE `successful_bid_vehicle`
+  ADD PRIMARY KEY (`order_id`);
+
+--
+-- Indexes for table `transportation`
+--
+ALTER TABLE `transportation`
   ADD PRIMARY KEY (`order_id`);
 
 --
