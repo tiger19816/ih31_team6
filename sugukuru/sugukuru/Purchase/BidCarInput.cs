@@ -38,7 +38,7 @@ namespace sugukuru.Purchase
         public BidCarInput(String id)
         {
             InitializeComponent();
-            MessageBox.Show(id);
+            
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
 
             //SQL文を発行する
@@ -115,8 +115,7 @@ namespace sugukuru.Purchase
                 tax = "0";
             }
 
-            MessageBox.Show(tax);
-           
+          
             String price = tbPrice.Text;
             if (price != "")
             {
@@ -131,7 +130,7 @@ namespace sugukuru.Purchase
                 price = "0";
             }
 
-            MessageBox.Show(price);
+           
 
             String carTax = tbCarTax.Text;
             if (carTax != "")
@@ -147,7 +146,7 @@ namespace sugukuru.Purchase
                 carTax = "0";
             }
 
-            MessageBox.Show(carTax);
+          
 
             String fee = tbFee.Text;
             if (fee != "")
@@ -163,7 +162,7 @@ namespace sugukuru.Purchase
                 fee = "0";
             }
 
-            MessageBox.Show(fee);
+        
 
 
             sum = int.Parse(tax) + int.Parse(price) + int.Parse(carTax) + int.Parse(fee);
@@ -173,34 +172,5 @@ namespace sugukuru.Purchase
         }
 
 
-
-        //private void tbTax_TextChanged(object sender, EventArgs e)
-        //{
-        //    int val = int.Parse(tbTax.Text);
-        //    sum += val;
-        //    lbSum.Text = sum.ToString();
-        //}
-
-        //private void tbPrice_TextChanged(object sender, EventArgs e)
-        //{
-        //    int val = int.Parse(tbPrice.Text);
-        //    sum += val;
-
-        //    lbSum.Text = sum.ToString();
-        //}
-
-        //private void tbCarTax_TextChanged(object sender, EventArgs e)
-        //{
-        //    int val = int.Parse(tbCarTax.Text);
-        //    sum += val;
-        //    lbSum.Text = sum.ToString();
-        //}
-
-        //private void tbFee_TextChanged(object sender, EventArgs e)
-        //{
-        //    int val = int.Parse(tbFee.Text);
-        //    sum += val;
-        //    lbSum.Text = sum.ToString();
-        //}
     }
 }
