@@ -243,7 +243,7 @@ CREATE TABLE `quote` (
   `client_id` char(5) NOT NULL COMMENT '顧客ID',
   `quote_date` date NOT NULL COMMENT '見積日',
   `quote_rep` char(3) NOT NULL COMMENT '見積担当者',
-  `expiry_date` date NOT NULL COMMENT '有効期限',
+  `expiry_date` varchar(20) NOT NULL COMMENT '有効期限',
   `payment_term` varchar(20) NOT NULL COMMENT '支払条件',
   `delivery_date` varchar(20) NOT NULL COMMENT '納期',
   `remarks` text NOT NULL COMMENT '備考'
@@ -257,8 +257,8 @@ CREATE TABLE `quote` (
 
 CREATE TABLE `quote_detail` (
   `quote_id` char(10) NOT NULL COMMENT '見積ID',
-  `order_id` char(10) NOT NULL COMMENT '受注ID',
   `no` int(11) NOT NULL COMMENT '項番',
+  `order_id` char(10) NOT NULL COMMENT '受注ID',
   `product_name` varchar(20) NOT NULL COMMENT '品名',
   `quantity` int(11) NOT NULL COMMENT '数量',
   `unit` int(11) NOT NULL COMMENT '単位',
