@@ -60,15 +60,70 @@ namespace sugukuru.ClaimCollection
 
         private void btCreate_Click(object sender, EventArgs e)
         {
+            //入金データを入れるList
+            List<Dictionary<string, string>> tbl = new List<Dictionary<string, string>>();
+
+            //CSVファイルを読み込んで、内容を取得、確認
             Encoding enc = Encoding.GetEncoding("utf-8");
             StreamReader sr = new StreamReader(tbFileName.Text, enc);
             String rec = sr.ReadLine();
-            while (!sr.EndOfStream)
+            string[] rtbl = rec.Split(',');
+            while (!"9".Equals(rtbl[0].ToString()))
             {
+                switch (rtbl[0].ToString())
+                {
+                    case "1":
+                        break;
+                    case "2":
+                        Dictionary<string, string> d = new Dictionary<string, string>();
+                        d.Add("date", rtbl[2].ToString());
+                        d.Add("price", rtbl[4].ToString());
+                        d.Add("name", rtbl[6].ToString());
+                        tbl.Add(d);
+                        break;
+                    case "8":
+                        bool checkFlag = true;
 
+                        if(!(int.Parse(rtbl[1]) == tbl.Count))
+                        {
+                            checkFlag = false;
+                        }
+                        else
+                        {
+                            int sumPrice = 0;
+                            for (int i = 0; i < tbl.Count; i++)
+                            {
+                                Dictionary<string, string> dic = tbl[i];
+                                sumPrice += int.Parse(dic["price"]);
+                            }
+                            if(!(int.Parse(rtbl[2]) == sumPrice))
+                            {
+                                checkFlag = false;
+                            }
+                        }
+
+                        if(!checkFlag)
+                        {
+                            MessageBox.Show("入金情報が正しくありません。");
+                            sr.Close();
+                            return;
+                        }
+                        break;
+                }
                 rec = sr.ReadLine();
+                rtbl = rec.Split(',');
             }
             sr.Close();
+
+            //消込処理
+            for (int i = tbl.Count - 1; i >= 0; i--)
+            {
+                
+                if (true)
+                {
+                    tbl.RemoveAt(i);
+                }
+            }
         }
     }
 }

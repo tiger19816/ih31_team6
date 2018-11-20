@@ -63,8 +63,7 @@ namespace sugukuru.ClaimCollection
                 {
                     string id = dgvBulk.Rows[i].Cells["id"].Value.ToString();
                     string date = dtpBill.Value.ToShortDateString();
-
-                    MessageBox.Show(id + DateTime.Now.ToString("yy") + "0" + cbMonth.SelectedItem.ToString());
+                    
                     string no = id + DateTime.Now.ToString("yy") + "0" + cbMonth.SelectedItem.ToString();
                     string payment = "月末締翌月末払";
 
@@ -83,6 +82,14 @@ namespace sugukuru.ClaimCollection
 
                     //SQL発行準備
                     MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    ///SQLの実行
+                    cmd.ExecuteNonQuery();
+
+                    sql = "INSERT INTO billing_clearing(no) VALUES('" + no +" ');";
+
+                    //SQL発行準備
+                    cmd = new MySqlCommand(sql, con);
 
                     ///SQLの実行
                     cmd.ExecuteNonQuery();
