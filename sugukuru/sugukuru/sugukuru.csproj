@@ -79,6 +79,11 @@
     <Compile Include="Customer\CustomerRegistrationControl.Designer.cs">
       <DependentUpon>CustomerRegistrationControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="DocumentHtmlTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocumentHtmlTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entites\Estimate.cs" />
     <Compile Include="FormMaster\UserControlMinMST.cs">
       <SubType>UserControl</SubType>
@@ -556,9 +561,17 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DocumentHtmlTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>DocumentHtmlTemplate.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
