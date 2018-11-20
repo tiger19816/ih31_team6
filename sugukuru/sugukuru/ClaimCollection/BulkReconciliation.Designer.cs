@@ -33,7 +33,7 @@
             this.btFileOpen = new System.Windows.Forms.Button();
             this.tbFileName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvReconciliation = new System.Windows.Forms.DataGridView();
             this.underDay = new System.Windows.Forms.Label();
             this.underMonth = new System.Windows.Forms.Label();
             this.underYear = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btCreate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReconciliation)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -93,14 +93,14 @@
             this.label2.TabIndex = 106;
             this.label2.Text = "入金情報ファイル";
             // 
-            // dataGridView1
+            // dgvReconciliation
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 130);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(1120, 433);
-            this.dataGridView1.TabIndex = 109;
+            this.dgvReconciliation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReconciliation.Location = new System.Drawing.Point(20, 130);
+            this.dgvReconciliation.Name = "dgvReconciliation";
+            this.dgvReconciliation.RowTemplate.Height = 21;
+            this.dgvReconciliation.Size = new System.Drawing.Size(1120, 433);
+            this.dgvReconciliation.TabIndex = 109;
             // 
             // underDay
             // 
@@ -193,7 +193,7 @@
             this.Controls.Add(this.comboBoxUnderDay);
             this.Controls.Add(this.comboBoxUnderMonth);
             this.Controls.Add(this.comboBoxUnderYear);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvReconciliation);
             this.Controls.Add(this.btFileOpen);
             this.Controls.Add(this.tbFileName);
             this.Controls.Add(this.label2);
@@ -201,7 +201,7 @@
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "BulkReconciliation";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReconciliation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,7 +213,7 @@
         private System.Windows.Forms.Button btFileOpen;
         private System.Windows.Forms.TextBox tbFileName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvReconciliation;
         private System.Windows.Forms.Label underDay;
         private System.Windows.Forms.Label underMonth;
         private System.Windows.Forms.Label underYear;

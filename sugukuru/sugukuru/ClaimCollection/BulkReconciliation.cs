@@ -18,15 +18,32 @@ namespace sugukuru.ClaimCollection
         //DB接続文字列の取得
         string conStr;
 
+        DataTable table;
+
         public BulkReconciliation()
         {
             InitializeComponent();
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
-        }
 
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            List<String> receiveList = BulkSelectForm.ShowForm();
+            // カラムを指定
+            dgvReconciliation.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvReconciliation.RowHeadersVisible = false;
+            dgvReconciliation.RowHeadersVisible = false;
+            dgvReconciliation.AllowUserToAddRows = false;
+            dgvReconciliation.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            table = new DataTable();
+
+            // データをつくる
+            table.Columns.Add("振込依頼人名");
+            table.Columns.Add("勘定日");
+            table.Columns.Add("起算日");
+            table.Columns.Add("金額", Type.GetType("System.Int32"));
+
+            dgvReconciliation.DataSource = table;
+
+            dgvReconciliation.Columns["金額"].DefaultCellStyle.Format = "c";
+            dgvReconciliation.Columns["金額"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void btFileOpen_Click(object sender, EventArgs e)
@@ -82,14 +99,14 @@ namespace sugukuru.ClaimCollection
                         break;
                     case "2":
                         Dictionary<string, string> d = new Dictionary<string, string>();
-                        d.Add("date", rtbl[2].ToString());
+                        d.Add("calculation_date", rtbl[2].ToString());
+                        d.Add("starting_date", rtbl[3].ToString());
                         d.Add("price", rtbl[4].ToString());
-                        d.Add("name", rtbl[6].ToString());
+                        d.Add("name", rtbl[7].ToString());
                         tbl.Add(d);
                         break;
                     case "8":
                         bool checkFlag = true;
-
                         if(!(int.Parse(rtbl[1]) == tbl.Count))
                         {
                             checkFlag = false;
@@ -121,46 +138,67 @@ namespace sugukuru.ClaimCollection
             }
             sr.Close();
 
-            //string sql = "";
+            string sql = "";
 
-            ////DB接続オブジェクトを作成
-            //MySqlConnection con = new MySqlConnection(this.conStr);
+            //DB接続オブジェクトを作成
+            MySqlConnection con = new MySqlConnection(this.conStr);
 
-            ////DB接続
-            //con.Open();
+            //DB接続
+            con.Open();
 
-            ////消込処理
-            //for (int i = tbl.Count - 1; i >= 0; i--)
-            //{
-            //    Dictionary<string, string> d = tbl[i];
-            //    sql = "SELECT * FROM client "
-            //        + "INNER JOIN "
-            //        + "WHERE bank_account_holder = '" + d["name"]+"'";
+            //消込処理
+            for (int i = tbl.Count - 1; i >= 0; i--)
+            {
+                Dictionary<string, string> d = tbl[i];
+                sql = "SELECT bc.no AS b_no, SUM(bd.quantity * bd.unit_price) AS price "
+                    + "FROM billing_clearing bc "
+                    + "INNER JOIN bill b ON bc.no = b.invoice_number "
+                    + "INNER JOIN client c ON b.customer_id = c.id "
+                    + "INNER JOIN billing_detail bd ON b.invoice_number = bd.invoice_number "
+                    + "WHERE c.bank_account_holder = '" + d["name"] + "' "
+                    + "AND bc.clearing_flag = 0 "
+                    + "HAVING price IS NOT NULL";
 
-            //    //抽象データ格納データセットを作成
-            //    DataSet dset = new DataSet("unbilled");
+                Console.WriteLine(sql);
 
-            //    //データアダプターの生成
-            //    MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+                //抽象データ格納データセットを作成
+                DataSet dset = new DataSet("bill");
 
-            //    ///データ抽出＆取得
-            //    mAdp.Fill(dset, "unbilled");
+                //データアダプターの生成
+                MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
 
-            //    sql = "INSERT INTO billing_clearing(no) VALUES('" + no + " ');";
+                ///データ抽出＆取得
+                mAdp.Fill(dset, "bill");
 
-            //    //SQL発行準備
-            //    MySqlCommand cmd = new MySqlCommand(sql, con);
+                if (dset.Tables["bill"].Rows.Count != 0)
+                {
+                    if (Convert.ToInt32(dset.Tables["bill"].Rows[0]["price"]) == Convert.ToInt32(d["price"]))
+                    {
+                        sql = "UPDATE billing_clearing SET amount = " + d["price"] + ", clearing_flag = 1 WHERE no = '" + dset.Tables["bill"].Rows[0]["b_no"] + "'";
 
-            //    ///SQLの実行
-            //    cmd.ExecuteNonQuery();
-            //    if (true)
-            //    {
-            //        tbl.RemoveAt(i);
-            //    }
-            //}
-            
-            ////DB接続
-            //con.Close();
+                        //SQL発行準備
+                        MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                        ///SQLの実行
+                        cmd.ExecuteNonQuery();
+                        tbl.RemoveAt(i);
+                    }
+                }
+            }
+            //DB接続
+            con.Close();
+
+            for (int i = 0; i < tbl.Count; i++)
+            {
+                Dictionary<string, string> d = tbl[i];
+                
+                DataRow row = table.NewRow();
+                row["振込依頼人名"] = d["name"];
+                row["勘定日"] = d["calculation_date"];
+                row["起算日"] = d["starting_date"];
+                row["金額"] = int.Parse(d["price"]);
+                table.Rows.Add(row);
+            }
         }
     }
 }
