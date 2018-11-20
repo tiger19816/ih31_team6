@@ -17,15 +17,12 @@ namespace sugukuru.Customer
         String conStr;
         public CustomerListControl()
         {
-            Console.WriteLine("A");
             InitializeComponent();
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
             //受注担当者をセットする(営業担当者のみ)
             Utility.ResponsibleList.setSales(searchSalesReq);
             //初期選択を未選択にする
             searchSalesReq.SelectedIndex = -1;
-
-
         }
 
         private void searchButton_Click(object sender, EventArgs e)

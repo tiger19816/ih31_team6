@@ -78,8 +78,10 @@
             this.clientList.AllowUserToAddRows = false;
             this.clientList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientList.Location = new System.Drawing.Point(48, 166);
+            this.clientList.MultiSelect = false;
             this.clientList.Name = "clientList";
             this.clientList.RowTemplate.Height = 21;
+            this.clientList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientList.Size = new System.Drawing.Size(1120, 400);
             this.clientList.TabIndex = 30;
             // 

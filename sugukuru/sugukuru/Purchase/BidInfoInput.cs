@@ -31,5 +31,13 @@ namespace sugukuru.Purchase
             
     
         }
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            Form MenuFM = new OrderSelectForm();
+            MenuFM.ShowDialog();
+            MenuFM.Dispose();
+            this.Show();
+        }
     }
 }
