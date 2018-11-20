@@ -71,7 +71,12 @@ namespace sugukuru.Purchase
             MessageBox.Show("登録しました。");
         }
 
-
-
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            Form MenuFM = new OrderSelectForm();
+            MenuFM.ShowDialog();
+            MenuFM.Dispose();
+            this.Show();
+        }
     }
 }

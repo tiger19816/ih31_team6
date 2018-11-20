@@ -177,6 +177,7 @@
             this.btSearch.TabIndex = 16;
             this.btSearch.Text = "検索";
             this.btSearch.UseVisualStyleBackColor = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // gbBidResult
             // 

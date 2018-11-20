@@ -10,27 +10,23 @@ using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 
-namespace sugukuru.Orders
+namespace sugukuru.Purchase
 {
-    public partial class OrderListControl : FormMaster.UserControlMST
+    public partial class OrderSelectForm : FormMaster.OpenFormMST
     {
         //DB接続文字列取得
         String conStr;
 
-        public OrderListControl()
+        public OrderSelectForm()
         {
             InitializeComponent();
             //DB接続文字列取得
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
         }
 
-        //詳細ボタン
-        private void btDetail_Click(object sender, EventArgs e)
+        private void btSearchCustomer_Click(object sender, EventArgs e)
         {
-            Form OpenFM = new OrderDetailForm();
-            OpenFM.ShowDialog();
-            OpenFM.Dispose();
-            this.Show();
+
         }
 
         //検索ボタン
@@ -40,12 +36,18 @@ namespace sugukuru.Orders
             DataSet dset = new DataSet("order");
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();
-            String sql = "SELECT `id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info` FROM sugukuru.order where id = '" + tbSearchOrderId.Text+"'";
+            String sql = "SELECT `id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info` FROM sugukuru.order where id = '" + tbSearchOrderId.Text + "'";
             MessageBox.Show(sql);
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
             mAdp.Fill(dset, "order");
             gvOrderList.DataSource = dset.Tables["order"];
             con.Close();
+        }
+
+        //選択ボタン
+        private void btSelect_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

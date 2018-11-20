@@ -116,6 +116,12 @@
     <Compile Include="Orders\EstimateControl.Designer.cs">
       <DependentUpon>EstimateControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders\selectester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\selectester.Designer.cs">
+      <DependentUpon>selectester.cs</DependentUpon>
+    </Compile>
     <Compile Include="Orders\OrderChangeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,12 +325,19 @@
     <Compile Include="Purchase\ListingResultFixed.Designer.cs">
       <DependentUpon>ListingResultFixed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\OrderSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\OrderSelectForm.Designer.cs">
+      <DependentUpon>OrderSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\Purchase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Purchase\Purchase.Designer.cs">
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\Customer.cs" />
     <Compile Include="Utility\ResponsibleList.cs" />
     <Compile Include="Utility\Tool.cs" />
     <EmbeddedResource Include="ClaimCollection\IndividualSelectForm.resx">
@@ -356,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\EstimateControl.resx">
       <DependentUpon>EstimateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\selectester.resx">
+      <DependentUpon>selectester.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\OrderChangeForm.resx">
       <DependentUpon>OrderChangeForm.cs</DependentUpon>
@@ -521,6 +537,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\ListingResultFixed.resx">
       <DependentUpon>ListingResultFixed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\OrderSelectForm.resx">
+      <DependentUpon>OrderSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
