@@ -57,7 +57,7 @@ namespace sugukuru.Orders
         private void btOrderRegistrarion_Click(object sender, EventArgs e)
         {
             //SQL文を発行する
-            DataSet dset = new DataSet("order");
+            DataSet dset = new DataSet("orders");
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();
 
@@ -75,12 +75,12 @@ namespace sugukuru.Orders
             String year = DateTime.Now.Year.ToString();    //2018
             String mo = DateTime.Now.Month.ToString();     //11
 
-            String sql_id = "SELECT COUNT(*) FROM `order` WHERE create_at LIKE '" + year + "-"+mo+"%';";
+            String sql_id = "SELECT COUNT(*) FROM `orders` WHERE create_at LIKE '" + year + "-"+mo+"%';";
 
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql_id, con);
-            mAdp.Fill(dset, "order");
+            mAdp.Fill(dset, "orders");
 
-            String cntStr = dset.Tables["order"].Rows[0]["COUNT(*)"].ToString();     //件数
+            String cntStr = dset.Tables["orders"].Rows[0]["COUNT(*)"].ToString();     //件数
            
             int cnt = int.Parse(cntStr)+1;
 
@@ -108,8 +108,8 @@ namespace sugukuru.Orders
             //ここまで
 
 
-            String sql = "INSERT INTO `sugukuru`.`order` (`id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info`, `order_rep`,`create_at`, `create_rep`,`cancel_flag`)" +
-                " VALUES ('" +id+"', '"+tbClientId.Text+"', '"+order_type+"', '"+tbCarModel.Text+"', '"+tbCarClass.Text+"', '"+tbCarYear.Text+"', '"+tbCarColor.Text+"', '"+tbCarMile.Text+"', '"+tbBudget.Text+"', '"+tbInfo.Text+"', '"+cbOrderRep.Text+ "', '" + date + "','" + cbCreateRep.Text+"','0');";
+            String sql = "INSERT INTO `sugukuru`.`orders` (`id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info`, `order_rep`,`create_at`, `create_rep`,`cancel_flag`)" +
+                " VALUES ('" +id+"', '"+tbClientId.Text+"', '"+order_type+"', '"+tbCarModel.Text+"', '"+tbCarClass.Text+"', '"+tbCarYear.Text+"', '"+tbCarColor.Text+"', '"+tbCarMile.Text+"', '"+tbBudget.Text+"', '"+tbInfo.Text+"', '"+cbOrderRep.SelectedValue+ "', '" + date + "','" + cbCreateRep.SelectedValue+"','0');";
 
 
            MessageBox.Show(sql);
