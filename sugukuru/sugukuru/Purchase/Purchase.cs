@@ -86,6 +86,8 @@ namespace sugukuru.Purchase
 
         private void btBitCar_Click(object sender, EventArgs e)
         {
+            BidCarProcessing.sqlBid();
+
             //落札車両処理
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;

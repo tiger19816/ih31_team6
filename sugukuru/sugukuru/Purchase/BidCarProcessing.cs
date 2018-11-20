@@ -14,7 +14,7 @@ namespace sugukuru.Purchase
     {
         public static BidCarFixed BidCarFixed;
         public static FixedPostProcessing FixedPostProcessing;
-        public static FixedProcessingResult FixedProcessingResult;
+        //public static FixedProcessingResult FixedProcessingResult;
        
             
 
@@ -25,11 +25,11 @@ namespace sugukuru.Purchase
 
             BidCarFixed = new BidCarFixed();
             FixedPostProcessing = new FixedPostProcessing();
-            FixedProcessingResult = new FixedProcessingResult();
+            //FixedProcessingResult = new FixedProcessingResult();
 
             panel2.Controls.Add(BidCarFixed);
             panel2.Controls.Add(FixedPostProcessing);
-            panel2.Controls.Add(FixedProcessingResult);
+            //panel2.Controls.Add(FixedProcessingResult);
 
 
 
@@ -41,7 +41,8 @@ namespace sugukuru.Purchase
             //落札車両確定
             BidCarFixed.Visible = true;
             FixedPostProcessing.Visible = false;
-            FixedProcessingResult.Visible = false;
+            BidCarFixed.sqlBid();
+            //FixedProcessingResult.Visible = false;
 
         }
 
@@ -50,15 +51,12 @@ namespace sugukuru.Purchase
             //落札後処理登録
             BidCarFixed.Visible = false;
             FixedPostProcessing.Visible = true;
-            FixedProcessingResult.Visible = false;
+            //FixedProcessingResult.Visible = false;
         }
 
-        private void btProcessingResult_Click(object sender, EventArgs e)
+        public void sqlBid()
         {
-            //落札後処理確認・確定
-            BidCarFixed.Visible = false;
-            FixedPostProcessing.Visible = false;
-            FixedProcessingResult.Visible = true;
+            BidCarFixed.sqlBid();
         }
     }
 }

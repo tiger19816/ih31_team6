@@ -23,59 +23,7 @@ namespace sugukuru.Purchase
         {
             InitializeComponent();
 
-           sqlBid(dataGridView1);
-
-//            this.conStr = ConfigurationManager.AppSettings["DbConKey"];
-
-            //            //SQL文を発行する
-            //            DataSet dset = new DataSet("list");
-            //            MySqlConnection con = new MySqlConnection(this.conStr);
-            //            con.Open();
-
-            //            //sql文
-            //            String sql = "select orders.id,formal_name,CONCAT (family_name, ' ', first_name) AS employee_name,orders.create_at,auction_hall.auction_hall_name,listing_number,bid_price,bid_date "+
-            //"FROM client INNER JOIN orders ON client.id = orders.client_id "+
-            //"INNER JOIN employee ON orders.order_rep = employee.id "+
-            //"INNER JOIN bid ON bid.order_id = orders.id "+
-            //"INNER JOIN auction_hall ON bid.auction_hall_id = auction_hall.id "+
-            //"INNER JOIN successful_bid_vehicle ON successful_bid_vehicle.order_id = bid.order_id "+
-            //"where successful_bid_fixing = 0; ";
-
-
-            //            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
-            //            mAdp.Fill(dset, "list");
-            //            con.Close();
-
-            //            //データグリッドビューの関連付け
-            //            dataGridView1.DataSource = dset.Tables["list"];
-
-            //            //表示の設定
-            //            dataGridView1.Columns[0].Width = 100;
-            //            dataGridView1.Columns[1].Width = 250;
-            //            dataGridView1.Columns[2].Width = 100;
-            //            dataGridView1.Columns[3].Width = 200;
-            //            dataGridView1.Columns[4].Width = 100;
-            //            dataGridView1.Columns[5].Width = 100;
-            //            dataGridView1.Columns[6].Width = 100;
-            //            dataGridView1.Columns[7].Width = 100;
-
-            //            dataGridView1.Columns[0].HeaderText = "受注ID";
-            //            dataGridView1.Columns[1].HeaderText = "顧客名";
-            //            dataGridView1.Columns[2].HeaderText = "受注担当者";
-            //            dataGridView1.Columns[3].HeaderText = "登録日";
-            //            dataGridView1.Columns[4].HeaderText = "オークション会場";
-            //            dataGridView1.Columns[5].HeaderText = "出品番号";
-            //            dataGridView1.Columns[6].HeaderText = "入札金額";
-            //            dataGridView1.Columns[7].HeaderText = "入札日";
-
-            //            dataGridView1.Columns[6].DefaultCellStyle.Format = "c";
-            //            dataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-
-
-            //            //選択モードを行単位にする
-            //            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
+           sqlBid();
 
         }
 
@@ -202,7 +150,7 @@ namespace sugukuru.Purchase
 
                     MessageBox.Show("受注を確定しました。");
 
-                    sqlBid(dataGridView1);
+                    sqlBid();
 
                 }
                
@@ -213,7 +161,7 @@ namespace sugukuru.Purchase
         #region 入札した後のID、顧客、担当者の一覧表示SQL
         //******************************************************************************************
 
-        private void sqlBid(DataGridView dataGridView)
+        public void sqlBid()
         {
             //sql文
             String sql = "select orders.id,formal_name,CONCAT (family_name, ' ', first_name) AS employee_name,orders.create_at,auction_hall.auction_hall_name,listing_number,bid_price,bid_date " +
@@ -237,34 +185,34 @@ namespace sugukuru.Purchase
             con.Close();
 
             //データグリッドビューの関連付け
-            dataGridView.DataSource = dset.Tables["list"];
+            dataGridView1.DataSource = dset.Tables["list"];
 
             //表示の設定
-            dataGridView.Columns[0].Width = 100;
-            dataGridView.Columns[1].Width = 250;
-            dataGridView.Columns[2].Width = 100;
-            dataGridView.Columns[3].Width = 200;
-            dataGridView.Columns[4].Width = 100;
-            dataGridView.Columns[5].Width = 100;
-            dataGridView.Columns[6].Width = 100;
-            dataGridView.Columns[7].Width = 100;
+            dataGridView1.Columns[0].Width = 100;
+            dataGridView1.Columns[1].Width = 250;
+            dataGridView1.Columns[2].Width = 100;
+            dataGridView1.Columns[3].Width = 200;
+            dataGridView1.Columns[4].Width = 100;
+            dataGridView1.Columns[5].Width = 100;
+            dataGridView1.Columns[6].Width = 100;
+            dataGridView1.Columns[7].Width = 100;
 
-            dataGridView.Columns[0].HeaderText = "受注ID";
-            dataGridView.Columns[1].HeaderText = "顧客名";
-            dataGridView.Columns[2].HeaderText = "受注担当者";
-            dataGridView.Columns[3].HeaderText = "登録日";
-            dataGridView.Columns[4].HeaderText = "オークション会場";
-            dataGridView.Columns[5].HeaderText = "出品番号";
-            dataGridView.Columns[6].HeaderText = "入札金額";
-            dataGridView.Columns[7].HeaderText = "入札日";
+            dataGridView1.Columns[0].HeaderText = "受注ID";
+            dataGridView1.Columns[1].HeaderText = "顧客名";
+            dataGridView1.Columns[2].HeaderText = "受注担当者";
+            dataGridView1.Columns[3].HeaderText = "登録日";
+            dataGridView1.Columns[4].HeaderText = "オークション会場";
+            dataGridView1.Columns[5].HeaderText = "出品番号";
+            dataGridView1.Columns[6].HeaderText = "入札金額";
+            dataGridView1.Columns[7].HeaderText = "入札日";
 
-            dataGridView.Columns[6].DefaultCellStyle.Format = "c";
-            dataGridView.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns[6].DefaultCellStyle.Format = "c";
+            dataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
 
 
             //選択モードを行単位にする
-            dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
 
 
