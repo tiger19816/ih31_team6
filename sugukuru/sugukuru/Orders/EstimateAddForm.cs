@@ -25,7 +25,7 @@ namespace sugukuru.Orders
         public EstimateAddForm()
         {
             InitializeComponent();
-            SelectFlg = true;
+            SelectFlg = false;
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
             estimate = new Entites.Estimate();
         }
@@ -46,6 +46,7 @@ namespace sugukuru.Orders
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
 
             // データを追加
             //抽象データ格納データセットを作成
@@ -85,6 +86,8 @@ namespace sugukuru.Orders
             dataGridView1.Columns["create_at"].Width = 250;
 
             dataGridView1.Columns["family_name1"].HeaderText = "登録担当者";
+
+            dataGridView1.Columns["budget"].DefaultCellStyle.Format = "c";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -102,11 +105,12 @@ namespace sugukuru.Orders
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SelectFlg = true;
             estimate.OrderNumber = textBox6.Text;
             estimate.ProductName = textBox1.Text;
-            estimate.Unit = textBox2.Text;
-            estimate.UnitPrice = textBox4.Text;
-            estimate.Quantity = textBox3.Text;
+            estimate.Unit = textBox4.Text;
+            estimate.UnitPrice = textBox3.Text;
+            estimate.Quantity = textBox2.Text;
             estimate.TotalPrice = textBox5.Text;
             this.Close();
         }

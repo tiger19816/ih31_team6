@@ -30,22 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btCustomerSearch = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -60,10 +51,25 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.tblCustomer.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -87,98 +93,7 @@
             this.button2.TabIndex = 32;
             this.button2.Text = "印刷";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // tblCustomer
-            // 
-            this.tblCustomer.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tblCustomer.ColumnCount = 2;
-            this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tblCustomer.Controls.Add(this.label3, 0, 0);
-            this.tblCustomer.Controls.Add(this.label12, 0, 2);
-            this.tblCustomer.Controls.Add(this.label11, 0, 1);
-            this.tblCustomer.Controls.Add(this.label15, 1, 0);
-            this.tblCustomer.Controls.Add(this.label17, 0, 3);
-            this.tblCustomer.Controls.Add(this.label18, 0, 4);
-            this.tblCustomer.Location = new System.Drawing.Point(24, 107);
-            this.tblCustomer.Name = "tblCustomer";
-            this.tblCustomer.RowCount = 5;
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCustomer.Size = new System.Drawing.Size(379, 168);
-            this.tblCustomer.TabIndex = 36;
-            this.tblCustomer.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(4, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "顧客名";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(4, 75);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 16);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "住所";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(4, 42);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 16);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "所在地〒";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(117, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 16);
-            this.label15.TabIndex = 5;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(4, 108);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(68, 16);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "取引先部署";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Location = new System.Drawing.Point(4, 142);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 16);
-            this.label18.TabIndex = 8;
-            this.label18.Text = "取引先担当者";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -196,6 +111,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(116, 27);
             this.textBox1.TabIndex = 34;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btCustomerSearch
             // 
@@ -225,25 +141,6 @@
             this.label21.TabIndex = 40;
             this.label21.Text = "見積担当者";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label20, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(874, 464);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(273, 102);
-            this.tableLayoutPanel1.TabIndex = 43;
-            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -266,15 +163,6 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "合計金額";
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(86, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 16);
-            this.label10.TabIndex = 5;
-            // 
             // label20
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -289,7 +177,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 411);
+            this.label7.Location = new System.Drawing.Point(29, 408);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 16);
             this.label7.TabIndex = 46;
@@ -366,6 +254,7 @@
             this.btEstimateDelete.TabIndex = 54;
             this.btEstimateDelete.Text = "削除";
             this.btEstimateDelete.UseVisualStyleBackColor = true;
+            this.btEstimateDelete.Click += new System.EventHandler(this.btEstimateDelete_Click);
             // 
             // label4
             // 
@@ -400,18 +289,191 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(171, 27);
             this.dateTimePicker1.TabIndex = 57;
             // 
-            // dateTimePicker2
+            // tableLayoutPanel2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(139, 404);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(171, 27);
-            this.dateTimePicker2.TabIndex = 58;
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.Controls.Add(this.label23, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.textBox8, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label22, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.textBox7, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label19, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.textBox4, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label16, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.textBox2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.textBox9, 1, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 107);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(379, 168);
+            this.tableLayoutPanel2.TabIndex = 59;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(4, 142);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(80, 16);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "取引先担当者";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox8.Enabled = false;
+            this.textBox8.Location = new System.Drawing.Point(117, 103);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(258, 27);
+            this.textBox8.TabIndex = 7;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(4, 108);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(68, 16);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "取引先部署";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox7.Enabled = false;
+            this.textBox7.Location = new System.Drawing.Point(117, 70);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(258, 27);
+            this.textBox7.TabIndex = 5;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(4, 75);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(32, 16);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "住所";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox4.Enabled = false;
+            this.textBox4.Location = new System.Drawing.Point(117, 37);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(258, 27);
+            this.textBox4.TabIndex = 3;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(4, 42);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(56, 16);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "所在地〒";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(4, 9);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 16);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "顧客名";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(117, 4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(258, 27);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox9.Enabled = false;
+            this.textBox9.Location = new System.Drawing.Point(117, 136);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(258, 27);
+            this.textBox9.TabIndex = 9;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.Controls.Add(this.textBox12, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.textBox11, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.textBox10, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label9, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label20, 0, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(874, 464);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(273, 102);
+            this.tableLayoutPanel3.TabIndex = 60;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox12.Enabled = false;
+            this.textBox12.Location = new System.Drawing.Point(86, 70);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(183, 27);
+            this.textBox12.TabIndex = 9;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox11.Enabled = false;
+            this.textBox11.Location = new System.Drawing.Point(86, 37);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(183, 27);
+            this.textBox11.TabIndex = 8;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox10.Enabled = false;
+            this.textBox10.Location = new System.Drawing.Point(86, 4);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(183, 27);
+            this.textBox10.TabIndex = 7;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(139, 403);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(171, 27);
+            this.textBox13.TabIndex = 61;
             // 
             // EstimateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
@@ -424,11 +486,9 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tblCustomer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btCustomerSearch);
@@ -436,11 +496,11 @@
             this.Controls.Add(this.label1);
             this.Name = "EstimateControl";
             this.Load += new System.EventHandler(this.EstimateControl_Load);
-            this.tblCustomer.ResumeLayout(false);
-            this.tblCustomer.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,22 +510,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TableLayoutPanel tblCustomer;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btCustomerSearch;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
@@ -480,6 +531,21 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox13;
     }
 }
