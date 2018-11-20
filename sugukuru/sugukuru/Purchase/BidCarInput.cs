@@ -28,11 +28,7 @@ namespace sugukuru.Purchase
         String order_id = "";
         int sum = 0;
 
-        String tbTaxName = "";
-        String tbPriceName = "";
-        String tbCarTaxName = "";
-        String tbFeeName = "";
-
+       
 
 
         public BidCarInput(String id)

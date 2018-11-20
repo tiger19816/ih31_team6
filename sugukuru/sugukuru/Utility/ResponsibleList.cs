@@ -152,5 +152,7 @@ namespace sugukuru.Utility
             combobox.DataSource = dt;
         }
         #endregion
+
+      
     }
 }
