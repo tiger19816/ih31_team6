@@ -31,7 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btFileOpen = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbFileName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.underDay = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.comboBoxUnderMonth = new System.Windows.Forms.ComboBox();
             this.comboBoxUnderYear = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btCreate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -73,16 +73,16 @@
             this.btFileOpen.Name = "btFileOpen";
             this.btFileOpen.Size = new System.Drawing.Size(89, 27);
             this.btFileOpen.TabIndex = 108;
-            this.btFileOpen.Text = "開く";
+            this.btFileOpen.Text = "参照";
             this.btFileOpen.UseVisualStyleBackColor = true;
             this.btFileOpen.Click += new System.EventHandler(this.btFileOpen_Click);
             // 
-            // textBox1
+            // tbFileName
             // 
-            this.textBox1.Location = new System.Drawing.Point(693, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(302, 27);
-            this.textBox1.TabIndex = 107;
+            this.tbFileName.Location = new System.Drawing.Point(693, 47);
+            this.tbFileName.Name = "tbFileName";
+            this.tbFileName.Size = new System.Drawing.Size(302, 27);
+            this.tbFileName.TabIndex = 107;
             // 
             // label2
             // 
@@ -161,14 +161,15 @@
             this.label3.Size = new System.Drawing.Size(0, 16);
             this.label3.TabIndex = 123;
             // 
-            // button3
+            // btCreate
             // 
-            this.button3.Location = new System.Drawing.Point(503, 84);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 40);
-            this.button3.TabIndex = 124;
-            this.button3.Text = "消込データ作成";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btCreate.Location = new System.Drawing.Point(503, 84);
+            this.btCreate.Name = "btCreate";
+            this.btCreate.Size = new System.Drawing.Size(150, 40);
+            this.btCreate.TabIndex = 124;
+            this.btCreate.Text = "消込処理開始";
+            this.btCreate.UseVisualStyleBackColor = true;
+            this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
             // 
             // label4
             // 
@@ -184,7 +185,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btCreate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.underDay);
             this.Controls.Add(this.underMonth);
@@ -194,7 +195,7 @@
             this.Controls.Add(this.comboBoxUnderYear);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btFileOpen);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbFileName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -210,7 +211,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btFileOpen;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbFileName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label underDay;
@@ -220,7 +221,7 @@
         private System.Windows.Forms.ComboBox comboBoxUnderMonth;
         private System.Windows.Forms.ComboBox comboBoxUnderYear;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btCreate;
         private System.Windows.Forms.Label label4;
     }
 }

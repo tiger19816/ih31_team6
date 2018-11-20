@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace sugukuru.ClaimCollection
 {
@@ -56,6 +57,19 @@ namespace sugukuru.ClaimCollection
                 //OKボタンがクリックされたとき、選択されたファイル名を表示する
                 Console.WriteLine(ofd.FileName);
             }
+        }
+
+        private void btCreate_Click(object sender, EventArgs e)
+        {
+            Encoding enc = Encoding.GetEncoding("utf-8");
+            StreamReader sr = new StreamReader(tbFileName.Text, enc);
+            String rec = sr.ReadLine();
+            while (!sr.EndOfStream)
+            {
+
+                rec = sr.ReadLine();
+            }
+            sr.Close();
         }
     }
 }
