@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gvOrderList = new System.Windows.Forms.DataGridView();
             this.btDetail = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbSearchTypeAND = new System.Windows.Forms.RadioButton();
+            this.rbSearchTypeOR = new System.Windows.Forms.RadioButton();
             this.btSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tbOrderId = new System.Windows.Forms.TextBox();
+            this.cbSearchProgress = new System.Windows.Forms.ComboBox();
+            this.tbSearchOrderId = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbDataEnd = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbMonthEnd = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,26 +49,26 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbDateStart = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbMonthStart = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cbYearStart = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.tbSearchCustomerId = new System.Windows.Forms.TextBox();
+            this.cbSearchCharge = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbSearchCurYearType = new System.Windows.Forms.TextBox();
+            this.tbSearchCurName = new System.Windows.Forms.TextBox();
+            this.tbSearchCurType = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvOrderList)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -83,14 +83,14 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "受注一覧";
             // 
-            // dataGridView1
+            // gvOrderList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 157);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(1120, 409);
-            this.dataGridView1.TabIndex = 32;
+            this.gvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvOrderList.Location = new System.Drawing.Point(20, 157);
+            this.gvOrderList.Name = "gvOrderList";
+            this.gvOrderList.RowTemplate.Height = 21;
+            this.gvOrderList.Size = new System.Drawing.Size(1120, 409);
+            this.gvOrderList.TabIndex = 32;
             // 
             // btDetail
             // 
@@ -107,8 +107,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbSearchTypeAND);
+            this.groupBox1.Controls.Add(this.rbSearchTypeOR);
             this.groupBox1.Location = new System.Drawing.Point(1021, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(119, 81);
@@ -116,28 +116,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "検索オプション";
             // 
-            // radioButton2
+            // rbSearchTypeAND
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(21, 56);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "AND検索";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbSearchTypeAND.AutoSize = true;
+            this.rbSearchTypeAND.Location = new System.Drawing.Point(21, 56);
+            this.rbSearchTypeAND.Name = "rbSearchTypeAND";
+            this.rbSearchTypeAND.Size = new System.Drawing.Size(76, 20);
+            this.rbSearchTypeAND.TabIndex = 1;
+            this.rbSearchTypeAND.TabStop = true;
+            this.rbSearchTypeAND.Text = "AND検索";
+            this.rbSearchTypeAND.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbSearchTypeOR
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(21, 27);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(67, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "OR検索";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbSearchTypeOR.AutoSize = true;
+            this.rbSearchTypeOR.Checked = true;
+            this.rbSearchTypeOR.Location = new System.Drawing.Point(21, 27);
+            this.rbSearchTypeOR.Name = "rbSearchTypeOR";
+            this.rbSearchTypeOR.Size = new System.Drawing.Size(67, 20);
+            this.rbSearchTypeOR.TabIndex = 0;
+            this.rbSearchTypeOR.TabStop = true;
+            this.rbSearchTypeOR.Text = "OR検索";
+            this.rbSearchTypeOR.UseVisualStyleBackColor = true;
             // 
             // btSearch
             // 
@@ -176,20 +176,20 @@
             this.label7.TabIndex = 50;
             this.label7.Text = "顧客ID";
             // 
-            // comboBox1
+            // cbSearchProgress
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(873, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 56;
+            this.cbSearchProgress.FormattingEnabled = true;
+            this.cbSearchProgress.Location = new System.Drawing.Point(873, 85);
+            this.cbSearchProgress.Name = "cbSearchProgress";
+            this.cbSearchProgress.Size = new System.Drawing.Size(121, 24);
+            this.cbSearchProgress.TabIndex = 56;
             // 
-            // tbOrderId
+            // tbSearchOrderId
             // 
-            this.tbOrderId.Location = new System.Drawing.Point(252, 51);
-            this.tbOrderId.Name = "tbOrderId";
-            this.tbOrderId.Size = new System.Drawing.Size(100, 27);
-            this.tbOrderId.TabIndex = 51;
+            this.tbSearchOrderId.Location = new System.Drawing.Point(252, 51);
+            this.tbSearchOrderId.Name = "tbSearchOrderId";
+            this.tbSearchOrderId.Size = new System.Drawing.Size(100, 27);
+            this.tbSearchOrderId.TabIndex = 51;
             // 
             // label10
             // 
@@ -201,14 +201,14 @@
             this.label10.TabIndex = 72;
             this.label10.Text = "日";
             // 
-            // comboBox3
+            // cbDataEnd
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(681, 118);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(45, 24);
-            this.comboBox3.TabIndex = 71;
+            this.cbDataEnd.FormattingEnabled = true;
+            this.cbDataEnd.Location = new System.Drawing.Point(681, 118);
+            this.cbDataEnd.Margin = new System.Windows.Forms.Padding(2);
+            this.cbDataEnd.Name = "cbDataEnd";
+            this.cbDataEnd.Size = new System.Drawing.Size(45, 24);
+            this.cbDataEnd.TabIndex = 71;
             // 
             // label9
             // 
@@ -278,14 +278,14 @@
             this.label16.TabIndex = 78;
             this.label16.Text = "日";
             // 
-            // comboBox4
+            // cbDateStart
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(410, 118);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(45, 24);
-            this.comboBox4.TabIndex = 77;
+            this.cbDateStart.FormattingEnabled = true;
+            this.cbDateStart.Location = new System.Drawing.Point(410, 118);
+            this.cbDateStart.Margin = new System.Windows.Forms.Padding(2);
+            this.cbDateStart.Name = "cbDateStart";
+            this.cbDateStart.Size = new System.Drawing.Size(45, 24);
+            this.cbDateStart.TabIndex = 77;
             // 
             // label17
             // 
@@ -297,14 +297,14 @@
             this.label17.TabIndex = 76;
             this.label17.Text = "月";
             // 
-            // comboBox5
+            // cbMonthStart
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(340, 118);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(44, 24);
-            this.comboBox5.TabIndex = 75;
+            this.cbMonthStart.FormattingEnabled = true;
+            this.cbMonthStart.Location = new System.Drawing.Point(340, 118);
+            this.cbMonthStart.Margin = new System.Windows.Forms.Padding(2);
+            this.cbMonthStart.Name = "cbMonthStart";
+            this.cbMonthStart.Size = new System.Drawing.Size(44, 24);
+            this.cbMonthStart.TabIndex = 75;
             // 
             // label18
             // 
@@ -316,14 +316,14 @@
             this.label18.TabIndex = 74;
             this.label18.Text = "年";
             // 
-            // comboBox6
+            // cbYearStart
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(252, 118);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(62, 24);
-            this.comboBox6.TabIndex = 73;
+            this.cbYearStart.FormattingEnabled = true;
+            this.cbYearStart.Location = new System.Drawing.Point(252, 118);
+            this.cbYearStart.Margin = new System.Windows.Forms.Padding(2);
+            this.cbYearStart.Name = "cbYearStart";
+            this.cbYearStart.Size = new System.Drawing.Size(62, 24);
+            this.cbYearStart.TabIndex = 73;
             // 
             // groupBox2
             // 
@@ -380,20 +380,20 @@
             this.button4.Text = "業者検索";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // tbSearchCustomerId
             // 
-            this.textBox5.Location = new System.Drawing.Point(252, 85);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
-            this.textBox5.TabIndex = 79;
+            this.tbSearchCustomerId.Location = new System.Drawing.Point(252, 85);
+            this.tbSearchCustomerId.Name = "tbSearchCustomerId";
+            this.tbSearchCustomerId.Size = new System.Drawing.Size(100, 27);
+            this.tbSearchCustomerId.TabIndex = 79;
             // 
-            // comboBox7
+            // cbSearchCharge
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(873, 118);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 24);
-            this.comboBox7.TabIndex = 83;
+            this.cbSearchCharge.FormattingEnabled = true;
+            this.cbSearchCharge.Location = new System.Drawing.Point(873, 118);
+            this.cbSearchCharge.Name = "cbSearchCharge";
+            this.cbSearchCharge.Size = new System.Drawing.Size(121, 24);
+            this.cbSearchCharge.TabIndex = 83;
             // 
             // label12
             // 
@@ -404,26 +404,26 @@
             this.label12.TabIndex = 82;
             this.label12.Text = "営業担当者";
             // 
-            // textBox2
+            // tbSearchCurYearType
             // 
-            this.textBox2.Location = new System.Drawing.Point(873, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
-            this.textBox2.TabIndex = 89;
+            this.tbSearchCurYearType.Location = new System.Drawing.Point(873, 51);
+            this.tbSearchCurYearType.Name = "tbSearchCurYearType";
+            this.tbSearchCurYearType.Size = new System.Drawing.Size(100, 27);
+            this.tbSearchCurYearType.TabIndex = 89;
             // 
-            // textBox3
+            // tbSearchCurName
             // 
-            this.textBox3.Location = new System.Drawing.Point(572, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 27);
-            this.textBox3.TabIndex = 88;
+            this.tbSearchCurName.Location = new System.Drawing.Point(572, 85);
+            this.tbSearchCurName.Name = "tbSearchCurName";
+            this.tbSearchCurName.Size = new System.Drawing.Size(171, 27);
+            this.tbSearchCurName.TabIndex = 88;
             // 
-            // textBox6
+            // tbSearchCurType
             // 
-            this.textBox6.Location = new System.Drawing.Point(572, 51);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(171, 27);
-            this.textBox6.TabIndex = 87;
+            this.tbSearchCurType.Location = new System.Drawing.Point(572, 51);
+            this.tbSearchCurType.Name = "tbSearchCurType";
+            this.tbSearchCurType.Size = new System.Drawing.Size(171, 27);
+            this.tbSearchCurType.TabIndex = 87;
             // 
             // label5
             // 
@@ -456,43 +456,43 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbSearchCurYearType);
+            this.Controls.Add(this.tbSearchCurName);
+            this.Controls.Add(this.tbSearchCurType);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.cbSearchCharge);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbSearchCustomerId);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.cbDateStart);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cbMonthStart);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.cbYearStart);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cbDataEnd);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cbMonthEnd);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbYearEnd);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.tbOrderId);
+            this.Controls.Add(this.cbSearchProgress);
+            this.Controls.Add(this.tbSearchOrderId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btSearch);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gvOrderList);
             this.Controls.Add(this.btDetail);
             this.Controls.Add(this.label1);
             this.Name = "OrderListControl";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvOrderList)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -505,19 +505,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gvOrderList;
         private System.Windows.Forms.Button btDetail;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbSearchTypeAND;
+        private System.Windows.Forms.RadioButton rbSearchTypeOR;
         private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox tbOrderId;
+        private System.Windows.Forms.ComboBox cbSearchProgress;
+        private System.Windows.Forms.TextBox tbSearchOrderId;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbDataEnd;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbMonthEnd;
         private System.Windows.Forms.Label label8;
@@ -525,22 +525,22 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbDateStart;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbMonthStart;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cbYearStart;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox tbSearchCustomerId;
+        private System.Windows.Forms.ComboBox cbSearchCharge;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbSearchCurYearType;
+        private System.Windows.Forms.TextBox tbSearchCurName;
+        private System.Windows.Forms.TextBox tbSearchCurType;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
