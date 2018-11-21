@@ -74,7 +74,7 @@ namespace sugukuru.Purchase
                 //DataRowの中身をフォームの中身に追加していく
                 //DataRowからの引数はデータベースのカラム名そのまま
                 tbOrderId.Text = selectRow["id"].ToString();
-                tbCustomerId.Text = selectRow["client_id"].ToString();
+                lbCustomerId.Text = selectRow["client_id"].ToString();
                 //顧客IDから紐づいている顧客データの取得
                 DataRow chainRow = Utility.Customer.ChainCustomerId(selectRow["client_id"].ToString());
 

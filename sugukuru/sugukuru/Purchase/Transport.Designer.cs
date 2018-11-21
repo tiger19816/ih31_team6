@@ -46,12 +46,13 @@
             this.tbSlip = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
+            this.label25 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbCustomerId = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.tbArrival = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.cbOrderRep = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.tblCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,11 +233,11 @@
             this.tblCustomer.Controls.Add(this.label13, 0, 5);
             this.tblCustomer.Controls.Add(this.label12, 0, 4);
             this.tblCustomer.Controls.Add(this.label11, 0, 3);
-            this.tblCustomer.Controls.Add(this.label15, 1, 1);
             this.tblCustomer.Controls.Add(this.label16, 0, 2);
             this.tblCustomer.Controls.Add(this.label17, 0, 7);
             this.tblCustomer.Controls.Add(this.label19, 0, 9);
             this.tblCustomer.Controls.Add(this.label18, 0, 8);
+            this.tblCustomer.Controls.Add(this.lbCustomerId, 1, 0);
             this.tblCustomer.Location = new System.Drawing.Point(17, 158);
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.RowCount = 10;
@@ -253,6 +253,17 @@
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tblCustomer.Size = new System.Drawing.Size(379, 335);
             this.tblCustomer.TabIndex = 35;
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Location = new System.Drawing.Point(4, 9);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(45, 16);
+            this.label25.TabIndex = 10;
+            this.label25.Text = "顧客ID";
             // 
             // label10
             // 
@@ -309,14 +320,14 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "所在地〒";
             // 
-            // label15
+            // lbCustomerId
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(117, 42);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 16);
-            this.label15.TabIndex = 5;
+            this.lbCustomerId.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCustomerId.AutoSize = true;
+            this.lbCustomerId.Location = new System.Drawing.Point(117, 9);
+            this.lbCustomerId.Name = "lbCustomerId";
+            this.lbCustomerId.Size = new System.Drawing.Size(0, 16);
+            this.lbCustomerId.TabIndex = 5;
             // 
             // label16
             // 
@@ -431,17 +442,6 @@
             this.cbOrderRep.Size = new System.Drawing.Size(121, 24);
             this.cbOrderRep.TabIndex = 42;
             // 
-            // label25
-            // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(4, 9);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(45, 16);
-            this.label25.TabIndex = 10;
-            this.label25.Text = "顧客ID";
-            // 
             // Transport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -505,7 +505,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbCustomerId;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
