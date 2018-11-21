@@ -30,19 +30,19 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvRepetition = new System.Windows.Forms.DataGridView();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbCustomerName = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbBillDate = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -76,7 +76,15 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.btSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lbPostal = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.lbDivision = new System.Windows.Forms.Label();
+            this.lbRep = new System.Windows.Forms.Label();
+            this.lbLimitDate = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbAmount = new System.Windows.Forms.Label();
+            this.lbDif = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRepetition)).BeginInit();
             this.tblCustomer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -104,14 +112,15 @@
             this.label2.TabIndex = 100;
             this.label2.Text = "未決済請求処理";
             // 
-            // dataGridView1
+            // dgvRepetition
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 153);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(1120, 289);
-            this.dataGridView1.TabIndex = 101;
+            this.dgvRepetition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRepetition.Location = new System.Drawing.Point(17, 153);
+            this.dgvRepetition.Name = "dgvRepetition";
+            this.dgvRepetition.RowTemplate.Height = 21;
+            this.dgvRepetition.Size = new System.Drawing.Size(1120, 289);
+            this.dgvRepetition.TabIndex = 101;
+            this.dgvRepetition.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRepetition_CellMouseClick);
             // 
             // tblCustomer
             // 
@@ -119,12 +128,16 @@
             this.tblCustomer.ColumnCount = 2;
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tblCustomer.Controls.Add(this.lbRep, 1, 4);
+            this.tblCustomer.Controls.Add(this.lbDivision, 1, 3);
+            this.tblCustomer.Controls.Add(this.lbAddress, 1, 2);
             this.tblCustomer.Controls.Add(this.label3, 0, 0);
             this.tblCustomer.Controls.Add(this.label12, 0, 2);
             this.tblCustomer.Controls.Add(this.label11, 0, 1);
-            this.tblCustomer.Controls.Add(this.label15, 1, 0);
+            this.tblCustomer.Controls.Add(this.lbCustomerName, 1, 0);
             this.tblCustomer.Controls.Add(this.label17, 0, 3);
             this.tblCustomer.Controls.Add(this.label18, 0, 4);
+            this.tblCustomer.Controls.Add(this.lbPostal, 1, 1);
             this.tblCustomer.Location = new System.Drawing.Point(15, 448);
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.RowCount = 5;
@@ -173,14 +186,14 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "所在地〒";
             // 
-            // label15
+            // lbCustomerName
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(117, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 16);
-            this.label15.TabIndex = 5;
+            this.lbCustomerName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCustomerName.AutoSize = true;
+            this.lbCustomerName.Location = new System.Drawing.Point(117, 9);
+            this.lbCustomerName.Name = "lbCustomerName";
+            this.lbCustomerName.Size = new System.Drawing.Size(0, 16);
+            this.lbCustomerName.TabIndex = 5;
             // 
             // label17
             // 
@@ -210,10 +223,14 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.Controls.Add(this.lbDif, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbAmount, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbPrice, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbLimitDate, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbBillDate, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(400, 448);
@@ -264,14 +281,14 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "入金日";
             // 
-            // label6
+            // lbBillDate
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(117, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 16);
-            this.label6.TabIndex = 5;
+            this.lbBillDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbBillDate.AutoSize = true;
+            this.lbBillDate.Location = new System.Drawing.Point(117, 9);
+            this.lbBillDate.Name = "lbBillDate";
+            this.lbBillDate.Size = new System.Drawing.Size(0, 16);
+            this.lbBillDate.TabIndex = 5;
             // 
             // label7
             // 
@@ -313,13 +330,13 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(146, 20);
             this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "翌月の請求に繰り越す";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(24, 33);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(158, 20);
@@ -574,6 +591,78 @@
             this.btSearch.UseVisualStyleBackColor = true;
             this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
+            // lbPostal
+            // 
+            this.lbPostal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPostal.AutoSize = true;
+            this.lbPostal.Location = new System.Drawing.Point(117, 42);
+            this.lbPostal.Name = "lbPostal";
+            this.lbPostal.Size = new System.Drawing.Size(0, 16);
+            this.lbPostal.TabIndex = 9;
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.Location = new System.Drawing.Point(117, 75);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(0, 16);
+            this.lbAddress.TabIndex = 133;
+            // 
+            // lbDivision
+            // 
+            this.lbDivision.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbDivision.AutoSize = true;
+            this.lbDivision.Location = new System.Drawing.Point(117, 108);
+            this.lbDivision.Name = "lbDivision";
+            this.lbDivision.Size = new System.Drawing.Size(0, 16);
+            this.lbDivision.TabIndex = 133;
+            // 
+            // lbRep
+            // 
+            this.lbRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbRep.AutoSize = true;
+            this.lbRep.Location = new System.Drawing.Point(117, 142);
+            this.lbRep.Name = "lbRep";
+            this.lbRep.Size = new System.Drawing.Size(0, 16);
+            this.lbRep.TabIndex = 133;
+            // 
+            // lbLimitDate
+            // 
+            this.lbLimitDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbLimitDate.AutoSize = true;
+            this.lbLimitDate.Location = new System.Drawing.Point(117, 42);
+            this.lbLimitDate.Name = "lbLimitDate";
+            this.lbLimitDate.Size = new System.Drawing.Size(0, 16);
+            this.lbLimitDate.TabIndex = 133;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Location = new System.Drawing.Point(117, 75);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(0, 16);
+            this.lbPrice.TabIndex = 133;
+            // 
+            // lbAmount
+            // 
+            this.lbAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAmount.AutoSize = true;
+            this.lbAmount.Location = new System.Drawing.Point(117, 108);
+            this.lbAmount.Name = "lbAmount";
+            this.lbAmount.Size = new System.Drawing.Size(0, 16);
+            this.lbAmount.TabIndex = 133;
+            // 
+            // lbDif
+            // 
+            this.lbDif.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbDif.AutoSize = true;
+            this.lbDif.Location = new System.Drawing.Point(117, 142);
+            this.lbDif.Name = "lbDif";
+            this.lbDif.Size = new System.Drawing.Size(0, 16);
+            this.lbDif.TabIndex = 133;
+            // 
             // RepetitionClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -607,12 +696,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tblCustomer);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvRepetition);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "RepetitionClaim";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRepetition)).EndInit();
             this.tblCustomer.ResumeLayout(false);
             this.tblCustomer.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -630,19 +719,19 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRepetition;
         private System.Windows.Forms.TableLayoutPanel tblCustomer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbCustomerName;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbBillDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -676,5 +765,13 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button btSearch;
+        private System.Windows.Forms.Label lbRep;
+        private System.Windows.Forms.Label lbDivision;
+        private System.Windows.Forms.Label lbAddress;
+        private System.Windows.Forms.Label lbPostal;
+        private System.Windows.Forms.Label lbDif;
+        private System.Windows.Forms.Label lbAmount;
+        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Label lbLimitDate;
     }
 }
