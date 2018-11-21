@@ -156,10 +156,10 @@ namespace sugukuru.Utility
         //******************************************************************************************
         #region コンボボックスに陸送業者の情報をセットする
         //******************************************************************************************
-        public static void setAuctionHall(ComboBox combobox)
+        public static void setVender(ComboBox combobox)
         {
             //SQL文を作成する
-            string sql = "SELECT id, auction_hall_name FROM auction_hall";
+            string sql = "SELECT id,name FROM transportation_vendor";
 
             //抽象データ格納データセットを作成
             DataTable dt = new DataTable();
@@ -180,7 +180,7 @@ namespace sugukuru.Utility
             con.Close();
 
             //コンボボックスに値をセットする
-            combobox.DisplayMember = "auction_hall_name";
+            combobox.DisplayMember = "name";
             combobox.ValueMember = "id";
             combobox.DataSource = dt;
         }

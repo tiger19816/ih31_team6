@@ -51,13 +51,7 @@
             this.tbCarMile = new System.Windows.Forms.TextBox();
             this.tbBudget = new System.Windows.Forms.TextBox();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
-            this.lbClientRep = new System.Windows.Forms.Label();
-            this.lbClientDivision = new System.Windows.Forms.Label();
-            this.lbFax = new System.Windows.Forms.Label();
-            this.lbPhoneNumber = new System.Windows.Forms.Label();
-            this.lbAddress = new System.Windows.Forms.Label();
-            this.lbPostalCode = new System.Windows.Forms.Label();
-            this.lbNameRead = new System.Windows.Forms.Label();
+            this.lbSalesRep = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -68,15 +62,25 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbNameRead = new System.Windows.Forms.Label();
+            this.lbPostalCode = new System.Windows.Forms.Label();
+            this.lbPhoneNumber = new System.Windows.Forms.Label();
+            this.lbFax = new System.Windows.Forms.Label();
+            this.lbClientDivision = new System.Windows.Forms.Label();
+            this.lbClientRep = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.cbCreateRep = new System.Windows.Forms.ComboBox();
             this.cbOrderRep = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lbSalesRep = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.gbOrderType.SuspendLayout();
             this.tblCustomer.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btOrderRegistrarion
@@ -321,75 +325,15 @@
             this.tblCustomer.TabIndex = 31;
             this.tblCustomer.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
             // 
-            // lbClientRep
+            // lbSalesRep
             // 
-            this.lbClientRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbClientRep.AutoSize = true;
-            this.lbClientRep.BackColor = System.Drawing.Color.Transparent;
-            this.lbClientRep.Location = new System.Drawing.Point(117, 240);
-            this.lbClientRep.Name = "lbClientRep";
-            this.lbClientRep.Size = new System.Drawing.Size(0, 16);
-            this.lbClientRep.TabIndex = 46;
-            // 
-            // lbClientDivision
-            // 
-            this.lbClientDivision.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbClientDivision.AutoSize = true;
-            this.lbClientDivision.BackColor = System.Drawing.Color.Transparent;
-            this.lbClientDivision.Location = new System.Drawing.Point(117, 207);
-            this.lbClientDivision.Name = "lbClientDivision";
-            this.lbClientDivision.Size = new System.Drawing.Size(0, 16);
-            this.lbClientDivision.TabIndex = 45;
-            // 
-            // lbFax
-            // 
-            this.lbFax.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbFax.AutoSize = true;
-            this.lbFax.BackColor = System.Drawing.Color.Transparent;
-            this.lbFax.Location = new System.Drawing.Point(117, 174);
-            this.lbFax.Name = "lbFax";
-            this.lbFax.Size = new System.Drawing.Size(0, 16);
-            this.lbFax.TabIndex = 44;
-            // 
-            // lbPhoneNumber
-            // 
-            this.lbPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbPhoneNumber.AutoSize = true;
-            this.lbPhoneNumber.BackColor = System.Drawing.Color.Transparent;
-            this.lbPhoneNumber.Location = new System.Drawing.Point(117, 141);
-            this.lbPhoneNumber.Name = "lbPhoneNumber";
-            this.lbPhoneNumber.Size = new System.Drawing.Size(0, 16);
-            this.lbPhoneNumber.TabIndex = 43;
-            // 
-            // lbAddress
-            // 
-            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbAddress.AutoSize = true;
-            this.lbAddress.BackColor = System.Drawing.Color.Transparent;
-            this.lbAddress.Location = new System.Drawing.Point(117, 108);
-            this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(0, 16);
-            this.lbAddress.TabIndex = 42;
-            // 
-            // lbPostalCode
-            // 
-            this.lbPostalCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbPostalCode.AutoSize = true;
-            this.lbPostalCode.BackColor = System.Drawing.Color.Transparent;
-            this.lbPostalCode.Location = new System.Drawing.Point(117, 75);
-            this.lbPostalCode.Name = "lbPostalCode";
-            this.lbPostalCode.Size = new System.Drawing.Size(0, 16);
-            this.lbPostalCode.TabIndex = 41;
-            // 
-            // lbNameRead
-            // 
-            this.lbNameRead.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbNameRead.AutoSize = true;
-            this.lbNameRead.BackColor = System.Drawing.Color.Transparent;
-            this.lbNameRead.Location = new System.Drawing.Point(117, 42);
-            this.lbNameRead.Name = "lbNameRead";
-            this.lbNameRead.Size = new System.Drawing.Size(0, 16);
-            this.lbNameRead.TabIndex = 40;
+            this.lbSalesRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbSalesRep.AutoSize = true;
+            this.lbSalesRep.BackColor = System.Drawing.Color.Transparent;
+            this.lbSalesRep.Location = new System.Drawing.Point(117, 273);
+            this.lbSalesRep.Name = "lbSalesRep";
+            this.lbSalesRep.Size = new System.Drawing.Size(0, 16);
+            this.lbSalesRep.TabIndex = 48;
             // 
             // lbName
             // 
@@ -500,6 +444,76 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "顧客名";
             // 
+            // lbNameRead
+            // 
+            this.lbNameRead.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbNameRead.AutoSize = true;
+            this.lbNameRead.BackColor = System.Drawing.Color.Transparent;
+            this.lbNameRead.Location = new System.Drawing.Point(117, 42);
+            this.lbNameRead.Name = "lbNameRead";
+            this.lbNameRead.Size = new System.Drawing.Size(0, 16);
+            this.lbNameRead.TabIndex = 40;
+            // 
+            // lbPostalCode
+            // 
+            this.lbPostalCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPostalCode.AutoSize = true;
+            this.lbPostalCode.BackColor = System.Drawing.Color.Transparent;
+            this.lbPostalCode.Location = new System.Drawing.Point(117, 75);
+            this.lbPostalCode.Name = "lbPostalCode";
+            this.lbPostalCode.Size = new System.Drawing.Size(0, 16);
+            this.lbPostalCode.TabIndex = 41;
+            // 
+            // lbPhoneNumber
+            // 
+            this.lbPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPhoneNumber.AutoSize = true;
+            this.lbPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lbPhoneNumber.Location = new System.Drawing.Point(117, 141);
+            this.lbPhoneNumber.Name = "lbPhoneNumber";
+            this.lbPhoneNumber.Size = new System.Drawing.Size(0, 16);
+            this.lbPhoneNumber.TabIndex = 43;
+            // 
+            // lbFax
+            // 
+            this.lbFax.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbFax.AutoSize = true;
+            this.lbFax.BackColor = System.Drawing.Color.Transparent;
+            this.lbFax.Location = new System.Drawing.Point(117, 174);
+            this.lbFax.Name = "lbFax";
+            this.lbFax.Size = new System.Drawing.Size(0, 16);
+            this.lbFax.TabIndex = 44;
+            // 
+            // lbClientDivision
+            // 
+            this.lbClientDivision.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientDivision.AutoSize = true;
+            this.lbClientDivision.BackColor = System.Drawing.Color.Transparent;
+            this.lbClientDivision.Location = new System.Drawing.Point(117, 207);
+            this.lbClientDivision.Name = "lbClientDivision";
+            this.lbClientDivision.Size = new System.Drawing.Size(0, 16);
+            this.lbClientDivision.TabIndex = 45;
+            // 
+            // lbClientRep
+            // 
+            this.lbClientRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientRep.AutoSize = true;
+            this.lbClientRep.BackColor = System.Drawing.Color.Transparent;
+            this.lbClientRep.Location = new System.Drawing.Point(117, 240);
+            this.lbClientRep.Name = "lbClientRep";
+            this.lbClientRep.Size = new System.Drawing.Size(0, 16);
+            this.lbClientRep.TabIndex = 46;
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lbAddress.Location = new System.Drawing.Point(117, 108);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(0, 16);
+            this.lbAddress.TabIndex = 42;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -550,20 +564,44 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
             this.dateTimePicker1.TabIndex = 38;
             // 
-            // lbSalesRep
+            // groupBox1
             // 
-            this.lbSalesRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbSalesRep.AutoSize = true;
-            this.lbSalesRep.BackColor = System.Drawing.Color.Transparent;
-            this.lbSalesRep.Location = new System.Drawing.Point(117, 273);
-            this.lbSalesRep.Name = "lbSalesRep";
-            this.lbSalesRep.Size = new System.Drawing.Size(0, 16);
-            this.lbSalesRep.TabIndex = 48;
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton4);
+            this.groupBox1.Location = new System.Drawing.Point(891, 77);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 69);
+            this.groupBox1.TabIndex = 124;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "AT/MT";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
+            this.radioButton3.Location = new System.Drawing.Point(24, 32);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(42, 20);
+            this.radioButton3.TabIndex = 113;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "AT";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(103, 32);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(45, 20);
+            this.radioButton4.TabIndex = 114;
+            this.radioButton4.Text = "MT";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // OrderRegistrationControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.cbOrderRep);
@@ -599,6 +637,8 @@
             this.gbOrderType.PerformLayout();
             this.tblCustomer.ResumeLayout(false);
             this.tblCustomer.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,5 +693,8 @@
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbNameRead;
         private System.Windows.Forms.Label lbSalesRep;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
     }
 }

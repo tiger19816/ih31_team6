@@ -126,9 +126,20 @@ namespace sugukuru.Orders
             date = date.Replace("/", "-");
             //ここまで
 
+            //AT/MT選択
+            String trans = "";
+            if (radioButton3.Checked == true)
+            {
+                trans = "0";
+            }
+            else if (radioButton4.Checked == true)
+            {
+                trans = "1";
+            }
 
-            String sql = "INSERT INTO `sugukuru`.`orders` (`id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info`, `order_rep`,`create_at`, `create_rep`,`cancel_flag`)" +
-                " VALUES ('" +id+"', '"+tbClientId.Text+"', '"+order_type+"', '"+tbCarModel.Text+"', '"+tbCarClass.Text+"', '"+tbCarYear.Text+"', '"+tbCarColor.Text+"', '"+tbCarMile.Text+"', '"+tbBudget.Text+"', '"+tbInfo.Text+"', '"+cbOrderRep.SelectedValue+ "', '" + date + "','" + cbCreateRep.SelectedValue+"','0');";
+
+            String sql = "INSERT INTO `sugukuru`.`orders` (`id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `transmission`,`car_mileage`, `budget`, `fine_info`, `order_rep`,`create_at`, `create_rep`,`cancel_flag`)" +
+                " VALUES ('" +id+"', '"+tbClientId.Text+"', '"+order_type+"', '"+tbCarModel.Text+"', '"+tbCarClass.Text+"', '"+tbCarYear.Text+"', '"+tbCarColor.Text+ "', '" + trans + "','" + tbCarMile.Text+"', '"+tbBudget.Text+"', '"+tbInfo.Text+"', '"+cbOrderRep.SelectedValue+ "', '" + date + "','" + cbCreateRep.SelectedValue+"','0');";
 
 
            MessageBox.Show(sql);

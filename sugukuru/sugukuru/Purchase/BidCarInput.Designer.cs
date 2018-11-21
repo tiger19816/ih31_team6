@@ -62,6 +62,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lbSum = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbNumber = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -104,7 +106,7 @@
             // 
             // tbModelYear
             // 
-            this.tbModelYear.Location = new System.Drawing.Point(514, 128);
+            this.tbModelYear.Location = new System.Drawing.Point(514, 177);
             this.tbModelYear.Name = "tbModelYear";
             this.tbModelYear.Size = new System.Drawing.Size(100, 27);
             this.tbModelYear.TabIndex = 108;
@@ -120,13 +122,13 @@
             // 
             this.tbModel.Location = new System.Drawing.Point(156, 128);
             this.tbModel.Name = "tbModel";
-            this.tbModel.Size = new System.Drawing.Size(171, 27);
+            this.tbModel.Size = new System.Drawing.Size(100, 27);
             this.tbModel.TabIndex = 106;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(382, 133);
+            this.label1.Location = new System.Drawing.Point(382, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 16);
             this.label1.TabIndex = 105;
@@ -207,7 +209,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(382, 222);
+            this.label11.Location = new System.Drawing.Point(382, 329);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(56, 16);
             this.label11.TabIndex = 115;
@@ -215,7 +217,7 @@
             // 
             // tbInfo
             // 
-            this.tbInfo.Location = new System.Drawing.Point(444, 222);
+            this.tbInfo.Location = new System.Drawing.Point(514, 329);
             this.tbInfo.Multiline = true;
             this.tbInfo.Name = "tbInfo";
             this.tbInfo.Size = new System.Drawing.Size(590, 74);
@@ -282,9 +284,9 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 53);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(823, 40);
             this.tableLayoutPanel1.TabIndex = 122;
             // 
@@ -394,11 +396,29 @@
             this.lbSum.TabIndex = 126;
             this.lbSum.Text = "0";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(382, 133);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(56, 16);
+            this.label16.TabIndex = 127;
+            this.label16.Text = "車台番号";
+            // 
+            // tbNumber
+            // 
+            this.tbNumber.Location = new System.Drawing.Point(514, 128);
+            this.tbNumber.Name = "tbNumber";
+            this.tbNumber.Size = new System.Drawing.Size(100, 27);
+            this.tbNumber.TabIndex = 128;
+            // 
             // BidCarInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.tbNumber);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.lbSum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
@@ -454,6 +474,8 @@
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.lbSum, 0);
+            this.Controls.SetChildIndex(this.label16, 0);
+            this.Controls.SetChildIndex(this.tbNumber, 0);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -498,5 +520,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbSum;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox tbNumber;
     }
 }

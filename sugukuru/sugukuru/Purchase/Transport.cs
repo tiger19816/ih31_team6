@@ -24,6 +24,8 @@ namespace sugukuru.Purchase
 
             //受注担当者をセットする(営業担当者のみ)
             Utility.ResponsibleList.setSales(cbOrderRep);
+            //陸送業者をセットする
+            Utility.ResponsibleList.setVender(cbTransport);
             //初期選択を未選択にする
             cbOrderRep.SelectedIndex = -1;
 

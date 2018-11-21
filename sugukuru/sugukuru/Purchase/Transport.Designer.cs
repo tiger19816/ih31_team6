@@ -174,7 +174,7 @@
             // 
             // tbDeparturePost
             // 
-            this.tbDeparturePost.Location = new System.Drawing.Point(88, 253);
+            this.tbDeparturePost.Location = new System.Drawing.Point(88, 291);
             this.tbDeparturePost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbDeparturePost.Name = "tbDeparturePost";
             this.tbDeparturePost.Size = new System.Drawing.Size(116, 27);
@@ -182,7 +182,7 @@
             // 
             // tbArrivalPost
             // 
-            this.tbArrivalPost.Location = new System.Drawing.Point(266, 253);
+            this.tbArrivalPost.Location = new System.Drawing.Point(266, 294);
             this.tbArrivalPost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbArrivalPost.Name = "tbArrivalPost";
             this.tbArrivalPost.Size = new System.Drawing.Size(116, 27);
@@ -220,11 +220,11 @@
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tblCustomer.Controls.Add(this.label25, 0, 0);
             this.tblCustomer.Controls.Add(this.lbCustomerId, 1, 0);
-            this.tblCustomer.Location = new System.Drawing.Point(320, 75);
+            this.tblCustomer.Location = new System.Drawing.Point(320, 72);
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.RowCount = 1;
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tblCustomer.Size = new System.Drawing.Size(379, 39);
             this.tblCustomer.TabIndex = 35;
             // 
@@ -233,7 +233,7 @@
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(4, 11);
+            this.label25.Location = new System.Drawing.Point(4, 12);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(45, 16);
             this.label25.TabIndex = 10;
@@ -243,7 +243,7 @@
             // 
             this.lbCustomerId.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbCustomerId.AutoSize = true;
-            this.lbCustomerId.Location = new System.Drawing.Point(117, 11);
+            this.lbCustomerId.Location = new System.Drawing.Point(117, 12);
             this.lbCustomerId.Name = "lbCustomerId";
             this.lbCustomerId.Size = new System.Drawing.Size(0, 16);
             this.lbCustomerId.TabIndex = 5;
@@ -268,7 +268,7 @@
             // 
             // tbDeparture
             // 
-            this.tbDeparture.Location = new System.Drawing.Point(88, 294);
+            this.tbDeparture.Location = new System.Drawing.Point(88, 256);
             this.tbDeparture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbDeparture.Name = "tbDeparture";
             this.tbDeparture.Size = new System.Drawing.Size(116, 27);
@@ -294,7 +294,7 @@
             // 
             // tbArrival
             // 
-            this.tbArrival.Location = new System.Drawing.Point(266, 294);
+            this.tbArrival.Location = new System.Drawing.Point(266, 256);
             this.tbArrival.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbArrival.Name = "tbArrival";
             this.tbArrival.Size = new System.Drawing.Size(116, 27);
