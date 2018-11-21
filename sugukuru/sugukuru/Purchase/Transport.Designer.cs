@@ -52,11 +52,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lbCustomerId = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.lbCustomerId = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tbDeparture = new System.Windows.Forms.TextBox();
@@ -65,6 +65,8 @@
             this.tbArrival = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.cbOrderRep = new System.Windows.Forms.ComboBox();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbNameK = new System.Windows.Forms.Label();
             this.tblCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -227,6 +229,8 @@
             this.tblCustomer.ColumnCount = 2;
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tblCustomer.Controls.Add(this.lbNameK, 1, 2);
+            this.tblCustomer.Controls.Add(this.lbName, 1, 1);
             this.tblCustomer.Controls.Add(this.label25, 0, 0);
             this.tblCustomer.Controls.Add(this.label10, 0, 1);
             this.tblCustomer.Controls.Add(this.label14, 0, 6);
@@ -320,15 +324,6 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "所在地〒";
             // 
-            // lbCustomerId
-            // 
-            this.lbCustomerId.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbCustomerId.AutoSize = true;
-            this.lbCustomerId.Location = new System.Drawing.Point(117, 9);
-            this.lbCustomerId.Name = "lbCustomerId";
-            this.lbCustomerId.Size = new System.Drawing.Size(0, 16);
-            this.lbCustomerId.TabIndex = 5;
-            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -372,6 +367,15 @@
             this.label18.Size = new System.Drawing.Size(80, 16);
             this.label18.TabIndex = 8;
             this.label18.Text = "取引先担当者";
+            // 
+            // lbCustomerId
+            // 
+            this.lbCustomerId.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCustomerId.AutoSize = true;
+            this.lbCustomerId.Location = new System.Drawing.Point(117, 9);
+            this.lbCustomerId.Name = "lbCustomerId";
+            this.lbCustomerId.Size = new System.Drawing.Size(0, 16);
+            this.lbCustomerId.TabIndex = 5;
             // 
             // label4
             // 
@@ -441,6 +445,28 @@
             this.cbOrderRep.Name = "cbOrderRep";
             this.cbOrderRep.Size = new System.Drawing.Size(121, 24);
             this.cbOrderRep.TabIndex = 42;
+            // 
+            // lbName
+            // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbName.AutoSize = true;
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
+            this.lbName.Location = new System.Drawing.Point(117, 42);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(44, 16);
+            this.lbName.TabIndex = 11;
+            this.lbName.Text = "顧客名";
+            // 
+            // lbNameK
+            // 
+            this.lbNameK.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbNameK.AutoSize = true;
+            this.lbNameK.BackColor = System.Drawing.Color.Transparent;
+            this.lbNameK.Location = new System.Drawing.Point(117, 75);
+            this.lbNameK.Name = "lbNameK";
+            this.lbNameK.Size = new System.Drawing.Size(68, 16);
+            this.lbNameK.TabIndex = 12;
+            this.lbNameK.Text = "顧客名カナ";
             // 
             // Transport
             // 
@@ -519,5 +545,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cbOrderRep;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lbNameK;
+        private System.Windows.Forms.Label lbName;
     }
 }
