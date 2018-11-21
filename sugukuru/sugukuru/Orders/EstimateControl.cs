@@ -22,6 +22,7 @@ namespace sugukuru.Orders
         string clientFAX;
         string clientTEL;
 
+
         public EstimateControl()
         {
             InitializeComponent();
@@ -33,20 +34,13 @@ namespace sugukuru.Orders
 
         private void EstimateControl_Load(object sender, EventArgs e)
         {
-            textBox1.Text = "18001";
+            // 初期化
             textBox10.Text = 0.ToString();
             textBox11.Text = 0.ToString();
             textBox12.Text = 0.ToString();
             textBox13.Text = "見積後２週間";
             clientFAX = "";
             clientTEL = "";
-
-            sql = "SELECT formal_name,postal_code,prefectures,municipality,client_division,client_rep,recovery_condition,phone_number,fax," +
-                " (CASE WHEN closing_date >= 30 THEN '月末締め' ELSE CONCAT(closing_date, '日締め') END) as closing_date," +
-                " (CASE WHEN collection_month = 1 THEN '当月' WHEN collection_month = 2 THEN '翌月' WHEN collection_month = 2 THEN '翌々月' ELSE '別途相談' END)as collection_month," +
-                " collection_date" +
-                " FROM client" +
-                " WHERE id = "+textBox1.Text;
 
             // カラムを指定
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -56,7 +50,6 @@ namespace sugukuru.Orders
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // データをつくる
-
             table.Columns.Add("受注番号");
             table.Columns.Add("品名");
             table.Columns.Add("数量");
@@ -74,64 +67,6 @@ namespace sugukuru.Orders
             //データグリッドビュー料金の右揃え
             dataGridView1.Columns["単価"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridView1.Columns["金額"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-            // データを追加
-            //抽象データ格納データセットを作成
-            DataSet dset = new DataSet("ClientInfo");
-
-            //DB接続オブジェクトを作成
-            MySqlConnection con = new MySqlConnection(this.conStr);
-
-            //DB接続
-            con.Open();
-
-            //データアダプターの生成
-            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
-
-            ///データ抽出＆取得
-            mAdp.Fill(dset, "ClientInfo");
-
-            //DB切断
-            con.Close();
-
-            //抽出件数を取得
-            int rcnt = dset.Tables["ClientInfo"].Rows.Count;
-
-            //0件の場合はエラー
-            if (rcnt != 0)
-            {
-                // 顧客名をセット
-                textBox2.Text = dset.Tables["ClientInfo"].Rows[0]["formal_name"].ToString();
-
-                // 住所〒をセット
-                textBox4.Text = dset.Tables["ClientInfo"].Rows[0]["postal_code"].ToString();
-
-                // 所在地をセット
-                textBox7.Text = dset.Tables["ClientInfo"].Rows[0]["prefectures"].ToString() + dset.Tables["ClientInfo"].Rows[0]["municipality"].ToString();
-
-                // 取引先部署をセット
-                textBox8.Text = dset.Tables["ClientInfo"].Rows[0]["client_division"].ToString();
-
-                // 取引先担当者をセット
-                textBox9.Text = dset.Tables["ClientInfo"].Rows[0]["client_rep"].ToString();
-
-                // 支払い条件をセット
-                textBox5.Text = dset.Tables["ClientInfo"].Rows[0]["closing_date"].ToString() + "の" + dset.Tables["ClientInfo"].Rows[0]["collection_month"].ToString() + dset.Tables["ClientInfo"].Rows[0]["collection_date"].ToString() +"払い";
-
-                // 納期をセット
-                textBox6.Text = "別途相談";
-
-                // FAXをセット
-                clientFAX = dset.Tables["ClientInfo"].Rows[0]["fax"].ToString();
-
-                // TELをセット
-                clientTEL = dset.Tables["ClientInfo"].Rows[0]["phone_number"].ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("顧客IDが誤っています。");
-            }
         }
 
         // 追加を押したときの処理
@@ -172,12 +107,99 @@ namespace sugukuru.Orders
 
         }
 
+        // 検索ボタンが押された時の処理
         private void btCustomerSearch_Click(object sender, EventArgs e)
         {
-            Form OpenFM = new CustomerSelectForm();
-            OpenFM.ShowDialog();
-            OpenFM.Dispose();
+            CustomerSelectForm MenuFM = new CustomerSelectForm();
+            MenuFM.ShowDialog();
+            MenuFM.Dispose();
             this.Show();
+
+            //子フォームで追加が押下された場合の処理
+            if (MenuFM.SelectFlg)
+            {
+                // dataGridView1に既に値がある場合初期化
+                if (quoteDetailList.Count() != 0)
+                {
+                    quoteDetailList.Clear();
+                }         
+                if (table.Rows.Count != 0 )
+                {
+                    table.Rows.Clear();
+                }           
+                
+
+                //返り値の取得(DataRow)
+                DataRow selectRow = MenuFM.Customer.getDataRow();
+                //DataRowの中身をフォームの中身に追加していく
+                //DataRowからの引数はデータベースのカラム名そのまま
+                textBox1.Text = selectRow["id"].ToString();
+
+                sql = "SELECT formal_name,postal_code,prefectures,municipality,client_division,client_rep,recovery_condition,phone_number,fax," +
+                " (CASE WHEN closing_date >= 30 THEN '月末締' ELSE CONCAT(closing_date, '日締') END) as closing_date," +
+                " (CASE WHEN collection_month = 1 THEN '翌月' WHEN collection_month = 2 THEN '翌々月' WHEN collection_month = 3 THEN '翌々々月' ELSE '別途相談' END)as collection_month," +
+                " collection_date" +
+                " FROM client" +
+                " WHERE id = " + textBox1.Text;         
+
+                // データを追加
+                //抽象データ格納データセットを作成
+                DataSet dset = new DataSet("ClientInfo");
+
+                //DB接続オブジェクトを作成
+                MySqlConnection con = new MySqlConnection(this.conStr);
+
+                //DB接続
+                con.Open();
+
+                //データアダプターの生成
+                MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+
+                ///データ抽出＆取得
+                mAdp.Fill(dset, "ClientInfo");
+
+                //DB切断
+                con.Close();
+
+                //抽出件数を取得
+                int rcnt = dset.Tables["ClientInfo"].Rows.Count;
+
+                //0件の場合はエラー
+                if (rcnt != 0)
+                {
+                    // 顧客名をセット
+                    textBox2.Text = dset.Tables["ClientInfo"].Rows[0]["formal_name"].ToString();
+
+                    // 住所〒をセット
+                    textBox4.Text = dset.Tables["ClientInfo"].Rows[0]["postal_code"].ToString();
+
+                    // 所在地をセット
+                    textBox7.Text = dset.Tables["ClientInfo"].Rows[0]["prefectures"].ToString() + dset.Tables["ClientInfo"].Rows[0]["municipality"].ToString();
+
+                    // 取引先部署をセット
+                    textBox8.Text = dset.Tables["ClientInfo"].Rows[0]["client_division"].ToString();
+
+                    // 取引先担当者をセット
+                    textBox9.Text = dset.Tables["ClientInfo"].Rows[0]["client_rep"].ToString();
+
+                    // 支払い条件をセット
+                    textBox5.Text = dset.Tables["ClientInfo"].Rows[0]["closing_date"].ToString() + dset.Tables["ClientInfo"].Rows[0]["collection_month"].ToString() + dset.Tables["ClientInfo"].Rows[0]["collection_date"].ToString() + "日払";
+
+                    // 納期をセット
+                    textBox6.Text = "別途相談";
+
+                    // FAXをセット
+                    clientFAX = dset.Tables["ClientInfo"].Rows[0]["fax"].ToString();
+
+                    // TELをセット
+                    clientTEL = dset.Tables["ClientInfo"].Rows[0]["phone_number"].ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("顧客IDが誤っています。");
+                }
+            }
         }
 
         private void tblCustomer_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
@@ -204,7 +226,7 @@ namespace sugukuru.Orders
             int count = 0;
             string year = "";
 
-            sql = "SELECT COUNT(*) as count,DATE_FORMAT(now(), '%y') as year FROM quote WHERE DATE_FORMAT(quote_date, '%Y')=year(now()) AND client_id = '18001'";
+            sql = "SELECT COUNT(*) as count,DATE_FORMAT(now(), '%y') as year FROM quote WHERE DATE_FORMAT(quote_date, '%Y')=year(now()) AND client_id = '"+textBox1.Text+"'";
 
             // データを追加
             //抽象データ格納データセットを作成
@@ -255,7 +277,7 @@ namespace sugukuru.Orders
             //SQL発行準備
             MySqlCommand cmd = new MySqlCommand(sql, con);
 
-            ///SQLの実行
+            //SQLの実行
             cmd.ExecuteNonQuery();
 
             //DB切断
@@ -341,7 +363,9 @@ namespace sugukuru.Orders
 
             // PDF作成
             var PDF = Renderer.RenderHtmlAsPdf(pageContent);
-            var OutputPath = "document\\quote.pdf";
+
+            // PATH&ファイル名指定
+            var OutputPath = "document\\見積書"+quoteID+".pdf";
 
             // 作成したPDFファイルに名前付け
             PDF.SaveAs(OutputPath);
