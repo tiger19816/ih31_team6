@@ -84,6 +84,13 @@ CREATE TABLE `bill` (
   `remarks` text NOT NULL COMMENT '備考'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求書';
 
+--
+-- テーブルのデータのダンプ `bill`
+--
+
+INSERT INTO `bill` (`invoice_number`, `customer_id`, `billing_date`, `billing_representative`, `payment_criteria`, `remarks`) VALUES
+('1800118011', '18001', '2018-11-21', '101', '月末締翌月末払', '');
+
 -- --------------------------------------------------------
 
 --
@@ -95,6 +102,13 @@ CREATE TABLE `billing_clearing` (
   `amount` int(11) NOT NULL COMMENT '入金額',
   `clearing_flag` int(11) NOT NULL DEFAULT '0' COMMENT '消込フラグ'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求消込';
+
+--
+-- テーブルのデータのダンプ `billing_clearing`
+--
+
+INSERT INTO `billing_clearing` (`no`, `amount`, `clearing_flag`) VALUES
+('1800118011', 1000000, 2);
 
 -- --------------------------------------------------------
 
@@ -111,6 +125,14 @@ CREATE TABLE `billing_detail` (
   `unit` varchar(3) NOT NULL COMMENT '単位',
   `unit_price` int(11) NOT NULL COMMENT '単価'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求明細';
+
+--
+-- テーブルのデータのダンプ `billing_detail`
+--
+
+INSERT INTO `billing_detail` (`invoice_number`, `no`, `order_id`, `product_name`, `quantity`, `unit`, `unit_price`) VALUES
+('1800118011', 1, '181110001', 'JZS144 クラウン', 1, '台', 1000000),
+('1800118011', 2, '181110002', 'L600S ムーブ', 1, '台', 1000000);
 
 -- --------------------------------------------------------
 
@@ -265,10 +287,10 @@ CREATE TABLE `procedure_after_successful_bid` (
   `payment_status` int(11) NOT NULL COMMENT '支払い状況',
   `payment_due` date NOT NULL COMMENT '支払い期限',
   `vehicle_registration_status` int(11) NOT NULL COMMENT '車両登録状況',
-  `procedure_content` varchar(50) NOT NULL COMMENT '手続内容',
-  `report_deadline` date NOT NULL COMMENT '報告期限',
-  `procedure_flag` int(11) NOT NULL COMMENT 'オークション手続伝達フラグ',
-  `report_complete_date` date NOT NULL COMMENT '報告完了日付'
+  `procedure_content` varchar(50) DEFAULT NULL COMMENT '手続内容',
+  `report_deadline` date DEFAULT NULL COMMENT '報告期限',
+  `procedure_flag` int(11) DEFAULT NULL COMMENT 'オークション手続伝達フラグ',
+  `report_complete_date` date DEFAULT NULL COMMENT '報告完了日付'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='落札後手続きテーブル';
 
 -- --------------------------------------------------------
@@ -403,8 +425,8 @@ CREATE TABLE `unbilled_data` (
 --
 
 INSERT INTO `unbilled_data` (`id`, `customer_id`, `order_id`, `recorded_date`, `billing_amount`, `quantity`, `unit`, `unit_price`, `comp_flag`) VALUES
-(1, '18001', '181110001', '2018-11-15', 'JZS144 クラウン', 1, '台', 1000000, 0),
-(2, '18001', '181110002', '2018-11-15', 'L600S ムーブ', 1, '台', 1000000, 0);
+(1, '18001', '181110001', '2018-11-15', 'JZS144 クラウン', 1, '台', 1000000, 1),
+(2, '18001', '181110002', '2018-11-15', 'L600S ムーブ', 1, '台', 1000000, 1);
 
 --
 -- Indexes for dumped tables
