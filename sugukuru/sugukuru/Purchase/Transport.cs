@@ -24,6 +24,8 @@ namespace sugukuru.Purchase
 
             //受注担当者をセットする(営業担当者のみ)
             Utility.ResponsibleList.setSales(cbOrderRep);
+            //陸送業者をセットする
+            Utility.ResponsibleList.setVender(cbTransport);
             //初期選択を未選択にする
             cbOrderRep.SelectedIndex = -1;
 
@@ -75,6 +77,7 @@ namespace sugukuru.Purchase
                 //DataRowからの引数はデータベースのカラム名そのまま
                 tbOrderId.Text = selectRow["id"].ToString();
                 lbCustomerId.Text = selectRow["client_id"].ToString();
+           
                 //顧客IDから紐づいている顧客データの取得
                 DataRow chainRow = Utility.Customer.ChainCustomerId(selectRow["client_id"].ToString());
 

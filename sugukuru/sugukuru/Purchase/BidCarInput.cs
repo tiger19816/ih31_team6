@@ -76,8 +76,8 @@ namespace sugukuru.Purchase
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();
 
-            String sql = "INSERT INTO successful_bid_vehicle (`order_id`, `car_model`, `car_model_year`, `car_name`, `car_color`, `car_mileage`, `transmission`, `fine_info`, `successful_bid_vehicle_tax`, `contracted_successful_bid_quantity`, `vehicle_tax_equivalent`, `fee`, `successful_bid_fixing`) " +
-                "VALUES('"+order_id+"', '"+tbModel.Text+"', '"+tbModelYear.Text+"', '"+tbCarName.Text+"', '"+tbColor.Text+"', '"+tbMile.Text+"', '"+trans+"', '"+tbInfo.Text+"', '"+tbTax.Text+"', '"+tbPrice.Text+"', '"+tbCarTax.Text+"', '"+tbFee.Text+"', '0')";
+            String sql = "INSERT INTO successful_bid_vehicle (`order_id`, `car_model`, `undercarriage_number`,`car_model_year`, `car_name`, `car_color`, `car_mileage`, `transmission`, `fine_info`, `successful_bid_vehicle_tax`, `contracted_successful_bid_quantity`, `vehicle_tax_equivalent`, `fee`, `successful_bid_fixing`) " +
+                "VALUES('"+order_id+"', '"+tbModel.Text+ "', '" + tbNumber.Text + "','" + tbModelYear.Text+"', '"+tbCarName.Text+"', '"+tbColor.Text+"', '"+tbMile.Text+"', '"+trans+"', '"+tbInfo.Text+"', '"+tbTax.Text+"', '"+tbPrice.Text+"', '"+tbCarTax.Text+"', '"+tbFee.Text+"', '0')";
 
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.ExecuteNonQuery();
@@ -167,6 +167,6 @@ namespace sugukuru.Purchase
 
         }
 
-
+       
     }
 }
