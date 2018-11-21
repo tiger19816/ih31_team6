@@ -75,7 +75,7 @@ namespace sugukuru.Purchase
                 //DataRowからの引数はデータベースのカラム名そのまま
                 tbOrderId.Text = selectRow["id"].ToString();
                 lbCustomerId.Text = selectRow["client_id"].ToString();
-            
+           
                 //顧客IDから紐づいている顧客データの取得
                 DataRow chainRow = Utility.Customer.ChainCustomerId(selectRow["client_id"].ToString());
 

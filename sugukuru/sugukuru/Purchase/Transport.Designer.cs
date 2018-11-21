@@ -47,15 +47,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
             this.label25 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.lbCustomerId = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -65,15 +56,13 @@
             this.tbArrival = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.cbOrderRep = new System.Windows.Forms.ComboBox();
-            this.lbName = new System.Windows.Forms.Label();
-            this.lbNameK = new System.Windows.Forms.Label();
             this.tblCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(408, 72);
+            this.label2.Location = new System.Drawing.Point(14, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 1;
@@ -82,7 +71,7 @@
             // cbTransport
             // 
             this.cbTransport.FormattingEnabled = true;
-            this.cbTransport.Location = new System.Drawing.Point(470, 67);
+            this.cbTransport.Location = new System.Drawing.Point(76, 141);
             this.cbTransport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbTransport.Name = "cbTransport";
             this.cbTransport.Size = new System.Drawing.Size(140, 24);
@@ -122,7 +111,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(408, 120);
+            this.label5.Location = new System.Drawing.Point(14, 229);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 16);
             this.label5.TabIndex = 14;
@@ -131,7 +120,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(617, 117);
+            this.label6.Location = new System.Drawing.Point(204, 229);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 15;
@@ -140,7 +129,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(442, 358);
+            this.label7.Location = new System.Drawing.Point(14, 346);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 16);
             this.label7.TabIndex = 16;
@@ -149,7 +138,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(430, 398);
+            this.label8.Location = new System.Drawing.Point(14, 393);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 16);
             this.label8.TabIndex = 17;
@@ -158,7 +147,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(418, 428);
+            this.label9.Location = new System.Drawing.Point(14, 439);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 18;
@@ -185,7 +174,7 @@
             // 
             // tbDeparturePost
             // 
-            this.tbDeparturePost.Location = new System.Drawing.Point(470, 144);
+            this.tbDeparturePost.Location = new System.Drawing.Point(88, 253);
             this.tbDeparturePost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbDeparturePost.Name = "tbDeparturePost";
             this.tbDeparturePost.Size = new System.Drawing.Size(116, 27);
@@ -193,7 +182,7 @@
             // 
             // tbArrivalPost
             // 
-            this.tbArrivalPost.Location = new System.Drawing.Point(667, 144);
+            this.tbArrivalPost.Location = new System.Drawing.Point(266, 253);
             this.tbArrivalPost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbArrivalPost.Name = "tbArrivalPost";
             this.tbArrivalPost.Size = new System.Drawing.Size(116, 27);
@@ -201,7 +190,7 @@
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(480, 358);
+            this.tbPrice.Location = new System.Drawing.Point(88, 346);
             this.tbPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(116, 27);
@@ -209,7 +198,7 @@
             // 
             // tbSlip
             // 
-            this.tbSlip.Location = new System.Drawing.Point(480, 428);
+            this.tbSlip.Location = new System.Drawing.Point(88, 436);
             this.tbSlip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbSlip.Name = "tbSlip";
             this.tbSlip.Size = new System.Drawing.Size(116, 27);
@@ -217,7 +206,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(480, 393);
+            this.dateTimePicker1.Location = new System.Drawing.Point(88, 393);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(233, 27);
@@ -229,33 +218,14 @@
             this.tblCustomer.ColumnCount = 2;
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tblCustomer.Controls.Add(this.lbNameK, 1, 2);
-            this.tblCustomer.Controls.Add(this.lbName, 1, 1);
             this.tblCustomer.Controls.Add(this.label25, 0, 0);
-            this.tblCustomer.Controls.Add(this.label10, 0, 1);
-            this.tblCustomer.Controls.Add(this.label14, 0, 6);
-            this.tblCustomer.Controls.Add(this.label13, 0, 5);
-            this.tblCustomer.Controls.Add(this.label12, 0, 4);
-            this.tblCustomer.Controls.Add(this.label11, 0, 3);
-            this.tblCustomer.Controls.Add(this.label16, 0, 2);
-            this.tblCustomer.Controls.Add(this.label17, 0, 7);
-            this.tblCustomer.Controls.Add(this.label19, 0, 9);
-            this.tblCustomer.Controls.Add(this.label18, 0, 8);
             this.tblCustomer.Controls.Add(this.lbCustomerId, 1, 0);
-            this.tblCustomer.Location = new System.Drawing.Point(17, 158);
+            this.tblCustomer.Location = new System.Drawing.Point(320, 75);
             this.tblCustomer.Name = "tblCustomer";
-            this.tblCustomer.RowCount = 10;
+            this.tblCustomer.RowCount = 1;
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tblCustomer.Size = new System.Drawing.Size(379, 335);
+            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblCustomer.Size = new System.Drawing.Size(379, 39);
             this.tblCustomer.TabIndex = 35;
             // 
             // label25
@@ -263,116 +233,17 @@
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(4, 9);
+            this.label25.Location = new System.Drawing.Point(4, 11);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(45, 16);
             this.label25.TabIndex = 10;
             this.label25.Text = "顧客ID";
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(4, 42);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 16);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "顧客名";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Location = new System.Drawing.Point(4, 207);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 16);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "FAX";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(4, 174);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 16);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "TEL";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(4, 141);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 16);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "住所";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(4, 108);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 16);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "所在地〒";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Location = new System.Drawing.Point(4, 75);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 16);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "顧客名カナ";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(4, 240);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(68, 16);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "取引先部署";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Location = new System.Drawing.Point(4, 308);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 16);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "営業担当者";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Location = new System.Drawing.Point(4, 273);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 16);
-            this.label18.TabIndex = 8;
-            this.label18.Text = "取引先担当者";
-            // 
             // lbCustomerId
             // 
             this.lbCustomerId.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbCustomerId.AutoSize = true;
-            this.lbCustomerId.Location = new System.Drawing.Point(117, 9);
+            this.lbCustomerId.Location = new System.Drawing.Point(117, 11);
             this.lbCustomerId.Name = "lbCustomerId";
             this.lbCustomerId.Size = new System.Drawing.Size(0, 16);
             this.lbCustomerId.TabIndex = 5;
@@ -380,7 +251,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(408, 147);
+            this.label4.Location = new System.Drawing.Point(14, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 36;
@@ -389,7 +260,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(408, 181);
+            this.label21.Location = new System.Drawing.Point(14, 294);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(32, 16);
             this.label21.TabIndex = 37;
@@ -397,7 +268,7 @@
             // 
             // tbDeparture
             // 
-            this.tbDeparture.Location = new System.Drawing.Point(470, 181);
+            this.tbDeparture.Location = new System.Drawing.Point(88, 294);
             this.tbDeparture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbDeparture.Name = "tbDeparture";
             this.tbDeparture.Size = new System.Drawing.Size(116, 27);
@@ -406,7 +277,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(605, 144);
+            this.label22.Location = new System.Drawing.Point(204, 256);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(56, 16);
             this.label22.TabIndex = 39;
@@ -415,7 +286,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(617, 181);
+            this.label23.Location = new System.Drawing.Point(204, 294);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(32, 16);
             this.label23.TabIndex = 40;
@@ -423,7 +294,7 @@
             // 
             // tbArrival
             // 
-            this.tbArrival.Location = new System.Drawing.Point(667, 179);
+            this.tbArrival.Location = new System.Drawing.Point(266, 294);
             this.tbArrival.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbArrival.Name = "tbArrival";
             this.tbArrival.Size = new System.Drawing.Size(116, 27);
@@ -432,7 +303,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(412, 477);
+            this.label24.Location = new System.Drawing.Point(14, 482);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(68, 16);
             this.label24.TabIndex = 43;
@@ -441,32 +312,10 @@
             // cbOrderRep
             // 
             this.cbOrderRep.FormattingEnabled = true;
-            this.cbOrderRep.Location = new System.Drawing.Point(489, 474);
+            this.cbOrderRep.Location = new System.Drawing.Point(88, 479);
             this.cbOrderRep.Name = "cbOrderRep";
             this.cbOrderRep.Size = new System.Drawing.Size(121, 24);
             this.cbOrderRep.TabIndex = 42;
-            // 
-            // lbName
-            // 
-            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbName.AutoSize = true;
-            this.lbName.BackColor = System.Drawing.Color.Transparent;
-            this.lbName.Location = new System.Drawing.Point(117, 42);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(44, 16);
-            this.lbName.TabIndex = 11;
-            this.lbName.Text = "顧客名";
-            // 
-            // lbNameK
-            // 
-            this.lbNameK.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbNameK.AutoSize = true;
-            this.lbNameK.BackColor = System.Drawing.Color.Transparent;
-            this.lbNameK.Location = new System.Drawing.Point(117, 75);
-            this.lbNameK.Name = "lbNameK";
-            this.lbNameK.Size = new System.Drawing.Size(68, 16);
-            this.lbNameK.TabIndex = 12;
-            this.lbNameK.Text = "顧客名カナ";
             // 
             // Transport
             // 
@@ -526,16 +375,7 @@
         private System.Windows.Forms.TextBox tbSlip;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TableLayoutPanel tblCustomer;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbCustomerId;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox tbDeparture;
@@ -545,7 +385,5 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cbOrderRep;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label lbNameK;
-        private System.Windows.Forms.Label lbName;
     }
 }
