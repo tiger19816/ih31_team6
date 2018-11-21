@@ -52,7 +52,7 @@ namespace sugukuru.Orders
 
             if (!searchCustomerId.Text.Equals(""))
             {
-                SQL += " WHERE id LIKE '%" + searchCustomerId.Text + "%'";
+                SQL += " WHERE client.id LIKE '%" + searchCustomerId.Text + "%'";
                 flg = true;
             }
             if (!searchCustomerName.Text.Equals(""))
