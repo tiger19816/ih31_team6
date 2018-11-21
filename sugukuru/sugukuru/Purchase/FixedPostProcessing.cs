@@ -67,11 +67,90 @@ namespace sugukuru.Purchase
         private void button9_Click(object sender, EventArgs e)
         {
             textBox2.Text = "181110001";
-            //Boolean flg = true;
-            //if (flg)
-            //{
+            Boolean flg = true;
+            if (flg)
+            {
+                this.sql = "SELECT * FROM `procedure_after_successful_bid` WHERE `order_id` = '"+textBox2.Text+"'";
 
-            //}
+                // データをDBへ追加する
+                //抽象データ格納データセットを作成
+                DataSet dset = new DataSet("FixedPostProcessing");
+
+                // DB接続オブジェクトを作成
+                MySqlConnection con = new MySqlConnection(this.conStr);
+
+                // DB接続
+                con.Open();
+
+                //データアダプターの生成
+                MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+
+                ///データ抽出＆取得
+                mAdp.Fill(dset, "FixedPostProcessing");
+
+                //DB切断
+                con.Close();
+
+                //抽出件数を取得
+                int rcnt = dset.Tables["FixedPostProcessing"].Rows.Count;
+
+                //行が存在しているかの確認  
+                if (rcnt != 0)
+                {
+                    // 支払いが未払いの場合true
+                    if(int.Parse(dset.Tables["FixedPostProcessing"].Rows[0]["payment_status"].ToString()) == 0)
+                    {
+                        radioButton1.Checked = true;
+                    }
+                    else
+                    {
+                        radioButton2.Checked = true;
+                    }
+
+                    // 支払期限をセット
+                    dateTimePicker1.Text = dset.Tables["FixedPostProcessing"].Rows[0]["payment_due"].ToString();
+
+                    // 担当者をセット
+                    Utility.ResponsibleList.SelectFromValue(comboBox1, dset.Tables["FixedPostProcessing"].Rows[0]["rep_id"].ToString());
+
+                    // 登録ナンバーが付いている場合true
+                    if (int.Parse(dset.Tables["FixedPostProcessing"].Rows[0]["vehicle_registration_status"].ToString()) == 1)
+                    {
+                        // 移転登録にセット
+                        radioButton4.Checked = true;
+
+                        //　移転登録の場合true
+                        if(int.Parse(dset.Tables["FixedPostProcessing"].Rows[0]["procedure_content"].ToString()) == 1)
+                        {
+                            radioButton6.Checked = true;
+                        }
+                        else
+                        {
+                            radioButton5.Checked = true;
+                        }
+
+                        // 報告期限をセット
+                        dateTimePicker2.Text = dset.Tables["FixedPostProcessing"].Rows[0]["report_deadline"].ToString();
+
+                        // 報告完了日付をセット
+                        dateTimePicker3.Text = dset.Tables["FixedPostProcessing"].Rows[0]["report_complete_date"].ToString();
+
+                        //　移転登録の場合true
+                        if (int.Parse(dset.Tables["FixedPostProcessing"].Rows[0]["procedure_flag"].ToString()) == 1)
+                        {
+                            checkBox1.Checked = true;
+                        }
+                        else
+                        {
+                            radioButton5.Checked = false;
+                        }
+                    }
+                    else
+                    {
+                        radioButton3.Checked = true;
+                    }
+                }
+            }
         }
 
         // 車両登録状況の登録ナンバー付にチェックが入ったら手続き内容を入力可にする
