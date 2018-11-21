@@ -14,10 +14,14 @@ namespace sugukuru.Orders
 {
     public partial class CustomerSelectForm : FormMaster.OpenFormMST
     {
+        //親フォームでの判定用フラグ
         public bool SelectFlg;
         private Utility.Customer customer = new Utility.Customer();
+
         String conStr;
+        //親フォームへの返り値用DataRowの入ったDataTable
         DataTable client = new DataTable("client");
+        //親フォームへの返り値用DataRowを入れるUtility
         public Utility.Customer Customer { get => customer; set => customer = value; }
 
         public CustomerSelectForm()
@@ -127,9 +131,9 @@ namespace sugukuru.Orders
             con.Open();
             MySqlDataAdapter mAdp = new MySqlDataAdapter(SQL, con);
             mAdp.Fill(dset.Tables["client"]);
-
+            //データベースからの取得データを入れる
             client = dset.Tables["client"];
-
+            //GridViewに適用する為のDataTableの作成と定義
             DataTable clientInfo = new DataTable("clientInfo");
             clientInfo.Columns.Add("顧客ID", typeof(String));
             clientInfo.Columns.Add("正式名称", typeof(String));
@@ -146,10 +150,12 @@ namespace sugukuru.Orders
             clientInfo.Columns.Add("微細情報", typeof(String));
             clientInfo.Columns.Add("営業担当者姓", typeof(String));
             clientInfo.Columns.Add("営業担当者名", typeof(String));
-
+            //GridView用のDataTableへデータを追加
             for (int i = 0; i < dset.Tables["client"].Rows.Count; i++)
             {
+                //GridView一行分の作成
                 DataRow datarow = clientInfo.NewRow();
+                //datarow[表示カラム名] ～ [行][取得カラム名]
                 datarow["顧客ID"] = client.Rows[i]["id"].ToString();
                 datarow["正式名称"] = client.Rows[i]["formal_name"].ToString();
                 datarow["正式名称カナ"] = client.Rows[i]["formal_name_read"].ToString();
@@ -165,8 +171,10 @@ namespace sugukuru.Orders
                 datarow["微細情報"] = client.Rows[i]["fine_info"].ToString();
                 datarow["営業担当者姓"] = client.Rows[i]["family_name"].ToString();
                 datarow["営業担当者名"] = client.Rows[i]["first_name"].ToString();
+                //行をDataTableに追加
                 clientInfo.Rows.Add(datarow);
             }
+            //GridViewに適用
             clientList.DataSource = clientInfo;
             con.Close();
         }
@@ -175,7 +183,9 @@ namespace sugukuru.Orders
         {
             foreach (DataGridViewRow r in clientList.SelectedRows)
             {
+                //親フォームの判定フラグのtrue
                 SelectFlg = true;
+                //返り値用のDataRowをセットする
                 customer.setDataRow(client.Rows[r.Index]);
                 this.Close();
             }

@@ -32,7 +32,21 @@ namespace sugukuru.Purchase
         //顧客ID検索ボタン押下
         private void btSearchCustomer_Click(object sender, EventArgs e)
         {
+            //子フォームを開く
+            Orders.CustomerSelectForm MenuFM = new Orders.CustomerSelectForm();
+            MenuFM.ShowDialog();
+            MenuFM.Dispose();
+            this.Show();
 
+            //子フォームで追加が押下された場合の処理
+            if (MenuFM.SelectFlg)
+            {
+                //返り値の取得(DataRow)
+                DataRow selectRow = MenuFM.Customer.getDataRow();
+                //DataRowの中身をフォームの中身に追加していく
+                //DataRowからの引数はデータベースのカラム名そのまま
+                tbSearchClientId.Text = selectRow["id"].ToString();
+            }
         }
 
         //検索ボタン

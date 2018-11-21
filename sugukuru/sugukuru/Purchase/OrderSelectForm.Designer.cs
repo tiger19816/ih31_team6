@@ -41,7 +41,7 @@
             this.cbSearchCharge = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btSearchCustomer = new System.Windows.Forms.Button();
-            this.tbSearchCustomerId = new System.Windows.Forms.TextBox();
+            this.tbSearchClientId = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -194,12 +194,12 @@
             this.btSearchCustomer.UseVisualStyleBackColor = true;
             this.btSearchCustomer.Click += new System.EventHandler(this.btSearchCustomer_Click);
             // 
-            // tbSearchCustomerId
+            // tbSearchClientId
             // 
-            this.tbSearchCustomerId.Location = new System.Drawing.Point(274, 82);
-            this.tbSearchCustomerId.Name = "tbSearchCustomerId";
-            this.tbSearchCustomerId.Size = new System.Drawing.Size(100, 27);
-            this.tbSearchCustomerId.TabIndex = 113;
+            this.tbSearchClientId.Location = new System.Drawing.Point(274, 82);
+            this.tbSearchClientId.Name = "tbSearchClientId";
+            this.tbSearchClientId.Size = new System.Drawing.Size(100, 27);
+            this.tbSearchClientId.TabIndex = 113;
             // 
             // groupBox2
             // 
@@ -472,7 +472,7 @@
             this.Controls.Add(this.cbSearchCharge);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btSearchCustomer);
-            this.Controls.Add(this.tbSearchCustomerId);
+            this.Controls.Add(this.tbSearchClientId);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.cbDateStart);
@@ -522,7 +522,7 @@
             this.Controls.SetChildIndex(this.cbDateStart, 0);
             this.Controls.SetChildIndex(this.label16, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
-            this.Controls.SetChildIndex(this.tbSearchCustomerId, 0);
+            this.Controls.SetChildIndex(this.tbSearchClientId, 0);
             this.Controls.SetChildIndex(this.btSearchCustomer, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.cbSearchCharge, 0);
@@ -559,7 +559,7 @@
         private System.Windows.Forms.ComboBox cbSearchCharge;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btSearchCustomer;
-        private System.Windows.Forms.TextBox tbSearchCustomerId;
+        private System.Windows.Forms.TextBox tbSearchClientId;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton3;
