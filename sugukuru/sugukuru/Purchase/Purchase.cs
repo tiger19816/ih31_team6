@@ -127,6 +127,9 @@ namespace sugukuru.Purchase
         private void btBidCarInput_Click(object sender, EventArgs e)
         {
             //落札車両登録
+
+
+
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;
             BidCarList.Visible = true;
