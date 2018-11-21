@@ -14,11 +14,16 @@ namespace sugukuru.Orders
 {
     public partial class CustomerSelectForm : FormMaster.OpenFormMST
     {
-
-        public Utility.Customer customer { get; set; }
+        //親フォームでの判定用フラグ
+        public bool SelectFlg;
+        private Utility.Customer customer = new Utility.Customer();
 
         String conStr;
-        DataTable clientInfo = new DataTable("clientInfo");
+        //親フォームへの返り値用DataRowの入ったDataTable
+        DataTable client = new DataTable("client");
+        //親フォームへの返り値用DataRowを入れるUtility
+        public Utility.Customer Customer { get => customer; set => customer = value; }
+
         public CustomerSelectForm()
         {
             InitializeComponent();
@@ -126,8 +131,10 @@ namespace sugukuru.Orders
             con.Open();
             MySqlDataAdapter mAdp = new MySqlDataAdapter(SQL, con);
             mAdp.Fill(dset.Tables["client"]);
-
-            clientInfo = new DataTable("clientInfo");
+            //データベースからの取得データを入れる
+            client = dset.Tables["client"];
+            //GridViewに適用する為のDataTableの作成と定義
+            DataTable clientInfo = new DataTable("clientInfo");
             clientInfo.Columns.Add("顧客ID", typeof(String));
             clientInfo.Columns.Add("正式名称", typeof(String));
             clientInfo.Columns.Add("正式名称カナ", typeof(String));
@@ -143,27 +150,31 @@ namespace sugukuru.Orders
             clientInfo.Columns.Add("微細情報", typeof(String));
             clientInfo.Columns.Add("営業担当者姓", typeof(String));
             clientInfo.Columns.Add("営業担当者名", typeof(String));
-
+            //GridView用のDataTableへデータを追加
             for (int i = 0; i < dset.Tables["client"].Rows.Count; i++)
             {
+                //GridView一行分の作成
                 DataRow datarow = clientInfo.NewRow();
-                datarow["顧客ID"] = dset.Tables["client"].Rows[i]["id"].ToString();
-                datarow["正式名称"] = dset.Tables["client"].Rows[i]["formal_name"].ToString();
-                datarow["正式名称カナ"] = dset.Tables["client"].Rows[i]["formal_name_read"].ToString();
-                datarow["略称"] = dset.Tables["client"].Rows[i]["abbreviation"].ToString();
-                datarow["略称読み"] = dset.Tables["client"].Rows[i]["abbreviation"].ToString();
-                datarow["郵便番号"] = dset.Tables["client"].Rows[i]["postal_code"].ToString();
-                datarow["都道府県"] = dset.Tables["client"].Rows[i]["prefectures"].ToString();
-                datarow["市町村以下"] = dset.Tables["client"].Rows[i]["municipality"].ToString();
-                datarow["取引先部署"] = dset.Tables["client"].Rows[i]["client_division"].ToString();
-                datarow["取引先担当者"] = dset.Tables["client"].Rows[i]["client_rep"].ToString();
-                datarow["電話番号"] = dset.Tables["client"].Rows[i]["phone_number"].ToString();
-                datarow["ファックス"] = dset.Tables["client"].Rows[i]["fax"].ToString();
-                datarow["微細情報"] = dset.Tables["client"].Rows[i]["fine_info"].ToString();
-                datarow["営業担当者姓"] = dset.Tables["client"].Rows[i]["family_name"].ToString();
-                datarow["営業担当者名"] = dset.Tables["client"].Rows[i]["first_name"].ToString();
+                //datarow[表示カラム名] ～ [行][取得カラム名]
+                datarow["顧客ID"] = client.Rows[i]["id"].ToString();
+                datarow["正式名称"] = client.Rows[i]["formal_name"].ToString();
+                datarow["正式名称カナ"] = client.Rows[i]["formal_name_read"].ToString();
+                datarow["略称"] = client.Rows[i]["abbreviation"].ToString();
+                datarow["略称読み"] = client.Rows[i]["abbreviation"].ToString();
+                datarow["郵便番号"] = client.Rows[i]["postal_code"].ToString();
+                datarow["都道府県"] = client.Rows[i]["prefectures"].ToString();
+                datarow["市町村以下"] = client.Rows[i]["municipality"].ToString();
+                datarow["取引先部署"] = client.Rows[i]["client_division"].ToString();
+                datarow["取引先担当者"] = client.Rows[i]["client_rep"].ToString();
+                datarow["電話番号"] = client.Rows[i]["phone_number"].ToString();
+                datarow["ファックス"] = client.Rows[i]["fax"].ToString();
+                datarow["微細情報"] = client.Rows[i]["fine_info"].ToString();
+                datarow["営業担当者姓"] = client.Rows[i]["family_name"].ToString();
+                datarow["営業担当者名"] = client.Rows[i]["first_name"].ToString();
+                //行をDataTableに追加
                 clientInfo.Rows.Add(datarow);
             }
+            //GridViewに適用
             clientList.DataSource = clientInfo;
             con.Close();
         }
@@ -172,8 +183,10 @@ namespace sugukuru.Orders
         {
             foreach (DataGridViewRow r in clientList.SelectedRows)
             {
-                customer.setDataRow(clientInfo.Rows[r.Index]);
-                customer = this.customer;
+                //親フォームの判定フラグのtrue
+                SelectFlg = true;
+                //返り値用のDataRowをセットする
+                customer.setDataRow(client.Rows[r.Index]);
                 this.Close();
             }
         }

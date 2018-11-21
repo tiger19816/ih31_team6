@@ -75,7 +75,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tblCustomer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -564,21 +564,22 @@
             this.radioButton4.Text = "OR検索";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btSearch
             // 
-            this.button2.Location = new System.Drawing.Point(940, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 131;
-            this.button2.Text = "検索";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btSearch.Location = new System.Drawing.Point(940, 118);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(75, 23);
+            this.btSearch.TabIndex = 131;
+            this.btSearch.Text = "検索";
+            this.btSearch.UseVisualStyleBackColor = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // RepetitionClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btSearch);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label9);
@@ -674,6 +675,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btSearch;
     }
 }
