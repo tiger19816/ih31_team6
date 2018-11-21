@@ -164,6 +164,31 @@ INSERT INTO `client` (`id`, `formal_name`, `formal_name_read`, `abbreviation`, `
 -- --------------------------------------------------------
 
 --
+-- テーブルの構造 `document`
+--
+
+CREATE TABLE `document` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL COMMENT '書類名',
+  `category` int(11) NOT NULL COMMENT '必要書類(0)登録ナンバー付(1)抹消済(2)'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='書類';
+
+--
+-- テーブルのデータのダンプ `document`
+--
+
+INSERT INTO `document` (`id`, `name`, `category`) VALUES
+(1, 'オークション出品票', 0),
+(2, '検査証', 1),
+(3, '自賠責保険証書', 1),
+(4, '譲渡証明', 1),
+(5, '印鑑証明', 1),
+(6, '委任状', 1),
+(7, '抹消証明', 2);
+
+-- --------------------------------------------------------
+
+--
 -- テーブルの構造 `employee`
 --
 
@@ -422,6 +447,12 @@ ALTER TABLE `client`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `document`
+--
+ALTER TABLE `document`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
@@ -490,6 +521,12 @@ ALTER TABLE `unbilled_data`
 --
 ALTER TABLE `auction_hall`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'オークション会場ID', AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `document`
+--
+ALTER TABLE `document`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `transportation_vendor`
