@@ -35,10 +35,17 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.lbClientName = new System.Windows.Forms.Label();
+            this.lbClientNameRead = new System.Windows.Forms.Label();
+            this.lbPostalCode = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.lbPhoneNumber = new System.Windows.Forms.Label();
+            this.lbFax = new System.Windows.Forms.Label();
+            this.lbClientDivision = new System.Windows.Forms.Label();
+            this.lbClientRep = new System.Windows.Forms.Label();
             this.btOrderChange = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -46,26 +53,37 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbOrderReceiveRep = new System.Windows.Forms.Label();
+            this.lbOrderReceiveDate = new System.Windows.Forms.Label();
+            this.lbOrderRep = new System.Windows.Forms.Label();
+            this.lbOrderType = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lbOrderId = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbCarModelYear = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.lbCarClassification = new System.Windows.Forms.Label();
+            this.lbCarModel = new System.Windows.Forms.Label();
+            this.lbCarColor = new System.Windows.Forms.Label();
+            this.lbCarMileage = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.lbBudget = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbUpdateDate = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+            this.lbUpdateRep = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label29 = new System.Windows.Forms.Label();
+            this.lbFineInfo = new System.Windows.Forms.Label();
             this.tblCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -96,10 +114,17 @@
             this.tblCustomer.Controls.Add(this.label13, 0, 4);
             this.tblCustomer.Controls.Add(this.label12, 0, 3);
             this.tblCustomer.Controls.Add(this.label11, 0, 2);
-            this.tblCustomer.Controls.Add(this.label15, 1, 0);
             this.tblCustomer.Controls.Add(this.label16, 0, 1);
             this.tblCustomer.Controls.Add(this.label17, 0, 6);
             this.tblCustomer.Controls.Add(this.label18, 0, 7);
+            this.tblCustomer.Controls.Add(this.lbClientName, 1, 0);
+            this.tblCustomer.Controls.Add(this.lbClientNameRead, 1, 1);
+            this.tblCustomer.Controls.Add(this.lbPostalCode, 1, 2);
+            this.tblCustomer.Controls.Add(this.lbAddress, 1, 3);
+            this.tblCustomer.Controls.Add(this.lbPhoneNumber, 1, 4);
+            this.tblCustomer.Controls.Add(this.lbFax, 1, 5);
+            this.tblCustomer.Controls.Add(this.lbClientDivision, 1, 6);
+            this.tblCustomer.Controls.Add(this.lbClientRep, 1, 7);
             this.tblCustomer.Location = new System.Drawing.Point(26, 144);
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.RowCount = 8;
@@ -111,6 +136,7 @@
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblCustomer.Size = new System.Drawing.Size(379, 268);
             this.tblCustomer.TabIndex = 32;
             // 
@@ -169,15 +195,6 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "所在地〒";
             // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(117, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 16);
-            this.label15.TabIndex = 5;
-            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -210,6 +227,86 @@
             this.label18.Size = new System.Drawing.Size(80, 16);
             this.label18.TabIndex = 8;
             this.label18.Text = "取引先担当者";
+            // 
+            // lbClientName
+            // 
+            this.lbClientName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientName.AutoSize = true;
+            this.lbClientName.Location = new System.Drawing.Point(117, 9);
+            this.lbClientName.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbClientName.Name = "lbClientName";
+            this.lbClientName.Size = new System.Drawing.Size(0, 16);
+            this.lbClientName.TabIndex = 43;
+            // 
+            // lbClientNameRead
+            // 
+            this.lbClientNameRead.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientNameRead.AutoSize = true;
+            this.lbClientNameRead.Location = new System.Drawing.Point(117, 42);
+            this.lbClientNameRead.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbClientNameRead.Name = "lbClientNameRead";
+            this.lbClientNameRead.Size = new System.Drawing.Size(0, 16);
+            this.lbClientNameRead.TabIndex = 44;
+            // 
+            // lbPostalCode
+            // 
+            this.lbPostalCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPostalCode.AutoSize = true;
+            this.lbPostalCode.Location = new System.Drawing.Point(117, 75);
+            this.lbPostalCode.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbPostalCode.Name = "lbPostalCode";
+            this.lbPostalCode.Size = new System.Drawing.Size(0, 16);
+            this.lbPostalCode.TabIndex = 45;
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.Location = new System.Drawing.Point(117, 108);
+            this.lbAddress.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(0, 16);
+            this.lbAddress.TabIndex = 46;
+            // 
+            // lbPhoneNumber
+            // 
+            this.lbPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPhoneNumber.AutoSize = true;
+            this.lbPhoneNumber.Location = new System.Drawing.Point(117, 141);
+            this.lbPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbPhoneNumber.Name = "lbPhoneNumber";
+            this.lbPhoneNumber.Size = new System.Drawing.Size(0, 16);
+            this.lbPhoneNumber.TabIndex = 47;
+            // 
+            // lbFax
+            // 
+            this.lbFax.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbFax.AutoSize = true;
+            this.lbFax.Location = new System.Drawing.Point(117, 174);
+            this.lbFax.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbFax.Name = "lbFax";
+            this.lbFax.Size = new System.Drawing.Size(0, 16);
+            this.lbFax.TabIndex = 48;
+            // 
+            // lbClientDivision
+            // 
+            this.lbClientDivision.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientDivision.AutoSize = true;
+            this.lbClientDivision.Location = new System.Drawing.Point(117, 207);
+            this.lbClientDivision.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbClientDivision.Name = "lbClientDivision";
+            this.lbClientDivision.Size = new System.Drawing.Size(0, 16);
+            this.lbClientDivision.TabIndex = 49;
+            // 
+            // lbClientRep
+            // 
+            this.lbClientRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientRep.AutoSize = true;
+            this.lbClientRep.Location = new System.Drawing.Point(117, 241);
+            this.lbClientRep.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbClientRep.Name = "lbClientRep";
+            this.lbClientRep.Size = new System.Drawing.Size(0, 16);
+            this.lbClientRep.TabIndex = 50;
             // 
             // btOrderChange
             // 
@@ -270,6 +367,9 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 10;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -281,46 +381,81 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
+            this.tableLayoutPanel1.Controls.Add(this.lbOrderReceiveRep, 9, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbOrderReceiveDate, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbOrderRep, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbOrderType, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label25, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbOrderId, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 52);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1078, 32);
             this.tableLayoutPanel1.TabIndex = 39;
+            // 
+            // lbOrderReceiveRep
+            // 
+            this.lbOrderReceiveRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbOrderReceiveRep.AutoSize = true;
+            this.lbOrderReceiveRep.Location = new System.Drawing.Point(953, 12);
+            this.lbOrderReceiveRep.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbOrderReceiveRep.Name = "lbOrderReceiveRep";
+            this.lbOrderReceiveRep.Size = new System.Drawing.Size(0, 16);
+            this.lbOrderReceiveRep.TabIndex = 46;
+            // 
+            // lbOrderReceiveDate
+            // 
+            this.lbOrderReceiveDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbOrderReceiveDate.AutoSize = true;
+            this.lbOrderReceiveDate.Location = new System.Drawing.Point(741, 12);
+            this.lbOrderReceiveDate.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbOrderReceiveDate.Name = "lbOrderReceiveDate";
+            this.lbOrderReceiveDate.Size = new System.Drawing.Size(0, 16);
+            this.lbOrderReceiveDate.TabIndex = 45;
+            // 
+            // lbOrderRep
+            // 
+            this.lbOrderRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbOrderRep.AutoSize = true;
+            this.lbOrderRep.Location = new System.Drawing.Point(529, 12);
+            this.lbOrderRep.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbOrderRep.Name = "lbOrderRep";
+            this.lbOrderRep.Size = new System.Drawing.Size(0, 16);
+            this.lbOrderRep.TabIndex = 44;
+            // 
+            // lbOrderType
+            // 
+            this.lbOrderType.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbOrderType.AutoSize = true;
+            this.lbOrderType.Location = new System.Drawing.Point(317, 12);
+            this.lbOrderType.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbOrderType.Name = "lbOrderType";
+            this.lbOrderType.Size = new System.Drawing.Size(0, 16);
+            this.lbOrderType.TabIndex = 43;
             // 
             // label25
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(4, 11);
+            this.label25.Location = new System.Drawing.Point(4, 12);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(56, 16);
             this.label25.TabIndex = 41;
             this.label25.Text = "受注番号";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(105, 11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 16);
-            this.label10.TabIndex = 5;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(852, 11);
+            this.label8.Location = new System.Drawing.Point(852, 12);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 16);
             this.label8.TabIndex = 40;
@@ -331,7 +466,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(640, 11);
+            this.label7.Location = new System.Drawing.Point(640, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 16);
             this.label7.TabIndex = 40;
@@ -342,7 +477,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(428, 11);
+            this.label6.Location = new System.Drawing.Point(428, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 6;
@@ -353,11 +488,21 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(216, 11);
+            this.label5.Location = new System.Drawing.Point(216, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 0;
             this.label5.Text = "受注種別";
+            // 
+            // lbOrderId
+            // 
+            this.lbOrderId.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbOrderId.AutoSize = true;
+            this.lbOrderId.Location = new System.Drawing.Point(105, 12);
+            this.lbOrderId.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbOrderId.Name = "lbOrderId";
+            this.lbOrderId.Size = new System.Drawing.Size(0, 16);
+            this.lbOrderId.TabIndex = 42;
             // 
             // tableLayoutPanel2
             // 
@@ -367,13 +512,18 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.Controls.Add(this.lbCarModelYear, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label22, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label23, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label24, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label21, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label20, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label19, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbCarClassification, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbCarModel, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbCarColor, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbCarMileage, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label19, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbBudget, 2, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(411, 144);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
@@ -384,6 +534,16 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(821, 101);
             this.tableLayoutPanel2.TabIndex = 40;
+            // 
+            // lbCarModelYear
+            // 
+            this.lbCarModelYear.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCarModelYear.AutoSize = true;
+            this.lbCarModelYear.Location = new System.Drawing.Point(168, 75);
+            this.lbCarModelYear.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbCarModelYear.Name = "lbCarModelYear";
+            this.lbCarModelYear.Size = new System.Drawing.Size(0, 16);
+            this.lbCarModelYear.TabIndex = 47;
             // 
             // label9
             // 
@@ -406,15 +566,6 @@
             this.label22.Size = new System.Drawing.Size(32, 16);
             this.label22.TabIndex = 1;
             this.label22.Text = "年式";
-            // 
-            // label23
-            // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(168, 9);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(0, 16);
-            this.label23.TabIndex = 5;
             // 
             // label24
             // 
@@ -449,6 +600,46 @@
             this.label20.TabIndex = 3;
             this.label20.Text = "走行距離";
             // 
+            // lbCarClassification
+            // 
+            this.lbCarClassification.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCarClassification.AutoSize = true;
+            this.lbCarClassification.Location = new System.Drawing.Point(168, 42);
+            this.lbCarClassification.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbCarClassification.Name = "lbCarClassification";
+            this.lbCarClassification.Size = new System.Drawing.Size(0, 16);
+            this.lbCarClassification.TabIndex = 44;
+            // 
+            // lbCarModel
+            // 
+            this.lbCarModel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCarModel.AutoSize = true;
+            this.lbCarModel.Location = new System.Drawing.Point(168, 9);
+            this.lbCarModel.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbCarModel.Name = "lbCarModel";
+            this.lbCarModel.Size = new System.Drawing.Size(0, 16);
+            this.lbCarModel.TabIndex = 43;
+            // 
+            // lbCarColor
+            // 
+            this.lbCarColor.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCarColor.AutoSize = true;
+            this.lbCarColor.Location = new System.Drawing.Point(577, 9);
+            this.lbCarColor.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbCarColor.Name = "lbCarColor";
+            this.lbCarColor.Size = new System.Drawing.Size(0, 16);
+            this.lbCarColor.TabIndex = 46;
+            // 
+            // lbCarMileage
+            // 
+            this.lbCarMileage.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCarMileage.AutoSize = true;
+            this.lbCarMileage.Location = new System.Drawing.Point(577, 42);
+            this.lbCarMileage.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbCarMileage.Name = "lbCarMileage";
+            this.lbCarMileage.Size = new System.Drawing.Size(0, 16);
+            this.lbCarMileage.TabIndex = 45;
+            // 
             // label19
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -460,60 +651,83 @@
             this.label19.TabIndex = 4;
             this.label19.Text = "予算";
             // 
+            // lbBudget
+            // 
+            this.lbBudget.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbBudget.AutoSize = true;
+            this.lbBudget.Location = new System.Drawing.Point(577, 75);
+            this.lbBudget.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbBudget.Name = "lbBudget";
+            this.lbBudget.Size = new System.Drawing.Size(0, 16);
+            this.lbBudget.TabIndex = 48;
+            // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 4;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.lbUpdateDate, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label26, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label27, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label31, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbUpdateRep, 3, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(26, 90);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(427, 32);
             this.tableLayoutPanel3.TabIndex = 41;
+            // 
+            // lbUpdateDate
+            // 
+            this.lbUpdateDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbUpdateDate.AutoSize = true;
+            this.lbUpdateDate.Location = new System.Drawing.Point(105, 12);
+            this.lbUpdateDate.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbUpdateDate.Name = "lbUpdateDate";
+            this.lbUpdateDate.Size = new System.Drawing.Size(0, 16);
+            this.lbUpdateDate.TabIndex = 43;
             // 
             // label26
             // 
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Location = new System.Drawing.Point(4, 11);
+            this.label26.Location = new System.Drawing.Point(4, 12);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(80, 16);
             this.label26.TabIndex = 41;
             this.label26.Text = "最終変更日付";
-            // 
-            // label27
-            // 
-            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(105, 11);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(0, 16);
-            this.label27.TabIndex = 5;
             // 
             // label31
             // 
             this.label31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Location = new System.Drawing.Point(216, 11);
+            this.label31.Location = new System.Drawing.Point(216, 12);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(92, 16);
             this.label31.TabIndex = 0;
             this.label31.Text = "最終変更担当者";
+            // 
+            // lbUpdateRep
+            // 
+            this.lbUpdateRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbUpdateRep.AutoSize = true;
+            this.lbUpdateRep.Location = new System.Drawing.Point(317, 12);
+            this.lbUpdateRep.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbUpdateRep.Name = "lbUpdateRep";
+            this.lbUpdateRep.Size = new System.Drawing.Size(0, 16);
+            this.lbUpdateRep.TabIndex = 44;
             // 
             // tableLayoutPanel4
             // 
@@ -522,6 +736,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Controls.Add(this.label29, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbFineInfo, 0, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(411, 251);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
@@ -540,6 +755,15 @@
             this.label29.Size = new System.Drawing.Size(56, 16);
             this.label29.TabIndex = 0;
             this.label29.Text = "細微情報";
+            // 
+            // lbFineInfo
+            // 
+            this.lbFineInfo.AutoSize = true;
+            this.lbFineInfo.Location = new System.Drawing.Point(4, 34);
+            this.lbFineInfo.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbFineInfo.Name = "lbFineInfo";
+            this.lbFineInfo.Size = new System.Drawing.Size(0, 16);
+            this.lbFineInfo.TabIndex = 43;
             // 
             // OrderDetailForm
             // 
@@ -598,7 +822,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -610,7 +833,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
@@ -620,14 +842,34 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lbOrderId;
+        private System.Windows.Forms.Label lbClientName;
+        private System.Windows.Forms.Label lbClientNameRead;
+        private System.Windows.Forms.Label lbPostalCode;
+        private System.Windows.Forms.Label lbAddress;
+        private System.Windows.Forms.Label lbPhoneNumber;
+        private System.Windows.Forms.Label lbFax;
+        private System.Windows.Forms.Label lbClientDivision;
+        private System.Windows.Forms.Label lbClientRep;
+        private System.Windows.Forms.Label lbOrderReceiveRep;
+        private System.Windows.Forms.Label lbOrderReceiveDate;
+        private System.Windows.Forms.Label lbOrderRep;
+        private System.Windows.Forms.Label lbOrderType;
+        private System.Windows.Forms.Label lbCarModelYear;
+        private System.Windows.Forms.Label lbCarClassification;
+        private System.Windows.Forms.Label lbCarModel;
+        private System.Windows.Forms.Label lbCarColor;
+        private System.Windows.Forms.Label lbCarMileage;
+        private System.Windows.Forms.Label lbBudget;
+        private System.Windows.Forms.Label lbFineInfo;
+        private System.Windows.Forms.Label lbUpdateDate;
+        private System.Windows.Forms.Label lbUpdateRep;
     }
 }

@@ -45,6 +45,25 @@ namespace sugukuru.Utility
 
             return chainRow;
         }
+        //社員IDに紐づいている顧客情報の取得(DataRow)
+        public static DataRow ChainEmployeeId(String id)
+        {
+            String conStr = ConfigurationManager.AppSettings["DbConKey"];
+            //SQL
+            String SQL = "SELECT * " +
+                         "FROM employee " +
+                         "WHERE id = '" + id + "'";
+            MySqlConnection con = new MySqlConnection(conStr);
+            //顧客情報用のDataTable
+            DataTable chain = new DataTable();
+            con.Open();
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(SQL, con);
+            mAdp.Fill(chain);
+            //顧客情報(DataRow)
+            DataRow chainRow = chain.Rows[0];
+
+            return chainRow;
+        }
 
     }
 
