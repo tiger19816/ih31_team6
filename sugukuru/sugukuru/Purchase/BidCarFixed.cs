@@ -152,6 +152,7 @@ namespace sugukuru.Purchase
 
                     sqlBid();
 
+
                 }
                
             }
@@ -213,6 +214,45 @@ namespace sugukuru.Purchase
 
             //選択モードを行単位にする
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+
+
+        }
+
+
+        #endregion
+
+
+
+
+        //******************************************************************************************
+        #region 確定した落札車両を登録するSQL
+        //******************************************************************************************
+
+        public void sqlInsertUnbilled()
+        {
+            //sql文
+            String sql = "select orders.id,formal_name,CONCAT (family_name, ' ', first_name) AS employee_name,orders.create_at,auction_hall.auction_hall_name,listing_number,bid_price,bid_date " +
+"FROM client INNER JOIN orders ON client.id = orders.client_id " +
+"INNER JOIN employee ON orders.order_rep = employee.id " +
+"INNER JOIN bid ON bid.order_id = orders.id " +
+"INNER JOIN auction_hall ON bid.auction_hall_id = auction_hall.id " +
+"INNER JOIN successful_bid_vehicle ON successful_bid_vehicle.order_id = bid.order_id " +
+"where successful_bid_fixing = 0; ";
+
+            MySqlConnection con = new MySqlConnection(ConfigurationManager.AppSettings["DbConKey"]);
+
+            //SQL文を発行する
+            DataSet dset = new DataSet("list");
+
+            con.Open();
+
+
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+            mAdp.Fill(dset, "list");
+            con.Close();
+
+           
 
 
 

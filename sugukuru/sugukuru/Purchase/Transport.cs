@@ -76,8 +76,12 @@ namespace sugukuru.Purchase
                 //DataRowの中身をフォームの中身に追加していく
                 //DataRowからの引数はデータベースのカラム名そのまま
                 tbOrderId.Text = selectRow["id"].ToString();
-                lbCustomerId.Text = selectRow["client_id"].ToString();
-           
+                lbClientId.Text = selectRow["client_id"].ToString();
+
+                
+
+
+
                 //顧客IDから紐づいている顧客データの取得
                 DataRow chainRow = Utility.Customer.ChainCustomerId(selectRow["client_id"].ToString());
 
@@ -88,6 +92,18 @@ namespace sugukuru.Purchase
                     chainData += chainRow[i].ToString() + ", ";
                 }
                 MessageBox.Show(chainData);
+
+
+
+                lbName.Text = chainRow["formal_name"].ToString();
+                lbNameRead.Text = chainRow["formal_name_read"].ToString();
+                lbPostalCode.Text = chainRow["postal_code"].ToString();
+                lbAddress.Text = chainRow["address"].ToString();
+                lbPhoneNumber.Text = chainRow["phone_number"].ToString();
+                lbFax.Text = chainRow["fax"].ToString();
+                lbClientDivision.Text = chainRow["client_division"].ToString();
+                lbClientRep.Text = chainRow["client_rep"].ToString();
+                lbSalesRep.Text = chainRow["family_name"].ToString() + " " + chainRow["first_name"].ToString();
             }
         }
     }
