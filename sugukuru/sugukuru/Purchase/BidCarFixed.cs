@@ -152,7 +152,7 @@ namespace sugukuru.Purchase
 
                     sqlBid();
 
-
+                    sqlInsertUnbilled(id);
                 }
                
             }
@@ -215,7 +215,7 @@ namespace sugukuru.Purchase
             //選択モードを行単位にする
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-
+            
 
         }
 
@@ -229,30 +229,57 @@ namespace sugukuru.Purchase
         #region 確定した落札車両を登録するSQL
         //******************************************************************************************
 
-        public void sqlInsertUnbilled()
+        public void sqlInsertUnbilled(String id)
         {
-            //sql文
-            String sql = "select orders.id,formal_name,CONCAT (family_name, ' ', first_name) AS employee_name,orders.create_at,auction_hall.auction_hall_name,listing_number,bid_price,bid_date " +
-"FROM client INNER JOIN orders ON client.id = orders.client_id " +
-"INNER JOIN employee ON orders.order_rep = employee.id " +
-"INNER JOIN bid ON bid.order_id = orders.id " +
-"INNER JOIN auction_hall ON bid.auction_hall_id = auction_hall.id " +
-"INNER JOIN successful_bid_vehicle ON successful_bid_vehicle.order_id = bid.order_id " +
-"where successful_bid_fixing = 0; ";
+            //受注 IDを保存
+            //String id = dataGridView1.SelectedCells[0].Value.ToString();
+
+            //検索する
+            String select = "SELECT `client_id`, `order_type`, orders.car_model,undercarriage_number, `car_classification`,successful_bid_vehicle_tax,contracted_successful_bid_quantity,vehicle_tax_equivalent,fee " +
+                "FROM sugukuru.orders INNER JOIN successful_bid_vehicle ON successful_bid_vehicle.order_id = orders.id " +
+                "WHERE id = " + id+";";
 
             MySqlConnection con = new MySqlConnection(ConfigurationManager.AppSettings["DbConKey"]);
-
             //SQL文を発行する
-            DataSet dset = new DataSet("list");
+            DataSet dset = new DataSet("sel");
 
             con.Open();
 
 
-            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
-            mAdp.Fill(dset, "list");
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(select, con);
+            mAdp.Fill(dset, "sel");
             con.Close();
 
-           
+            String customer_id = dset.Tables["sel"].Rows[0]["client_id"].ToString();
+            String amount = dset.Tables["sel"].Rows[0]["car_model"].ToString() +"-"+ dset.Tables["sel"].Rows[0]["undercarriage_number"].ToString() + " " + dset.Tables["sel"].Rows[0]["car_classification"].ToString();
+
+            String p1 = dset.Tables["sel"].Rows[0]["successful_bid_vehicle_tax"].ToString();
+            String p2 = dset.Tables["sel"].Rows[0]["contracted_successful_bid_quantity"].ToString();
+            String p3 = dset.Tables["sel"].Rows[0]["vehicle_tax_equivalent"].ToString();
+            String p4 = dset.Tables["sel"].Rows[0]["fee"].ToString();
+
+            int price = int.Parse(p1) + int.Parse(p2) + int.Parse(p3) + int.Parse(p4);
+            String priceStr = price.ToString();
+
+            //sql文
+            String sql = "INSERT INTO unbilled_data(customer_id,order_id,recorded_date,billing_amount,quantity,unit,unit_price,comp_flag)" +
+                "VALUES("+ customer_id + ","+id+",now(),'"+amount+"',1,'台',"+priceStr+",0);";
+
+            Console.WriteLine(sql);
+
+           // MySqlConnection con = new MySqlConnection(ConfigurationManager.AppSettings["DbConKey"]);
+
+            //SQL文を発行する
+            dset = new DataSet("list");
+
+            con.Open();
+
+
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+
 
 
 
