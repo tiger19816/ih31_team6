@@ -19,12 +19,19 @@ namespace sugukuru.Orders
         public bool SelectFlg;
         string conStr;
         private Entites.Estimate estimate;
+        string clientId;
 
         public Estimate Estimate { get => estimate; set => estimate = value; }
 
         public EstimateAddForm()
         {
             InitializeComponent();
+        }
+
+        public EstimateAddForm(string _clientId)
+        {
+            InitializeComponent();
+            this.clientId = _clientId;
             SelectFlg = false;
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
             estimate = new Entites.Estimate();
@@ -37,7 +44,7 @@ namespace sugukuru.Orders
                 "INNER JOIN client c ON c.id = orders.client_id " +
                 "INNER JOIN employee e1 ON e1.id = orders.order_rep " +
                 "INNER JOIN employee e2 ON e2.id = orders.create_rep " +
-                "WHERE c.id = 18001 " +
+                "WHERE c.id = '"+clientId+"' " +
                 "AND cancel_flag = 0 ";          
             
             // カラムの設定
