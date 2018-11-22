@@ -28,17 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btFix = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvRepetition = new System.Windows.Forms.DataGridView();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
+            this.lbRep = new System.Windows.Forms.Label();
+            this.lbDivision = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbCustomerName = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.lbPostal = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbDif = new System.Windows.Forms.Label();
+            this.lbAmount = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbLimitDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -76,14 +84,6 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.btSearch = new System.Windows.Forms.Button();
-            this.lbPostal = new System.Windows.Forms.Label();
-            this.lbAddress = new System.Windows.Forms.Label();
-            this.lbDivision = new System.Windows.Forms.Label();
-            this.lbRep = new System.Windows.Forms.Label();
-            this.lbLimitDate = new System.Windows.Forms.Label();
-            this.lbPrice = new System.Windows.Forms.Label();
-            this.lbAmount = new System.Windows.Forms.Label();
-            this.lbDif = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepetition)).BeginInit();
             this.tblCustomer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -91,16 +91,17 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btFix
             // 
-            this.button1.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1040, 573);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 53);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "確定";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btFix.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btFix.Location = new System.Drawing.Point(1040, 573);
+            this.btFix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btFix.Name = "btFix";
+            this.btFix.Size = new System.Drawing.Size(117, 53);
+            this.btFix.TabIndex = 10;
+            this.btFix.Text = "確定";
+            this.btFix.UseVisualStyleBackColor = true;
+            this.btFix.Click += new System.EventHandler(this.btFix_Click);
             // 
             // label2
             // 
@@ -152,6 +153,33 @@
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblCustomer.Size = new System.Drawing.Size(379, 168);
             this.tblCustomer.TabIndex = 102;
+            // 
+            // lbRep
+            // 
+            this.lbRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbRep.AutoSize = true;
+            this.lbRep.Location = new System.Drawing.Point(117, 142);
+            this.lbRep.Name = "lbRep";
+            this.lbRep.Size = new System.Drawing.Size(0, 16);
+            this.lbRep.TabIndex = 133;
+            // 
+            // lbDivision
+            // 
+            this.lbDivision.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbDivision.AutoSize = true;
+            this.lbDivision.Location = new System.Drawing.Point(117, 108);
+            this.lbDivision.Name = "lbDivision";
+            this.lbDivision.Size = new System.Drawing.Size(0, 16);
+            this.lbDivision.TabIndex = 133;
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.Location = new System.Drawing.Point(117, 75);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(0, 16);
+            this.lbAddress.TabIndex = 133;
             // 
             // label3
             // 
@@ -217,6 +245,15 @@
             this.label18.TabIndex = 8;
             this.label18.Text = "取引先担当者";
             // 
+            // lbPostal
+            // 
+            this.lbPostal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPostal.AutoSize = true;
+            this.lbPostal.Location = new System.Drawing.Point(117, 42);
+            this.lbPostal.Name = "lbPostal";
+            this.lbPostal.Size = new System.Drawing.Size(0, 16);
+            this.lbPostal.TabIndex = 9;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
@@ -247,6 +284,42 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 168);
             this.tableLayoutPanel1.TabIndex = 103;
+            // 
+            // lbDif
+            // 
+            this.lbDif.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbDif.AutoSize = true;
+            this.lbDif.Location = new System.Drawing.Point(117, 142);
+            this.lbDif.Name = "lbDif";
+            this.lbDif.Size = new System.Drawing.Size(0, 16);
+            this.lbDif.TabIndex = 133;
+            // 
+            // lbAmount
+            // 
+            this.lbAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAmount.AutoSize = true;
+            this.lbAmount.Location = new System.Drawing.Point(117, 108);
+            this.lbAmount.Name = "lbAmount";
+            this.lbAmount.Size = new System.Drawing.Size(0, 16);
+            this.lbAmount.TabIndex = 133;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Location = new System.Drawing.Point(117, 75);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(0, 16);
+            this.lbPrice.TabIndex = 133;
+            // 
+            // lbLimitDate
+            // 
+            this.lbLimitDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbLimitDate.AutoSize = true;
+            this.lbLimitDate.Location = new System.Drawing.Point(117, 42);
+            this.lbLimitDate.Name = "lbLimitDate";
+            this.lbLimitDate.Size = new System.Drawing.Size(0, 16);
+            this.lbLimitDate.TabIndex = 133;
             // 
             // label1
             // 
@@ -591,78 +664,6 @@
             this.btSearch.UseVisualStyleBackColor = true;
             this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
-            // lbPostal
-            // 
-            this.lbPostal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbPostal.AutoSize = true;
-            this.lbPostal.Location = new System.Drawing.Point(117, 42);
-            this.lbPostal.Name = "lbPostal";
-            this.lbPostal.Size = new System.Drawing.Size(0, 16);
-            this.lbPostal.TabIndex = 9;
-            // 
-            // lbAddress
-            // 
-            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbAddress.AutoSize = true;
-            this.lbAddress.Location = new System.Drawing.Point(117, 75);
-            this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(0, 16);
-            this.lbAddress.TabIndex = 133;
-            // 
-            // lbDivision
-            // 
-            this.lbDivision.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbDivision.AutoSize = true;
-            this.lbDivision.Location = new System.Drawing.Point(117, 108);
-            this.lbDivision.Name = "lbDivision";
-            this.lbDivision.Size = new System.Drawing.Size(0, 16);
-            this.lbDivision.TabIndex = 133;
-            // 
-            // lbRep
-            // 
-            this.lbRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbRep.AutoSize = true;
-            this.lbRep.Location = new System.Drawing.Point(117, 142);
-            this.lbRep.Name = "lbRep";
-            this.lbRep.Size = new System.Drawing.Size(0, 16);
-            this.lbRep.TabIndex = 133;
-            // 
-            // lbLimitDate
-            // 
-            this.lbLimitDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbLimitDate.AutoSize = true;
-            this.lbLimitDate.Location = new System.Drawing.Point(117, 42);
-            this.lbLimitDate.Name = "lbLimitDate";
-            this.lbLimitDate.Size = new System.Drawing.Size(0, 16);
-            this.lbLimitDate.TabIndex = 133;
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Location = new System.Drawing.Point(117, 75);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(0, 16);
-            this.lbPrice.TabIndex = 133;
-            // 
-            // lbAmount
-            // 
-            this.lbAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbAmount.AutoSize = true;
-            this.lbAmount.Location = new System.Drawing.Point(117, 108);
-            this.lbAmount.Name = "lbAmount";
-            this.lbAmount.Size = new System.Drawing.Size(0, 16);
-            this.lbAmount.TabIndex = 133;
-            // 
-            // lbDif
-            // 
-            this.lbDif.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbDif.AutoSize = true;
-            this.lbDif.Location = new System.Drawing.Point(117, 142);
-            this.lbDif.Name = "lbDif";
-            this.lbDif.Size = new System.Drawing.Size(0, 16);
-            this.lbDif.TabIndex = 133;
-            // 
             // RepetitionClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -698,7 +699,7 @@
             this.Controls.Add(this.tblCustomer);
             this.Controls.Add(this.dgvRepetition);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btFix);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "RepetitionClaim";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepetition)).EndInit();
@@ -717,7 +718,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btFix;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvRepetition;
         private System.Windows.Forms.TableLayoutPanel tblCustomer;

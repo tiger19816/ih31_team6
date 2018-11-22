@@ -33,7 +33,7 @@ namespace sugukuru.ClaimCollection
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT bc.no AS b_no, c.formal_name AS name, c.postal_code AS postal, CONCAT(c.prefectures, c.municipality) AS address, c.client_division AS division, c.client_rep AS rep, b.billing_date AS b_date, SUM(bd.quantity * bd.unit_price) AS price, bc.amount AS amount, bc.amount AS amount, (-(bc.amount - SUM(bd.quantity * bd.unit_price))) AS dif "
+            string sql = "SELECT bc.no AS b_no, c.id AS c_id, c.formal_name AS name, c.postal_code AS postal, CONCAT(c.prefectures, c.municipality) AS address, c.client_division AS division, c.client_rep AS rep, b.billing_date AS b_date, SUM(bd.quantity * bd.unit_price) AS price, bc.amount AS amount, bc.amount AS amount, (-(bc.amount - SUM(bd.quantity * bd.unit_price))) AS dif "
                     + "FROM billing_clearing bc "
                     + "INNER JOIN bill b ON bc.no = b.invoice_number "
                     + "INNER JOIN client c ON b.customer_id = c.id "
@@ -76,6 +76,42 @@ namespace sugukuru.ClaimCollection
             lbPrice.Text = row["price"].ToString();
             lbAmount.Text = row["amount"].ToString();
             lbDif.Text = row["dif"].ToString();
+        }
+
+        private void btFix_Click(object sender, EventArgs e)
+        {
+            DataRowView aaa = (DataRowView)dgvRepetition.CurrentRow.DataBoundItem;
+            DataRow row = (DataRow)aaa.Row;
+
+            string sql = "INSERT INTO unbilled_data(customer_id, recorded_date, billing_amount, quantity, unit, unit_price) VALUES ("
+                + "'"+ row["c_id"].ToString() + "', "
+                + "now(), "
+                + "'" + (Convert.ToDateTime(row["b_date"])).Month + "月請求繰越分', "
+                + "1, "
+                + "'個', "
+                + row["dif"].ToString() + ")";
+
+            //DB接続オブジェクトを作成
+            MySqlConnection con = new MySqlConnection(this.conStr);
+
+            //DB接続
+            con.Open();
+
+            //SQL発行準備
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+
+            ///SQLの実行
+            cmd.ExecuteNonQuery();
+
+            lbCustomerName.Text = "";
+            lbPostal.Text = "";
+            lbAddress.Text = "";
+            lbDivision.Text = "";
+            lbRep.Text = "";
+            lbBillDate.Text = "";
+            lbPrice.Text = "";
+            lbAmount.Text = "";
+            lbDif.Text = "";
         }
     }
 }
