@@ -40,7 +40,7 @@ namespace sugukuru.Orders
             DataSet dset = new DataSet("order");
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();
-            String sql = "SELECT `id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info` FROM sugukuru.order where id = '" + tbSearchOrderId.Text+"'";
+            String sql = "SELECT `id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info` FROM sugukuru.orders where id = '" + tbSearchOrderId.Text+"'";
             MessageBox.Show(sql);
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
             mAdp.Fill(dset, "order");

@@ -128,7 +128,7 @@ namespace sugukuru.Purchase
         {
             //落札車両登録
 
-
+            BidCarList.sqlOrder();
 
             BidInfoInput.Visible = false;
             DeliverySlip.Visible = false;

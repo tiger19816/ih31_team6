@@ -21,11 +21,61 @@ namespace sugukuru.ClaimCollection
         {
             InitializeComponent();
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
+
+            // カラムを指定
+            dgvRepetition.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRepetition.RowHeadersVisible = false;
+            dgvRepetition.RowHeadersVisible = false;
+            dgvRepetition.AllowUserToAddRows = false;
+            dgvRepetition.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRepetition.ReadOnly = true;
         }
 
         private void btSearch_Click(object sender, EventArgs e)
         {
+            string sql = "SELECT bc.no AS b_no, c.formal_name AS name, c.postal_code AS postal, CONCAT(c.prefectures, c.municipality) AS address, c.client_division AS division, c.client_rep AS rep, b.billing_date AS b_date, SUM(bd.quantity * bd.unit_price) AS price, bc.amount AS amount, bc.amount AS amount, (-(bc.amount - SUM(bd.quantity * bd.unit_price))) AS dif "
+                    + "FROM billing_clearing bc "
+                    + "INNER JOIN bill b ON bc.no = b.invoice_number "
+                    + "INNER JOIN client c ON b.customer_id = c.id "
+                    + "INNER JOIN billing_detail bd ON b.invoice_number = bd.invoice_number "
+                    + "WHERE bc.clearing_flag = 2 "
+                    + "GROUP BY b_no";
 
+            Console.WriteLine(sql);
+
+            //DB接続オブジェクトを作成
+            MySqlConnection con = new MySqlConnection(this.conStr);
+
+            //DB接続
+            con.Open();
+
+            //抽象データ格納データセットを作成
+            DataSet dset = new DataSet("bill");
+
+            //データアダプターの生成
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+
+            ///データ抽出＆取得
+            mAdp.Fill(dset, "bill");
+
+            con.Close();
+
+            dgvRepetition.DataSource = dset.Tables["bill"];
+        }
+
+        private void dgvRepetition_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataRowView aaa = (DataRowView)dgvRepetition.CurrentRow.DataBoundItem;
+            DataRow row = (DataRow)aaa.Row;
+            lbCustomerName.Text = row["name"].ToString();
+            lbPostal.Text = row["postal"].ToString();
+            lbAddress.Text = row["address"].ToString();
+            lbDivision.Text = row["division"].ToString();
+            lbRep.Text = row["rep"].ToString();
+            lbBillDate.Text = row["b_date"].ToString();
+            lbPrice.Text = row["price"].ToString();
+            lbAmount.Text = row["amount"].ToString();
+            lbDif.Text = row["dif"].ToString();
         }
     }
 }
