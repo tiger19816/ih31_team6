@@ -68,7 +68,7 @@ namespace sugukuru.Orders
             orderInfo.Columns.Add("年式", typeof(String));
             orderInfo.Columns.Add("色", typeof(String));
             orderInfo.Columns.Add("走行距離", typeof(String));
-            orderInfo.Columns.Add("予算", typeof(String));
+            orderInfo.Columns.Add("予算", typeof(int));
             orderInfo.Columns.Add("微細情報", typeof(String));
 
             //GridView用のDataTableにDataを入れる
@@ -83,13 +83,17 @@ namespace sugukuru.Orders
                 datarow["車種"] = order.Rows[i]["car_classification"].ToString();
                 datarow["年式"] = order.Rows[i]["car_model_year"].ToString();
                 datarow["色"] = order.Rows[i]["car_color"].ToString();
-                datarow["走行距離"] = order.Rows[i]["car_mileage"].ToString();
-                datarow["予算"] = order.Rows[i]["budget"].ToString();
+                datarow["走行距離"] = String.Format("{0:#,0}", Int32.Parse(order.Rows[i]["car_mileage"].ToString())) + "km";
+                datarow["予算"] = Int32.Parse(order.Rows[i]["budget"].ToString());
                 datarow["微細情報"] = order.Rows[i]["fine_info"].ToString();
                 orderInfo.Rows.Add(datarow);
             }
             //GridViewへの反映
             gvOrderList.DataSource = orderInfo;
+            gvOrderList.Columns["走行距離"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvOrderList.Columns["予算"].DefaultCellStyle.Format = "c";
+            gvOrderList.Columns["予算"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvOrderList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             con.Close();
         }
     }

@@ -64,6 +64,25 @@ namespace sugukuru.Utility
 
             return chainRow;
         }
+        //受注IDに紐づいているオークション履歴情報の取得(DataRow)
+        public static DataTable ChainOrderId(String id)
+        {
+            String conStr = ConfigurationManager.AppSettings["DbConKey"];
+            //SQL
+            String SQL = "SELECT * " +
+                         "FROM bid " +
+                         "INNER JOIN auction_hall ON auction_hall_id = auction_hall.id " +
+                         "WHERE order_id = '" + id + "'";
+            MySqlConnection con = new MySqlConnection(conStr);
+            //顧客情報用のDataTable
+            DataTable chain = new DataTable();
+            con.Open();
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(SQL, con);
+            mAdp.Fill(chain);
+            //顧客情報(DataRow);
+
+            return chain;
+        }
 
     }
 
