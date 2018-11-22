@@ -837,7 +837,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(142, 40);
             this.button3.TabIndex = 44;
-            this.button3.Text = "落札詳細情報";
+            this.button3.Text = "落札車両情報";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // OrderDetailForm
