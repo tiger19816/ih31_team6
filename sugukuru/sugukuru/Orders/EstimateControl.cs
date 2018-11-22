@@ -72,7 +72,7 @@ namespace sugukuru.Orders
         // 追加を押したときの処理
         private void btEstimateAdd_Click(object sender, EventArgs e)
         {
-            EstimateAddForm OpenFM = new EstimateAddForm();
+            EstimateAddForm OpenFM = new EstimateAddForm(textBox1.Text);
             OpenFM.ShowDialog();
             OpenFM.Dispose();
             this.Show();
