@@ -9,14 +9,15 @@
     <script type="text/javascript">
       // このフィールドを変えるだけで書類が完成します。
       var data = {
-        "種別":"請求",
+        "種別":"見積",
         "作成日":"20181116",
         "番号":"12345678",
         "有効期限":"見積後２週間",
+        "支払期限":"2018/11/22",
         "宛先":{
-          "名称":"株式会社 皇居 御中",
+          "名称":"株式会社 皇居",
           "郵便番号":"100-8111",
-          "住所1":"東京都千代田区千代田１?１",
+          "住所1":"東京都千代田区千代田１−１",
           "住所2":"インペリアル御茶の水219",
           "TEL":"00-1111-2222",
           "FAX":"00-1111-3333",
@@ -36,13 +37,12 @@
           "担当者":"山田"
         },
         "明細":[
-          {"品名":"プリウス","数量":1,"単位":"個","単価":3000000},
+          {"品名":"ああああ","数量":1,"単位":"台","単価":10000},
         ],
         "備考":"なし"
       };
 
     </script>
-    
     <meta charset="UTF-8">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -54,7 +54,7 @@
 
         <!-- 宛先情報をhtmlにセットします。 -->
         <div class="col-md-7 col-xs-7">
-          <h2 id="to-name">株式会社 xx 御中</h2>
+          <h2 id="to-name">株式会社 xx </h2>
           〒<span id="to-zip">XXX-XXXXX</span><br/>
           <span id="to-address1">東京都XX区XXXX1-2-3</span><br/>
           <span id="to-address2">XXビル1F</span><br/>
@@ -62,9 +62,10 @@
           FAX:　<span id="to-fax">00-0000-0000</span><br/>
           担当部署:　<span id="to-division">○○</span>部<br/>
           担当者:　<span id="to-divisionrep">○○ ××</span>　様<br/><br>
-          支払条件:　<span id="to-payment-terms">xxxxxxxxxx</span>　<br/>
-          納期:　<span id="to-delivery-date">xxxxxxxxxx</span>　<br/>
-          有効期限: <span id="expiration-date">xxxxxxxxxx</span>　<br/>
+          <div class="payment-terms"> 支払条件:　<span id="to-payment-terms">xxxxxxxxxx</span>　<br/></div>
+          <div class="delivery-date"> 納期:　<span id="to-delivery-date">xxxxxxxxxx</span>　<br/></div>
+          <div class="expiration-date"> 有効期限:　<span id="expiration-date">xxxxxxxxxx</span>　<br/></div>
+          <div class="payment-deadline"> 支払期限:　<span id="payment-deadline">xxxxxxxxxx</span>　<br/></div>
         </div>
 
         <!-- 自社情報をhtmlにセットします。 -->
@@ -77,7 +78,7 @@
           <span id="from-address2">XXビル1F</span><br/>
           TEL:　<span id="from-tel">03-1234-5678</span><br/>
           FAX:　<span id="from-fax">00-0000-0000</span><br/>
-          担当者:　<span id="from-divisionrep">・宦・××</span> <br/>
+          担当者:　<span id="from-divisionrep">○○ ××</span> <br/>
         </div>
 
       </div>
@@ -129,7 +130,14 @@
       }
 
       $(document).ready(function() {
-        if (data["種別"] != "請求") { $(".bank").hide() ; }
+        if (data["種別"] != "請求") {
+          $(".bank").hide();
+          $(".payment-deadline").hide();
+        }else {
+          $(".payment-terms").hide();
+          $(".delivery-date").hide();
+          $(".expiration-date").hide();
+        }
 
         $("<title>" +　data["種別"] + data["番号"] + "</title>").prependTo("head");
 
@@ -149,8 +157,11 @@
         // 有効期限をidへセットします。
         $("#expiration-date").text(data["有効期限"]);
 
+        // 有効期限をidへセットします。
+        $("#payment-deadline").text(data["支払期限"]);
+
         // 宛先情報をidへセットします。
-        $("#to-name").text(data["宛先"]["名称"]);
+        $("#to-name").text(data["宛先"]["名称"]+ " 御中");
         $("#to-zip").text(data["宛先"]["郵便番号"]);
         $("#to-address1").text(data["宛先"]["住所1"]);
         $("#to-address2").text(data["宛先"]["住所2"]);
@@ -199,4 +210,5 @@
     </script>
   </body>
 </html>
+
 

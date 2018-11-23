@@ -69,7 +69,7 @@ namespace sugukuru.Orders
             dataGridView1.Columns["金額"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
-        // 追加を押したときの処理
+        // 追加を押したときの処理　
         private void btEstimateAdd_Click(object sender, EventArgs e)
         {
             EstimateAddForm OpenFM = new EstimateAddForm(textBox1.Text);
@@ -345,7 +345,7 @@ namespace sugukuru.Orders
             // 備考をセット
             page.Remarks = textBox3.Text;
             // 明細情報をセット
-            page.QuoteList = quoteDetailList;
+            page.DetailList = quoteDetailList;
 
             // HTML文字列取得
             String pageContent = page.TransformText();
@@ -365,7 +365,7 @@ namespace sugukuru.Orders
             var PDF = Renderer.RenderHtmlAsPdf(pageContent);
 
             // PATH&ファイル名指定
-            var OutputPath = "document\\見積書"+quoteID+".pdf";
+            var OutputPath = "書類\\見積書\\見積書"+quoteID+".pdf";
 
             // 作成したPDFファイルに名前付け
             PDF.SaveAs(OutputPath);

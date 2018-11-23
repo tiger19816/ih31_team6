@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using IronPdf;
 
 namespace sugukuru.ClaimCollection
 {
@@ -16,12 +17,15 @@ namespace sugukuru.ClaimCollection
     {
         //DB接続文字列の取得
         string conStr;
+        List<Entites.Estimate> bulkDetailList;
+        Entites.Estimate bulkEntity;
 
         public BulkClaim()
         {
             InitializeComponent();
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
             DateTime date = DateTime.Now;
+            bulkDetailList = new List<Entites.Estimate>();
             //年の設定
             int i = 2018;
             while (i <= date.Year)
@@ -98,6 +102,8 @@ namespace sugukuru.ClaimCollection
                         + "WHERE recorded_date LIKE '" + strYear + "-" + strMonth + "%' "
                         + "AND customer_id = '" + id + "'";
 
+                    Console.WriteLine(sql);
+
                     //抽象データ格納データセットを作成
                     DataSet dset = new DataSet("unbilled");
 
@@ -109,6 +115,8 @@ namespace sugukuru.ClaimCollection
 
                     for (int j = 0; j < dset.Tables["unbilled"].Rows.Count; j++)
                     {
+                        bulkEntity = new Entites.Estimate();
+
                         sql = "INSERT INTO billing_detail VALUES("
                             + "'" + no + "',"
                             + "'" + (j + 1) + "',"
@@ -131,9 +139,92 @@ namespace sugukuru.ClaimCollection
 
                         ///SQLの実行
                         cmd.ExecuteNonQuery();
+
+                        bulkEntity.OrderNumber = dset.Tables["unbilled"].Rows[j]["order_id"].ToString();
+                        bulkEntity.ProductName = dset.Tables["unbilled"].Rows[j]["billing_amount"].ToString();
+                        bulkEntity.Unit = dset.Tables["unbilled"].Rows[j]["unit"].ToString();
+                        bulkEntity.UnitPrice = dset.Tables["unbilled"].Rows[j]["unit_price"].ToString();
+                        bulkEntity.Quantity = dset.Tables["unbilled"].Rows[j]["quantity"].ToString();
+                        bulkEntity.TotalPrice = dgvBulk.Rows[i].Cells["price"].Value.ToString();
+
+                        bulkDetailList.Add(bulkEntity);
                     }
                     //DB切断
                     con.Close();
+
+                    // 見積内容をhtmlにセットしていく
+                    DocumentHtmlTemplate page = new DocumentHtmlTemplate();
+
+                    // 書類種別をセット
+                    page.DocumentType = "請求";
+                    // 書類作成日をセット
+                    page.DocumentCreationDate = DateTime.Parse(dtpBill.Text).ToString("yyyyMMdd");
+                    // 書類作成者をセット
+                    page.DocumentCreationReq = FormMaster.BaseFormMST.ID;
+                    // 書類番号をセット
+                    page.DocumentNumber = no;
+                    // 書類有効期限
+                    page.ExpirationDate = "";
+                    // 支払期限
+                    page.PaymentDeadline = "2018年11月31日";
+                    // 顧客名をセット
+                    page.ClientName = dgvBulk.Rows[i].Cells["formal_name"].Value.ToString();
+                    // 顧客郵便番号をセット
+                    page.ClientZip = dgvBulk.Rows[i].Cells["postal_code"].Value.ToString();
+                    // 顧客住所1をセット
+                    page.ClientAddress1 = dgvBulk.Rows[i].Cells["prefectures"].Value.ToString() + dgvBulk.Rows[i].Cells["municipality"].Value.ToString();
+                    // 顧客住所2をセット
+                    page.ClientAddress2 = "";
+                    // 顧客FAXをセット
+                    page.ClientFAX = String.Format("{0:(###)###-####}", Convert.ToInt64(dgvBulk.Rows[i].Cells["fax"].Value.ToString())); ;
+                    // 顧客TELをセット
+                    page.ClientTEL = String.Format("{0:(###)###-####}", Convert.ToInt64(dgvBulk.Rows[i].Cells["phone_number"].Value.ToString())); ;
+                    // 顧客部署をセット
+                    page.ClientDivision = dgvBulk.Rows[i].Cells["client_division"].Value.ToString();
+                    // 顧客担当者をセット
+                    page.ClientReq = dgvBulk.Rows[i].Cells["client_rep"].Value.ToString();
+                    // 支払い条件をセット
+                    page.ClientPaymentTerms = "";
+                    // 納期をセット
+                    page.ClientDeliveryDate = "";
+                    // 備考をセット
+                    page.Remarks = "";
+                    // 明細情報をセット
+                    page.DetailList = bulkDetailList;
+
+                    // HTML文字列取得
+                    String pageContent = page.TransformText();
+
+                    // PDFライブラリ呼び出し
+                    var Renderer = new IronPdf.HtmlToPdf();
+
+                    // JSを適用
+                    Renderer.PrintOptions.EnableJavaScript = true;
+                    Renderer.PrintOptions.RenderDelay = 500;
+
+                    // PDFサイズを設定
+                    Renderer.PrintOptions.PaperSize = PdfPrintOptions.PdfPaperSize.A4;
+                    Renderer.PrintOptions.PaperOrientation = PdfPrintOptions.PdfPaperOrientation.Landscape;
+
+                    // PDF作成
+                    var PDF = Renderer.RenderHtmlAsPdf(pageContent);
+
+                    // PATH&ファイル名指定
+                    var OutputPath = "書類\\請求書\\請求書" + no + ".pdf";
+
+                    // 作成したPDFファイルに名前付け
+                    PDF.SaveAs(OutputPath);
+
+                    //メッセージボックスを表示する
+                    DialogResult result = MessageBox.Show("請求内容をPDF化しました。",
+                        "質問",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    //何が選択されたか調べる
+                    if (result == DialogResult.OK)
+                    {
+                        //「はい」が選択された時               
+                    }
                 }
             }
             dataGridViewDisplay();
@@ -149,7 +240,7 @@ namespace sugukuru.ClaimCollection
             string strMonth = cbMonth.SelectedItem.ToString();
 
             //SQL文を作成する
-            string sql = "SELECT c.id, c.formal_name, d.price "
+            string sql = "SELECT c.id, c.formal_name, c.postal_code, c.prefectures, c.municipality, c.client_division, c.client_rep, c.phone_number, c.fax, d.price "
                 + "FROM client c INNER JOIN "
                 + "(SELECT customer_id, SUM(unit_price * quantity) AS price "
                 + "FROM unbilled_data "
@@ -158,6 +249,8 @@ namespace sugukuru.ClaimCollection
                 + "GROUP BY customer_id) d "
                 + "ON c.id = d.customer_id "
                 + "ORDER BY c.formal_name_read;";
+
+            Console.WriteLine(sql);
 
             //抽象データ格納データセットを作成
             DataSet dset = new DataSet("bulk");
@@ -176,6 +269,13 @@ namespace sugukuru.ClaimCollection
 
             //DB切断
             con.Close();
+
+            // カラムを指定
+            dgvBulk.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvBulk.RowHeadersVisible = false;
+            dgvBulk.RowHeadersVisible = false;
+            dgvBulk.AllowUserToAddRows = false;
+            dgvBulk.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dgvBulk.DataSource = dset.Tables["bulk"];
 
@@ -196,9 +296,30 @@ namespace sugukuru.ClaimCollection
             dgvBulk.Columns["price"].ReadOnly = true;
 
             dgvBulk.Columns["BooleanCol"].HeaderText = "";
+
             dgvBulk.Columns["id"].HeaderText = "顧客ID";
+
             dgvBulk.Columns["formal_name"].HeaderText = "会社名";
+
             dgvBulk.Columns["price"].HeaderText = "請求金額";
+
+            dgvBulk.Columns["postal_code"].HeaderText = "郵便番号";
+            dgvBulk.Columns["postal_code"].Visible = false;
+
+            dgvBulk.Columns["prefectures"].HeaderText = "都道府県";
+            dgvBulk.Columns["prefectures"].Visible = false;
+
+            dgvBulk.Columns["municipality"].HeaderText = "市町村以下";
+            dgvBulk.Columns["municipality"].Visible = false;
+
+            dgvBulk.Columns["client_division"].HeaderText = "取引先担当部署";
+            dgvBulk.Columns["client_rep"].HeaderText = "取引先担当者";
+
+            dgvBulk.Columns["phone_number"].HeaderText = "TEL";
+            dgvBulk.Columns["phone_number"].Visible = false;
+
+            dgvBulk.Columns["fax"].HeaderText = "FAX";
+            dgvBulk.Columns["fax"].Visible = false;
         }
         #endregion
     }
