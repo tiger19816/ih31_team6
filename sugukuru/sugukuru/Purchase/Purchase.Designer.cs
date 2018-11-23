@@ -53,7 +53,7 @@
             this.btBitCar.Margin = new System.Windows.Forms.Padding(2);
             this.btBitCar.Name = "btBitCar";
             this.btBitCar.Size = new System.Drawing.Size(94, 60);
-            this.btBitCar.TabIndex = 0;
+            this.btBitCar.TabIndex = 2;
             this.btBitCar.Text = "落札車両処理";
             this.btBitCar.UseVisualStyleBackColor = true;
             this.btBitCar.Click += new System.EventHandler(this.btBitCar_Click);
@@ -65,7 +65,7 @@
             this.btBitInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btBitInfo.Name = "btBitInfo";
             this.btBitInfo.Size = new System.Drawing.Size(94, 60);
-            this.btBitInfo.TabIndex = 1;
+            this.btBitInfo.TabIndex = 0;
             this.btBitInfo.Text = "入札情報登録";
             this.btBitInfo.UseVisualStyleBackColor = true;
             this.btBitInfo.Click += new System.EventHandler(this.btBitInfo_Click);
@@ -77,7 +77,7 @@
             this.btTransportInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btTransportInfo.Name = "btTransportInfo";
             this.btTransportInfo.Size = new System.Drawing.Size(94, 60);
-            this.btTransportInfo.TabIndex = 2;
+            this.btTransportInfo.TabIndex = 5;
             this.btTransportInfo.Text = "陸送情報登録";
             this.btTransportInfo.UseVisualStyleBackColor = true;
             this.btTransportInfo.Click += new System.EventHandler(this.btTransportInfo_Click);
@@ -89,7 +89,7 @@
             this.btDisposalCarPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btDisposalCarPurchase.Name = "btDisposalCarPurchase";
             this.btDisposalCarPurchase.Size = new System.Drawing.Size(94, 60);
-            this.btDisposalCarPurchase.TabIndex = 3;
+            this.btDisposalCarPurchase.TabIndex = 6;
             this.btDisposalCarPurchase.Text = "社内販売";
             this.btDisposalCarPurchase.UseVisualStyleBackColor = true;
             this.btDisposalCarPurchase.Click += new System.EventHandler(this.btDisposalCarPurchase_Click);
@@ -99,7 +99,7 @@
             this.btDeliverySlip.Location = new System.Drawing.Point(3, 67);
             this.btDeliverySlip.Name = "btDeliverySlip";
             this.btDeliverySlip.Size = new System.Drawing.Size(94, 60);
-            this.btDeliverySlip.TabIndex = 5;
+            this.btDeliverySlip.TabIndex = 4;
             this.btDeliverySlip.Text = "納品書発行";
             this.btDeliverySlip.UseVisualStyleBackColor = true;
             this.btDeliverySlip.Click += new System.EventHandler(this.btDeliverySlip_Click);
@@ -111,7 +111,7 @@
             this.btBidCarInput.Margin = new System.Windows.Forms.Padding(2);
             this.btBidCarInput.Name = "btBidCarInput";
             this.btBidCarInput.Size = new System.Drawing.Size(94, 60);
-            this.btBidCarInput.TabIndex = 9;
+            this.btBidCarInput.TabIndex = 3;
             this.btBidCarInput.Text = "落札車両登録";
             this.btBidCarInput.UseVisualStyleBackColor = true;
             this.btBidCarInput.Click += new System.EventHandler(this.btBidCarInput_Click);

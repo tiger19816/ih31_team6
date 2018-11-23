@@ -48,7 +48,7 @@ namespace sugukuru.Purchase
             panel1.Controls.Add(Discount);
             panel1.Controls.Add(BidCarProcessing);
             
-            BidInfoInput.Visible = false;
+            BidInfoInput.Visible = true;
             DeliverySlip.Visible = false;
             BidCarList.Visible = false;
             Transport.Visible = false;
