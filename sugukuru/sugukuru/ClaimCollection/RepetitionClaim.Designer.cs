@@ -53,9 +53,9 @@
             this.lbBillDate = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.gbClaim = new System.Windows.Forms.GroupBox();
+            this.rbAfter = new System.Windows.Forms.RadioButton();
+            this.rbDunning = new System.Windows.Forms.RadioButton();
             this.whiler = new System.Windows.Forms.Label();
             this.overDay = new System.Windows.Forms.Label();
             this.overMonth = new System.Windows.Forms.Label();
@@ -87,12 +87,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepetition)).BeginInit();
             this.tblCustomer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbClaim.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btFix
             // 
+            this.btFix.Enabled = false;
             this.btFix.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btFix.Location = new System.Drawing.Point(1040, 573);
             this.btFix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -385,38 +386,39 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "差額";
             // 
-            // groupBox1
+            // gbClaim
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(846, 448);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(224, 116);
-            this.groupBox1.TabIndex = 104;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "手続内容";
+            this.gbClaim.Controls.Add(this.rbAfter);
+            this.gbClaim.Controls.Add(this.rbDunning);
+            this.gbClaim.Enabled = false;
+            this.gbClaim.Location = new System.Drawing.Point(846, 448);
+            this.gbClaim.Name = "gbClaim";
+            this.gbClaim.Size = new System.Drawing.Size(224, 116);
+            this.gbClaim.TabIndex = 104;
+            this.gbClaim.TabStop = false;
+            this.gbClaim.Text = "手続内容";
             // 
-            // radioButton2
+            // rbAfter
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(24, 77);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(146, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "翌月の請求に繰り越す";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbAfter.AutoSize = true;
+            this.rbAfter.Location = new System.Drawing.Point(24, 77);
+            this.rbAfter.Name = "rbAfter";
+            this.rbAfter.Size = new System.Drawing.Size(146, 20);
+            this.rbAfter.TabIndex = 1;
+            this.rbAfter.Text = "翌月の請求に繰り越す";
+            this.rbAfter.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbDunning
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(24, 33);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(158, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "直ちに請求する（督促）";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbDunning.AutoSize = true;
+            this.rbDunning.Checked = true;
+            this.rbDunning.Location = new System.Drawing.Point(24, 33);
+            this.rbDunning.Name = "rbDunning";
+            this.rbDunning.Size = new System.Drawing.Size(158, 20);
+            this.rbDunning.TabIndex = 0;
+            this.rbDunning.TabStop = true;
+            this.rbDunning.Text = "直ちに請求する（督促）";
+            this.rbDunning.UseVisualStyleBackColor = true;
             // 
             // whiler
             // 
@@ -694,7 +696,7 @@
             this.Controls.Add(this.comboBoxUnderMonth);
             this.Controls.Add(this.comboBoxUnderYear);
             this.Controls.Add(this.searchDate);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbClaim);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tblCustomer);
             this.Controls.Add(this.dgvRepetition);
@@ -707,8 +709,8 @@
             this.tblCustomer.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbClaim.ResumeLayout(false);
+            this.gbClaim.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -735,9 +737,9 @@
         private System.Windows.Forms.Label lbBillDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox gbClaim;
+        private System.Windows.Forms.RadioButton rbAfter;
+        private System.Windows.Forms.RadioButton rbDunning;
         private System.Windows.Forms.Label whiler;
         private System.Windows.Forms.Label overDay;
         private System.Windows.Forms.Label overMonth;
