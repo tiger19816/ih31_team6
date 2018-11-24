@@ -65,6 +65,9 @@ namespace sugukuru.ClaimCollection
 
         private void dgvRepetition_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            btFix.Enabled = true;
+            gbClaim.Enabled = true;
+
             DataRowView aaa = (DataRowView)dgvRepetition.CurrentRow.DataBoundItem;
             DataRow row = (DataRow)aaa.Row;
             lbCustomerName.Text = row["name"].ToString();
@@ -80,38 +83,52 @@ namespace sugukuru.ClaimCollection
 
         private void btFix_Click(object sender, EventArgs e)
         {
-            DataRowView aaa = (DataRowView)dgvRepetition.CurrentRow.DataBoundItem;
-            DataRow row = (DataRow)aaa.Row;
+            if(rbDunning.Checked)
+            {
+                DunningClaimForm form = new DunningClaimForm();
+                form.ShowDialog();
+                form.Dispose();
+                this.Show();
+            }
+            else
+            {
+                DataRowView rowView = (DataRowView)dgvRepetition.CurrentRow.DataBoundItem;
+                DataRow row = (DataRow)rowView.Row;
 
-            string sql = "INSERT INTO unbilled_data(customer_id, recorded_date, billing_amount, quantity, unit, unit_price) VALUES ("
-                + "'"+ row["c_id"].ToString() + "', "
-                + "now(), "
-                + "'" + (Convert.ToDateTime(row["b_date"])).Month + "月請求繰越分', "
-                + "1, "
-                + "'個', "
-                + row["dif"].ToString() + ")";
+                string sql = "INSERT INTO unbilled_data(customer_id, recorded_date, billing_amount, quantity, unit, unit_price) VALUES ("
+                    + "'" + row["c_id"].ToString() + "', "
+                    + "now(), "
+                    + "'" + (Convert.ToDateTime(row["b_date"])).Month + "月請求繰越分', "
+                    + "1, "
+                    + "'個', "
+                    + row["dif"].ToString() + ")";
 
-            //DB接続オブジェクトを作成
-            MySqlConnection con = new MySqlConnection(this.conStr);
+                //DB接続オブジェクトを作成
+                MySqlConnection con = new MySqlConnection(this.conStr);
 
-            //DB接続
-            con.Open();
+                //DB接続
+                con.Open();
 
-            //SQL発行準備
-            MySqlCommand cmd = new MySqlCommand(sql, con);
+                //SQL発行準備
+                MySqlCommand cmd = new MySqlCommand(sql, con);
 
-            ///SQLの実行
-            cmd.ExecuteNonQuery();
+                ///SQLの実行
+                cmd.ExecuteNonQuery();
 
-            lbCustomerName.Text = "";
-            lbPostal.Text = "";
-            lbAddress.Text = "";
-            lbDivision.Text = "";
-            lbRep.Text = "";
-            lbBillDate.Text = "";
-            lbPrice.Text = "";
-            lbAmount.Text = "";
-            lbDif.Text = "";
+                lbCustomerName.Text = "";
+                lbPostal.Text = "";
+                lbAddress.Text = "";
+                lbDivision.Text = "";
+                lbRep.Text = "";
+                lbBillDate.Text = "";
+                lbPrice.Text = "";
+                lbAmount.Text = "";
+                lbDif.Text = "";
+
+
+                btFix.Enabled = false;
+                gbClaim.Enabled = false;
+            }
         }
     }
 }
