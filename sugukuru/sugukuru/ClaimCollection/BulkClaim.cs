@@ -25,7 +25,7 @@ namespace sugukuru.ClaimCollection
             InitializeComponent();
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
             DateTime date = DateTime.Now;
-            bulkDetailList = new List<Entites.Estimate>();
+           
             //年の設定
             int i = 2018;
             while (i <= date.Year)
@@ -65,6 +65,8 @@ namespace sugukuru.ClaimCollection
             {
                 if ("True".Equals(dgvBulk.Rows[i].Cells["BooleanCol"].Value.ToString()))
                 {
+                    bulkDetailList = new List<Entites.Estimate>();
+
                     string id = dgvBulk.Rows[i].Cells["id"].Value.ToString();
                     string date = dtpBill.Value.ToShortDateString();
                     
@@ -160,13 +162,13 @@ namespace sugukuru.ClaimCollection
                     // 書類作成日をセット
                     page.DocumentCreationDate = DateTime.Parse(dtpBill.Text).ToString("yyyyMMdd");
                     // 書類作成者をセット
-                    page.DocumentCreationReq = FormMaster.BaseFormMST.ID;
+                    page.DocumentCreationReq = FormMaster.BaseFormMST.NAME;
                     // 書類番号をセット
                     page.DocumentNumber = no;
                     // 書類有効期限
                     page.ExpirationDate = "";
                     // 支払期限
-                    page.PaymentDeadline = "2018年11月31日";
+                    page.PaymentDeadline = DateTime.Parse(dtpBill.Text).AddDays(14).ToString("yyyy年MM月dd日");
                     // 顧客名をセット
                     page.ClientName = dgvBulk.Rows[i].Cells["formal_name"].Value.ToString();
                     // 顧客郵便番号をセット
@@ -214,18 +216,18 @@ namespace sugukuru.ClaimCollection
 
                     // 作成したPDFファイルに名前付け
                     PDF.SaveAs(OutputPath);
-
-                    //メッセージボックスを表示する
-                    DialogResult result = MessageBox.Show("請求内容をPDF化しました。",
-                        "質問",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    //何が選択されたか調べる
-                    if (result == DialogResult.OK)
-                    {
-                        //「はい」が選択された時               
-                    }
                 }
+            }
+
+            //メッセージボックスを表示する
+            DialogResult result = MessageBox.Show("請求内容をPDF化しました。",
+                "質問",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            //何が選択されたか調べる
+            if (result == DialogResult.OK)
+            {
+                //「はい」が選択された時               
             }
             dataGridViewDisplay();
         }
