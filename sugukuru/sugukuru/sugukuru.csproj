@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaimCollection\AllocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\AllocationForm.Designer.cs">
+      <DependentUpon>AllocationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClaimCollection\DunningClaimForm.cs">
       <SubType>Form</SubType>
     </Compile>

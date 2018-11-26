@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btAllocation = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btFileOpen = new System.Windows.Forms.Button();
             this.tbFileName = new System.Windows.Forms.TextBox();
@@ -46,16 +46,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvReconciliation)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btAllocation
             // 
-            this.button1.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1040, 570);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 53);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "消込";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btAllocation.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btAllocation.Location = new System.Drawing.Point(1040, 570);
+            this.btAllocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btAllocation.Name = "btAllocation";
+            this.btAllocation.Size = new System.Drawing.Size(117, 53);
+            this.btAllocation.TabIndex = 4;
+            this.btAllocation.Text = "引き当て";
+            this.btAllocation.UseVisualStyleBackColor = true;
+            this.btAllocation.Click += new System.EventHandler(this.btAllocation_Click);
             // 
             // label1
             // 
@@ -198,7 +199,7 @@
             this.Controls.Add(this.tbFileName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btAllocation);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "BulkReconciliation";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReconciliation)).EndInit();
@@ -208,7 +209,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btAllocation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btFileOpen;
         private System.Windows.Forms.TextBox tbFileName;
