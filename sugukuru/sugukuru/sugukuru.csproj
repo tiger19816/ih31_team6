@@ -363,6 +363,9 @@
     <Compile Include="Utility\Customer.cs" />
     <Compile Include="Utility\ResponsibleList.cs" />
     <Compile Include="Utility\Tool.cs" />
+    <EmbeddedResource Include="ClaimCollection\AllocationForm.resx">
+      <DependentUpon>AllocationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClaimCollection\DunningClaimForm.resx">
       <DependentUpon>DunningClaimForm.cs</DependentUpon>
     </EmbeddedResource>

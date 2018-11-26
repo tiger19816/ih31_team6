@@ -51,5 +51,10 @@ namespace sugukuru.ClaimCollection
 
             dgvAllocation.DataSource = dset.Tables["bill"];
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

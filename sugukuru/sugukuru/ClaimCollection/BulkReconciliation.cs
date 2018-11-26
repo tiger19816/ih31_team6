@@ -153,7 +153,7 @@ namespace sugukuru.ClaimCollection
             for (int i = tbl.Count - 1; i >= 0; i--)
             {
                 Dictionary<string, string> d = tbl[i];
-                sql = "SELECT bc.no AS b_no, SUM(bd.quantity * bd.unit_price) AS price "
+                sql = "SELECT bc.no AS b_no, TRUNCATE(SUM(bd.quantity * bd.unit_price * 1.08), 0) AS price "
                     + "FROM billing_clearing bc "
                     + "INNER JOIN bill b ON bc.no = b.invoice_number "
                     + "INNER JOIN client c ON b.customer_id = c.id "
