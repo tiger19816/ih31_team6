@@ -130,7 +130,6 @@ namespace sugukuru.Orders
                 
             }
 
-
             gvAuctionLog.DataSource = auctionLog;
             gvAuctionLog.Columns["入札金額"].DefaultCellStyle.Format = "c";
             gvAuctionLog.Columns["入札金額"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
@@ -156,6 +155,26 @@ namespace sugukuru.Orders
             //OpenFM.ShowDialog();
             //OpenFM.Dispose();
             //this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataRow chainTrans = Utility.Customer.ChainTransportation(order.getDataRow()["id"].ToString());
+
+            Form OpenFM = new Transportation(chainTrans);
+            OpenFM.ShowDialog();
+            OpenFM.Dispose();
+            this.Show();
+        }
+
+        private void btCompleteOrderInfo_Click(object sender, EventArgs e)
+        {
+            DataRow chainComplete = Utility.Customer.ChainComleteOrder(order.getDataRow()["id"].ToString());
+
+            Form OpenFM = new OrderCompleteDetailForm(chainComplete);
+            OpenFM.ShowDialog();
+            OpenFM.Dispose();
+            this.Show();
         }
     }
 }

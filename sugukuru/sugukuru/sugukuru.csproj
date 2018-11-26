@@ -139,6 +139,12 @@
     <Compile Include="Orders\OrderChangeForm.Designer.cs">
       <DependentUpon>OrderChangeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders\OrderCompleteDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\OrderCompleteDetailForm.Designer.cs">
+      <DependentUpon>OrderCompleteDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Orders\OrderDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,12 @@
     </Compile>
     <Compile Include="ClaimCollection\RepetitionClaim.Designer.cs">
       <DependentUpon>RepetitionClaim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\Transportation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\Transportation.Designer.cs">
+      <DependentUpon>Transportation.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchase\BidCarFixed.cs">
       <SubType>UserControl</SubType>
@@ -387,6 +399,9 @@
     <EmbeddedResource Include="Orders\OrderChangeForm.resx">
       <DependentUpon>OrderChangeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Orders\OrderCompleteDetailForm.resx">
+      <DependentUpon>OrderCompleteDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Orders\OrderDetailForm.resx">
       <DependentUpon>OrderDetailForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -441,6 +456,9 @@
     <Compile Include="Purchase\Transport.Designer.cs">
       <DependentUpon>Transport.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Orders\Transportation.resx">
+      <DependentUpon>Transportation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\BidCarFixed.resx">
       <DependentUpon>BidCarFixed.cs</DependentUpon>
     </EmbeddedResource>

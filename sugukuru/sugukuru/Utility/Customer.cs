@@ -83,7 +83,44 @@ namespace sugukuru.Utility
 
             return chain;
         }
+        public static DataRow ChainTransportation(String id)
+        {
+            String conStr = ConfigurationManager.AppSettings["DbConKey"];
+            //SQL
+            String SQL = "SELECT * " +
+                         "FROM transportation " +
+                         "INNER JOIN transportation_vendor ON vendor_id = transportation_vendor.id " +
+                         "INNER JOIN employee ON responsible_id = employee.id " +
+                         "WHERE order_id = '" + id + "'";
+            MySqlConnection con = new MySqlConnection(conStr);
+            //顧客情報用のDataTable
+            DataTable chain = new DataTable();
+            con.Open();
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(SQL, con);
+            mAdp.Fill(chain);
+            //顧客情報(DataRow);
+            DataRow chainRow = chain.Rows[0];
 
+            return chainRow;
+        }
+        public static DataRow ChainComleteOrder(String id)
+        {
+            String conStr = ConfigurationManager.AppSettings["DbConKey"];
+            //SQL
+            String SQL = "SELECT * " +
+                         "FROM successful_bid_vehicle " +
+                         "WHERE order_id = '" + id + "'";
+            MySqlConnection con = new MySqlConnection(conStr);
+            //顧客情報用のDataTable
+            DataTable chain = new DataTable();
+            con.Open();
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(SQL, con);
+            mAdp.Fill(chain);
+            //顧客情報(DataRow);
+            DataRow chainRow = chain.Rows[0];
+
+            return chainRow;
+        }
     }
 
 }
