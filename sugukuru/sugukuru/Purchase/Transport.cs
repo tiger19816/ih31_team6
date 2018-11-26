@@ -91,7 +91,7 @@ namespace sugukuru.Purchase
                 {
                     chainData += chainRow[i].ToString() + ", ";
                 }
-                MessageBox.Show(chainData);
+                //MessageBox.Show(chainData);
 
 
 

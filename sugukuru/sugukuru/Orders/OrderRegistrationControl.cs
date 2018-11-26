@@ -142,7 +142,7 @@ namespace sugukuru.Orders
                 " VALUES ('" +id+"', '"+tbClientId.Text+"', '"+order_type+"', '"+tbCarModel.Text+"', '"+tbCarClass.Text+"', '"+tbCarYear.Text+"', '"+tbCarColor.Text+ "', '" + trans + "','" + tbCarMile.Text+"', '"+tbBudget.Text+"', '"+tbInfo.Text+"', '"+cbOrderRep.SelectedValue+ "', '" + date + "','" + cbCreateRep.SelectedValue+"','0');";
 
 
-           MessageBox.Show(sql);
+           //MessageBox.Show(sql);
 
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.ExecuteNonQuery();
