@@ -89,7 +89,27 @@ namespace sugukuru.Purchase
                 //DataRowの中身をフォームの中身に追加していく
                 //DataRowからの引数はデータベースのカラム名そのまま
                 tbOrderId.Text = selectRow["id"].ToString();
-                //lbCustomerId.Text = selectRow["client_id"].ToString();
+                lbCId.Text = selectRow["client_id"].ToString();
+                lbBuget.Text = selectRow["budget"].ToString();
+                lbClass.Text = selectRow["car_classification"].ToString();
+                lbColor.Text = selectRow["car_color"].ToString();
+                
+                lbInfo.Text = selectRow["fine_info"].ToString();
+                lbMile.Text = selectRow["car_mileage"].ToString();
+                lbModel.Text = selectRow["car_model"].ToString();
+                
+                String type = selectRow["order_type"].ToString();
+                if(type == "1")
+                {
+                    lbType.Text = "買注文";
+                }
+                else
+                {
+                    lbType.Text = "売注文";
+                }
+
+                
+                lbYear.Text = selectRow["car_model_year"].ToString();
 
                 //顧客IDから紐づいている顧客データの取得
                 DataRow chainRow = Utility.Customer.ChainCustomerId(selectRow["client_id"].ToString());
@@ -101,6 +121,10 @@ namespace sugukuru.Purchase
                     chainData += chainRow[i].ToString() + ", ";
                 }
                 MessageBox.Show(chainData);
+
+                lbCname.Text = chainRow["formal_name"].ToString();
+                lbCkana.Text = chainRow["formal_name_read"].ToString();
+                lbRep.Text = chainRow["client_rep"].ToString();
             }
         }
     }

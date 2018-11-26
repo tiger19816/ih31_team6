@@ -308,7 +308,7 @@
             this.tblCustomer.Controls.Add(this.lbClientDivision, 1, 6);
             this.tblCustomer.Controls.Add(this.lbClientRep, 1, 7);
             this.tblCustomer.Controls.Add(this.lbAddress, 1, 3);
-            this.tblCustomer.Location = new System.Drawing.Point(33, 185);
+            this.tblCustomer.Location = new System.Drawing.Point(30, 185);
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.RowCount = 9;
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
