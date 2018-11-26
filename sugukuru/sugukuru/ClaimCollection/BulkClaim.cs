@@ -244,7 +244,7 @@ namespace sugukuru.ClaimCollection
             //SQL文を作成する
             string sql = "SELECT c.id, c.formal_name, c.postal_code, c.prefectures, c.municipality, c.client_division, c.client_rep, c.phone_number, c.fax, d.price "
                 + "FROM client c INNER JOIN "
-                + "(SELECT customer_id, SUM(unit_price * quantity) AS price "
+                + "(SELECT customer_id, TRUNCATE(SUM(unit_price * quantity * 1.08), 0) AS price "
                 + "FROM unbilled_data "
                 + "WHERE recorded_date LIKE '" + strYear + "-" + strMonth + "%' "
                 + "AND comp_flag = 0 "

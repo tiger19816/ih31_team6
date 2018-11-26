@@ -146,11 +146,14 @@ namespace sugukuru.ClaimCollection
             //DB接続
             con.Open();
 
+            int tblReadCount = tbl.Count;
+            int reconciliationCount = 0;
+
             //消込処理
             for (int i = tbl.Count - 1; i >= 0; i--)
             {
                 Dictionary<string, string> d = tbl[i];
-                sql = "SELECT bc.no AS b_no, SUM(bd.quantity * bd.unit_price) AS price "
+                sql = "SELECT bc.no AS b_no, TRUNCATE(SUM(bd.quantity * bd.unit_price * 1.08), 0) AS price "
                     + "FROM billing_clearing bc "
                     + "INNER JOIN bill b ON bc.no = b.invoice_number "
                     + "INNER JOIN client c ON b.customer_id = c.id "
@@ -182,6 +185,7 @@ namespace sugukuru.ClaimCollection
                         ///SQLの実行
                         cmd.ExecuteNonQuery();
                         tbl.RemoveAt(i);
+                        reconciliationCount++;
                     }
                 }
             }
@@ -199,6 +203,16 @@ namespace sugukuru.ClaimCollection
                 row["金額"] = int.Parse(d["price"]);
                 table.Rows.Add(row);
             }
+
+            MessageBox.Show("読込件数："+ tblReadCount +"件\n消込件数：" + reconciliationCount + "件\n未処理件数：" + (tblReadCount - reconciliationCount) + "件");
+        }
+
+        private void btAllocation_Click(object sender, EventArgs e)
+        {
+            AllocationForm form = new AllocationForm();
+            form.ShowDialog();
+            form.Dispose();
+            this.Show();
         }
     }
 }

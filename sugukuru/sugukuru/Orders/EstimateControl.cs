@@ -21,7 +21,7 @@ namespace sugukuru.Orders
         List<Entites.Estimate> quoteDetailList;
         string clientFAX;
         string clientTEL;
-
+        bool creditCheck = false;
 
         public EstimateControl()
         {
@@ -218,6 +218,63 @@ namespace sugukuru.Orders
         // 印刷を押したときの処理
         private void button2_Click(object sender, EventArgs e)
         {
+            sql = "SELECT c.id AS c_no, TRUNCATE(c.monthly_trading_estimated * 1.5, 0) AS credit, IFNULL(TRUNCATE(SUM(bd.quantity * bd.unit_price * 1.08), 0) - SUM(bc.amount), 0) + IFNULL(TRUNCATE(SUM(u.quantity * u.unit_price * 1.08), 0), 0)  AS accounts_receivable "
+                + "FROM client c "
+                + "LEFT JOIN bill b ON  b.customer_id = c.id "
+                + "LEFT JOIN billing_clearing bc ON bc.no = b.invoice_number AND bc.clearing_flag <> 1 AND bc.clearing_flag <> 3 "
+                + "LEFT JOIN billing_detail bd ON b.invoice_number = bd.invoice_number "
+                + "LEFT JOIN unbilled_data u ON c.id = u.customer_id AND u.comp_flag = 0 "
+                + "WHERE c.id = '" + textBox1.Text  + "'";
+
+            // データを追加
+            //抽象データ格納データセットを作成
+            DataSet dset = new DataSet("credit");
+
+            //DB接続オブジェクトを作成
+            MySqlConnection con = new MySqlConnection(this.conStr);
+
+            //DB接続
+            con.Open();
+
+            //データアダプターの生成
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+
+            ///データ抽出＆取得
+            mAdp.Fill(dset, "credit");
+
+            //DB切断
+            con.Close();
+
+            //抽出件数を取得
+            int rcnt = dset.Tables["credit"].Rows.Count;
+
+            if (rcnt != 0)
+            {
+                int sum = 0;
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    sum += Convert.ToInt32(quoteDetailList[i].Quantity) * Convert.ToInt32(quoteDetailList[i].UnitPrice);
+                }
+                if (Convert.ToInt32(dset.Tables["credit"].Rows[0]["credit"]) < Convert.ToInt32(dset.Tables["credit"].Rows[0]["accounts_receivable"]) + sum)
+                {
+                    if(!creditCheck)
+                    {
+                        MessageBox.Show("与信限度額を超過しています。\n超過額：" + (Convert.ToInt32(dset.Tables["credit"].Rows[0]["accounts_receivable"]) + sum - Convert.ToInt32(dset.Tables["credit"].Rows[0]["credit"])) + "円");
+                        creditCheck = true;
+                        return;
+                    }
+                    else
+                    {
+                        DialogResult res;
+                        res = MessageBox.Show("与信限度額を超過しています。それでも確定してよろしいでしょうか？\n超過額：" + (Convert.ToInt32(dset.Tables["credit"].Rows[0]["accounts_receivable"]) + sum - Convert.ToInt32(dset.Tables["credit"].Rows[0]["credit"])) + "円", "警告", MessageBoxButtons.OKCancel);
+                        if (res == DialogResult.Cancel)
+                        {
+                            return;
+                        }
+                    }
+                }
+            }
+
             // 見積書番号の作成
             // WWWWW　18001（顧客ID）
             // XX　　 18（2018年）
@@ -230,16 +287,16 @@ namespace sugukuru.Orders
 
             // データを追加
             //抽象データ格納データセットを作成
-            DataSet dset = new DataSet("QuoteIdCount");
+            dset = new DataSet("QuoteIdCount");
 
             //DB接続オブジェクトを作成
-            MySqlConnection con = new MySqlConnection(this.conStr);
+            con = new MySqlConnection(this.conStr);
 
             //DB接続
             con.Open();
 
             //データアダプターの生成
-            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+            mAdp = new MySqlDataAdapter(sql, con);
 
             ///データ抽出＆取得
             mAdp.Fill(dset, "QuoteIdCount");
@@ -248,7 +305,7 @@ namespace sugukuru.Orders
             con.Close();
 
             //抽出件数を取得
-            int rcnt = dset.Tables["QuoteIdCount"].Rows.Count;
+            rcnt = dset.Tables["QuoteIdCount"].Rows.Count;
 
             //0件の場合はエラー
             if (rcnt != 0)

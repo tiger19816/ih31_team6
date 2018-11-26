@@ -500,7 +500,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Name = "DunningClaimForm";
-            this.Text = "DunningClaimForm";
+            this.Text = "督促請求書発行 - スグクル社車両販売システム";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

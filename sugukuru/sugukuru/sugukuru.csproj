@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaimCollection\AllocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\AllocationForm.Designer.cs">
+      <DependentUpon>AllocationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClaimCollection\DunningClaimForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +363,9 @@
     <Compile Include="Utility\Customer.cs" />
     <Compile Include="Utility\ResponsibleList.cs" />
     <Compile Include="Utility\Tool.cs" />
+    <EmbeddedResource Include="ClaimCollection\AllocationForm.resx">
+      <DependentUpon>AllocationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClaimCollection\DunningClaimForm.resx">
       <DependentUpon>DunningClaimForm.cs</DependentUpon>
     </EmbeddedResource>

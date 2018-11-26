@@ -33,7 +33,7 @@ namespace sugukuru.ClaimCollection
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT bc.no AS b_no, c.id AS c_id, c.formal_name AS name, c.postal_code AS postal, CONCAT(c.prefectures, c.municipality) AS address, c.client_division AS division, c.client_rep AS rep, b.billing_date AS b_date, SUM(bd.quantity * bd.unit_price) AS price, bc.amount AS amount, bc.amount AS amount, (-(bc.amount - SUM(bd.quantity * bd.unit_price))) AS dif "
+            string sql = "SELECT bc.no AS b_no, c.id AS c_id, c.formal_name AS name, c.postal_code AS postal, CONCAT(c.prefectures, c.municipality) AS address, c.client_division AS division, c.client_rep AS rep, b.billing_date AS b_date, TRUNCATE(SUM(bd.quantity * bd.unit_price * 1.08), 0) AS price, bc.amount AS amount, bc.amount AS amount, (-(bc.amount - TRUNCATE(SUM(bd.quantity * bd.unit_price * 1.08), 0))) AS dif "
                     + "FROM billing_clearing bc "
                     + "INNER JOIN bill b ON bc.no = b.invoice_number "
                     + "INNER JOIN client c ON b.customer_id = c.id "
