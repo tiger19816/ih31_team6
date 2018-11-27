@@ -55,6 +55,11 @@ namespace sugukuru.Purchase
             order_id = lbPid.Text;
             lbSum.Text = sum.ToString();
 
+            tbPrice.TextAlign = HorizontalAlignment.Right;
+            tbCarTax.TextAlign = HorizontalAlignment.Right;
+            tbFee.TextAlign = HorizontalAlignment.Right;
+            tbTax.TextAlign = HorizontalAlignment.Right;
+
         }
 
         //確定ボタンクリック
@@ -189,6 +194,12 @@ namespace sugukuru.Purchase
 
         }
 
-       
+        private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (e.Column % 2 == 0)
+            {
+                e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
+            }
+        }
     }
 }

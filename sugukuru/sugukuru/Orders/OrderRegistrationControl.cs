@@ -31,6 +31,8 @@ namespace sugukuru.Orders
             Utility.ResponsibleList.setSales(cbOrderRep);
             //初期選択を未選択にする
             cbOrderRep.SelectedIndex = -1;
+
+            tbBudget.TextAlign = HorizontalAlignment.Right;
         }
 
         //顧客情報のデータテーブル

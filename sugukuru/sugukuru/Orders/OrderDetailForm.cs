@@ -26,7 +26,7 @@ namespace sugukuru.Orders
             this.order = order;
             DataRow chainRow = Utility.Customer.ChainCustomerId(order.getDataRow()["client_id"].ToString());
 
-            lbOrderId.Text = order.getDataRow()["id"].ToString();
+        lbOrderId.Text = order.getDataRow()["id"].ToString();
             if (order.getDataRow()["order_type"].ToString() == "1")
             {
                 lbOrderType.Text = "買注文";
@@ -136,27 +136,27 @@ namespace sugukuru.Orders
             gvAuctionLog.Columns["入札金額"].DefaultCellStyle.Format = "c";
             gvAuctionLog.Columns["入札金額"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             gvAuctionLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
-        private void tblCustomer_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+
+
+    }
+    private void tblCustomer_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
         {
-            if (e.Column == 0)
-            {
-                e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
-            }
+
         }
 
         private void btOrderChange_Click(object sender, EventArgs e)
         {
-            String select = "";
-            for (int i = 0; i < order.getDataRow().ItemArray.Length; i++)
-            {
-                select += order.getDataRow()[i].ToString() + ", ";
-            }
-            MessageBox.Show(select);
-            //Form OpenFM = new OrderChangeForm();
-            //OpenFM.ShowDialog();
-            //OpenFM.Dispose();
-            //this.Show();
+            //String select = "";
+            //for (int i = 0; i < order.getDataRow().ItemArray.Length; i++)
+            //{
+            //    select += order.getDataRow()[i].ToString() + ", ";
+            //}
+            //MessageBox.Show(select);
+
+            Form OpenFM = new OrderChangeForm(order);
+            OpenFM.ShowDialog();
+            OpenFM.Dispose();
+            this.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -177,6 +177,22 @@ namespace sugukuru.Orders
             OpenFM.ShowDialog();
             OpenFM.Dispose();
             this.Show();
+        }
+
+        private void tblCustomer_CellPaint_1(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (e.Column%2 == 0)
+            {
+                e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
+            }
+        }
+
+        private void tableLayoutPanel4_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (e.Row == 0)
+            {
+                e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
+            }
         }
     }
 }
