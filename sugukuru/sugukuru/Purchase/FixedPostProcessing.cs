@@ -330,6 +330,7 @@ namespace sugukuru.Purchase
                 }
                 else
                 {
+                    // 初期値セット
                     radioButton1.Checked = true;
                     radioButton4.Checked = true;
                     radioButton6.Checked = true;
