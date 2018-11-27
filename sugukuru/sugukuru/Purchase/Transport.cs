@@ -29,6 +29,8 @@ namespace sugukuru.Purchase
             //初期選択を未選択にする
             cbOrderRep.SelectedIndex = -1;
 
+            tbPrice.TextAlign = HorizontalAlignment.Right;
+
         }
 
         //登録ボタンが押されたら
@@ -126,6 +128,14 @@ namespace sugukuru.Purchase
                 lbClientDivision.Text = chainRow["client_division"].ToString();
                 lbClientRep.Text = chainRow["client_rep"].ToString();
                 lbSalesRep.Text = chainRow["family_name"].ToString() + " " + chainRow["first_name"].ToString();
+            }
+        }
+
+        private void tblCustomer_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (e.Column % 2 == 0)
+            {
+                e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
             }
         }
     }

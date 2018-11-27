@@ -45,10 +45,6 @@
             this.gbBidResult = new System.Windows.Forms.GroupBox();
             this.btFixed = new System.Windows.Forms.Button();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
-            this.lbRep = new System.Windows.Forms.Label();
-            this.lbInfo = new System.Windows.Forms.Label();
-            this.lbBuget = new System.Windows.Forms.Label();
-            this.lbMile = new System.Windows.Forms.Label();
             this.lbColor = new System.Windows.Forms.Label();
             this.lbYear = new System.Windows.Forms.Label();
             this.lbClass = new System.Windows.Forms.Label();
@@ -57,10 +53,6 @@
             this.lbCkana = new System.Windows.Forms.Label();
             this.lbCname = new System.Windows.Forms.Label();
             this.lbCId = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -69,6 +61,14 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbMile = new System.Windows.Forms.Label();
+            this.lbBuget = new System.Windows.Forms.Label();
+            this.lbInfo = new System.Windows.Forms.Label();
+            this.lbRep = new System.Windows.Forms.Label();
             this.gbBidResult.SuspendLayout();
             this.tblCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -274,46 +274,7 @@
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tblCustomer.Size = new System.Drawing.Size(379, 402);
             this.tblCustomer.TabIndex = 73;
-            // 
-            // lbRep
-            // 
-            this.lbRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbRep.AutoSize = true;
-            this.lbRep.BackColor = System.Drawing.Color.Transparent;
-            this.lbRep.Location = new System.Drawing.Point(117, 374);
-            this.lbRep.Name = "lbRep";
-            this.lbRep.Size = new System.Drawing.Size(0, 16);
-            this.lbRep.TabIndex = 83;
-            // 
-            // lbInfo
-            // 
-            this.lbInfo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbInfo.AutoSize = true;
-            this.lbInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lbInfo.Location = new System.Drawing.Point(117, 339);
-            this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(0, 16);
-            this.lbInfo.TabIndex = 82;
-            // 
-            // lbBuget
-            // 
-            this.lbBuget.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbBuget.AutoSize = true;
-            this.lbBuget.BackColor = System.Drawing.Color.Transparent;
-            this.lbBuget.Location = new System.Drawing.Point(117, 306);
-            this.lbBuget.Name = "lbBuget";
-            this.lbBuget.Size = new System.Drawing.Size(0, 16);
-            this.lbBuget.TabIndex = 81;
-            // 
-            // lbMile
-            // 
-            this.lbMile.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbMile.AutoSize = true;
-            this.lbMile.BackColor = System.Drawing.Color.Transparent;
-            this.lbMile.Location = new System.Drawing.Point(117, 273);
-            this.lbMile.Name = "lbMile";
-            this.lbMile.Size = new System.Drawing.Size(0, 16);
-            this.lbMile.TabIndex = 80;
+            this.tblCustomer.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
             // 
             // lbColor
             // 
@@ -394,50 +355,6 @@
             this.lbCId.Name = "lbCId";
             this.lbCId.Size = new System.Drawing.Size(0, 16);
             this.lbCId.TabIndex = 54;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(4, 374);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 16);
-            this.label10.TabIndex = 51;
-            this.label10.Text = "担当者";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(4, 339);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 16);
-            this.label9.TabIndex = 50;
-            this.label9.Text = "微細情報";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(4, 306);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 16);
-            this.label8.TabIndex = 49;
-            this.label8.Text = "予算";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Location = new System.Drawing.Point(4, 273);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(56, 16);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "走行距離";
             // 
             // label17
             // 
@@ -526,6 +443,90 @@
             this.label15.Size = new System.Drawing.Size(45, 16);
             this.label15.TabIndex = 52;
             this.label15.Text = "顧客ID";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Location = new System.Drawing.Point(4, 273);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(56, 16);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "走行距離";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(4, 306);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 16);
+            this.label8.TabIndex = 49;
+            this.label8.Text = "予算";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(4, 339);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 16);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "微細情報";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Location = new System.Drawing.Point(4, 374);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 16);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "担当者";
+            // 
+            // lbMile
+            // 
+            this.lbMile.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMile.AutoSize = true;
+            this.lbMile.BackColor = System.Drawing.Color.Transparent;
+            this.lbMile.Location = new System.Drawing.Point(117, 273);
+            this.lbMile.Name = "lbMile";
+            this.lbMile.Size = new System.Drawing.Size(0, 16);
+            this.lbMile.TabIndex = 80;
+            // 
+            // lbBuget
+            // 
+            this.lbBuget.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbBuget.AutoSize = true;
+            this.lbBuget.BackColor = System.Drawing.Color.Transparent;
+            this.lbBuget.Location = new System.Drawing.Point(117, 306);
+            this.lbBuget.Name = "lbBuget";
+            this.lbBuget.Size = new System.Drawing.Size(0, 16);
+            this.lbBuget.TabIndex = 81;
+            // 
+            // lbInfo
+            // 
+            this.lbInfo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbInfo.AutoSize = true;
+            this.lbInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lbInfo.Location = new System.Drawing.Point(117, 339);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(0, 16);
+            this.lbInfo.TabIndex = 82;
+            // 
+            // lbRep
+            // 
+            this.lbRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbRep.AutoSize = true;
+            this.lbRep.BackColor = System.Drawing.Color.Transparent;
+            this.lbRep.Location = new System.Drawing.Point(117, 374);
+            this.lbRep.Name = "lbRep";
+            this.lbRep.Size = new System.Drawing.Size(0, 16);
+            this.lbRep.TabIndex = 83;
             // 
             // BidInfoInput
             // 

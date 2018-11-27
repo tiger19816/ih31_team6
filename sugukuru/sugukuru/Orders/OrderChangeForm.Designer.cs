@@ -36,22 +36,22 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbRep = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.tbMile = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbUpdateDay = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbColor = new System.Windows.Forms.TextBox();
+            this.tbYear = new System.Windows.Forms.TextBox();
+            this.tbCarName = new System.Windows.Forms.TextBox();
+            this.tbModel = new System.Windows.Forms.TextBox();
+            this.tbInfo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -68,7 +68,16 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.lbCreate = new System.Windows.Forms.Label();
+            this.lbCostomerId = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbRead = new System.Windows.Forms.Label();
+            this.lbPost = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.lbTel = new System.Windows.Forms.Label();
+            this.lbFax = new System.Windows.Forms.Label();
+            this.lbPosition = new System.Windows.Forms.Label();
+            this.lbDay = new System.Windows.Forms.Label();
             this.tblCustomer.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -88,16 +97,24 @@
             this.tblCustomer.ColumnCount = 2;
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tblCustomer.Controls.Add(this.lbPosition, 1, 7);
+            this.tblCustomer.Controls.Add(this.lbFax, 1, 6);
+            this.tblCustomer.Controls.Add(this.lbTel, 1, 5);
+            this.tblCustomer.Controls.Add(this.lbAddress, 1, 4);
+            this.tblCustomer.Controls.Add(this.lbPost, 1, 3);
+            this.tblCustomer.Controls.Add(this.lbRead, 1, 2);
             this.tblCustomer.Controls.Add(this.label2, 0, 0);
             this.tblCustomer.Controls.Add(this.label3, 0, 1);
             this.tblCustomer.Controls.Add(this.label14, 0, 6);
             this.tblCustomer.Controls.Add(this.label13, 0, 5);
             this.tblCustomer.Controls.Add(this.label12, 0, 4);
             this.tblCustomer.Controls.Add(this.label11, 0, 3);
-            this.tblCustomer.Controls.Add(this.label15, 1, 1);
             this.tblCustomer.Controls.Add(this.label16, 0, 2);
             this.tblCustomer.Controls.Add(this.label17, 0, 7);
             this.tblCustomer.Controls.Add(this.label18, 0, 8);
+            this.tblCustomer.Controls.Add(this.lbCostomerId, 1, 0);
+            this.tblCustomer.Controls.Add(this.lbRep, 0, 8);
+            this.tblCustomer.Controls.Add(this.lbName, 1, 1);
             this.tblCustomer.Location = new System.Drawing.Point(32, 126);
             this.tblCustomer.Name = "tblCustomer";
             this.tblCustomer.RowCount = 9;
@@ -180,14 +197,15 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "所在地〒";
             // 
-            // label15
+            // lbRep
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(117, 42);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 16);
-            this.label15.TabIndex = 5;
+            this.lbRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbRep.AutoSize = true;
+            this.lbRep.Location = new System.Drawing.Point(117, 273);
+            this.lbRep.Name = "lbRep";
+            this.lbRep.Size = new System.Drawing.Size(30, 16);
+            this.lbRep.TabIndex = 5;
+            this.lbRep.Text = "Rep";
             // 
             // label16
             // 
@@ -222,19 +240,19 @@
             this.label18.TabIndex = 8;
             this.label18.Text = "取引先担当者";
             // 
-            // textBox8
+            // tbPrice
             // 
-            this.textBox8.Location = new System.Drawing.Point(662, 276);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 27);
-            this.textBox8.TabIndex = 57;
+            this.tbPrice.Location = new System.Drawing.Point(662, 276);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(100, 27);
+            this.tbPrice.TabIndex = 57;
             // 
-            // textBox7
+            // tbMile
             // 
-            this.textBox7.Location = new System.Drawing.Point(662, 236);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 27);
-            this.textBox7.TabIndex = 56;
+            this.tbMile.Location = new System.Drawing.Point(662, 236);
+            this.tbMile.Name = "tbMile";
+            this.tbMile.Size = new System.Drawing.Size(100, 27);
+            this.tbMile.TabIndex = 56;
             // 
             // comboBox1
             // 
@@ -244,12 +262,12 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 62;
             // 
-            // textBox9
+            // tbUpdateDay
             // 
-            this.textBox9.Location = new System.Drawing.Point(155, 520);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(171, 27);
-            this.textBox9.TabIndex = 61;
+            this.tbUpdateDay.Location = new System.Drawing.Point(155, 520);
+            this.tbUpdateDay.Name = "tbUpdateDay";
+            this.tbUpdateDay.Size = new System.Drawing.Size(171, 27);
+            this.tbUpdateDay.TabIndex = 61;
             // 
             // label21
             // 
@@ -278,41 +296,41 @@
             this.label22.TabIndex = 64;
             this.label22.Text = "受注担当者";
             // 
-            // textBox6
+            // tbColor
             // 
-            this.textBox6.Location = new System.Drawing.Point(662, 196);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 27);
-            this.textBox6.TabIndex = 55;
+            this.tbColor.Location = new System.Drawing.Point(662, 196);
+            this.tbColor.Name = "tbColor";
+            this.tbColor.Size = new System.Drawing.Size(100, 27);
+            this.tbColor.TabIndex = 55;
             // 
-            // textBox5
+            // tbYear
             // 
-            this.textBox5.Location = new System.Drawing.Point(662, 156);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
-            this.textBox5.TabIndex = 54;
+            this.tbYear.Location = new System.Drawing.Point(662, 156);
+            this.tbYear.Name = "tbYear";
+            this.tbYear.Size = new System.Drawing.Size(100, 27);
+            this.tbYear.TabIndex = 54;
             // 
-            // textBox4
+            // tbCarName
             // 
-            this.textBox4.Location = new System.Drawing.Point(662, 116);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 27);
-            this.textBox4.TabIndex = 53;
+            this.tbCarName.Location = new System.Drawing.Point(662, 116);
+            this.tbCarName.Name = "tbCarName";
+            this.tbCarName.Size = new System.Drawing.Size(171, 27);
+            this.tbCarName.TabIndex = 53;
             // 
-            // textBox3
+            // tbModel
             // 
-            this.textBox3.Location = new System.Drawing.Point(662, 76);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 27);
-            this.textBox3.TabIndex = 52;
+            this.tbModel.Location = new System.Drawing.Point(662, 76);
+            this.tbModel.Name = "tbModel";
+            this.tbModel.Size = new System.Drawing.Size(171, 27);
+            this.tbModel.TabIndex = 52;
             // 
-            // textBox2
+            // tbInfo
             // 
-            this.textBox2.Location = new System.Drawing.Point(585, 331);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(550, 151);
-            this.textBox2.TabIndex = 51;
+            this.tbInfo.Location = new System.Drawing.Point(585, 331);
+            this.tbInfo.Multiline = true;
+            this.tbInfo.Name = "tbInfo";
+            this.tbInfo.Size = new System.Drawing.Size(550, 151);
+            this.tbInfo.TabIndex = 51;
             // 
             // label10
             // 
@@ -453,9 +471,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.Controls.Add(this.lbDay, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label23, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label24, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label29, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbCreate, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 430);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -493,14 +512,114 @@
             this.label24.TabIndex = 0;
             this.label24.Text = "登録者";
             // 
-            // label29
+            // lbCreate
             // 
-            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(117, 43);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(0, 16);
-            this.label29.TabIndex = 5;
+            this.lbCreate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCreate.AutoSize = true;
+            this.lbCreate.Location = new System.Drawing.Point(117, 43);
+            this.lbCreate.Name = "lbCreate";
+            this.lbCreate.Size = new System.Drawing.Size(43, 16);
+            this.lbCreate.TabIndex = 5;
+            this.lbCreate.Text = "create";
+            // 
+            // lbCostomerId
+            // 
+            this.lbCostomerId.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCostomerId.AutoSize = true;
+            this.lbCostomerId.BackColor = System.Drawing.Color.Transparent;
+            this.lbCostomerId.Location = new System.Drawing.Point(117, 9);
+            this.lbCostomerId.Name = "lbCostomerId";
+            this.lbCostomerId.Size = new System.Drawing.Size(18, 16);
+            this.lbCostomerId.TabIndex = 66;
+            this.lbCostomerId.Text = "id";
+            // 
+            // lbName
+            // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbName.AutoSize = true;
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
+            this.lbName.Location = new System.Drawing.Point(117, 42);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(39, 16);
+            this.lbName.TabIndex = 67;
+            this.lbName.Text = "name";
+            // 
+            // lbRead
+            // 
+            this.lbRead.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbRead.AutoSize = true;
+            this.lbRead.BackColor = System.Drawing.Color.Transparent;
+            this.lbRead.Location = new System.Drawing.Point(117, 75);
+            this.lbRead.Name = "lbRead";
+            this.lbRead.Size = new System.Drawing.Size(33, 16);
+            this.lbRead.TabIndex = 67;
+            this.lbRead.Text = "read";
+            // 
+            // lbPost
+            // 
+            this.lbPost.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPost.AutoSize = true;
+            this.lbPost.BackColor = System.Drawing.Color.Transparent;
+            this.lbPost.Location = new System.Drawing.Point(117, 108);
+            this.lbPost.Name = "lbPost";
+            this.lbPost.Size = new System.Drawing.Size(32, 16);
+            this.lbPost.TabIndex = 67;
+            this.lbPost.Text = "post";
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lbAddress.Location = new System.Drawing.Point(117, 141);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(52, 16);
+            this.lbAddress.TabIndex = 67;
+            this.lbAddress.Text = "address";
+            // 
+            // lbTel
+            // 
+            this.lbTel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbTel.AutoSize = true;
+            this.lbTel.BackColor = System.Drawing.Color.Transparent;
+            this.lbTel.Location = new System.Drawing.Point(117, 174);
+            this.lbTel.Name = "lbTel";
+            this.lbTel.Size = new System.Drawing.Size(22, 16);
+            this.lbTel.TabIndex = 67;
+            this.lbTel.Text = "tel";
+            // 
+            // lbFax
+            // 
+            this.lbFax.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbFax.AutoSize = true;
+            this.lbFax.BackColor = System.Drawing.Color.Transparent;
+            this.lbFax.Location = new System.Drawing.Point(117, 207);
+            this.lbFax.Name = "lbFax";
+            this.lbFax.Size = new System.Drawing.Size(25, 16);
+            this.lbFax.TabIndex = 67;
+            this.lbFax.Text = "fax";
+            // 
+            // lbPosition
+            // 
+            this.lbPosition.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPosition.AutoSize = true;
+            this.lbPosition.BackColor = System.Drawing.Color.Transparent;
+            this.lbPosition.Location = new System.Drawing.Point(117, 240);
+            this.lbPosition.Name = "lbPosition";
+            this.lbPosition.Size = new System.Drawing.Size(52, 16);
+            this.lbPosition.TabIndex = 67;
+            this.lbPosition.Text = "position";
+            // 
+            // lbDay
+            // 
+            this.lbDay.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbDay.AutoSize = true;
+            this.lbDay.BackColor = System.Drawing.Color.Transparent;
+            this.lbDay.Location = new System.Drawing.Point(117, 9);
+            this.lbDay.Name = "lbDay";
+            this.lbDay.Size = new System.Drawing.Size(28, 16);
+            this.lbDay.TabIndex = 67;
+            this.lbDay.Text = "day";
             // 
             // OrderChangeForm
             // 
@@ -511,18 +630,18 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.tblCustomer);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tbPrice);
+            this.Controls.Add(this.tbMile);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.tbUpdateDay);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbColor);
+            this.Controls.Add(this.tbYear);
+            this.Controls.Add(this.tbCarName);
+            this.Controls.Add(this.tbModel);
+            this.Controls.Add(this.tbInfo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -545,18 +664,18 @@
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.label10, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
-            this.Controls.SetChildIndex(this.textBox4, 0);
-            this.Controls.SetChildIndex(this.textBox5, 0);
-            this.Controls.SetChildIndex(this.textBox6, 0);
+            this.Controls.SetChildIndex(this.tbInfo, 0);
+            this.Controls.SetChildIndex(this.tbModel, 0);
+            this.Controls.SetChildIndex(this.tbCarName, 0);
+            this.Controls.SetChildIndex(this.tbYear, 0);
+            this.Controls.SetChildIndex(this.tbColor, 0);
             this.Controls.SetChildIndex(this.label22, 0);
             this.Controls.SetChildIndex(this.label20, 0);
             this.Controls.SetChildIndex(this.label21, 0);
-            this.Controls.SetChildIndex(this.textBox9, 0);
+            this.Controls.SetChildIndex(this.tbUpdateDay, 0);
             this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.textBox7, 0);
-            this.Controls.SetChildIndex(this.textBox8, 0);
+            this.Controls.SetChildIndex(this.tbMile, 0);
+            this.Controls.SetChildIndex(this.tbPrice, 0);
             this.Controls.SetChildIndex(this.tblCustomer, 0);
             this.Controls.SetChildIndex(this.comboBox2, 0);
             this.Controls.SetChildIndex(this.label19, 0);
@@ -581,22 +700,22 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbRep;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.TextBox tbMile;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbUpdateDay;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbColor;
+        private System.Windows.Forms.TextBox tbYear;
+        private System.Windows.Forms.TextBox tbCarName;
+        private System.Windows.Forms.TextBox tbModel;
+        private System.Windows.Forms.TextBox tbInfo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -614,6 +733,15 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lbCreate;
+        private System.Windows.Forms.Label lbCostomerId;
+        private System.Windows.Forms.Label lbPosition;
+        private System.Windows.Forms.Label lbFax;
+        private System.Windows.Forms.Label lbTel;
+        private System.Windows.Forms.Label lbAddress;
+        private System.Windows.Forms.Label lbPost;
+        private System.Windows.Forms.Label lbRead;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbDay;
     }
 }

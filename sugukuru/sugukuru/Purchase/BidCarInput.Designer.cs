@@ -284,18 +284,19 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 53);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(823, 40);
             this.tableLayoutPanel1.TabIndex = 122;
+            this.tableLayoutPanel1.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tableLayoutPanel1_CellPaint);
             // 
             // lbAid
             // 
             this.lbAid.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbAid.AutoSize = true;
             this.lbAid.BackColor = System.Drawing.Color.Transparent;
-            this.lbAid.Location = new System.Drawing.Point(414, 13);
+            this.lbAid.Location = new System.Drawing.Point(414, 14);
             this.lbAid.Name = "lbAid";
             this.lbAid.Size = new System.Drawing.Size(45, 16);
             this.lbAid.TabIndex = 11;
@@ -306,7 +307,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(578, 13);
+            this.label15.Location = new System.Drawing.Point(578, 14);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(56, 16);
             this.label15.TabIndex = 10;
@@ -317,7 +318,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(250, 13);
+            this.label6.Location = new System.Drawing.Point(250, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 16);
             this.label6.TabIndex = 9;
@@ -328,7 +329,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(4, 13);
+            this.label5.Location = new System.Drawing.Point(4, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 8;
@@ -339,7 +340,7 @@
             this.lbPid.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbPid.AutoSize = true;
             this.lbPid.BackColor = System.Drawing.Color.Transparent;
-            this.lbPid.Location = new System.Drawing.Point(127, 13);
+            this.lbPid.Location = new System.Drawing.Point(127, 14);
             this.lbPid.Name = "lbPid";
             this.lbPid.Size = new System.Drawing.Size(45, 16);
             this.lbPid.TabIndex = 0;
@@ -350,7 +351,7 @@
             this.lbBid.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbBid.AutoSize = true;
             this.lbBid.BackColor = System.Drawing.Color.Transparent;
-            this.lbBid.Location = new System.Drawing.Point(701, 13);
+            this.lbBid.Location = new System.Drawing.Point(701, 14);
             this.lbBid.Name = "lbBid";
             this.lbBid.Size = new System.Drawing.Size(45, 16);
             this.lbBid.TabIndex = 7;

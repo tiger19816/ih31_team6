@@ -17,6 +17,7 @@ namespace sugukuru.Purchase
     {
         //DB接続文字列の取得
         string conStr;
+       
 
         public BidInfoInput()
         {
@@ -25,6 +26,8 @@ namespace sugukuru.Purchase
 
             //登録担当者をコンボボックスにセットする(全社員)
             Utility.ResponsibleList.setAuctionHall(cbAuction);
+
+            tbPrice.TextAlign = HorizontalAlignment.Right;
 
         }
 
@@ -148,5 +151,16 @@ namespace sugukuru.Purchase
                 lbRep.Text = chainRow["client_rep"].ToString();
             }
         }
+
+        private void tblCustomer_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (e.Column == 0)
+            {
+                e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
+            }
+        }
+
+       
+
     }
 }
