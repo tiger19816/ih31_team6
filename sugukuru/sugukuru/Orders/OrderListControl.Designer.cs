@@ -77,6 +77,7 @@
             // 
             this.cbSearchProgress.FormattingEnabled = true;
             this.cbSearchProgress.Items.AddRange(new object[] {
+            "全件",
             "未入札",
             "買注残",
             "落札済"});

@@ -36,9 +36,13 @@
             // 
             // dgvBulk
             // 
+            this.dgvBulk.AllowUserToAddRows = false;
+            this.dgvBulk.AllowUserToDeleteRows = false;
             this.dgvBulk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBulk.Location = new System.Drawing.Point(17, 59);
+            this.dgvBulk.MultiSelect = false;
             this.dgvBulk.Name = "dgvBulk";
+            this.dgvBulk.RowHeadersVisible = false;
             this.dgvBulk.RowTemplate.Height = 21;
             this.dgvBulk.Size = new System.Drawing.Size(1120, 504);
             this.dgvBulk.TabIndex = 112;

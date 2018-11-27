@@ -207,7 +207,8 @@ namespace sugukuru.Purchase
             checkedListBox1.Items.Clear();
             checkedListBox2.Items.Clear();
 
-            OrderSelectForm selectFM = new OrderSelectForm();
+            int mode = 3;
+            OrderSelectForm selectFM = new OrderSelectForm(mode);
             selectFM.ShowDialog();
             selectFM.Dispose();
             this.Show();
