@@ -41,10 +41,12 @@
             this.clientNameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.taxLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.subTotalLabel = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -65,8 +67,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.taxLabel = new System.Windows.Forms.Label();
-            this.totalLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tblCustomer.SuspendLayout();
@@ -129,6 +129,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(271, 192);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
@@ -224,6 +225,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(273, 102);
             this.tableLayoutPanel1.TabIndex = 94;
             // 
+            // taxLabel
+            // 
+            this.taxLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.taxLabel.AutoSize = true;
+            this.taxLabel.BackColor = System.Drawing.Color.Transparent;
+            this.taxLabel.Location = new System.Drawing.Point(86, 42);
+            this.taxLabel.Name = "taxLabel";
+            this.taxLabel.Size = new System.Drawing.Size(0, 16);
+            this.taxLabel.TabIndex = 108;
+            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -265,6 +276,16 @@
             this.label20.Size = new System.Drawing.Size(44, 16);
             this.label20.TabIndex = 6;
             this.label20.Text = "消費税";
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.BackColor = System.Drawing.Color.Transparent;
+            this.totalLabel.Location = new System.Drawing.Point(86, 76);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(0, 16);
+            this.totalLabel.TabIndex = 108;
             // 
             // comboBox1
             // 
@@ -475,26 +496,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(171, 27);
             this.dateTimePicker1.TabIndex = 107;
-            // 
-            // taxLabel
-            // 
-            this.taxLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.taxLabel.AutoSize = true;
-            this.taxLabel.BackColor = System.Drawing.Color.Transparent;
-            this.taxLabel.Location = new System.Drawing.Point(86, 42);
-            this.taxLabel.Name = "taxLabel";
-            this.taxLabel.Size = new System.Drawing.Size(0, 16);
-            this.taxLabel.TabIndex = 108;
-            // 
-            // totalLabel
-            // 
-            this.totalLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.totalLabel.AutoSize = true;
-            this.totalLabel.BackColor = System.Drawing.Color.Transparent;
-            this.totalLabel.Location = new System.Drawing.Point(86, 76);
-            this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(0, 16);
-            this.totalLabel.TabIndex = 108;
             // 
             // DeliverySlip
             // 

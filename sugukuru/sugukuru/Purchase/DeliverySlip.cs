@@ -100,7 +100,7 @@ namespace sugukuru.Purchase
             var PDF = Renderer.RenderHtmlAsPdf(pageContent);
 
             // PATH&ファイル名指定
-            var OutputPath = "書類\\見積書\\納品書"+InvoiceNo+".pdf";
+            var OutputPath = "書類\\納品書\\納品書"+InvoiceNo+".pdf";
 
             // 作成したPDFファイルに名前付け
             PDF.SaveAs(OutputPath);
@@ -129,6 +129,7 @@ namespace sugukuru.Purchase
                 taxLabel.Text = "";
                 totalLabel.Text = "";
                 quoteInfoData.Tables["QuoteInfo"].Rows.Clear();
+                button1.Enabled = false;
             }
         }
 
@@ -174,13 +175,9 @@ namespace sugukuru.Purchase
                     dataGridView1.Columns["price"].HeaderText = "単価";
 
                     //データグリッドビュー料金の3桁カンマ区切り
-                    dataGridView1.Columns["quantity"].DefaultCellStyle.Format = "c";
-                    dataGridView1.Columns["unit"].DefaultCellStyle.Format = "c";
                     dataGridView1.Columns["price"].DefaultCellStyle.Format = "c";
 
                     //データグリッドビュー料金の右揃え
-                    dataGridView1.Columns["quantity"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                    dataGridView1.Columns["unit"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                     dataGridView1.Columns["price"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
                     // 小計
@@ -204,7 +201,6 @@ namespace sugukuru.Purchase
                     subTotalLabel.Text = subtotal.ToString();
                     taxLabel.Text = tax.ToString();
                     totalLabel.Text = total.ToString();
-                    // 1800118002
                 }
                 else
                 {
@@ -276,6 +272,8 @@ namespace sugukuru.Purchase
 
                     // TELをセット
                     clientTEL = dset.Tables["ClientInfo"].Rows[0]["phone_number"].ToString();
+
+                    button1.Enabled = true;
 
                 }
                 else
