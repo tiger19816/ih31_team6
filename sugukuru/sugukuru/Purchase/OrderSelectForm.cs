@@ -97,7 +97,6 @@ namespace sugukuru.Purchase
                             "WHERE successful_bid_vehicle.successful_bid_fixing = 1";
                     break;
             }
-            MessageBox.Show(sql);
 
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();
