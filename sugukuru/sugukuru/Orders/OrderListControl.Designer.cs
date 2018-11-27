@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cbSearchProgress = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gvOrderList = new System.Windows.Forms.DataGridView();
             this.btDetail = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbSearchProgress = new System.Windows.Forms.ComboBox();
             this.tbSearchOrderId = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cbDataEnd = new System.Windows.Forms.ComboBox();
@@ -72,6 +72,18 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // cbSearchProgress
+            // 
+            this.cbSearchProgress.FormattingEnabled = true;
+            this.cbSearchProgress.Items.AddRange(new object[] {
+            "未入札",
+            "買注残",
+            "落札済"});
+            this.cbSearchProgress.Location = new System.Drawing.Point(873, 85);
+            this.cbSearchProgress.Name = "cbSearchProgress";
+            this.cbSearchProgress.Size = new System.Drawing.Size(121, 24);
+            this.cbSearchProgress.TabIndex = 56;
             // 
             // label1
             // 
@@ -179,18 +191,6 @@
             this.label7.Size = new System.Drawing.Size(45, 16);
             this.label7.TabIndex = 50;
             this.label7.Text = "顧客ID";
-            // 
-            // cbSearchProgress
-            // 
-            this.cbSearchProgress.FormattingEnabled = true;
-            this.cbSearchProgress.Items.AddRange(new object[] {
-            "未入札",
-            "注残",
-            "完了"});
-            this.cbSearchProgress.Location = new System.Drawing.Point(873, 85);
-            this.cbSearchProgress.Name = "cbSearchProgress";
-            this.cbSearchProgress.Size = new System.Drawing.Size(121, 24);
-            this.cbSearchProgress.TabIndex = 56;
             // 
             // tbSearchOrderId
             // 
@@ -522,7 +522,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbSearchProgress;
         private System.Windows.Forms.TextBox tbSearchOrderId;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbDataEnd;
@@ -552,5 +551,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbSearchProgress;
     }
 }

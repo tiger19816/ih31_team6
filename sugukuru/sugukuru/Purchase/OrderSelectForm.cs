@@ -21,12 +21,22 @@ namespace sugukuru.Purchase
         DataTable order = new DataTable("order");
         //返り値用のUtility
         public Utility.Customer Order = new Utility.Customer();
+        //検索モード
+        private int sqlMode = 0;
 
         public OrderSelectForm()
         {
             InitializeComponent();
             //DB接続文字列取得
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
+        }
+        public OrderSelectForm(int mode)
+        {
+            InitializeComponent();
+            //DB接続文字列取得
+            this.conStr = ConfigurationManager.AppSettings["DbConKey"];
+            //SQLモードの設定
+            this.sqlMode = mode;
         }
 
         //顧客ID検索ボタン押下
@@ -54,11 +64,38 @@ namespace sugukuru.Purchase
         {
             //SQL文発行する
             DataSet dset = new DataSet("order");
-            String sql = "SELECT `id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info` FROM sugukuru.orders";
-            if (!tbSearchOrderId.Text.Equals(""))
+            String sql =    "SELECT * " +
+                            "FROM sugukuru.orders ";
+            bool flg = false;
+            
+
+            switch (this.sqlMode)
             {
-                sql += " where id = '" + tbSearchOrderId.Text + "'";
+                //絶対条件なし
+                case 0:
+                    
+                    break;
+                //入札登録
+                case 1:
+                    sql +=  "LEFT JOIN bid ON id = bid.order_id " +
+                            "LEFT JOIN quote_detail ON id = quote_detail.order_id " +
+                            "WHERE quote_detail.quote_id IS NOT null " +
+                            "AND bid.bid_result = 0";
+                    break;
+
+                //陸送登録
+                case 2:
+                    sql +=  "LEFT JOIN bid ON id = bid.order_id " +
+                            "LEFT JOIN transportation ON id = transportation.order_id " +
+                            "WHERE bid.bid_result = 1 " +
+                            "AND transportation.order_id IS null";
+                    break;
+                    
+                //
+                case 3:
+                    break;
             }
+            MessageBox.Show(sql);
 
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();

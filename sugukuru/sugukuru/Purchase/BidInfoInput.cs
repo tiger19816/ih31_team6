@@ -95,9 +95,9 @@ namespace sugukuru.Purchase
         private void btSearch_Click(object sender, EventArgs e)
         {
 
-
+            int mode = 1;
             //子フォームを開く
-            OrderSelectForm selectFM = new OrderSelectForm();
+            OrderSelectForm selectFM = new OrderSelectForm(mode);
             selectFM.ShowDialog();
             selectFM.Dispose();
             this.Show();

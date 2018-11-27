@@ -45,12 +45,52 @@ namespace sugukuru.Orders
         {
             //SQL文発行する
             DataSet dset = new DataSet("order");
-            String sql = "SELECT * FROM sugukuru.orders";
+            String sql =    "SELECT * " +
+                            "FROM sugukuru.orders " +
+                            "LEFT JOIN bid ON id = bid.order_id";
+            bool flg = false;
             if (!tbSearchOrderId.Text.Equals(""))
             {
-                sql += " where id = '" + tbSearchOrderId.Text + "'";
+                sql += " WHERE id = '" + tbSearchOrderId.Text + "'";
+                flg = true;
             }
-
+            if (cbSearchProgress.SelectedItem != null)
+            {
+                if(cbSearchProgress.SelectedItem.ToString() == "未入札")
+                {
+                    if (flg)
+                    {
+                        sql += " AND bid.bid_result IS null";
+                    }
+                    else
+                    {
+                        sql += " WHERE bid.bid_result IS null";
+                    }
+                }
+                if (cbSearchProgress.SelectedItem.ToString() == "買注残")
+                {
+                    if (flg)
+                    {
+                        sql += " AND bid.bid_result = 0";
+                    }
+                    else
+                    {
+                        sql += " WHERE bid.bid_result = 0";
+                    }
+                }
+                if (cbSearchProgress.SelectedItem.ToString() == "落札済")
+                {
+                    if (flg)
+                    {
+                        sql += " AND bid.bid_result = 1";
+                    }
+                    else
+                    {
+                        sql += " WHERE bid.bid_result = 1";
+                    }
+                }
+                
+            }
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
