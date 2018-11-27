@@ -361,6 +361,7 @@
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility\Customer.cs" />
+    <Compile Include="Utility\OrderSqlMode.cs" />
     <Compile Include="Utility\ResponsibleList.cs" />
     <Compile Include="Utility\Tool.cs" />
     <EmbeddedResource Include="ClaimCollection\AllocationForm.resx">
