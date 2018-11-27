@@ -80,6 +80,7 @@
             this.gvOrderList.Location = new System.Drawing.Point(12, 174);
             this.gvOrderList.MultiSelect = false;
             this.gvOrderList.Name = "gvOrderList";
+            this.gvOrderList.RowHeadersVisible = false;
             this.gvOrderList.RowTemplate.Height = 21;
             this.gvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvOrderList.Size = new System.Drawing.Size(1240, 436);
