@@ -82,6 +82,16 @@ namespace sugukuru.ClaimCollection
             dgvAllocation.Columns["price"].HeaderText = "請求額";
             dgvAllocation.Columns["dif"].HeaderText = "残額";
             dgvAllocation.Columns["amount"].HeaderText = "入金済金額";
+
+            //データグリッドビュー料金の3桁カンマ区切り
+            dgvAllocation.Columns["price"].DefaultCellStyle.Format = "c";
+            dgvAllocation.Columns["dif"].DefaultCellStyle.Format = "c";
+            dgvAllocation.Columns["amount"].DefaultCellStyle.Format = "c";
+
+            //データグリッドビュー料金の右揃え
+            dgvAllocation.Columns["price"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvAllocation.Columns["dif"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvAllocation.Columns["amount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void button1_Click(object sender, EventArgs e)
