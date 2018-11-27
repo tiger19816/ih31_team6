@@ -315,11 +315,13 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(379, 168);
             this.tableLayoutPanel2.TabIndex = 59;
+            this.tableLayoutPanel2.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
             // 
             // label23
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Location = new System.Drawing.Point(4, 142);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(80, 16);
@@ -339,6 +341,7 @@
             // 
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Location = new System.Drawing.Point(4, 108);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(68, 16);
@@ -358,6 +361,7 @@
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Location = new System.Drawing.Point(4, 75);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(32, 16);
@@ -377,6 +381,7 @@
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Location = new System.Drawing.Point(4, 42);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(56, 16);
@@ -387,6 +392,7 @@
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Location = new System.Drawing.Point(4, 9);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 16);
@@ -432,6 +438,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(273, 102);
             this.tableLayoutPanel3.TabIndex = 60;
+            this.tableLayoutPanel3.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
             // 
             // textBox12
             // 

@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAllocation = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.btFix = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllocation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +68,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btFix
+            // 
+            this.btFix.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btFix.Location = new System.Drawing.Point(688, 385);
+            this.btFix.Name = "btFix";
+            this.btFix.Size = new System.Drawing.Size(100, 40);
+            this.btFix.TabIndex = 103;
+            this.btFix.Text = "確定";
+            this.btFix.UseVisualStyleBackColor = true;
+            this.btFix.Click += new System.EventHandler(this.btFix_Click);
+            // 
             // AllocationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btFix);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvAllocation);
             this.Controls.Add(this.label1);
@@ -80,6 +93,7 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.dgvAllocation, 0);
             this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.btFix, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllocation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -91,5 +105,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvAllocation;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btFix;
     }
 }
