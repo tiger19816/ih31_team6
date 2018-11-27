@@ -67,7 +67,8 @@ CREATE TABLE `bid` (
 
 INSERT INTO `bid` (`order_id`, `auction_hall_id`, `listing_number`, `bid_date`, `bid_price`, `bid_result`) VALUES
 ('181110001', 1, 12345, '2018-11-14', 850000, 1),
-('181110002', 1, 12346, '2018-11-14', 700000, 1);
+('181110002', 1, 12346, '2018-11-14', 700000, 1),
+('181110004', 1, 5400008, '2018-11-26', 238000, 0);
 
 -- --------------------------------------------------------
 
@@ -84,13 +85,6 @@ CREATE TABLE `bill` (
   `remarks` text NOT NULL COMMENT '備考'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求書';
 
---
--- テーブルのデータのダンプ `bill`
---
-
-INSERT INTO `bill` (`invoice_number`, `customer_id`, `billing_date`, `billing_representative`, `payment_criteria`, `remarks`) VALUES
-('1800118011', '18001', '2018-11-21', '101', '月末締翌月末払', '');
-
 -- --------------------------------------------------------
 
 --
@@ -102,13 +96,6 @@ CREATE TABLE `billing_clearing` (
   `amount` int(11) NOT NULL COMMENT '入金額',
   `clearing_flag` int(11) NOT NULL DEFAULT '0' COMMENT '消込フラグ'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求消込';
-
---
--- テーブルのデータのダンプ `billing_clearing`
---
-
-INSERT INTO `billing_clearing` (`no`, `amount`, `clearing_flag`) VALUES
-('1800118011', 1000000, 2);
 
 -- --------------------------------------------------------
 
@@ -125,14 +112,6 @@ CREATE TABLE `billing_detail` (
   `unit` varchar(3) NOT NULL COMMENT '単位',
   `unit_price` int(11) NOT NULL COMMENT '単価'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求明細';
-
---
--- テーブルのデータのダンプ `billing_detail`
---
-
-INSERT INTO `billing_detail` (`invoice_number`, `no`, `order_id`, `product_name`, `quantity`, `unit`, `unit_price`) VALUES
-('1800118011', 1, '181110001', 'JZS144 クラウン', 1, '台', 1000000),
-('1800118011', 2, '181110002', 'L600S ムーブ', 1, '台', 1000000);
 
 -- --------------------------------------------------------
 
@@ -179,9 +158,9 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`id`, `formal_name`, `formal_name_read`, `abbreviation`, `abbreviation_read`, `postal_code`, `prefectures`, `municipality`, `client_division`, `client_rep`, `phone_number`, `fax`, `mail_address`, `monthly_trading_estimated`, `recovery_condition`, `closing_date`, `collection_month`, `collection_date`, `financial_institution_name`, `financial_institution_code`, `branch_name`, `branch_code`, `bank_account_type`, `bank_account_number`, `bank_account_holder`, `fine_info`, `create_at`, `create_rep`, `update_at`, `update_rep`, `sales_rep`) VALUES
-('18001', '株式会社カーステーションバンバン', 'カブシキガイシャカーステーションバンバン', 'カーステバン', 'カーステバン', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '岡本隆', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'ｶ)ｶｰｽﾃｰｼﾖﾝﾊﾞﾝﾊﾞﾝ', NULL, '2018-11-06 16:41:30', '101', '2018-11-20 15:58:12', NULL, '102'),
-('18002', '株式会社パシフィックオート', 'カブシキガイシャパシフィックオート', 'パシフオート', 'パシフオート', '5300001', '大阪府', '北区梅田3-3-1', '総務部', '今井哲文', '0612345555', '0623456785', 'imai@pasificauto.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'ｶ)ﾊﾟｼﾌｲﾂｸｵｰﾄ', NULL, '2018-11-06 16:41:30', '101', '2018-11-20 15:58:50', NULL, '102'),
-('18003', '株式会社オフィスMIYA', 'カブシキガイシャオフィスミヤ', 'オフィスミヤ', 'オフィスミヤ', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '田中太郎', '0612345678', '0623456789', 'okamoto@carban.co.jp', 100, 1, 20, 1, 15, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'ｶ)ｵﾌｲｽﾐﾔ', NULL, '2018-11-13 18:10:15', '101', '2018-11-20 16:00:03', NULL, '102');
+('18001', '株式会社カーステーションバンバン', 'カブシキガイシャカーステーションバンバン', 'カーステバン', 'カーステバン', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '岡本隆', '0612345678', '0623456789', 'okamoto@carban.co.jp', 1000000, 1, 25, 1, 10, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'ｶ)ｶｰｽﾃｰｼﾖﾝﾊﾞﾝﾊﾞﾝ', NULL, '2018-11-06 16:41:30', '101', '2018-11-26 13:38:02', NULL, '102'),
+('18002', '株式会社パシフィックオート', 'カブシキガイシャパシフィックオート', 'パシフオート', 'パシフオート', '5300001', '大阪府', '北区梅田3-3-1', '総務部', '今井哲文', '0612345555', '0623456785', 'imai@pasificauto.co.jp', 1000000, 1, 25, 1, 10, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'ｶ)ﾊﾟｼﾌｲﾂｸｵｰﾄ', NULL, '2018-11-06 16:41:30', '101', '2018-11-26 13:38:05', NULL, '102'),
+('18003', '株式会社オフィスMIYA', 'カブシキガイシャオフィスミヤ', 'オフィスミヤ', 'オフィスミヤ', '5300001', '大阪府', '北区梅田3-3-1', '営業部', '田中太郎', '0612345678', '0623456789', 'okamoto@carban.co.jp', 1000000, 1, 25, 1, 10, '三井住友銀行', '0009', '天六支店', '130', 0, '1234567', 'ｶ)ｵﾌｲｽﾐﾔ', NULL, '2018-11-13 18:10:15', '101', '2018-11-26 13:38:08', NULL, '102');
 
 -- --------------------------------------------------------
 
@@ -273,7 +252,8 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `transmission`, `car_mileage`, `budget`, `fine_info`, `order_rep`, `create_at`, `create_rep`, `update_at`, `update_rep`, `cancel_flag`) VALUES
 ('181110001', '18001', 1, 'JZS144', 'クラウン', 'H10', 'パール', 0, 50000, 1000000, '', '102', '2018-11-12 15:42:07', '101', '0000-00-00 00:00:00', '', 0),
 ('181110002', '18001', 1, 'L600S', 'ムーブ', 'H10', 'シルバー', 0, 50000, 1000000, '', '102', '2018-11-13 15:17:57', '101', '0000-00-00 00:00:00', '', 0),
-('181110003', '18002', 1, 'LH186', 'ハイエース', 'H14', 'シルバー', 0, 50000, 1500000, '', '102', '2018-11-13 15:17:57', '101', '0000-00-00 00:00:00', '', 0);
+('181110003', '18002', 1, 'LH186', 'ハイエース', 'H14', 'シルバー', 0, 50000, 1500000, '', '102', '2018-11-13 15:17:57', '101', '0000-00-00 00:00:00', '', 0),
+('181110004', '18003', 1, 'L700S', 'ミラジーノ', 'H14', 'ホワイト', 0, 80000, 300000, '', '103', '2018-11-26 00:00:00', '101', '0000-00-00 00:00:00', '', 0);
 
 -- --------------------------------------------------------
 
@@ -310,6 +290,13 @@ CREATE TABLE `quote` (
   `remarks` text NOT NULL COMMENT '備考'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='見積テーブル';
 
+--
+-- テーブルのデータのダンプ `quote`
+--
+
+INSERT INTO `quote` (`id`, `client_id`, `quote_date`, `quote_rep`, `expiry_date`, `payment_term`, `delivery_date`, `remarks`) VALUES
+('1800318001', '18003', '2018-11-26', '山田', '見積後２週間', '25日締翌月10日払', '別途相談', '');
+
 -- --------------------------------------------------------
 
 --
@@ -322,9 +309,16 @@ CREATE TABLE `quote_detail` (
   `order_id` char(10) NOT NULL COMMENT '受注ID',
   `product_name` varchar(20) NOT NULL COMMENT '品名',
   `quantity` int(11) NOT NULL COMMENT '数量',
-  `unit` int(11) NOT NULL COMMENT '単位',
+  `unit` varchar(3) NOT NULL COMMENT '単位',
   `price` int(11) NOT NULL COMMENT '単価'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='見積明細テーブル';
+
+--
+-- テーブルのデータのダンプ `quote_detail`
+--
+
+INSERT INTO `quote_detail` (`quote_id`, `no`, `order_id`, `product_name`, `quantity`, `unit`, `price`) VALUES
+('1800318001', 1, '181110004', 'L700S ミラジーノ(H14)', 1, '台', 280000);
 
 -- --------------------------------------------------------
 
@@ -425,8 +419,9 @@ CREATE TABLE `unbilled_data` (
 --
 
 INSERT INTO `unbilled_data` (`id`, `customer_id`, `order_id`, `recorded_date`, `billing_amount`, `quantity`, `unit`, `unit_price`, `comp_flag`) VALUES
-(1, '18001', '181110001', '2018-11-15', 'JZS144 クラウン', 1, '台', 1000000, 1),
-(2, '18001', '181110002', '2018-11-15', 'L600S ムーブ', 1, '台', 1000000, 1);
+(1, '18001', '181110001', '2018-11-15', 'JZS144 クラウン', 1, '台', 1000000, 0),
+(2, '18001', '181110002', '2018-11-15', 'L600S ムーブ', 1, '台', 1000000, 0),
+(3, '18002', '', '2018-11-22', '11月請求繰越分', 1, '個', 1000000, 0);
 
 --
 -- Indexes for dumped tables
@@ -442,7 +437,7 @@ ALTER TABLE `auction_hall`
 -- Indexes for table `bid`
 --
 ALTER TABLE `bid`
-  ADD PRIMARY KEY (`order_id`);
+  ADD PRIMARY KEY (`order_id`,`auction_hall_id`,`listing_number`);
 
 --
 -- Indexes for table `bill`
@@ -560,7 +555,7 @@ ALTER TABLE `transportation_vendor`
 -- AUTO_INCREMENT for table `unbilled_data`
 --
 ALTER TABLE `unbilled_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
