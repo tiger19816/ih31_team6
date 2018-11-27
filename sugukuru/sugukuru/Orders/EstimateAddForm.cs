@@ -105,7 +105,7 @@ namespace sugukuru.Orders
                 textBox1.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[3].Value) + " " + Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value) + "(" + Convert.ToString(dataGridView1.CurrentRow.Cells[5].Value) + ")";
                 textBox2.Text = 1.ToString();
                 textBox2.Enabled = false;
-                textBox4.Text = 1.ToString();
+                textBox4.Text = "台";
                 textBox4.Enabled = false;
             }
         }
