@@ -25,14 +25,30 @@ namespace sugukuru.Orders
             lbCarModelYear.Text = orderDetail["car_model_year"].ToString();
             lbCarName.Text = orderDetail["car_name"].ToString();
             lbCarColor.Text = orderDetail["car_color"].ToString();
-            lbCarMileage.Text = orderDetail["car_mileage"].ToString();
+            lbCarMileage.Text = String.Format("{0:#,0}", Int32.Parse(orderDetail["car_mileage"].ToString())) + "km";
             lbTransmission.Text = orderDetail["transmission"].ToString();
+            if (orderDetail["transmission"].ToString() == "0")
+            {
+                lbTransmission.Text = "AT";
+            }
+            else if (orderDetail["transmission"].ToString() == "1")
+            {
+                lbTransmission.Text = "MT";
+            }
             lbFineInfo.Text = orderDetail["fine_info"].ToString();
-            lbBidVehicleTax.Text = orderDetail["successful_bid_vehicle_tax"].ToString();
-            lbContractedBidQuantity.Text = orderDetail["contracted_successful_bid_quantity"].ToString();
-            lbVehicleTaxEquivalent.Text = orderDetail["vehicle_tax_equivalent"].ToString();
-            lbFee.Text = orderDetail["fee"].ToString();
-            lbBidFixing.Text = orderDetail["successful_bid_fixing"].ToString();
+            lbBidVehicleTax.Text = "\\" + String.Format("{0:#,0}", Int32.Parse(orderDetail["successful_bid_vehicle_tax"].ToString()));
+            lbContractedBidQuantity.Text = "\\" + String.Format("{0:#,0}", Int32.Parse(orderDetail["contracted_successful_bid_quantity"].ToString()));
+            lbVehicleTaxEquivalent.Text = "\\" + String.Format("{0:#,0}", Int32.Parse(orderDetail["vehicle_tax_equivalent"].ToString()));
+            lbFee.Text = "\\" + String.Format("{0:#,0}", Int32.Parse(orderDetail["fee"].ToString()));
+            if(orderDetail["successful_bid_fixing"].ToString() == "0")
+            {
+                lbBidFixing.Text = "未確定";
+            }
+            else if(orderDetail["successful_bid_fixing"].ToString() == "1")
+            {
+                lbBidFixing.Text = "確定";
+            }
+            
         }
 
         private void btClose_Click(object sender, EventArgs e)
