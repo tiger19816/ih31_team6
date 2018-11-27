@@ -85,6 +85,28 @@ namespace sugukuru.Purchase
             con.Close();
 
             MessageBox.Show("登録しました。");
+
+
+            lbAid.Text = "";
+            lbBid.Text = "";
+            lbPid.Text = "";
+            lbSum.Text = "";
+
+            tbCarName.Text = "";
+            tbCarTax.Text = "";
+            tbColor.Text = "";
+            tbFee.Text = "";
+            tbInfo.Text = "";
+            tbMile.Text = "";
+            tbModel.Text = "";
+            tbModelYear.Text = "";
+            tbNumber.Text = "";
+            tbPrice.Text = "";
+            tbTax.Text = "";
+
+
+
+
         }
 
        

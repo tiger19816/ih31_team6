@@ -69,6 +69,27 @@ namespace sugukuru.Purchase
             con.Close();
 
             MessageBox.Show("登録しました。");
+
+            tbListingNumber.Text = "";
+            tbOrderId.Text = "";
+            tbPrice.Text = "";
+
+            lbBuget.Text = "";
+            lbCId.Text = "";
+            lbCkana.Text = "";
+            lbClass.Text = "";
+            lbCname.Text = "";
+            lbColor.Text = "";
+            lbInfo.Text = "";
+            lbMile.Text = "";
+            lbModel.Text = "";
+            lbRep.Text = "";
+            lbType.Text = "";
+            lbYear.Text = "";
+
+            cbAuction.SelectedIndex = -1;
+
+
         }
 
         private void btSearch_Click(object sender, EventArgs e)

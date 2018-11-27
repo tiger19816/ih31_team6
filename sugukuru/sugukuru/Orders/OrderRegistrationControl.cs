@@ -160,6 +160,18 @@ namespace sugukuru.Orders
             tbBudget.Text = "";
             tbInfo.Text = "";
 
+            lbAddress.Text = "";
+            lbClientDivision.Text = "";
+            lbClientRep.Text = "";
+            lbFax.Text = "";
+            lbName.Text = "";
+            lbNameRead.Text = "";
+            lbPhoneNumber.Text = "";
+            lbPostalCode.Text = "";
+            lbSalesRep.Text = "";
+           
+
+
 
         }
     }

@@ -58,6 +58,28 @@ namespace sugukuru.Purchase
             con.Close();
 
             MessageBox.Show("登録しました。");
+
+            cbOrderRep.SelectedIndex = -1;
+            tbArrival.Text = "";
+            tbArrivalPost.Text = "";
+            tbDeparture.Text = "";
+            tbDeparturePost.Text = "";
+            tbOrderId.Text = "";
+            tbPrice.Text = "";
+            tbSlip.Text = "";
+
+            lbAddress.Text = "";
+            lbClientDivision.Text = "";
+            lbClientId.Text = "";
+            lbClientRep.Text = "";
+            lbFax.Text = "";
+            lbName.Text = "";
+            lbNameRead.Text = "";
+            lbPhoneNumber.Text = "";
+            lbPostalCode.Text = "";
+            lbSalesRep.Text = "";
+
+
         }
 
         private void btSearch_Click(object sender, EventArgs e)
