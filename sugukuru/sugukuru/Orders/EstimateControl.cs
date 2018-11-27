@@ -127,7 +127,7 @@ namespace sugukuru.Orders
                 {
                     table.Rows.Clear();
                 }           
-                
+               
 
                 //返り値の取得(DataRow)
                 DataRow selectRow = MenuFM.Customer.getDataRow();
@@ -429,6 +429,31 @@ namespace sugukuru.Orders
 
             // PDFをブラウザで表示
             System.Diagnostics.Process.Start(OutputPath);
+
+            //メッセージボックスを表示する
+            DialogResult result = MessageBox.Show("処理内容をPDF化しました。",
+            "質問",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+            //何が選択されたか調べる
+            if (result == DialogResult.OK)
+            {
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox4.Text = "";
+                textBox7.Text = "";
+                textBox8.Text = "";
+                textBox9.Text = "";
+                dateTimePicker1.Text = "";
+                textBox13.Text = "";
+                textBox5.Text = "";
+                textBox6.Text = "";
+                textBox3.Text = "";
+                textBox10.Text = "";
+                textBox11.Text = "";
+                textBox12.Text = "";
+                table.Rows.Clear();
+            }
         }
     }
 }

@@ -84,6 +84,13 @@ CREATE TABLE `bill` (
   `remarks` text NOT NULL COMMENT '備考'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求書';
 
+--
+-- テーブルのデータのダンプ `bill`
+--
+
+INSERT INTO `bill` (`invoice_number`, `customer_id`, `billing_date`, `billing_representative`, `payment_criteria`, `remarks`) VALUES
+('1800118011', '18001', '2018-11-21', '101', '月末締翌月末払', '');
+
 -- --------------------------------------------------------
 
 --
@@ -92,9 +99,16 @@ CREATE TABLE `bill` (
 
 CREATE TABLE `billing_clearing` (
   `no` char(10) NOT NULL COMMENT '請求書番号',
-  `amount` int(11) DEFAULT NULL COMMENT '入金額',
+  `amount` int(11) NOT NULL COMMENT '入金額',
   `clearing_flag` int(11) NOT NULL DEFAULT '0' COMMENT '消込フラグ'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求消込';
+
+--
+-- テーブルのデータのダンプ `billing_clearing`
+--
+
+INSERT INTO `billing_clearing` (`no`, `amount`, `clearing_flag`) VALUES
+('1800118011', 1000000, 2);
 
 -- --------------------------------------------------------
 
@@ -111,6 +125,14 @@ CREATE TABLE `billing_detail` (
   `unit` varchar(3) NOT NULL COMMENT '単位',
   `unit_price` int(11) NOT NULL COMMENT '単価'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='請求明細';
+
+--
+-- テーブルのデータのダンプ `billing_detail`
+--
+
+INSERT INTO `billing_detail` (`invoice_number`, `no`, `order_id`, `product_name`, `quantity`, `unit`, `unit_price`) VALUES
+('1800118011', 1, '181110001', 'JZS144 クラウン', 1, '台', 1000000),
+('1800118011', 2, '181110002', 'L600S ムーブ', 1, '台', 1000000);
 
 -- --------------------------------------------------------
 
@@ -164,6 +186,31 @@ INSERT INTO `client` (`id`, `formal_name`, `formal_name_read`, `abbreviation`, `
 -- --------------------------------------------------------
 
 --
+-- テーブルの構造 `document`
+--
+
+CREATE TABLE `document` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL COMMENT '書類名',
+  `category` int(11) NOT NULL COMMENT '必要書類(0)登録ナンバー付(1)抹消済(2)'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='書類';
+
+--
+-- テーブルのデータのダンプ `document`
+--
+
+INSERT INTO `document` (`id`, `name`, `category`) VALUES
+(1, 'オークション出品票', 0),
+(2, '検査証', 1),
+(3, '自賠責保険証書', 1),
+(4, '譲渡証明', 1),
+(5, '印鑑証明', 1),
+(6, '委任状', 1),
+(7, '抹消証明', 2);
+
+-- --------------------------------------------------------
+
+--
 -- テーブルの構造 `employee`
 --
 
@@ -207,6 +254,7 @@ CREATE TABLE `orders` (
   `car_classification` varchar(30) NOT NULL COMMENT '車種',
   `car_model_year` char(3) NOT NULL COMMENT '年式',
   `car_color` varchar(5) NOT NULL COMMENT '色',
+  `transmission` int(11) NOT NULL COMMENT 'AT(0)/MT(1)',
   `car_mileage` int(11) NOT NULL COMMENT '走行距離',
   `budget` int(11) NOT NULL COMMENT '予算',
   `fine_info` text NOT NULL COMMENT '微細情報',
@@ -222,10 +270,10 @@ CREATE TABLE `orders` (
 -- テーブルのデータのダンプ `orders`
 --
 
-INSERT INTO `orders` (`id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `car_mileage`, `budget`, `fine_info`, `order_rep`, `create_at`, `create_rep`, `update_at`, `update_rep`, `cancel_flag`) VALUES
-('181110001', '18001', 1, 'JZS144', 'クラウン', 'H10', 'パール', 50000, 1000000, '', '102', '2018-11-12 15:42:07', '101', '0000-00-00 00:00:00', '', 0),
-('181110002', '18001', 1, 'L600S', 'ムーブ', 'H10', 'シルバー', 50000, 1000000, '', '102', '2018-11-13 15:17:57', '101', '0000-00-00 00:00:00', '', 0),
-('181110003', '18002', 1, 'LH186', 'ハイエース', 'H14', 'シルバー', 50000, 1500000, '', '102', '2018-11-13 15:17:57', '101', '0000-00-00 00:00:00', '', 0);
+INSERT INTO `orders` (`id`, `client_id`, `order_type`, `car_model`, `car_classification`, `car_model_year`, `car_color`, `transmission`, `car_mileage`, `budget`, `fine_info`, `order_rep`, `create_at`, `create_rep`, `update_at`, `update_rep`, `cancel_flag`) VALUES
+('181110001', '18001', 1, 'JZS144', 'クラウン', 'H10', 'パール', 0, 50000, 1000000, '', '102', '2018-11-12 15:42:07', '101', '0000-00-00 00:00:00', '', 0),
+('181110002', '18001', 1, 'L600S', 'ムーブ', 'H10', 'シルバー', 0, 50000, 1000000, '', '102', '2018-11-13 15:17:57', '101', '0000-00-00 00:00:00', '', 0),
+('181110003', '18002', 1, 'LH186', 'ハイエース', 'H14', 'シルバー', 0, 50000, 1500000, '', '102', '2018-11-13 15:17:57', '101', '0000-00-00 00:00:00', '', 0);
 
 -- --------------------------------------------------------
 
@@ -239,10 +287,10 @@ CREATE TABLE `procedure_after_successful_bid` (
   `payment_status` int(11) NOT NULL COMMENT '支払い状況',
   `payment_due` date NOT NULL COMMENT '支払い期限',
   `vehicle_registration_status` int(11) NOT NULL COMMENT '車両登録状況',
-  `procedure_content` varchar(50) NOT NULL COMMENT '手続内容',
-  `report_deadline` date NOT NULL COMMENT '報告期限',
-  `procedure_flag` int(11) NOT NULL COMMENT 'オークション手続伝達フラグ',
-  `report_complete_date` date NOT NULL COMMENT '報告完了日付'
+  `procedure_content` varchar(50) DEFAULT NULL COMMENT '手続内容',
+  `report_deadline` date DEFAULT NULL COMMENT '報告期限',
+  `procedure_flag` int(11) DEFAULT NULL COMMENT 'オークション手続伝達フラグ',
+  `report_complete_date` date DEFAULT NULL COMMENT '報告完了日付'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='落札後手続きテーブル';
 
 -- --------------------------------------------------------
@@ -262,14 +310,6 @@ CREATE TABLE `quote` (
   `remarks` text NOT NULL COMMENT '備考'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='見積テーブル';
 
---
--- テーブルのデータのダンプ `quote`
---
-
-INSERT INTO `quote` (`id`, `client_id`, `quote_date`, `quote_rep`, `expiry_date`, `payment_term`, `delivery_date`, `remarks`) VALUES
-('1800118001', '18001', '2018-11-20', '山田', '見積後２週間', '20日締めの当月15払い', '別途相談', ''),
-('1800118002', '18001', '2018-11-20', '山田', '見積後２週間', '20日締めの当月15払い', '別途相談', '');
-
 -- --------------------------------------------------------
 
 --
@@ -285,16 +325,6 @@ CREATE TABLE `quote_detail` (
   `unit` int(11) NOT NULL COMMENT '単位',
   `price` int(11) NOT NULL COMMENT '単価'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='見積明細テーブル';
-
---
--- テーブルのデータのダンプ `quote_detail`
---
-
-INSERT INTO `quote_detail` (`quote_id`, `no`, `order_id`, `product_name`, `quantity`, `unit`, `price`) VALUES
-('1800118001', 1, '181110001', 'JZS144 クラウン(H10)', 1, 1, 10000),
-('1800118001', 2, '181110002', 'L600S ムーブ(H10)', 1, 1, 100000),
-('1800118002', 1, '181110001', 'JZS144 クラウン(H10)', 1, 1, 100000),
-('1800118002', 2, '181110002', 'L600S ムーブ(H10)', 1, 1, 100000);
 
 -- --------------------------------------------------------
 
@@ -316,6 +346,7 @@ CREATE TABLE `recieved_document` (
 CREATE TABLE `successful_bid_vehicle` (
   `order_id` char(9) NOT NULL COMMENT '受注ID',
   `car_model` varchar(30) NOT NULL COMMENT '型式',
+  `undercarriage_number` varchar(20) NOT NULL COMMENT '車台番号',
   `car_model_year` char(9) NOT NULL COMMENT '年式',
   `car_name` varchar(30) NOT NULL COMMENT '車名',
   `car_color` varchar(5) NOT NULL COMMENT '色',
@@ -351,6 +382,29 @@ CREATE TABLE `transportation` (
 -- --------------------------------------------------------
 
 --
+-- テーブルの構造 `transportation_vendor`
+--
+
+CREATE TABLE `transportation_vendor` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL COMMENT '陸送業者名'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='陸送業者';
+
+--
+-- テーブルのデータのダンプ `transportation_vendor`
+--
+
+INSERT INTO `transportation_vendor` (`id`, `name`) VALUES
+(1, ' 株式会社オークション・トランスポート'),
+(2, ' 新富士陸送株式会社'),
+(3, ' スズキ輸送梱包株式会社'),
+(4, ' 国際陸送有限会社'),
+(5, '株式会社ゼロ'),
+(6, '株式会社テイクオフ');
+
+-- --------------------------------------------------------
+
+--
 -- テーブルの構造 `unbilled_data`
 --
 
@@ -371,8 +425,8 @@ CREATE TABLE `unbilled_data` (
 --
 
 INSERT INTO `unbilled_data` (`id`, `customer_id`, `order_id`, `recorded_date`, `billing_amount`, `quantity`, `unit`, `unit_price`, `comp_flag`) VALUES
-(1, '18001', '181110001', '2018-11-15', 'JZS144 クラウン', 1, '台', 1000000, 0),
-(2, '18001', '181110002', '2018-11-15', 'L600S ムーブ', 1, '台', 1000000, 0);
+(1, '18001', '181110001', '2018-11-15', 'JZS144 クラウン', 1, '台', 1000000, 1),
+(2, '18001', '181110002', '2018-11-15', 'L600S ムーブ', 1, '台', 1000000, 1);
 
 --
 -- Indexes for dumped tables
@@ -412,6 +466,12 @@ ALTER TABLE `billing_detail`
 -- Indexes for table `client`
 --
 ALTER TABLE `client`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `document`
+--
+ALTER TABLE `document`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -463,6 +523,12 @@ ALTER TABLE `transportation`
   ADD PRIMARY KEY (`order_id`);
 
 --
+-- Indexes for table `transportation_vendor`
+--
+ALTER TABLE `transportation_vendor`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `unbilled_data`
 --
 ALTER TABLE `unbilled_data`
@@ -477,6 +543,18 @@ ALTER TABLE `unbilled_data`
 --
 ALTER TABLE `auction_hall`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'オークション会場ID', AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `document`
+--
+ALTER TABLE `document`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `transportation_vendor`
+--
+ALTER TABLE `transportation_vendor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `unbilled_data`
