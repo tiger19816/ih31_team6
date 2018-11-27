@@ -141,7 +141,7 @@ namespace sugukuru.Purchase
                 {
                     chainData += chainRow[i].ToString() + ", ";
                 }
-                MessageBox.Show(chainData);
+                //MessageBox.Show(chainData);
 
                 lbCname.Text = chainRow["formal_name"].ToString();
                 lbCkana.Text = chainRow["formal_name_read"].ToString();
