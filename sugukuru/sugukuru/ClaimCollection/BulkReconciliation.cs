@@ -83,6 +83,8 @@ namespace sugukuru.ClaimCollection
 
         private void btCreate_Click(object sender, EventArgs e)
         {
+            table.Clear();
+
             //入金データを入れるList
             List<Dictionary<string, string>> tbl = new List<Dictionary<string, string>>();
 
@@ -209,10 +211,24 @@ namespace sugukuru.ClaimCollection
 
         private void btAllocation_Click(object sender, EventArgs e)
         {
-            AllocationForm form = new AllocationForm();
+            DataRowView drv = (DataRowView)dgvReconciliation.CurrentRow.DataBoundItem;
+            DataRow row = (DataRow)drv.Row;
+
+            Dictionary<string, string> d = new Dictionary<string, string>();
+            d.Add("calculation_date", row["勘定日"].ToString());
+            d.Add("starting_date", row["起算日"].ToString());
+            d.Add("price", row["金額"].ToString());
+            d.Add("name", row["振込依頼人名"].ToString());
+
+            AllocationForm form = new AllocationForm(d);
             form.ShowDialog();
             form.Dispose();
             this.Show();
+
+            if(form.fixFlag)
+            {
+                dgvReconciliation.Rows.RemoveAt(dgvReconciliation.CurrentRow.Index);
+            }
         }
     }
 }

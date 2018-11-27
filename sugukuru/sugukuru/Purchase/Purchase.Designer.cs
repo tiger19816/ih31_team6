@@ -39,6 +39,7 @@
             // 
             // inheritableFlowLayoutPanel1
             // 
+            this.inheritableFlowLayoutPanel1.BackColor = System.Drawing.Color.LightGreen;
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btBidCarInput);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btDeliverySlip);
             this.inheritableFlowLayoutPanel1.Controls.Add(this.btBitInfo);
