@@ -93,11 +93,14 @@ namespace sugukuru.Orders
                 table.Rows.Add(row);
 
                 // 小計を計算し表示
-                textBox10.Text = (int.Parse(textBox10.Text) + int.Parse(OpenFM.Estimate.TotalPrice)).ToString();
+                int result1 = (int.Parse(textBox10.Text) + int.Parse(OpenFM.Estimate.TotalPrice));
+                textBox10.Text = "\\" + String.Format("{0:#,0}", Int32.Parse(result1.ToString()));
                 // 消費税を計算し表示
-                textBox11.Text = (int.Parse(textBox10.Text) / 100 * 8).ToString();
+                int result2 = (result1 / 100 * 8);
+                textBox11.Text = "\\" + String.Format("{0:#,0}", Int32.Parse(result2.ToString()));
                 // 合計金額額を計算し表示
-                textBox12.Text = (int.Parse(textBox10.Text) + int.Parse(textBox11.Text)).ToString();
+                int result3 = (result1 + result2);
+                textBox12.Text = "\\" + String.Format("{0:#,0}", Int32.Parse(result3.ToString()));
             }
         }
 
