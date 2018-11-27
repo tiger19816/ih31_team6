@@ -49,6 +49,7 @@ namespace sugukuru.ClaimCollection
         //****************************************************************************
         private void btDisplay_Click(object sender, EventArgs e)
         {
+            dtpBill.Value = DateTime.Parse(cbYear.SelectedItem.ToString() + "/" + cbMonth.SelectedItem.ToString() + "/25");
             dataGridViewDisplay();
         }
         #endregion
@@ -71,7 +72,7 @@ namespace sugukuru.ClaimCollection
                     string date = dtpBill.Value.ToShortDateString();
                     
                     string no = id + DateTime.Now.ToString("yy") + "0" + cbMonth.SelectedItem.ToString();
-                    string payment = "月末締翌月末払";
+                    string payment = "25日締翌月10日払";
 
                     string sql = "INSERT INTO bill (invoice_number,customer_id,billing_date,billing_representative,payment_criteria) VALUES("
                         + "'" + no + "',"
@@ -157,6 +158,18 @@ namespace sugukuru.ClaimCollection
                     // 見積内容をhtmlにセットしていく
                     DocumentHtmlTemplate page = new DocumentHtmlTemplate();
 
+                    DateTime limitDate;
+
+                    if ("12".Equals(cbMonth.SelectedItem.ToString()))
+                    {
+                        
+                        limitDate = DateTime.Parse((Convert.ToInt32(cbYear.SelectedItem) + 1).ToString() + "/1/10");
+                    }
+                    else
+                    {
+                        limitDate = DateTime.Parse(cbYear.SelectedItem.ToString() + "/"+ (Convert.ToInt32(cbMonth.SelectedItem) + 1).ToString() +"/10");
+                    }
+
                     // 書類種別をセット
                     page.DocumentType = "請求";
                     // 書類作成日をセット
@@ -168,7 +181,7 @@ namespace sugukuru.ClaimCollection
                     // 書類有効期限
                     page.ExpirationDate = "";
                     // 支払期限
-                    page.PaymentDeadline = DateTime.Parse(dtpBill.Text).AddDays(14).ToString("yyyy年MM月dd日");
+                    page.PaymentDeadline = limitDate.ToString("yyyy年MM月dd日");
                     // 顧客名をセット
                     page.ClientName = dgvBulk.Rows[i].Cells["formal_name"].Value.ToString();
                     // 顧客郵便番号をセット
@@ -240,13 +253,20 @@ namespace sugukuru.ClaimCollection
         {
             string strYear = cbYear.SelectedItem.ToString();
             string strMonth = cbMonth.SelectedItem.ToString();
+            string preYear = strYear;
+            string preMonth = (int.Parse(strMonth) - 1).ToString();
+            if("1".Equals(strMonth))
+            {
+                preYear = (int.Parse(strYear) - 1).ToString();
+                preMonth = "12";
+            }
 
             //SQL文を作成する
             string sql = "SELECT c.id, c.formal_name, c.postal_code, c.prefectures, c.municipality, c.client_division, c.client_rep, c.phone_number, c.fax, d.price "
                 + "FROM client c INNER JOIN "
                 + "(SELECT customer_id, TRUNCATE(SUM(unit_price * quantity * 1.08), 0) AS price "
                 + "FROM unbilled_data "
-                + "WHERE recorded_date LIKE '" + strYear + "-" + strMonth + "%' "
+                + "WHERE recorded_date BETWEEN '" + preYear + "-" + preMonth + "-26' AND '" + strYear + "-" + strMonth + "-25' "
                 + "AND comp_flag = 0 "
                 + "GROUP BY customer_id) d "
                 + "ON c.id = d.customer_id "

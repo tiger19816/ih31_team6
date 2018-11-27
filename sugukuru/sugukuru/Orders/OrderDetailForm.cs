@@ -115,6 +115,8 @@ namespace sugukuru.Orders
                 else if (chainAuction.Rows[chainAuction.Rows.Count - 1]["bid_result"].ToString() == "1")
                 {
                     lbState.Text = "完了";
+                    btTransportation.Visible = true;
+                    btCompleteOrderInfo.Visible = true;
                 }
             }
             else

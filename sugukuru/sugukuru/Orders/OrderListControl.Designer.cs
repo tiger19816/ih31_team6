@@ -183,6 +183,10 @@
             // cbSearchProgress
             // 
             this.cbSearchProgress.FormattingEnabled = true;
+            this.cbSearchProgress.Items.AddRange(new object[] {
+            "未入札",
+            "注残",
+            "完了"});
             this.cbSearchProgress.Location = new System.Drawing.Point(873, 85);
             this.cbSearchProgress.Name = "cbSearchProgress";
             this.cbSearchProgress.Size = new System.Drawing.Size(121, 24);
