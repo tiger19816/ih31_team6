@@ -109,6 +109,11 @@
     <Compile Include="FormMaster\UserControlMST.Designer.cs">
       <DependentUpon>UserControlMST.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceHtmlTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceHtmlTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -612,6 +617,10 @@
     <Content Include="DocumentHtmlTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>DocumentHtmlTemplate.cs</LastGenOutput>
+    </Content>
+    <Content Include="InvoiceHtmlTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>InvoiceHtmlTemplate.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
