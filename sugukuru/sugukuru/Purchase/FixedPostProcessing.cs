@@ -120,10 +120,10 @@ namespace sugukuru.Purchase
 
             //DB切断
             con.Close();
-
+            
             for (int i = 0; i < documentDset.Tables["list2"].Rows.Count; i++)
             {
-                list2.Add(documentDset.Tables["list2"].Rows[i]["name"].ToString());
+                list2.Add(documentDset.Tables["list2"].Rows[i]["name"].ToString());               
             }
 
             checkedListBox1.Items.AddRange(list1.ToArray());
@@ -134,9 +134,9 @@ namespace sugukuru.Purchase
         {
             // 受領済み書類を入れるリスト
             list3 = new List<string>();
+            list4 = new string[6];
 
-            string sql = "SELECT `vehicle_registration_status` FROM `procedure_after_successful_bid` WHERE `order_id` = '"+_orderID+"'";
-            Console.WriteLine(sql);
+            string sql = "SELECT `vehicle_registration_status` FROM `procedure_after_successful_bid` WHERE `order_id` = '"+_orderID+"'";          
 
             //抽象データ格納データセットを作成
             DataSet dset = new DataSet("vehicleRegistrationStatus");
@@ -182,7 +182,7 @@ namespace sugukuru.Purchase
 
             //DB切断
             con.Close();
-
+            
             for (int i = 0; i < dset.Tables["recievedDocument"].Rows.Count; i++)
             {
                 list3.Add(dset.Tables["recievedDocument"].Rows[i]["name"].ToString());
@@ -204,8 +204,6 @@ namespace sugukuru.Purchase
         // 検索ボタンが押された処理
         private void button9_Click(object sender, EventArgs e)
         {
-            checkedListBox1.Items.Clear();
-            checkedListBox2.Items.Clear();
 
             OrderSelectForm selectFM = new OrderSelectForm();
             selectFM.ShowDialog();
@@ -305,24 +303,32 @@ namespace sugukuru.Purchase
                         // 報告完了日付をセット
                         dateTimePicker3.Text = dset.Tables["FixedPostProcessing"].Rows[0]["report_complete_date"].ToString();
 
-                        //　移転登録の場合true
+                        // 伝達完了の場合true
                         if (int.Parse(dset.Tables["FixedPostProcessing"].Rows[0]["procedure_flag"].ToString()) == 1)
                         {
                             checkBox1.Checked = true;
                         }
                         else
                         {
-                            radioButton5.Checked = false;
+                            checkBox1.Checked = false;
                         }
+
+                        checkedListBox1.Items.Clear();
+                        checkedListBox2.Items.Clear();
 
                         getDocument(textBox2.Text);
                         checkedListBox1.Items.AddRange(list4);
                         checkedListBox2.Items.AddRange(list3.ToArray());
                     }
-                    else
+                    // ナンバー登録なし
+                    else if (int.Parse(dset.Tables["FixedPostProcessing"].Rows[0]["vehicle_registration_status"].ToString()) == 0)
                     {
-                        // ナンバー登録なし
                         radioButton3.Checked = true;
+                        groupBox4.Enabled = false;
+
+                        checkedListBox1.Items.Clear();
+                        checkedListBox2.Items.Clear();
+
                         getDocument(textBox2.Text);
                         checkedListBox1.Items.AddRange(list4);
                         checkedListBox2.Items.AddRange(list3.ToArray());
@@ -330,7 +336,7 @@ namespace sugukuru.Purchase
                 }
                 else
                 {
-                    // 初期値セット
+                    // 初期値セット                                   
                     radioButton1.Checked = true;
                     radioButton4.Checked = true;
                     radioButton6.Checked = true;
@@ -572,6 +578,7 @@ namespace sugukuru.Purchase
             //何が選択されたか調べる
             if (result == DialogResult.OK)
             {
+                list3 = new List<string>();
                 textBox2.Text = "";
                 radioButton1.Checked = true;
                 radioButton4.Checked = true;
