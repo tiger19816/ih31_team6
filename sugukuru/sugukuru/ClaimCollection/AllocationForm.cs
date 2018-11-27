@@ -39,9 +39,13 @@ namespace sugukuru.ClaimCollection
             dgvAllocation.ReadOnly = true;
 
             dictionary = d;
-            this.conStr = ConfigurationManager.AppSettings["DbConKey"];
 
-            string sql = "SELECT bc.no AS b_no, c.id AS c_id, c.formal_name AS name, c.postal_code AS postal, CONCAT(c.prefectures, c.municipality) AS address, c.client_division AS division, c.client_rep AS rep, b.billing_date AS b_date, TRUNCATE(SUM(bd.quantity * bd.unit_price * 1.08), 0) AS price, bc.amount AS amount, (-(bc.amount - TRUNCATE(SUM(bd.quantity * bd.unit_price * 1.08), 0))) AS dif "
+            lbName.Text = d["name"];
+            lbDate1.Text = d["calculation_date"];
+            lbDate2.Text = d["starting_date"];
+            lbAmount.Text = int.Parse(d["price"]).ToString("C");
+
+            string sql = "SELECT bc.no AS b_no, c.id AS c_id, c.formal_name AS name, b.billing_date AS b_date, TRUNCATE(SUM(bd.quantity * bd.unit_price * 1.08), 0) AS price, bc.amount AS amount, (-(bc.amount - TRUNCATE(SUM(bd.quantity * bd.unit_price * 1.08), 0))) AS dif "
                     + "FROM billing_clearing bc "
                     + "INNER JOIN bill b ON bc.no = b.invoice_number "
                     + "INNER JOIN client c ON b.customer_id = c.id "
@@ -69,6 +73,15 @@ namespace sugukuru.ClaimCollection
             con.Close();
 
             dgvAllocation.DataSource = dset.Tables["bill"];
+
+            dgvAllocation.Columns["c_id"].Visible = false;
+
+            dgvAllocation.Columns["b_no"].HeaderText = "請求書番号";
+            dgvAllocation.Columns["name"].HeaderText = "会社名";
+            dgvAllocation.Columns["b_date"].HeaderText = "請求日";
+            dgvAllocation.Columns["price"].HeaderText = "請求額";
+            dgvAllocation.Columns["dif"].HeaderText = "残額";
+            dgvAllocation.Columns["amount"].HeaderText = "入金済金額";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -109,6 +122,14 @@ namespace sugukuru.ClaimCollection
 
             fixFlag = true;
             this.Close();
+        }
+
+        private void tblCustomer_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (e.Column % 2 == 0)
+            {
+                e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
+            }
         }
     }
 }
