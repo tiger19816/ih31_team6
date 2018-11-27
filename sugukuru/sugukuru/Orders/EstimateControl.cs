@@ -127,7 +127,7 @@ namespace sugukuru.Orders
                 {
                     table.Rows.Clear();
                 }           
-                
+               
 
                 //返り値の取得(DataRow)
                 DataRow selectRow = MenuFM.Customer.getDataRow();

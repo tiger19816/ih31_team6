@@ -125,6 +125,8 @@ namespace sugukuru.Purchase
             {
                 list2.Add(documentDset.Tables["list2"].Rows[i]["name"].ToString());
             }
+
+            checkedListBox1.Items.AddRange(list1.ToArray());
         }
 
         // 受注に対して必要な書類と受領済み書類を返す。
@@ -134,6 +136,7 @@ namespace sugukuru.Purchase
             list3 = new List<string>();
 
             string sql = "SELECT `vehicle_registration_status` FROM `procedure_after_successful_bid` WHERE `order_id` = '"+_orderID+"'";
+            Console.WriteLine(sql);
 
             //抽象データ格納データセットを作成
             DataSet dset = new DataSet("vehicleRegistrationStatus");
@@ -204,10 +207,18 @@ namespace sugukuru.Purchase
             checkedListBox1.Items.Clear();
             checkedListBox2.Items.Clear();
 
-            textBox2.Text = "181110001";
-            Boolean flg = true;
-            if (flg)
+            OrderSelectForm selectFM = new OrderSelectForm();
+            selectFM.ShowDialog();
+            selectFM.Dispose();
+            this.Show();
+
+            //子フォームで選択ボタンが押された場合の処理
+            if (selectFM.SelectFlg)
             {
+                //子フォームからの返り値(DataRow)
+                DataRow selectRow = selectFM.Order.getDataRow();
+                textBox2.Text = selectRow["id"].ToString();
+
                 this.sql = "SELECT * FROM `procedure_after_successful_bid` WHERE `order_id` = '"+textBox2.Text+"'";
 
                 // データをDBへ追加する
@@ -315,6 +326,22 @@ namespace sugukuru.Purchase
                         getDocument(textBox2.Text);
                         checkedListBox1.Items.AddRange(list4);
                         checkedListBox2.Items.AddRange(list3.ToArray());
+                    }
+                }
+                else
+                {
+                    radioButton1.Checked = true;
+                    radioButton4.Checked = true;
+                    radioButton6.Checked = true;
+                    checkBox1.Checked = false;
+                    dateTimePicker1.Text = "";
+                    dateTimePicker2.Text = "";
+                    dateTimePicker3.Text = "";
+                    checkedListBox1.Items.Clear();
+                    checkedListBox2.Items.Clear();
+                    for (int i = 0; i < list1.Count; i++)
+                    {
+                        checkedListBox1.Items.Add(list1[i]);
                     }
                 }
             }
