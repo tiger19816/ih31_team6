@@ -114,12 +114,12 @@ namespace sugukuru.Purchase
                 //DataRowからの引数はデータベースのカラム名そのまま
                 tbOrderId.Text = selectRow["id"].ToString();
                 lbCId.Text = selectRow["client_id"].ToString();
-                lbBuget.Text = selectRow["budget"].ToString();
+                lbBuget.Text = "\\" + String.Format("{0:#,0}", Int32.Parse(selectRow["budget"].ToString()));
                 lbClass.Text = selectRow["car_classification"].ToString();
                 lbColor.Text = selectRow["car_color"].ToString();
                 
                 lbInfo.Text = selectRow["fine_info"].ToString();
-                lbMile.Text = selectRow["car_mileage"].ToString();
+                lbMile.Text = String.Format("{0:#,0}", Int32.Parse(selectRow["car_mileage"].ToString())) + "km";
                 lbModel.Text = selectRow["car_model"].ToString();
                 
                 String type = selectRow["order_type"].ToString();

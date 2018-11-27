@@ -57,7 +57,6 @@
             this.lbOrderReceiveDate = new System.Windows.Forms.Label();
             this.lbOrderRep = new System.Windows.Forms.Label();
             this.lbOrderType = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -90,6 +89,7 @@
             this.lbFineInfo = new System.Windows.Forms.Label();
             this.btTransportation = new System.Windows.Forms.Button();
             this.btCompleteOrderInfo = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
             this.tblCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvAuctionLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -380,7 +380,6 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 10;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -392,7 +391,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.tableLayoutPanel1.Controls.Add(this.lbOrderReceiveRep, 9, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbOrderReceiveDate, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbOrderRep, 5, 0);
@@ -406,7 +405,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 52);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1078, 32);
             this.tableLayoutPanel1.TabIndex = 39;
             this.tableLayoutPanel1.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint_1);
@@ -415,7 +414,7 @@
             // 
             this.lbOrderReceiveRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbOrderReceiveRep.AutoSize = true;
-            this.lbOrderReceiveRep.Location = new System.Drawing.Point(953, 16);
+            this.lbOrderReceiveRep.Location = new System.Drawing.Point(953, 9);
             this.lbOrderReceiveRep.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lbOrderReceiveRep.Name = "lbOrderReceiveRep";
             this.lbOrderReceiveRep.Size = new System.Drawing.Size(0, 16);
@@ -425,7 +424,7 @@
             // 
             this.lbOrderReceiveDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbOrderReceiveDate.AutoSize = true;
-            this.lbOrderReceiveDate.Location = new System.Drawing.Point(741, 16);
+            this.lbOrderReceiveDate.Location = new System.Drawing.Point(741, 9);
             this.lbOrderReceiveDate.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lbOrderReceiveDate.Name = "lbOrderReceiveDate";
             this.lbOrderReceiveDate.Size = new System.Drawing.Size(0, 16);
@@ -435,7 +434,7 @@
             // 
             this.lbOrderRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbOrderRep.AutoSize = true;
-            this.lbOrderRep.Location = new System.Drawing.Point(529, 16);
+            this.lbOrderRep.Location = new System.Drawing.Point(529, 9);
             this.lbOrderRep.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lbOrderRep.Name = "lbOrderRep";
             this.lbOrderRep.Size = new System.Drawing.Size(0, 16);
@@ -445,29 +444,18 @@
             // 
             this.lbOrderType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbOrderType.AutoSize = true;
-            this.lbOrderType.Location = new System.Drawing.Point(317, 16);
+            this.lbOrderType.Location = new System.Drawing.Point(317, 9);
             this.lbOrderType.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lbOrderType.Name = "lbOrderType";
             this.lbOrderType.Size = new System.Drawing.Size(0, 16);
             this.lbOrderType.TabIndex = 43;
-            // 
-            // label25
-            // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(4, 16);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(56, 16);
-            this.label25.TabIndex = 41;
-            this.label25.Text = "受注番号";
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(852, 16);
+            this.label8.Location = new System.Drawing.Point(852, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 16);
             this.label8.TabIndex = 40;
@@ -478,7 +466,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(640, 16);
+            this.label7.Location = new System.Drawing.Point(640, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 16);
             this.label7.TabIndex = 40;
@@ -489,7 +477,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(428, 16);
+            this.label6.Location = new System.Drawing.Point(428, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 6;
@@ -500,7 +488,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(216, 16);
+            this.label5.Location = new System.Drawing.Point(216, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 0;
@@ -510,7 +498,7 @@
             // 
             this.lbOrderId.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbOrderId.AutoSize = true;
-            this.lbOrderId.Location = new System.Drawing.Point(105, 16);
+            this.lbOrderId.Location = new System.Drawing.Point(105, 9);
             this.lbOrderId.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lbOrderId.Name = "lbOrderId";
             this.lbOrderId.Size = new System.Drawing.Size(0, 16);
@@ -727,13 +715,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
             this.tableLayoutPanel3.Controls.Add(this.lbUpdateDate, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label26, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label31, 2, 0);
@@ -741,7 +723,7 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(26, 90);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(427, 32);
             this.tableLayoutPanel3.TabIndex = 41;
             this.tableLayoutPanel3.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint_1);
@@ -750,7 +732,7 @@
             // 
             this.lbUpdateDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbUpdateDate.AutoSize = true;
-            this.lbUpdateDate.Location = new System.Drawing.Point(105, 16);
+            this.lbUpdateDate.Location = new System.Drawing.Point(105, 9);
             this.lbUpdateDate.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lbUpdateDate.Name = "lbUpdateDate";
             this.lbUpdateDate.Size = new System.Drawing.Size(0, 16);
@@ -761,7 +743,7 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Location = new System.Drawing.Point(4, 16);
+            this.label26.Location = new System.Drawing.Point(4, 9);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(80, 16);
             this.label26.TabIndex = 41;
@@ -772,7 +754,7 @@
             this.label31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Location = new System.Drawing.Point(216, 16);
+            this.label31.Location = new System.Drawing.Point(216, 9);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(92, 16);
             this.label31.TabIndex = 0;
@@ -782,7 +764,7 @@
             // 
             this.lbUpdateRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbUpdateRep.AutoSize = true;
-            this.lbUpdateRep.Location = new System.Drawing.Point(317, 16);
+            this.lbUpdateRep.Location = new System.Drawing.Point(317, 9);
             this.lbUpdateRep.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lbUpdateRep.Name = "lbUpdateRep";
             this.lbUpdateRep.Size = new System.Drawing.Size(0, 16);
@@ -848,6 +830,17 @@
             this.btCompleteOrderInfo.UseVisualStyleBackColor = true;
             this.btCompleteOrderInfo.Visible = false;
             this.btCompleteOrderInfo.Click += new System.EventHandler(this.btCompleteOrderInfo_Click);
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Location = new System.Drawing.Point(4, 9);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(56, 16);
+            this.label25.TabIndex = 41;
+            this.label25.Text = "受注番号";
             // 
             // OrderDetailForm
             // 
@@ -931,7 +924,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label31;
@@ -965,5 +957,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btTransportation;
         private System.Windows.Forms.Button btCompleteOrderInfo;
+        private System.Windows.Forms.Label label25;
     }
 }

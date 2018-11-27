@@ -490,20 +490,20 @@
             // 
             // lbMile
             // 
-            this.lbMile.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMile.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbMile.AutoSize = true;
             this.lbMile.BackColor = System.Drawing.Color.Transparent;
-            this.lbMile.Location = new System.Drawing.Point(117, 273);
+            this.lbMile.Location = new System.Drawing.Point(375, 273);
             this.lbMile.Name = "lbMile";
             this.lbMile.Size = new System.Drawing.Size(0, 16);
             this.lbMile.TabIndex = 80;
             // 
             // lbBuget
             // 
-            this.lbBuget.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbBuget.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbBuget.AutoSize = true;
             this.lbBuget.BackColor = System.Drawing.Color.Transparent;
-            this.lbBuget.Location = new System.Drawing.Point(117, 306);
+            this.lbBuget.Location = new System.Drawing.Point(375, 306);
             this.lbBuget.Name = "lbBuget";
             this.lbBuget.Size = new System.Drawing.Size(0, 16);
             this.lbBuget.TabIndex = 81;
