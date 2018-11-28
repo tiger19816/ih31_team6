@@ -24,6 +24,7 @@ namespace sugukuru.Purchase
         DataSet quoteInfoData;
 
         List<Entites.Estimate> quoteDetailList;
+        Entites.Estimate bulkEntity;
 
         public DeliverySlip()
         {

@@ -122,9 +122,9 @@ namespace sugukuru
                     "\",\r\n          \"TEL\":\""+clientTEL+"\",\r\n          \"FAX\":\""+clientFAX+"\",\r\n         " +
                     " \"部署\":\""+clientDivision+"\",\r\n          \"担当者\":\""+clientReq+"\",\r\n          \"支払条件\":\""+clientPaymentTerms+"\",\r\n      " +
                     "    \"納期\":\""+clientDeliveryDate+"\",\r\n        },\r\n        \"自社\":{\r\n          \"名称\":\"スグクル車販株式会社\",\r\n    " +
-                    "      \"郵便番号\":\"534-0011\",\r\n          \"住所1\":\"大阪府都島区高倉町1丁目4-6\",\r\n          \"住所2\":\"エ" +
-                    "ンブレム都島408号\",\r\n          \"TEL\":\"03-1234-5678\",\r\n          \"FAX\":\"03-1234-5678\",\r\n" +
-                    "          \"部署\":\"事務員\",\r\n          \"担当者\":\""+documentCreationReq+"\"\r\n        },\r\n        \"明細\":[\r\n        " +
+                    "      \"郵便番号\":\"5300001\",\r\n          \"住所1\":\"大阪府大阪市北区梅田3丁目3−1\",\r\n          \"住所2\":\"" +
+                    "\",\r\n          \"TEL\":\"(03)1234-5678\",\r\n          \"FAX\":\"(03)1234-5678\",\r\n" +
+                    "          \"部署\":\"総務\",\r\n          \"担当者\":\""+documentCreationReq+"\"\r\n        },\r\n        \"明細\":[\r\n        " +
                     "  "+detail+"\r\n        ],\r\n        \"備考\":\""+remarks+"\"\r\n    " +
                     "  };\r\n\r\n    </script>\r\n    <meta charset=\"UTF-8\">\r\n    <script src=\"http://ajax." +
                     "googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script>\r\n    <link rel=\"" +
