@@ -115,6 +115,7 @@
             this.tlTransportation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.148162F));
             this.tlTransportation.Size = new System.Drawing.Size(611, 356);
             this.tlTransportation.TabIndex = 1;
+            this.tlTransportation.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tlTransportation_CellPaint);
             // 
             // lbBidFixing
             // 

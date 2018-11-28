@@ -67,6 +67,12 @@
     <Compile Include="ClaimCollection\DunningClaimForm.Designer.cs">
       <DependentUpon>DunningClaimForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClaimCollection\IndividualClaimAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClaimCollection\IndividualClaimAdd.Designer.cs">
+      <DependentUpon>IndividualClaimAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClaimCollection\IndividualSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClaimCollection\DunningClaimForm.resx">
       <DependentUpon>DunningClaimForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClaimCollection\IndividualClaimAdd.resx">
+      <DependentUpon>IndividualClaimAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClaimCollection\IndividualSelectForm.resx">
       <DependentUpon>IndividualSelectForm.cs</DependentUpon>

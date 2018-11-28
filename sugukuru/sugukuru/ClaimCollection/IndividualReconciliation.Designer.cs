@@ -100,6 +100,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(379, 168);
             this.tableLayoutPanel2.TabIndex = 128;
+            this.tableLayoutPanel2.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
             // 
             // lbDif
             // 
@@ -252,6 +253,7 @@
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblCustomer.Size = new System.Drawing.Size(379, 168);
             this.tblCustomer.TabIndex = 125;
+            this.tblCustomer.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
             // 
             // lbClientRep
             // 
