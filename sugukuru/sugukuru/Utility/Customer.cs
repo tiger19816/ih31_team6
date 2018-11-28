@@ -72,7 +72,8 @@ namespace sugukuru.Utility
             String SQL = "SELECT * " +
                          "FROM bid " +
                          "INNER JOIN auction_hall ON auction_hall_id = auction_hall.id " +
-                         "WHERE order_id = '" + id + "'";
+                         "WHERE order_id = '" + id + "'" +
+                         "ORDER BY bid_date ASC";
             MySqlConnection con = new MySqlConnection(conStr);
             //顧客情報用のDataTable
             DataTable chain = new DataTable();

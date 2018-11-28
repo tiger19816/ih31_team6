@@ -63,10 +63,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -436,39 +436,10 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(273, 102);
             this.tableLayoutPanel3.TabIndex = 60;
             this.tableLayoutPanel3.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tblCustomer_CellPaint);
-            // 
-            // textBox12
-            // 
-            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox12.Enabled = false;
-            this.textBox12.Location = new System.Drawing.Point(86, 70);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(183, 27);
-            this.textBox12.TabIndex = 9;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(86, 37);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(183, 27);
-            this.textBox11.TabIndex = 8;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(86, 4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(183, 27);
-            this.textBox10.TabIndex = 7;
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox13
             // 
@@ -476,6 +447,36 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(171, 27);
             this.textBox13.TabIndex = 61;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox10.AutoSize = true;
+            this.textBox10.BackColor = System.Drawing.Color.Transparent;
+            this.textBox10.Location = new System.Drawing.Point(86, 9);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(0, 16);
+            this.textBox10.TabIndex = 10;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox11.AutoSize = true;
+            this.textBox11.BackColor = System.Drawing.Color.Transparent;
+            this.textBox11.Location = new System.Drawing.Point(86, 42);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(0, 16);
+            this.textBox11.TabIndex = 11;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox12.AutoSize = true;
+            this.textBox12.BackColor = System.Drawing.Color.Transparent;
+            this.textBox12.Location = new System.Drawing.Point(86, 76);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(0, 16);
+            this.textBox12.TabIndex = 12;
             // 
             // EstimateControl
             // 
@@ -553,9 +554,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label textBox12;
+        private System.Windows.Forms.Label textBox11;
+        private System.Windows.Forms.Label textBox10;
     }
 }
