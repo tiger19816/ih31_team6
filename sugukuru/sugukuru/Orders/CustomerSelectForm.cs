@@ -32,6 +32,13 @@ namespace sugukuru.Orders
             Utility.ResponsibleList.setSales(searchSalesReq);
             //初期選択を未選択にする
             searchSalesReq.SelectedIndex = -1;
+            
+            // カラムを指定
+            clientList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            clientList.RowHeadersVisible = false;
+            clientList.RowHeadersVisible = false;
+            clientList.AllowUserToAddRows = false;
+            clientList.ReadOnly = true;
         }
 
         private void searchButton_Click(object sender, EventArgs e)

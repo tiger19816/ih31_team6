@@ -29,10 +29,10 @@ namespace sugukuru.Purchase
         String id = "";
 
 
-            private void btSelect_Click(object sender, EventArgs e)
+        private void btSelect_Click(object sender, EventArgs e)
         {
 
-           id = dgvBulk.SelectedCells[0].Value.ToString();
+            id = dgvBulk.SelectedCells[0].Value.ToString();
 
             //MessageBox.Show(id);
 
@@ -51,7 +51,7 @@ namespace sugukuru.Purchase
 
         }
 
-public void sqlOrder()
+        public void sqlOrder()
         {
             this.conStr = ConfigurationManager.AppSettings["DbConKey"];
 
@@ -62,12 +62,12 @@ public void sqlOrder()
 
             //sql文
             String sql = "select orders.id,formal_name,CONCAT(family_name, ' ', first_name) AS employee_name, orders.create_at,auction_hall.auction_hall_name,listing_number,bid_price,bid_date " +
-"FROM client INNER JOIN orders ON client.id = orders.client_id " +
-"INNER JOIN employee ON orders.order_rep = employee.id " +
-"INNER JOIN bid ON bid.order_id = orders.id " +
-"INNER JOIN auction_hall ON bid.auction_hall_id = auction_hall.id " +
-"WHERE bid_result = 1 AND " +
-"NOT EXISTS(select * FROM successful_bid_vehicle where successful_bid_vehicle.order_id = bid.order_id)";
+                "FROM client INNER JOIN orders ON client.id = orders.client_id " +
+                "INNER JOIN employee ON orders.order_rep = employee.id " +
+                "INNER JOIN bid ON bid.order_id = orders.id AND bid_result = 1 " +
+                "INNER JOIN auction_hall ON bid.auction_hall_id = auction_hall.id " +
+                "WHERE bid_result = 1 AND " +
+                "NOT EXISTS(select * FROM successful_bid_vehicle where successful_bid_vehicle.order_id = bid.order_id)";
 
 
             //MessageBox.Show(sql);

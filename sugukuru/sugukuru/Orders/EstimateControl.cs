@@ -22,6 +22,7 @@ namespace sugukuru.Orders
         string clientFAX;
         string clientTEL;
         bool creditCheck = false;
+        int resultTemp = 0;
 
         public EstimateControl()
         {
@@ -92,8 +93,10 @@ namespace sugukuru.Orders
                 row["金額"] = OpenFM.Estimate.TotalPrice;
                 table.Rows.Add(row);
 
+                resultTemp += int.Parse(OpenFM.Estimate.TotalPrice);
+
                 // 小計を計算し表示
-                int result1 = (int.Parse(textBox10.Text) + int.Parse(OpenFM.Estimate.TotalPrice));
+                int result1 = resultTemp;
                 textBox10.Text = "\\" + String.Format("{0:#,0}", Int32.Parse(result1.ToString()));
                 // 消費税を計算し表示
                 int result2 = (result1 / 100 * 8);
@@ -456,6 +459,7 @@ namespace sugukuru.Orders
                 textBox11.Text = "";
                 textBox12.Text = "";
                 table.Rows.Clear();
+                resultTemp = 0;
             }
         }
     }

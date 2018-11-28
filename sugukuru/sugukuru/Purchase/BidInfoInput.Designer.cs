@@ -69,6 +69,7 @@
             this.lbBuget = new System.Windows.Forms.Label();
             this.lbInfo = new System.Windows.Forms.Label();
             this.lbRep = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.gbBidResult.SuspendLayout();
             this.tblCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -111,7 +112,7 @@
             // 
             // tbListingNumber
             // 
-            this.tbListingNumber.Location = new System.Drawing.Point(624, 131);
+            this.tbListingNumber.Location = new System.Drawing.Point(624, 135);
             this.tbListingNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbListingNumber.Name = "tbListingNumber";
             this.tbListingNumber.Size = new System.Drawing.Size(116, 27);
@@ -119,7 +120,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(624, 183);
+            this.dateTimePicker1.Location = new System.Drawing.Point(624, 187);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(233, 27);
@@ -128,7 +129,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(509, 183);
+            this.label5.Location = new System.Drawing.Point(509, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 9;
@@ -137,7 +138,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(509, 240);
+            this.label6.Location = new System.Drawing.Point(509, 244);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 16);
             this.label6.TabIndex = 10;
@@ -145,11 +146,12 @@
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(624, 240);
+            this.tbPrice.Location = new System.Drawing.Point(624, 239);
             this.tbPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(116, 27);
             this.tbPrice.TabIndex = 11;
+            this.tbPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // rbSatisfied
             // 
@@ -528,10 +530,20 @@
             this.lbRep.Size = new System.Drawing.Size(0, 16);
             this.lbRep.TabIndex = 83;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(751, 244);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(20, 16);
+            this.label22.TabIndex = 137;
+            this.label22.Text = "円";
+            // 
             // BidInfoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.tblCustomer);
             this.Controls.Add(this.btFixed);
             this.Controls.Add(this.gbBidResult);
@@ -600,5 +612,6 @@
         private System.Windows.Forms.Label lbCkana;
         private System.Windows.Forms.Label lbCname;
         private System.Windows.Forms.Label lbCId;
+        private System.Windows.Forms.Label label22;
     }
 }

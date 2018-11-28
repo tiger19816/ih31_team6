@@ -43,7 +43,7 @@ namespace sugukuru.Purchase
             con.Open();
 
             //sql文
-            String sql = "SELECT order_id,listing_number,auction_hall_name FROM bid INNER JOIN auction_hall ON bid.auction_hall_id = auction_hall.id WHERE order_id = "+id;
+            String sql = "SELECT order_id,listing_number,auction_hall_name, bid_price FROM bid INNER JOIN auction_hall ON bid.auction_hall_id = auction_hall.id WHERE order_id = "+id;
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
             mAdp.Fill(dset, "list");
             con.Close();
@@ -51,9 +51,10 @@ namespace sugukuru.Purchase
             lbPid.Text = dset.Tables["list"].Rows[0]["order_id"].ToString();
             lbAid.Text = dset.Tables["list"].Rows[0]["auction_hall_name"].ToString();
             lbBid.Text = dset.Tables["list"].Rows[0]["listing_number"].ToString();
+            tbBitPrice.Text = dset.Tables["list"].Rows[0]["bid_price"].ToString();
+            lbSum.Text = Convert.ToInt32(dset.Tables["list"].Rows[0]["bid_price"]).ToString("C");
 
             order_id = lbPid.Text;
-            lbSum.Text = sum.ToString();
 
             tbPrice.TextAlign = HorizontalAlignment.Right;
             tbCarTax.TextAlign = HorizontalAlignment.Right;
@@ -109,6 +110,8 @@ namespace sugukuru.Purchase
             tbPrice.Text = "";
             tbTax.Text = "";
 
+            this.Close();
+
 
 
 
@@ -124,6 +127,21 @@ namespace sugukuru.Purchase
             int i = 0;
 
             //いったん全部読み込む
+            String bitPrice = tbBitPrice.Text;
+            if (bitPrice != "")
+            {
+                Boolean result = int.TryParse(bitPrice, out i);
+                if (!result)
+                {
+                    bitPrice = "0";
+                }
+            }
+            else
+            {
+                bitPrice = "0";
+            }
+
+
             String tax = tbTax.Text;
             if (tax != "")
             {
@@ -188,9 +206,9 @@ namespace sugukuru.Purchase
         
 
 
-            sum = int.Parse(tax) + int.Parse(price) + int.Parse(carTax) + int.Parse(fee);
+            sum = int.Parse(bitPrice) + int.Parse(tax) + int.Parse(price) + int.Parse(carTax) + int.Parse(fee);
             
-            lbSum.Text = sum.ToString();
+            lbSum.Text = sum.ToString("C");
 
         }
 

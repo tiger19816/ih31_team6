@@ -166,12 +166,12 @@ namespace sugukuru.Purchase
         {
             //sql文
             String sql = "select orders.id,formal_name,CONCAT (family_name, ' ', first_name) AS employee_name,orders.create_at,auction_hall.auction_hall_name,listing_number,bid_price,bid_date " +
-"FROM client INNER JOIN orders ON client.id = orders.client_id " +
-"INNER JOIN employee ON orders.order_rep = employee.id " +
-"INNER JOIN bid ON bid.order_id = orders.id " +
-"INNER JOIN auction_hall ON bid.auction_hall_id = auction_hall.id " +
-"INNER JOIN successful_bid_vehicle ON successful_bid_vehicle.order_id = bid.order_id " +
-"where successful_bid_fixing = 0; ";
+                "FROM client INNER JOIN orders ON client.id = orders.client_id " +
+                "INNER JOIN employee ON orders.order_rep = employee.id " +
+                "INNER JOIN bid ON bid.order_id = orders.id AND bid.bid_result = 1 " +
+                "INNER JOIN auction_hall ON bid.auction_hall_id = auction_hall.id " +
+                "INNER JOIN successful_bid_vehicle ON successful_bid_vehicle.order_id = bid.order_id " +
+                "where successful_bid_fixing = 0; ";
 
             MySqlConnection con = new MySqlConnection(ConfigurationManager.AppSettings["DbConKey"]);
 
@@ -235,8 +235,9 @@ namespace sugukuru.Purchase
             //String id = dataGridView1.SelectedCells[0].Value.ToString();
 
             //検索する
-            String select = "SELECT `client_id`, `order_type`, orders.car_model,undercarriage_number, `car_classification`,successful_bid_vehicle_tax,contracted_successful_bid_quantity,vehicle_tax_equivalent,fee " +
+            String select = "SELECT `client_id`, `order_type`, orders.car_model,undercarriage_number, `car_classification`,successful_bid_vehicle_tax,contracted_successful_bid_quantity,vehicle_tax_equivalent,fee,bid_price " +
                 "FROM sugukuru.orders INNER JOIN successful_bid_vehicle ON successful_bid_vehicle.order_id = orders.id " +
+                "INNER JOIN bid ON bid.order_id = id AND bid.bid_result = 1 " +
                 "WHERE id = " + id+";";
 
             MySqlConnection con = new MySqlConnection(ConfigurationManager.AppSettings["DbConKey"]);
@@ -257,8 +258,9 @@ namespace sugukuru.Purchase
             String p2 = dset.Tables["sel"].Rows[0]["contracted_successful_bid_quantity"].ToString();
             String p3 = dset.Tables["sel"].Rows[0]["vehicle_tax_equivalent"].ToString();
             String p4 = dset.Tables["sel"].Rows[0]["fee"].ToString();
+            String p5 = dset.Tables["sel"].Rows[0]["bid_price"].ToString();
 
-            int price = int.Parse(p1) + int.Parse(p2) + int.Parse(p3) + int.Parse(p4);
+            int price = int.Parse(p1) + int.Parse(p2) + int.Parse(p3) + int.Parse(p4) + int.Parse(p5);
             String priceStr = price.ToString();
 
             //sql文

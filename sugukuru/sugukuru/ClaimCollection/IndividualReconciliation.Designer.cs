@@ -28,206 +28,199 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btCustomerSearch = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbDif = new System.Windows.Forms.Label();
+            this.lbAmount = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbClaimDate = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbClaimNo = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tblCustomer = new System.Windows.Forms.TableLayoutPanel();
+            this.lbClientRep = new System.Windows.Forms.Label();
+            this.lbClientDivision = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.lbPostalCode = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.tbPayment = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbClientId = new System.Windows.Forms.TextBox();
+            this.btCustomerSearch = new System.Windows.Forms.Button();
+            this.dgvRecon = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btFix = new System.Windows.Forms.Button();
+            this.dtpBill = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2.SuspendLayout();
             this.tblCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecon)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // tableLayoutPanel2
             // 
-            this.button1.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1040, 569);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 53);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "消込";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.Controls.Add(this.lbDif, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lbAmount, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lbPrice, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbClaimDate, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbClaimNo, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label11, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(754, 259);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(379, 168);
+            this.tableLayoutPanel2.TabIndex = 128;
             // 
-            // label1
+            // lbDif
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 25);
-            this.label1.TabIndex = 99;
-            this.label1.Text = "個別消込一覧";
+            this.lbDif.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbDif.AutoSize = true;
+            this.lbDif.Location = new System.Drawing.Point(375, 142);
+            this.lbDif.Name = "lbDif";
+            this.lbDif.Size = new System.Drawing.Size(0, 16);
+            this.lbDif.TabIndex = 133;
             // 
-            // dataGridView1
+            // lbAmount
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 85);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(728, 423);
-            this.dataGridView1.TabIndex = 102;
+            this.lbAmount.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbAmount.AutoSize = true;
+            this.lbAmount.Location = new System.Drawing.Point(375, 108);
+            this.lbAmount.Name = "lbAmount";
+            this.lbAmount.Size = new System.Drawing.Size(0, 16);
+            this.lbAmount.TabIndex = 133;
             // 
-            // button2
+            // lbPrice
             // 
-            this.button2.Location = new System.Drawing.Point(661, 47);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 31);
-            this.button2.TabIndex = 110;
-            this.button2.Text = "絞り込む";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lbPrice.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Location = new System.Drawing.Point(375, 75);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(0, 16);
+            this.lbPrice.TabIndex = 133;
             // 
-            // label2
+            // lbClaimDate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 16);
-            this.label2.TabIndex = 109;
-            this.label2.Text = "顧客ID";
+            this.lbClaimDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClaimDate.AutoSize = true;
+            this.lbClaimDate.Location = new System.Drawing.Point(117, 42);
+            this.lbClaimDate.Name = "lbClaimDate";
+            this.lbClaimDate.Size = new System.Drawing.Size(0, 16);
+            this.lbClaimDate.TabIndex = 133;
             // 
-            // textBox1
+            // label5
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 51);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 27);
-            this.textBox1.TabIndex = 108;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(4, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "請求書番号";
             // 
-            // btCustomerSearch
+            // label6
             // 
-            this.btCustomerSearch.Location = new System.Drawing.Point(261, 47);
-            this.btCustomerSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btCustomerSearch.Name = "btCustomerSearch";
-            this.btCustomerSearch.Size = new System.Drawing.Size(87, 31);
-            this.btCustomerSearch.TabIndex = 107;
-            this.btCustomerSearch.Text = "検索";
-            this.btCustomerSearch.UseVisualStyleBackColor = true;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(4, 75);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "請求額";
             // 
-            // textBox7
+            // label9
             // 
-            this.textBox7.Location = new System.Drawing.Point(874, 465);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 27);
-            this.textBox7.TabIndex = 121;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(4, 42);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "請求日";
             // 
-            // textBox6
+            // lbClaimNo
             // 
-            this.textBox6.Location = new System.Drawing.Point(874, 425);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 27);
-            this.textBox6.TabIndex = 120;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(758, 468);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
-            this.label8.TabIndex = 115;
-            this.label8.Text = "入金額";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(758, 428);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
-            this.label7.TabIndex = 114;
-            this.label7.Text = "入金日";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(661, 515);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 31);
-            this.button3.TabIndex = 123;
-            this.button3.Text = "選択";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label20, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(754, 259);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 102);
-            this.tableLayoutPanel1.TabIndex = 124;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(4, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "請求書番号";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(4, 76);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 16);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "入金予定日";
+            this.lbClaimNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClaimNo.AutoSize = true;
+            this.lbClaimNo.Location = new System.Drawing.Point(117, 9);
+            this.lbClaimNo.Name = "lbClaimNo";
+            this.lbClaimNo.Size = new System.Drawing.Size(0, 16);
+            this.lbClaimNo.TabIndex = 5;
             // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(117, 9);
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Location = new System.Drawing.Point(4, 108);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 16);
-            this.label11.TabIndex = 5;
+            this.label11.Size = new System.Drawing.Size(44, 16);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "入金額";
             // 
-            // label20
+            // label15
             // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Location = new System.Drawing.Point(4, 42);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 16);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "請求金額";
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Location = new System.Drawing.Point(4, 142);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(32, 16);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "差額";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(758, 441);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.TabIndex = 127;
+            this.label4.Text = "入金区分";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "現金",
+            "小切手",
+            "銀行振込"});
+            this.comboBox1.Location = new System.Drawing.Point(874, 438);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 126;
             // 
             // tblCustomer
             // 
@@ -235,10 +228,14 @@
             this.tblCustomer.ColumnCount = 2;
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tblCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tblCustomer.Controls.Add(this.lbClientRep, 1, 4);
+            this.tblCustomer.Controls.Add(this.lbClientDivision, 1, 3);
+            this.tblCustomer.Controls.Add(this.lbAddress, 1, 2);
+            this.tblCustomer.Controls.Add(this.lbPostalCode, 1, 1);
             this.tblCustomer.Controls.Add(this.label12, 0, 0);
             this.tblCustomer.Controls.Add(this.label13, 0, 2);
             this.tblCustomer.Controls.Add(this.label14, 0, 1);
-            this.tblCustomer.Controls.Add(this.label15, 1, 0);
+            this.tblCustomer.Controls.Add(this.lbName, 1, 0);
             this.tblCustomer.Controls.Add(this.label17, 0, 3);
             this.tblCustomer.Controls.Add(this.label18, 0, 4);
             this.tblCustomer.Location = new System.Drawing.Point(754, 85);
@@ -255,6 +252,46 @@
             this.tblCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblCustomer.Size = new System.Drawing.Size(379, 168);
             this.tblCustomer.TabIndex = 125;
+            // 
+            // lbClientRep
+            // 
+            this.lbClientRep.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientRep.AutoSize = true;
+            this.lbClientRep.BackColor = System.Drawing.Color.Transparent;
+            this.lbClientRep.Location = new System.Drawing.Point(117, 142);
+            this.lbClientRep.Name = "lbClientRep";
+            this.lbClientRep.Size = new System.Drawing.Size(0, 16);
+            this.lbClientRep.TabIndex = 130;
+            // 
+            // lbClientDivision
+            // 
+            this.lbClientDivision.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbClientDivision.AutoSize = true;
+            this.lbClientDivision.BackColor = System.Drawing.Color.Transparent;
+            this.lbClientDivision.Location = new System.Drawing.Point(117, 108);
+            this.lbClientDivision.Name = "lbClientDivision";
+            this.lbClientDivision.Size = new System.Drawing.Size(0, 16);
+            this.lbClientDivision.TabIndex = 129;
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lbAddress.Location = new System.Drawing.Point(117, 75);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(0, 16);
+            this.lbAddress.TabIndex = 128;
+            // 
+            // lbPostalCode
+            // 
+            this.lbPostalCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPostalCode.AutoSize = true;
+            this.lbPostalCode.BackColor = System.Drawing.Color.Transparent;
+            this.lbPostalCode.Location = new System.Drawing.Point(117, 42);
+            this.lbPostalCode.Name = "lbPostalCode";
+            this.lbPostalCode.Size = new System.Drawing.Size(0, 16);
+            this.lbPostalCode.TabIndex = 128;
             // 
             // label12
             // 
@@ -289,14 +326,14 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "所在地〒";
             // 
-            // label15
+            // lbName
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(117, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 16);
-            this.label15.TabIndex = 5;
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbName.AutoSize = true;
+            this.lbName.Location = new System.Drawing.Point(117, 9);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(0, 16);
+            this.lbName.TabIndex = 5;
             // 
             // label17
             // 
@@ -320,81 +357,198 @@
             this.label18.TabIndex = 8;
             this.label18.Text = "取引先担当者";
             // 
-            // comboBox1
+            // btnSelect
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(874, 384);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 126;
+            this.btnSelect.Location = new System.Drawing.Point(661, 515);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(87, 31);
+            this.btnSelect.TabIndex = 123;
+            this.btnSelect.Text = "選択";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
-            // label4
+            // tbPayment
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(758, 387);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
-            this.label4.TabIndex = 127;
-            this.label4.Text = "入金区分";
+            this.tbPayment.Location = new System.Drawing.Point(874, 519);
+            this.tbPayment.Name = "tbPayment";
+            this.tbPayment.Size = new System.Drawing.Size(100, 27);
+            this.tbPayment.TabIndex = 121;
+            this.tbPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(758, 522);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 16);
+            this.label8.TabIndex = 115;
+            this.label8.Text = "入金額";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(758, 482);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.TabIndex = 114;
+            this.label7.Text = "入金日";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(661, 47);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 31);
+            this.button2.TabIndex = 110;
+            this.button2.Text = "絞り込む";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 16);
+            this.label2.TabIndex = 109;
+            this.label2.Text = "顧客ID";
+            // 
+            // tbClientId
+            // 
+            this.tbClientId.Location = new System.Drawing.Point(127, 49);
+            this.tbClientId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbClientId.Name = "tbClientId";
+            this.tbClientId.Size = new System.Drawing.Size(116, 27);
+            this.tbClientId.TabIndex = 108;
+            // 
+            // btCustomerSearch
+            // 
+            this.btCustomerSearch.Location = new System.Drawing.Point(261, 47);
+            this.btCustomerSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btCustomerSearch.Name = "btCustomerSearch";
+            this.btCustomerSearch.Size = new System.Drawing.Size(87, 31);
+            this.btCustomerSearch.TabIndex = 107;
+            this.btCustomerSearch.Text = "検索";
+            this.btCustomerSearch.UseVisualStyleBackColor = true;
+            this.btCustomerSearch.Click += new System.EventHandler(this.btCustomerSearch_Click);
+            // 
+            // dgvRecon
+            // 
+            this.dgvRecon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecon.Location = new System.Drawing.Point(20, 85);
+            this.dgvRecon.Name = "dgvRecon";
+            this.dgvRecon.RowTemplate.Height = 21;
+            this.dgvRecon.Size = new System.Drawing.Size(728, 423);
+            this.dgvRecon.TabIndex = 102;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 25);
+            this.label1.TabIndex = 99;
+            this.label1.Text = "個別消込一覧";
+            // 
+            // btFix
+            // 
+            this.btFix.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btFix.Location = new System.Drawing.Point(1040, 569);
+            this.btFix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btFix.Name = "btFix";
+            this.btFix.Size = new System.Drawing.Size(117, 53);
+            this.btFix.TabIndex = 5;
+            this.btFix.Text = "消込";
+            this.btFix.UseVisualStyleBackColor = true;
+            this.btFix.Click += new System.EventHandler(this.btFix_Click);
+            // 
+            // dtpBill
+            // 
+            this.dtpBill.Location = new System.Drawing.Point(874, 479);
+            this.dtpBill.Name = "dtpBill";
+            this.dtpBill.Size = new System.Drawing.Size(171, 27);
+            this.dtpBill.TabIndex = 129;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(980, 524);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 16);
+            this.label3.TabIndex = 130;
+            this.label3.Text = "円";
             // 
             // IndividualReconciliation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dtpBill);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tblCustomer);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.btnSelect);
+            this.Controls.Add(this.tbPayment);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbClientId);
             this.Controls.Add(this.btCustomerSearch);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvRecon);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btFix);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "IndividualReconciliation";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.tblCustomer.ResumeLayout(false);
             this.tblCustomer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btFix;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRecon;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbClientId;
         private System.Windows.Forms.Button btCustomerSearch;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbPayment;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.TableLayoutPanel tblCustomer;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbClientRep;
+        private System.Windows.Forms.Label lbClientDivision;
+        private System.Windows.Forms.Label lbAddress;
+        private System.Windows.Forms.Label lbPostalCode;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label lbDif;
+        private System.Windows.Forms.Label lbAmount;
+        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Label lbClaimDate;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbClaimNo;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DateTimePicker dtpBill;
+        private System.Windows.Forms.Label label3;
     }
 }

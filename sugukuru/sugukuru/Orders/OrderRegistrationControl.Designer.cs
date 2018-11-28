@@ -78,6 +78,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.gbOrderType.SuspendLayout();
             this.tblCustomer.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -597,10 +599,30 @@
             this.radioButton4.Text = "MT";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(766, 282);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(20, 16);
+            this.label15.TabIndex = 125;
+            this.label15.Text = "円";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(766, 242);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(24, 16);
+            this.label23.TabIndex = 126;
+            this.label23.Text = "km";
+            // 
             // OrderRegistrationControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label22);
@@ -696,5 +718,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label23;
     }
 }

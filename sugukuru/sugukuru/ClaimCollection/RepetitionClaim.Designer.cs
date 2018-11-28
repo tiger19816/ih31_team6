@@ -290,27 +290,27 @@
             // 
             // lbDif
             // 
-            this.lbDif.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbDif.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbDif.AutoSize = true;
-            this.lbDif.Location = new System.Drawing.Point(117, 142);
+            this.lbDif.Location = new System.Drawing.Point(375, 142);
             this.lbDif.Name = "lbDif";
             this.lbDif.Size = new System.Drawing.Size(0, 16);
             this.lbDif.TabIndex = 133;
             // 
             // lbAmount
             // 
-            this.lbAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbAmount.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbAmount.AutoSize = true;
-            this.lbAmount.Location = new System.Drawing.Point(117, 108);
+            this.lbAmount.Location = new System.Drawing.Point(375, 108);
             this.lbAmount.Name = "lbAmount";
             this.lbAmount.Size = new System.Drawing.Size(0, 16);
             this.lbAmount.TabIndex = 133;
             // 
             // lbPrice
             // 
-            this.lbPrice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPrice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbPrice.AutoSize = true;
-            this.lbPrice.Location = new System.Drawing.Point(117, 75);
+            this.lbPrice.Location = new System.Drawing.Point(375, 75);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(0, 16);
             this.lbPrice.TabIndex = 133;
