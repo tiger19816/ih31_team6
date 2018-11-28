@@ -451,15 +451,17 @@ namespace sugukuru.Orders
                 textBox8.Text = "";
                 textBox9.Text = "";
                 dateTimePicker1.Text = "";
-                textBox13.Text = "";
                 textBox5.Text = "";
                 textBox6.Text = "";
                 textBox3.Text = "";
                 textBox10.Text = "";
                 textBox11.Text = "";
                 textBox12.Text = "";
+                clientFAX = "";
+                clientTEL = "";
                 table.Rows.Clear();
                 resultTemp = 0;
+                quoteDetailList = new List<Entites.Estimate>();
             }
         }
     }
