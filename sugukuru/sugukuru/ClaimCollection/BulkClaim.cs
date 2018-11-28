@@ -100,9 +100,17 @@ namespace sugukuru.ClaimCollection
 
                     ///SQLの実行
                     cmd.ExecuteNonQuery();
+                    
+                    string preYear = strYear;
+                    string preMonth = (int.Parse(strMonth) - 1).ToString();
+                    if ("1".Equals(strMonth))
+                    {
+                        preYear = (int.Parse(strYear) - 1).ToString();
+                        preMonth = "12";
+                    }
 
                     sql = "SELECT * FROM unbilled_data "
-                        + "WHERE recorded_date LIKE '" + strYear + "-" + strMonth + "%' "
+                        + "WHERE recorded_date BETWEEN '" + preYear + "-" + preMonth + "-26' AND '" + strYear + "-" + strMonth + "-25' "
                         + "AND customer_id = '" + id + "'";
 
                     Console.WriteLine(sql);

@@ -80,7 +80,7 @@ namespace sugukuru.Purchase
                     sql +=  "LEFT JOIN bid ON id = bid.order_id " +
                             "LEFT JOIN quote_detail ON id = quote_detail.order_id " +
                             "WHERE quote_detail.quote_id IS NOT null " +
-                            "AND bid.bid_result = 0";
+                            "AND (bid.bid_result = 0 OR bid.bid_result IS NULL)";
                     break;
 
                 //陸送登録
