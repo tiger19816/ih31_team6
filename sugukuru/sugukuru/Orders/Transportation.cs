@@ -36,5 +36,13 @@ namespace sugukuru.Orders
         {
             this.Close();
         }
+
+        private void tlTransportation_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            if (e.Column == 0)
+            {
+                e.Graphics.FillRectangle(Brushes.LightGray, e.CellBounds);
+            }
+        }
     }
 }

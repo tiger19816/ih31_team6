@@ -80,7 +80,7 @@
             this.tlTransportation.Controls.Add(this.lbOrderId, 1, 0);
             this.tlTransportation.Controls.Add(this.label3, 0, 0);
             this.tlTransportation.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tlTransportation.Location = new System.Drawing.Point(100, 75);
+            this.tlTransportation.Location = new System.Drawing.Point(100, 43);
             this.tlTransportation.Name = "tlTransportation";
             this.tlTransportation.RowCount = 10;
             this.tlTransportation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -95,6 +95,7 @@
             this.tlTransportation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tlTransportation.Size = new System.Drawing.Size(611, 356);
             this.tlTransportation.TabIndex = 0;
+            this.tlTransportation.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tlTransportation_CellPaint);
             // 
             // lbResponsName
             // 
