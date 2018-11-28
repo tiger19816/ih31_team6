@@ -103,13 +103,27 @@ namespace sugukuru.Orders
             MySqlConnection con = new MySqlConnection(this.conStr);
             con.Open();
 
-            ////日付************************************************
-            //String date = dateTimePicker1.Value.ToShortDateString();
-            //date.Replace("/", "-");
-            ////*****************************************************
+            //日付************************************************
+            String date = dateTimePicker1.Value.ToShortDateString();
+            date.Replace("/", "-");
+            //*****************************************************
+
+
+            if (radioButton3.Checked == true)
+            {
+                
+                trans = "0";
+            }
+            else if (radioButton4.Checked == true)
+            {
+                
+                trans = "1";
+            }
+
+
 
             String sql = "UPDATE `sugukuru`.`orders` " +
-            "SET `car_model` = '"+tbModel.Text+"', `car_classification` = '"+tbCarName.Text+"', `car_model_year` = '"+tbYear.Text+"', `car_color` = '"+tbColor.Text+"', `transmission` = '"+trans+"', `car_mileage` = '"+tbMile.Text+"', `budget` = '"+tbPrice.Text+"', `fine_info` = '"+tbInfo.Text+"', `update_rep` = '"+cbChengeRep.SelectedValue+"' WHERE `orders`.`id` = '"+ order.getDataRow()["id"].ToString() + "';";
+            "SET `car_model` = '"+tbModel.Text+"', `car_classification` = '"+tbCarName.Text+"', `car_model_year` = '"+tbYear.Text+"', `car_color` = '"+tbColor.Text+"', `transmission` = '"+trans+"', `car_mileage` = '"+tbMile.Text+"', `budget` = '"+tbPrice.Text+"', `fine_info` = '"+tbInfo.Text+ "',update_at = '" + date + "', `update_rep` = '" + cbChengeRep.SelectedValue+"' WHERE `orders`.`id` = '"+ order.getDataRow()["id"].ToString() + "';";
 
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.ExecuteNonQuery();
@@ -119,7 +133,7 @@ namespace sugukuru.Orders
             MessageBox.Show("変更しました。");
 
 
-
+            Close();
 
         }
     }
