@@ -46,8 +46,7 @@ namespace sugukuru.Orders
             //SQL文発行する
             DataSet dset = new DataSet("order");
             String sql =    "SELECT * " +
-                            "FROM sugukuru.orders " +
-                            "LEFT JOIN bid ON id = bid.order_id";
+                            "FROM orders ";
             bool flg = false;
             if (!tbSearchOrderId.Text.Equals(""))
             {
@@ -60,33 +59,33 @@ namespace sugukuru.Orders
                 {
                     if (flg)
                     {
-                        sql += " AND bid.bid_result IS null";
+                        sql += " AND NOT EXISTS(SELECT order_id FROM bid WHERE orders.id = order_id)";
                     }
                     else
                     {
-                        sql += " WHERE bid.bid_result IS null";
+                        sql += " WHERE NOT EXISTS(SELECT order_id FROM bid WHERE orders.id = order_id)";
                     }
                 }
                 if (cbSearchProgress.SelectedItem.ToString() == "買注残")
                 {
                     if (flg)
                     {
-                        sql += " AND bid.bid_result = 0";
+                        sql += " AND EXISTS(SELECT order_id FROM bid WHERE orders.id = order_id AND bid.bid_result = 0) AND NOT EXISTS(SELECT order_id FROM bid WHERE orders.id = order_id AND bid.bid_result = 1)";
                     }
                     else
                     {
-                        sql += " WHERE bid.bid_result = 0";
+                        sql += " WHERE EXISTS(SELECT order_id FROM bid WHERE orders.id = order_id AND bid.bid_result = 0) AND NOT EXISTS(SELECT order_id FROM bid WHERE orders.id = order_id AND bid.bid_result = 1)";
                     }
                 }
                 if (cbSearchProgress.SelectedItem.ToString() == "落札済")
                 {
                     if (flg)
                     {
-                        sql += " AND bid.bid_result = 1";
+                        sql += " AND EXISTS(SELECT order_id FROM bid WHERE orders.id = order_id AND bid.bid_result = 1)";
                     }
                     else
                     {
-                        sql += " WHERE bid.bid_result = 1";
+                        sql += " WHERE EXISTS(SELECT order_id FROM bid WHERE orders.id = order_id AND bid.bid_result = 1)";
                     }
                 }
                 
